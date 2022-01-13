@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: IRANSansWeb;
+  src: url(./font/IRANSansWeb/IRANSansWeb.ttf) ;
+  src: url(./font/IRANSansWeb/IRANSansWeb.woff) ;
+  src: url(./font/IRANSansWeb/IRANSansWeb.woff2) 
+}
+body {
+  direction: ltr;
+  font-family: IRANSansWeb;
+  box-sizing: border-box;
+}
+button {
+  margin: 5px;
+  background-color: #00ff85;
+  border-radius: 6px;
+  width: 150px;
+  height: 46px;
+  border: 1.5px solid #80FFC2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-size: 12px;
+  margin-bottom: 1rem;
+  color: #E6FFF3;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img{
+  border-radius: 10px;
+  position: absolute;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sideLeft{
+  width:44%;
+  direction: rtl;
+  margin-right: 1.5rem;
+  margin-top: 5rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pHomepage{
+  border-right: 2.5px solid #00CC6A ;
 }
