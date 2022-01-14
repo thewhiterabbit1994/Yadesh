@@ -8,11 +8,10 @@ import Menu from "./Menu";
 const Navbar = () => {
   const [menuDisplay, setmenuDisplay] = useState(false);
   return (
-    <div>
-      <div className="bg-[#010506] flex h-[56px] w-full">
+    <div className="fixed h-[56px] w-full  top-0 z-10">
+      <div className="backdrop-blur-xl bg-[#0105062d] flex  ">
         <div
           onClick={() => setmenuDisplay(!menuDisplay)}
-          // onClick={}
           className="cursor-pointer my-[22px] mr-[30px]"
         >
           <MenuIcon />
@@ -33,7 +32,7 @@ const Navbar = () => {
             </p>
           </button>
         </div>
-        <div className="flex mr-[770px]">
+        <div className="flex absolute left-10">
           <button className="bg-[#001d29] flex mr-[15px] mt-[11px] w-[120px] h-[35px] rounded-[4px] text-[#E6E9EB]">
             <div className="mr-[10px] mt-[9px]">
               <SearchIcon />
