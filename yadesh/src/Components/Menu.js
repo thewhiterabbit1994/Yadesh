@@ -16,7 +16,7 @@ import LinkedinLogo from "../assets/svg/LinkedinLogo";
 export default ({ menuDisplay }) => {
   return (
     <div
-      className={`transition-transform delay-150 w-full h-[460px] rounded-b-[10px] bg-[#17313c] ${
+      className={`transition-transform delay-150 w-full h-[460px] rounded-b-[10px] bg-[#001d29] ${
         menuDisplay ? null : "hidden"
       }`}
     >
