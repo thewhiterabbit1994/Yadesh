@@ -6,10 +6,15 @@ import trnava from "../assets/Img/imgHomeNotLogin/trnava-university-WGG4eD0rQmo-
 import TicIcon from "../assets/svg/HomePageNotLogin/TikIcon"
 import PopularCourses from "../Components/PopularCourses"
 import CustomerYadeshّ from "../Components/CustomersYadesh"
+import Navbar from "../Components/Navbar"
+import AboutYadesh from "../Components/AboutYadesh"
+import MostView from "../Components/MostView"
+import CustomerYadesh from "../Components/CustomerYadesh"
 
 const HomePageNotLogin = () => {
     return (
         <div >
+            <Navbar/>ّ
             <section className="w-full bg-black h-screen flex ">
                 <div className=" w-2/5  mt-[10%] mr-[5%]">
                     <div>
@@ -52,7 +57,9 @@ const HomePageNotLogin = () => {
             </section >
             <section >
                 <PopularCourses />
-                <CustomerYadeshّ />
+                <AboutYadesh/>
+                <MostView/>
+                <CustomerYadesh />
             </section>
         </div>
     )
