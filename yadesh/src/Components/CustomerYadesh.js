@@ -6,6 +6,7 @@ import MelatBank from "../assets/svg/CustomerYadesh/melatBank.svg";
 import Shape from "../assets/svg/CustomerYadesh/shape.svg";
 import Snap from "../assets/svg/CustomerYadesh/snap.svg";
 import "slick-carousel/slick/slick.css";
+import "../Css/CustomerYadesh.css"
 
 export default class CustomerYadesh extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class CustomerYadesh extends Component {
       <div className="bg-[#000] width-[100%] h-[40vh] ">
         <section className=" mr-[11rem] mb-[4rem] ">
           <div className="text-[#E6FFF3] flex">
-            <div className="border-[#00FF85] opacity-80  border-r-[3.5px] ml-[7px] ">
+            <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] rounded">
               {" "}
             </div>
             <h6> مشتریان یادش</h6>
