@@ -14,7 +14,7 @@ const PopularCourses = () => {
                 <h5 className="text-[#E6FFF3] text-[12px] mr-[2rem] opacity-80">به انتخاب یادش</h5>
             </div>
 
-            <div className="flex justify-center w-[100%] h-[100%] mr-[6px] ">
+            <div className="flex justify-center w-[99%] h-[100%] mr-[6px] ">
                 <div className="relative h-[57%] w-[12%]">
                     <img className="rounded w-[100%] h-[100%] opacity-70" src={FinancialManagement} />
                     <div className="absolute top-[81%] left-[23%] text-[#E6FFF3] flex flex-col text-center ">

@@ -5,7 +5,6 @@ import lucas from "../assets/Img//imgHomeNotLogin/lucas-george-wendt-B-WavFzUtiA
 import trnava from "../assets/Img/imgHomeNotLogin/trnava-university-WGG4eD0rQmo-unsplash 1.jpg"
 import TicIcon from "../assets/svg/HomePageNotLogin/TikIcon"
 import PopularCourses from "../Components/PopularCourses"
-import CustomerYadeshّ from "../Components/CustomersYadesh"
 import Navbar from "../Components/Navbar"
 import AboutYadesh from "../Components/AboutYadesh"
 import MostView from "../Components/MostView"
@@ -13,8 +12,8 @@ import CustomerYadesh from "../Components/CustomerYadesh"
 
 const HomePageNotLogin = () => {
     return (
-        <div >
-            <Navbar/>ّ
+        <div className="w-[100%] mt-[-2rem] " >
+            <Navbar />ّ
             <section className="w-full bg-black h-screen flex ">
                 <div className=" w-2/5  mt-[10%] mr-[5%]">
                     <div>
@@ -55,12 +54,10 @@ const HomePageNotLogin = () => {
                     <img src={ed} className="w-[65%] h-[22%] absolute left-[34%] top-[63%] rounded" />
                 </div>
             </section >
-            <section >
-                <PopularCourses />
-                <AboutYadesh/>
-                <MostView/>
-                <CustomerYadesh />
-            </section>
+            <PopularCourses />
+            <AboutYadesh />
+            <MostView />
+            <CustomerYadesh />
         </div>
     )
 }
