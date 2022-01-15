@@ -5,11 +5,11 @@ import lucas from "../assets/Img//imgHomeNotLogin/lucas-george-wendt-B-WavFzUtiA
 import trnava from "../assets/Img/imgHomeNotLogin/trnava-university-WGG4eD0rQmo-unsplash 1.jpg";
 import TicIcon from "../assets/svg/HomePageNotLogin/TikIcon";
 import PopularCourses from "../Components/PopularCourses";
-import CustomerYadeshّ from "../Components/CustomersYadesh";
 import Navbar from "../Components/Navbar";
 import AboutYadesh from "../Components/AboutYadesh";
 import MostView from "../Components/MostView";
 import CustomerYadesh from "../Components/CustomerYadesh";
+import PelaneSazmani from "../Components/PelaneSazmani";
 
 const HomePageNotLogin = () => {
   return (
@@ -41,7 +41,7 @@ const HomePageNotLogin = () => {
 
           <div className="text-white w-[50%] mt-[2rem]  ">
             <div className="flex">
-              <div className="border-[#00FF85] opacity-80  border-r-[3.5px] ml-[7px] mr-[7px]">
+              <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] mr-[7px] rounded">
                 {" "}
               </div>
               <p className="text-[12px] ">مزایای ثبت نام در یادش</p>
@@ -93,12 +93,11 @@ const HomePageNotLogin = () => {
           />
         </div>
       </section>
-      <section>
-        <PopularCourses />
-        <AboutYadesh />
-        <MostView />
-        <CustomerYadesh />
-      </section>
+      <PopularCourses />
+      <AboutYadesh />
+      <MostView />
+      <CustomerYadesh />
+      <PelaneSazmani />
     </div>
   );
 };

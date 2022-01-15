@@ -6,7 +6,6 @@ import MelatBank from "../assets/svg/CustomerYadesh/melatBank.svg";
 import Shape from "../assets/svg/CustomerYadesh/shape.svg";
 import Snap from "../assets/svg/CustomerYadesh/snap.svg";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default class CustomerYadesh extends Component {
   render() {

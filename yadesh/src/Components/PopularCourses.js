@@ -8,7 +8,7 @@ const PopularCourses = () => {
         <div className="w-[100%] h-[100vh] bg-[black] ">
             <div className="mr-[4rem] mb-[1.5rem]">
                 <idv className="flex mb-[1.5rem] mr-[2rem]">
-                    <div className="border-[#00FF85] opacity-80  border-r-[3.5px] ml-[7px] " ></div>
+                    <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] rounded" ></div>
                     <h2 className="text-[#E6FFF3]">دوره های پرطرفدار</h2>
                 </idv>
                 <h5 className="text-[#E6FFF3] text-[12px] mr-[2rem] opacity-80">به انتخاب یادش</h5>
