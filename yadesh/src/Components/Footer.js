@@ -14,8 +14,8 @@ import LinkedinLogo from "../assets/svg/LinkedinLogo";
 
 const Footer = () => {
   return (
-    <div className="absolute bottom-0 w-full h-[567px] bg-[#000405] ">
-      <div className=" pt-[30px] pr-[60px]">
+    <div className=" w-full h-[567px] bg-[#000405] ">
+      <div className="flex justify-between mr-[65px] pt-[30px] ">
         <div className="flex flex-row">
           <div className="">
             <YadeshLogo />
@@ -24,11 +24,9 @@ const Footer = () => {
             <YadeshNameLogo />
           </div>
         </div>
-        <p className="text-[10px] mt-[10px] text-[#B3BDC2] ">
-          پلتفرم آموزش ویدیویی آنلاین
-        </p>
-        <div className="flex absolute top-7 left-24">
-          <button className="border-[1.5px] border-[#80FFC2] flex mr-[15px] mt-[11px] w-[72px] h-[33px] rounded-[6px] text-[#E6E9EB]">
+
+        <div className="flex  ml-[80px]">
+          <button className="border-[1.5px] border-[#80FFC2] flex mt-[11px] w-[72px] h-[33px] rounded-[6px] text-[#E6E9EB]">
             <p className="mt-[7px] w-[80px] h-[25px]  text-[11px] ">
               وارد شوید
             </p>
@@ -38,6 +36,11 @@ const Footer = () => {
             <option value="2">EN</option>
           </select>
         </div>
+      </div>
+      <div>
+        <p className=" text-[10px] -mt-[10px] mr-[65px] text-[#B3BDC2] ">
+          پلتفرم آموزش ویدیویی آنلاین
+        </p>
       </div>
       <div className="flex ">
         <div className="w-[208px] h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]">

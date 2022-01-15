@@ -16,7 +16,7 @@ import LinkedinLogo from "../assets/svg/LinkedinLogo";
 export default ({ menuDisplay }) => {
   return (
     <div
-      className={`transition-transform delay-150 w-full h-[460px] rounded-b-[10px] bg-[#001d29] ${
+      className={`transition-transform delay-150 w-full h-[460px] rounded-b-[10px] bg-[#17313c] ${
         menuDisplay ? null : "hidden"
       }`}
     >
@@ -42,7 +42,7 @@ export default ({ menuDisplay }) => {
         <div className="flex justify-between mt-[20px] w-[300px]">
           <div>
             <button className=" flex  mt-[11px] w-[118px] h-[35px] rounded-[4px] text-[#B3BDC2]">
-              <div className=" text-[#939fa5] mt-[9px] opacity-80">
+              <div className=" text-[#7e8d93] mt-[9px] opacity-80">
                 <UserPannel />
               </div>
               <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
@@ -60,7 +60,7 @@ export default ({ menuDisplay }) => {
               </p>
             </button>
           </div>
-          <div className="bg-[#001d29] flex mr-[40px] mt-[7px] w-[124px] h-[46px] rounded-[4px] text-[#B3BDC2]">
+          <div className="bg-[#0c2028] flex mr-[40px] mt-[7px] w-[124px] h-[46px] rounded-[4px] text-[#B3BDC2]">
             <button className="flex">
               <div className="mr-[10px] text-[#939fa5] mt-[14px] opacity-80">
                 <MyProgressRocket />
@@ -93,17 +93,17 @@ export default ({ menuDisplay }) => {
             </button>
           </div>
         </div>
-        <div className="flex w-[800px] justify-between">
-          <div className="flex mt-[100px] text-[12px] text-[#939FA5] ">
-            <p>تماس با ما</p>
+        <div className="flex w-[770px] justify-between">
+          <div className="flex mt-[100px] text-[12px] text-[#5f7179] ">
+            <p className="text-[#939FA5]">تماس با ما</p>
             <p className="flex mr-[21px]">
-              <div className="ml-[10.5px] -mt-1 opacity-50">
+              <div className="ml-[10.5px] -mt-1 opacity-30">
                 <Call />
               </div>
               ۶۵۲۳۶۵۲۶۵۲
             </p>
             <p className="flex mr-[21px]">
-              <div className="ml-[10.5px] opacity-50">
+              <div className="ml-[10.5px] opacity-30">
                 <Email />
               </div>
               info@yadesh.com
@@ -111,16 +111,16 @@ export default ({ menuDisplay }) => {
           </div>
           <div className="flex mt-[100px] text-[12px] text-[#939FA5]">
             <p className="px-4">شبکه های اجتماعی</p>
-            <div className="opacity-50 px-2">
+            <div className="opacity-30 px-2">
               <InstaLogo />
             </div>
-            <div className="opacity-50 px-2">
+            <div className="opacity-30 px-2">
               <WhatsAppLogo />
             </div>
             <div className=" px-2">
               <TwiterLogo />
             </div>
-            <div className="opacity-50 px-2">
+            <div className="opacity-30 px-2">
               <LinkedinLogo />
             </div>
           </div>
