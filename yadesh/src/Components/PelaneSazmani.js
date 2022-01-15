@@ -6,7 +6,7 @@ const PelaneSazmani = () => {
             <section className="w-[80%] bg-[#000E14] h-[41vh] flex rounded mb-[2rem]">
                 <section className="w-[65%] flex flex-col  h-[100%] items-center justify-center ">
                     <div className="text-[#E6FFF3] text-[14px] flex w-[75%] mb-[2rem]">
-                        <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] rounded " >  </div>
+                        <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] rounded-[6px] " >  </div>
                         <h6> پلن سازمانی</h6>
                     </div>
                     <div className="text-[#E6FFF3] text-[14px] leading-10 opacity-70">

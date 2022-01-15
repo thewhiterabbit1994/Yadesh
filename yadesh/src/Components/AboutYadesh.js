@@ -8,7 +8,7 @@ const Aboutyadesh = () => {
             <section className="w-[50%] opacity-80 flex flex-col justify-center h-[50vh] ">
                 <div className="mr-[5.5rem]">
                     <div className="flex text-[#E6FFF3] ">
-                        <div className="border-[#00FF85] opacity-80  border-r-[3.5px] ml-[7px] " > </div>
+                        <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] rounded" > </div>
                         <h6 className="">درباره یادش</h6>
                     </div>
                     <h6 className="text-[#E6FFF3] mt-[1rem] text-[13px]"> درباره ما بیشتر بدانید</h6>
