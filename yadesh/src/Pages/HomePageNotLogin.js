@@ -15,7 +15,7 @@ const HomePageNotLogin = () => {
   return (
     <div>
       <Navbar />ّ
-      <section className="w-full bg-black h-screen flex ">
+      <section className="w-full bg-black h-screen flex mt-[-2rem]">
         <div className=" w-2/5  mt-[10%] mr-[5%]">
           <div>
             <h1 className="text-[#E6FFF3] font-medium text-[27px]  ">

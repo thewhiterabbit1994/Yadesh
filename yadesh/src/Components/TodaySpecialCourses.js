@@ -15,7 +15,7 @@ const TodaySpecialCourses = () => {
     dots: true,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: -1,
     autoplay: false,
     speed: 1000,
     autoplaySpeed: 2000,
@@ -76,7 +76,7 @@ const TodaySpecialCourses = () => {
           </button>
         </div>
       </div>
-      <section className="mt-[70px] rounded-lg mr-[120px] w-[670px]">
+      <section className=" mt-[70px] rounded-lg mr-[120px] w-[670px]">
         <div className="flex w-[670px] justify-between">
           <p className="relative rounded text-[12px] mr-5 py-2 pr-[18px] text-[#fff] w-[120px] h-[32px] bg-[#7b9199] top-[50px] z-10 ">
             فرهنگ سازمانی

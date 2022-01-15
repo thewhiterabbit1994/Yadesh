@@ -8,7 +8,7 @@ import Menu from "./Menu";
 const Navbar = () => {
   const [menuDisplay, setmenuDisplay] = useState(false);
   return (
-    <div className="fixed h-[56px] w-full  top-0 z-10">
+    <div className="fixed h-[56px] w-full  top-0 z-20">
       <div className="backdrop-blur-xl bg-[#0105062d] flex  ">
         <div
           onClick={() => setmenuDisplay(!menuDisplay)}
