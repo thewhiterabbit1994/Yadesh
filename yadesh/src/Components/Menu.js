@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import YadeshLogo from "../assets/svg/YadeshLogo";
 import YadeshNameLogo from "../assets/svg/YadeshNameLogo";
 import MenuImg from "../assets/Img/MenuImg.png";
@@ -65,9 +66,11 @@ export default ({ menuDisplay }) => {
               <div className="mr-[10px] text-[#939fa5] mt-[14px] opacity-80">
                 <MyProgressRocket />
               </div>
-              <p className="my-[13px] w-[92px] h-[19px] text-[12.5px] ">
-                پیشرفت من
-              </p>
+              <Link to={"/home/myprogress"}>
+                <p className="my-[13px] w-[92px] h-[19px] text-[12.5px] ">
+                  پیشرفت من
+                </p>
+              </Link>
             </button>
           </div>
         </div>

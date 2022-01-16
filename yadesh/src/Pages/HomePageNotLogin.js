@@ -1,11 +1,11 @@
-import PopularCourses from "../Components/PopularCourses";
+import PopularCourses from "../Components/HomePageNotLogin/PopularCourses";
 import Navbar from "../Components/Navbar";
-import AboutYadesh from "../Components/AboutYadesh";
+import AboutYadesh from "../Components/HomePageNotLogin/AboutYadesh";
 import MostView from "../Components/MostView";
-import CustomerYadesh from "../Components/CustomerYadesh";
-import PelaneSazmani from "../Components/PelaneSazmani";
+import CustomerYadesh from "../Components/HomePageNotLogin/CustomerYadesh";
+import PelaneSazmani from "../Components/HomePageNotLogin/PelaneSazmani";
 import Footer from "../Components/Footer";
-import HeaderHomePageNotLogin from "../Components/HeaderHomeNotLogin";
+import HeaderHomePageNotLogin from "../Components/HomePageNotLogin/HeaderHomeNotLogin";
 
 const HomePageNotLogin = () => {
   return (

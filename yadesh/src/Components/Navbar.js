@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import YadeshLogo from "../assets/svg/YadeshLogo";
 import YadeshNameLogo from "../assets/svg/YadeshNameLogo";
 import MenuIcon from "../assets/svg/MenuIcon";
@@ -27,9 +28,11 @@ const Navbar = () => {
             <div className="mr-[10px] mt-[9px]">
               <MyProgressRocket />
             </div>
-            <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
-              پیشرفت من
-            </p>
+            <Link to={"/home/myprogress"}>
+              <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
+                پیشرفت من
+              </p>
+            </Link>
           </button>
         </div>
         <div className="flex absolute left-10">

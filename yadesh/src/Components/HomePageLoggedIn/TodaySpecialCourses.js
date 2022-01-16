@@ -1,14 +1,14 @@
-import TeacherImg1 from "../assets/Img/TeacherImg1.png";
-import Clock from "../assets/svg/Clock";
-import View from "../assets/svg/View";
-import Hat from "../assets/svg/Hat";
-import BtnPlay from "../assets/svg/BtnPlay";
+import TeacherImg1 from "../../assets/Img/TeacherImg1.png";
+import Clock from "../../assets/svg/Clock";
+import View from "../../assets/svg/View";
+import Hat from "../../assets/svg/Hat";
+import BtnPlay from "../../assets/svg/BtnPlay";
 import Slider from "react-slick";
-import FarhangeSazmani from "../assets/Img/FarhangeSazmani.png";
+import FarhangeSazmani from "../../assets/Img/FarhangeSazmani.png";
 import "slick-carousel/slick/slick.css";
-import "../Css/TodaySpecialCoursesSlick.css";
-import Bookmark from "../assets/svg/Bookmark";
-import Speakermute from "../assets/svg/Speakermute";
+import "../../Css/TodaySpecialCoursesSlick.css";
+import Bookmark from "../../assets/svg/Bookmark";
+import Speakermute from "../../assets/svg/Speakermute";
 
 const TodaySpecialCourses = () => {
   const settings = {
