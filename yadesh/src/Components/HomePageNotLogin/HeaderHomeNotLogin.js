@@ -4,9 +4,13 @@ import work from "../../assets/Img/imgHomeNotLogin/work.jpg";
 import convetion from "../../assets/Img/imgHomeNotLogin/convertion.jpg";
 import reading from "../../assets/Img/imgHomeNotLogin/reading.jpg";
 import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
+import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
 const HeaderHomeNotLogin = () => {
   return (
     <section className="w-full bg-black  h-[700px] flex justify-center mt-[-2rem] ">
+      <div className="absolute">
+        <Ellipse />
+      </div>
       <div className="w-[725px] h-[562px] mt-[100px] relative -mr-[80px] ">
         <img
           src={classs}
