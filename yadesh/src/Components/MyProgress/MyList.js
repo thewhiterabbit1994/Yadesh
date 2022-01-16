@@ -14,9 +14,9 @@ export default () => (
         </p>
       </div>
     </div>
-    <div className="w-[100%] flex flex-wrap m-auto mt-[25px]">
+    <div className="w-[100%] flex flex-wrap justify-center mt-[25px]">
       <div>
-        <img className="w-[310px] h-[310px] mr-[80px]" src={MyListImg} />
+        <img className="w-[310px] h-[310px] " src={MyListImg} />
         <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
           <_3Dots />
         </div>
@@ -58,7 +58,7 @@ export default () => (
         </div>
       </div>
       <div>
-        <img className="w-[310px] h-[310px] mr-[80px]" src={MyListImg} />
+        <img className="w-[310px] h-[310px] " src={MyListImg} />
         <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
           <_3Dots />
         </div>
