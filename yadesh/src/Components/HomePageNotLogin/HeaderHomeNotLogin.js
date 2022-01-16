@@ -6,7 +6,7 @@ import reading from "../../assets/Img/imgHomeNotLogin/reading.jpg";
 import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 const HeaderHomeNotLogin = () => {
   return (
-    <section className="w-[1366px] bg-black h-[700px] flex mt-[-2rem] ">
+    <section className="w-[100%] bg-black h-[700px] flex mt-[-2rem] ">
       <div className=" w-2/5  mt-[160px] mr-[80px]">
         <div>
           <h1 className="text-[#E6FFF3] font-medium text-[32px] w-[414px] h-[50px] leading-[50px] ">

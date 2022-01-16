@@ -21,15 +21,15 @@ export default class CustomerYadesh extends Component {
       cssEase: "linear",
     };
     return (
-      <div className="bg-[#000] width-[100%] h-[40vh] ">
-        <section className=" mr-[11rem] mb-[4rem] ">
-          <div className="text-[#E6FFF3] flex">
-            <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] rounded">
+      <div className="bg-[#000] width-[100%] h-[60vh] ">
+        <section className="  mb-[4rem]  mr-[55px]">
+          <div className="text-[#E6FFF3] flex w-[183px] h-[31px]">
+            <div className="border-[#00FF85] opacity-80  border-r-[7px] h-[20px] mt-[7px] ml-[7px] rounded">
               {" "}
             </div>
-            <h6> مشتریان یادش</h6>
+            <h6 className="text-[22px]"> مشتریان یادش</h6>
           </div>
-          <h6 className="text-[#E6FFF3] mt-[1rem] text-[13px] opacity-80">
+          <h6 className=" font-thin text-[#E6FFF3] mt-[1rem] text-[15px] opacity-80">
             یادش از انتخاب شما تشکر میکند
           </h6>
         </section>
