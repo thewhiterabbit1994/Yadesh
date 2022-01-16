@@ -20,7 +20,7 @@ const MostView = () => {
                     <h6 className="text-[#C4C4C4] mt-[1rem] text-[16px] w-[174px] h-[17px] font-extralight">اپیزودها پربازدید هفته</h6>
                 </div>
             </section>
-            <section className="w-[100%] h-[557px] flex mt-[2rem] justify-center ">
+            <section className="w-[520xp] h-[557px] flex mt-[2rem] justify-center ">
                 <div className="w-[520px] flex flex-col  items-end pl-[2rem] relative  h-[460px] " >
                     <img src={imgPlayVideo} className="rounded w-[459.99px] h-[275px] blur-[2px] bg-current" />
                     <img src={LogoPlay} className="absolute top-[95px] right-[315px] blur-[none] z-10 w-[30px] " />

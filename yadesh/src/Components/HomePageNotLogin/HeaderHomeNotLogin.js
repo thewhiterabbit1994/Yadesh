@@ -7,7 +7,7 @@ import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 const HeaderHomeNotLogin = () => {
   return (
     <section className="w-[100%] bg-black h-[700px] flex mt-[-2rem] ">
-      <div className=" w-2/5  mt-[160px] mr-[80px]">
+      <div className="  w-[414px] h-[405px]  mt-[160px] mr-[80px] ">
         <div>
           <h1 className="text-[#E6FFF3] font-medium text-[32px] w-[414px] h-[50px] leading-[50px] ">
             {" "}
@@ -30,7 +30,7 @@ const HeaderHomeNotLogin = () => {
           </button>
         </div>
 
-        <div className="text-white  font-normal">
+        <div className="text-white  font-normal ">
           <div className="flex mt-[50px]">
             <div className="border-[#00FF85] opacity-80  border-r-[6px] ml-[7px] mr-[7px] rounded ">
               {" "}
@@ -63,7 +63,7 @@ const HeaderHomeNotLogin = () => {
         </div>
       </div>
 
-      <div className="w-[60%] h-[80vh] mt-[100px] relative ">
+      <div className="w-[900px] h-[562px] mt-[100px] relative ">
         <img
           src={classs}
           className="w-[348px] h-[175px] absolute  left-[105px] top-[0] rounded"
