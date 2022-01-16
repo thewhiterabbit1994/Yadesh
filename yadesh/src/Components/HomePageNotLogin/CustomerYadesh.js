@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import HamraheAval from "../assets/svg/CustomerYadesh/hamraheaval.svg";
-import LogoBanafsh from "../assets/svg/CustomerYadesh/logo-banafsh.svg";
-import MelatBank from "../assets/svg/CustomerYadesh/melatBank.svg";
-import Shape from "../assets/svg/CustomerYadesh/shape.svg";
-import Snap from "../assets/svg/CustomerYadesh/snap.svg";
+import HamraheAval from "../../assets/svg/CustomerYadesh/hamraheaval.svg";
+import LogoBanafsh from "../../assets/svg/CustomerYadesh/logo-banafsh.svg";
+import MelatBank from "../../assets/svg/CustomerYadesh/melatBank.svg";
+import Shape from "../../assets/svg/CustomerYadesh/shape.svg";
+import Snap from "../../assets/svg/CustomerYadesh/snap.svg";
 import "slick-carousel/slick/slick.css";
-import "../Css/CustomerYadesh.css"
+import "../../Css/CustomerYadesh.css";
 
 export default class CustomerYadesh extends Component {
   render() {

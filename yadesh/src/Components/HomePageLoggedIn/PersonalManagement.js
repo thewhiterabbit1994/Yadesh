@@ -1,10 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import conlearnImg1 from "../assets/Img/conlearnImg1.png";
-import LogoPlay from "../assets/Img/MostVeiw/logoPlay.svg";
-import bgLogoPlay from "../assets/Img/MostVeiw/bgLogoPlay.png";
-
-const TodayMostViewLessons = () => {
+import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
+const PersonalManagement = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -18,11 +15,11 @@ const TodayMostViewLessons = () => {
       <div className="pt-[50px] mr-[80px]">
         <div className="flex ">
           <div className="w-[5.5px] h-[18px] bg-[#00FF85] rounded-[10px] mt-1.5 ml-2"></div>
-          <p className="text-[19px]  text-[#ffffff]">درس های پربازدید امروز</p>
+          <p className="text-[19px]  text-[#ffffff]">مدیریت شخصی</p>
         </div>
         <div>
           <p className="mt-[15px]  text-[#C4C4C4] text-[14px]">
-            یادشی ها این ویدیو ها را بیشتر دیده اند
+            پربازدیدترین های مدیریت شخصی
           </p>
         </div>
       </div>
@@ -121,4 +118,4 @@ const TodayMostViewLessons = () => {
     </div>
   );
 };
-export default TodayMostViewLessons;
+export default PersonalManagement;
