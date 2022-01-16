@@ -6,7 +6,7 @@ import reading from "../../assets/Img/imgHomeNotLogin/reading.jpg";
 import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 const HeaderHomeNotLogin = () => {
   return (
-    <section className="w-[100%] bg-black h-[700px] flex mt-[-2rem] ">
+    <section className="w-full bg-black h-[700px] flex mt-[-2rem] ">
       <div className="  w-[414px] h-[405px]  mt-[160px] mr-[80px] ">
         <div>
           <h1 className="text-[#E6FFF3] font-medium text-[32px] w-[414px] h-[50px] leading-[50px] ">
@@ -63,26 +63,26 @@ const HeaderHomeNotLogin = () => {
         </div>
       </div>
 
-      <div className="w-[900px] h-[562px] mt-[100px] relative ">
+      <div className="w-[725px] h-[562px] mt-[100px] relative mr-[70px]">
         <img
           src={classs}
-          className="w-[348px] h-[175px] absolute  left-[105px] top-[0] rounded"
+          className="w-[348px] h-[175px] absolute  left-[0px] top-[0] rounded"
         />
         <img
           src={reading}
-          className="w-[357px] h-[348px] absolute left-[470px] top-[0] rounded"
+          className="w-[357px] h-[348px] absolute left-[368px] top-[0] rounded"
         />
         <img
           src={convetion}
-          className="w-[163px] h-[153px] absolute left-[290px] top-[194px] rounded"
+          className="w-[163px] h-[153px] absolute left-[185px] top-[194px] rounded"
         />
         <img
           src={asnad}
-          className="w-[165px] h-[308px] absolute left-[105px] top-[193px] rounded"
+          className="w-[165px] h-[308px] absolute left-[0] top-[193px] rounded"
         />
         <img
           src={work}
-          className="w-[540px] h-[135px] absolute left-[286px] top-[366px] rounded"
+          className="w-[540px] h-[135px] absolute left-[185px] top-[366px] rounded"
         />
       </div>
     </section>
