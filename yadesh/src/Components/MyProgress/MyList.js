@@ -17,10 +17,10 @@ export default () => (
     <div className="w-[100%] flex flex-wrap justify-center mt-[25px]">
       <div>
         <img className="w-[310px] h-[310px] " src={MyListImg} />
-        <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
+        <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
           <_3Dots />
         </div>
-        <div className=" relative right-[80px] -top-[100px]">
+        <div className=" relative right-[10px] -top-[100px]">
           <p className="text-[14px]  text-[#ffffff]">
             برندسازی شخصی - رفتار حرفه ای
           </p>
@@ -59,10 +59,10 @@ export default () => (
       </div>
       <div>
         <img className="w-[310px] h-[310px] " src={MyListImg} />
-        <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
+        <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
           <_3Dots />
         </div>
-        <div className=" relative right-[80px] -top-[100px]">
+        <div className=" relative right-[10px] -top-[100px]">
           <p className="text-[14px]  text-[#ffffff]">
             برندسازی شخصی - رفتار حرفه ای
           </p>
