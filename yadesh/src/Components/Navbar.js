@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import YadeshLogo from "../assets/svg/YadeshLogo";
 import YadeshNameLogo from "../assets/svg/YadeshNameLogo";
 import MenuIcon from "../assets/svg/MenuIcon";
@@ -7,6 +7,7 @@ import MyProgressRocket from "../assets/svg/MyProgressRocket";
 import SearchIcon from "../assets/svg/SearchIcon";
 import Menu from "./Menu";
 const Navbar = () => {
+  let location = useLocation();
   const [menuDisplay, setmenuDisplay] = useState(false);
   return (
     <div className="fixed h-[56px] w-full  top-0 z-20">
@@ -24,12 +25,20 @@ const Navbar = () => {
           <YadeshNameLogo />
         </div>
         <div>
-          <button className="bg-[#001d29] flex mr-[15px] mt-[11px] w-[118px] h-[35px] rounded-[4px] text-[#E6E9EB]">
-            <div className="mr-[10px] mt-[9px]">
+          <button
+            className={`bg-[#001d29] flex mr-[15px] mt-[11px] w-[118px] h-[35px] rounded-[4px] text-[#E6E9EB]${
+              location.pathname === "/home/myprogress"
+                ? " border border-[#80FFC2]"
+                : ""
+            }`}
+          >
+            <div className="mr-[10px] mt-[7.5px]">
               <MyProgressRocket />
             </div>
             <Link to={"/home/myprogress"}>
-              <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
+              <p
+                className={`my-[7.5px] w-[70px] h-[19px] mr-[10px] text-[12.5px]`}
+              >
                 پیشرفت من
               </p>
             </Link>

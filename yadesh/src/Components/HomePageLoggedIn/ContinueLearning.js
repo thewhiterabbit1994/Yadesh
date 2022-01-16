@@ -21,7 +21,7 @@ const ContinueLearning = () => {
           <p className="text-[19px]  text-[#ffffff]">به یادگیری ادامه دهید</p>
         </div>
         <div>
-          <p className="mt-[15px] mr-[13px] text-[#C4C4C4] text-[14px]">
+          <p className="mt-[15px]  text-[#C4C4C4] text-[14px]">
             ویدیو های در حال تماشای شما
           </p>
         </div>
