@@ -6,7 +6,7 @@ import reading from "../../assets/Img/imgHomeNotLogin/reading.jpg";
 import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 const HeaderHomeNotLogin = () => {
   return (
-    <section className="w-full bg-black h-[700px] flex mt-[-2rem] ">
+    <section className="w-full bg-black  h-[700px] flex mt-[-2rem] ">
       <div className="  w-[414px] h-[405px]  mt-[160px] mr-[80px] ">
         <div>
           <h1 className="text-[#E6FFF3] font-medium text-[32px] w-[414px] h-[50px] leading-[50px] ">
@@ -63,7 +63,7 @@ const HeaderHomeNotLogin = () => {
         </div>
       </div>
 
-      <div className="w-[725px] h-[562px] mt-[100px] relative mr-[70px]">
+      <div className="w-[725px] h-[562px] mt-[100px] relative mr-[30px] ">
         <img
           src={classs}
           className="w-[348px] h-[175px] absolute  left-[0px] top-[0] rounded"
