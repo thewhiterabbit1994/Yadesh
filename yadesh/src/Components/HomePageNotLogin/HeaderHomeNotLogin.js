@@ -1,59 +1,61 @@
-import Christin from "../../assets/Img/imgHomeNotLogin/christin-hume-Hcfwew744z4-unsplash 1.jpg";
-import cole from "../../assets/Img/imgHomeNotLogin/cole-keister-SRs7zDrj150-unsplash 1.jpg";
-import ed from "../../assets/Img/imgHomeNotLogin/ed-robertson-eeSdJfLfx1A-unsplash 1.jpg";
-import lucas from "../../assets/Img//imgHomeNotLogin/lucas-george-wendt-B-WavFzUtiA-unsplash 1.jpg";
-import trnava from "../../assets/Img/imgHomeNotLogin/trnava-university-WGG4eD0rQmo-unsplash 1.jpg";
+import classs from "../../assets/Img/imgHomeNotLogin/class.jpg";
+import asnad from "../../assets/Img/imgHomeNotLogin/asnad.jpg";
+import work from "../../assets/Img/imgHomeNotLogin/work.jpg";
+import convetion from "../../assets/Img/imgHomeNotLogin/convertion.jpg";
+import reading from "../../assets/Img/imgHomeNotLogin/reading.jpg";
 import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 const HeaderHomeNotLogin = () => {
   return (
-    <section className="w-[1366px] bg-black h-[100vh] flex mt-[-2rem] ">
-      <div className=" w-2/5  mt-[10%] mr-[5%]">
+    <section className="w-[1366px] bg-black h-[700px] flex mt-[-2rem] ">
+      <div className=" w-2/5  mt-[160px] mr-[80px]">
         <div>
-          <h1 className="text-[#E6FFF3] font-medium text-[27px]  ">
+          <h1 className="text-[#E6FFF3] font-medium text-[32px] w-[414px] h-[50px] leading-[50px] ">
             {" "}
             یادگیری به فاصله چند کلیک
           </h1>
-          <p className=" w-[414px]  twxt-[18px] mt-[1rem] text-[#E6FFF3] text-[13px] ">
+          <p className=" w-[414px] h-[85px] twxt-[18px] mt-[1rem] text-[#C4C4C4] text-[15px] leading-[40px]">
             {" "}
             بیش از هزاران ویدیوی آموزشی برای شما از بروزترین منابع آموزشی دنیا{" "}
           </p>
         </div>
 
-        <div className="flex mb-[1rem] mt-[2rem] ">
-          <button className="text-[12px] text-[#E6FFF3] w-[7rem] h-[3rem] rounded border-solid border-[#00FF85] border-2 ml-[7px] ">
+        <div className="flex mt-[20px]">
+          <button className="text-[12px] text-[#E6FFF3] w-[150px] h-[46px] rounded border-solid border-[#00FF85] border-2 ml-[7px] ">
             {" "}
             بیشتر بدانید
           </button>
-          <button className="text-[12px] text-[#000] bg-[#00FF85] w-[7rem] h-[3rem] rounded">
+          <button className="text-[12px] text-[#000] bg-[#00FF85] w-[150px] h-[46px] rounded">
             {" "}
             ثبت نام کنید
           </button>
         </div>
 
-        <div className="text-white w-[50%] mt-[2rem]  ">
-          <div className="flex">
-            <div className="border-[#00FF85] opacity-80  border-r-[4px] ml-[7px] mr-[7px] rounded">
+        <div className="text-white  font-normal">
+          <div className="flex mt-[50px]">
+            <div className="border-[#00FF85] opacity-80  border-r-[6px] ml-[7px] mr-[7px] rounded ">
               {" "}
             </div>
-            <p className="text-[12px] ">مزایای ثبت نام در یادش</p>
+            <p className=" w-[155px] h-[20px] text-[14px]">
+              مزایای ثبت نام در یادش
+            </p>
           </div>
-          <div className="flex mt-[1rem]  ">
+          <div className="flex  mt-[20px] text-[12px] text-[#C4C4C4]">
             <TicIcon />
-            <p className="text-[12px] opacity-80 mr-[7px] ">
+            <p className=" opacity-80 mr-[7px]  w-[207px] h-[19px]">
               {" "}
               دسترسی به بیش از هزاران ویدیو
             </p>
           </div>
-          <div className="flex mt-[1rem]">
+          <div className="flex  mt-[20px] text-[12px] text-[#C4C4C4]">
             <TicIcon />
-            <p className="text-[12px] opacity-90  mr-[7px]">
+            <p className=" opacity-90  mr-[7px] w-[167px] h-[20px]">
               {" "}
               پنل کاربری مامل و کاربردی{" "}
             </p>
           </div>
-          <div className="flex mt-[1rem]">
+          <div className="flex  mt-[20px] text-[12px] text-[#C4C4C4]">
             <TicIcon />
-            <p className="text-[12px] opacity-80  mr-[7px]">
+            <p className=" opacity-80  mr-[7px] w-[225px] h-[18px]">
               {" "}
               امکان کامل ویدیو بدون محدودیت
             </p>
@@ -61,26 +63,26 @@ const HeaderHomeNotLogin = () => {
         </div>
       </div>
 
-      <div className="w-[60%] h-[80vh] mt-[3rem] relative top-[2rem]">
+      <div className="w-[60%] h-[80vh] mt-[100px] relative ">
         <img
-          src={Christin}
-          className="w-[43%] h-[31%] absolute  left-[13.5%] top-[0] rounded"
+          src={classs}
+          className="w-[348px] h-[175px] absolute  left-[105px] top-[0] rounded"
         />
         <img
-          src={trnava}
-          className="w-[41%] h-[61%] absolute left-[58%] top-[0] rounded"
+          src={reading}
+          className="w-[357px] h-[348px] absolute left-[470px] top-[0] rounded"
         />
         <img
-          src={lucas}
-          className="w-[22.5%] h-[29%] absolute left-[34%] top-[33%] rounded"
+          src={convetion}
+          className="w-[163px] h-[153px] absolute left-[290px] top-[194px] rounded"
         />
         <img
-          src={cole}
-          className="w-[20%] h-[53%] absolute left-[13%] top-[33%] rounded"
+          src={asnad}
+          className="w-[165px] h-[308px] absolute left-[105px] top-[193px] rounded"
         />
         <img
-          src={ed}
-          className="w-[65%] h-[22%] absolute left-[34%] top-[63%] rounded"
+          src={work}
+          className="w-[540px] h-[135px] absolute left-[286px] top-[366px] rounded"
         />
       </div>
     </section>
