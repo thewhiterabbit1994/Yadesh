@@ -7,31 +7,54 @@ import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 const HeaderHomeNotLogin = () => {
   return (
     <section className="w-full bg-black  h-[700px] flex mt-[-2rem] ">
-      <div className="  w-[414px] h-[405px]  mt-[160px] mr-[80px] ">
+      <div className="w-[725px] h-[562px] mt-[100px] relative -mr-[10px] ">
+        <img
+          src={classs}
+          className="w-[300px] h-[150px] absolute  left-[0px] top-[0] rounded-lg"
+        />
+        <img
+          src={reading}
+          className="w-[300px] h-[300px] absolute left-[320px] top-[0] rounded-lg"
+        />
+        <img
+          src={convetion}
+          className="w-[145px] h-[140px] absolute left-[155px] top-[170px] rounded-lg"
+        />
+        <img
+          src={asnad}
+          className="w-[140px] h-[270px] absolute left-[0] top-[170px] rounded-lg"
+        />
+        <img
+          src={work}
+          className="w-[460px] h-[120px] absolute left-[160px] top-[320px] rounded-lg"
+        />
+      </div>
+
+      <div className="   w-[414px] h-[405px]  mt-[140px] mr-[60px] ">
         <div>
-          <h1 className="text-[#E6FFF3] font-medium text-[32px] w-[414px] h-[50px] leading-[50px] ">
+          <h1 className="text-[#E6FFF3] font-medium text-[28px] w-[414px] h-[50px] leading-[50px] ">
             {" "}
             یادگیری به فاصله چند کلیک
           </h1>
-          <p className=" w-[414px] h-[85px] twxt-[18px] mt-[1rem] text-[#C4C4C4] text-[15px] leading-[40px]">
+          <p className=" w-[414px] h-[85px] text-[14px] mt-[1rem] text-[#C4C4C4] leading-[40px]">
             {" "}
             بیش از هزاران ویدیوی آموزشی برای شما از بروزترین منابع آموزشی دنیا{" "}
           </p>
         </div>
 
         <div className="flex mt-[20px]">
-          <button className="text-[12px] text-[#E6FFF3] w-[150px] h-[46px] rounded border-solid border-[#00FF85] border-2 ml-[7px] ">
+          <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
             {" "}
             بیشتر بدانید
           </button>
-          <button className="text-[12px] text-[#000] bg-[#00FF85] w-[150px] h-[46px] rounded">
+          <button className="text-[12px] text-[#000] bg-[#00ff85] w-[140px] h-[43px] rounded-[6px]">
             {" "}
-            ثبت نام کنید
+            ثبت نام
           </button>
         </div>
 
         <div className="text-white  font-normal ">
-          <div className="flex mt-[50px]">
+          <div className="flex mt-[30px]">
             <div className="border-[#00FF85] opacity-80  border-r-[6px] ml-[7px] mr-[7px] rounded ">
               {" "}
             </div>
@@ -61,29 +84,6 @@ const HeaderHomeNotLogin = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="w-[725px] h-[562px] mt-[100px] relative mr-[30px] ">
-        <img
-          src={classs}
-          className="w-[348px] h-[175px] absolute  left-[0px] top-[0] rounded"
-        />
-        <img
-          src={reading}
-          className="w-[357px] h-[348px] absolute left-[368px] top-[0] rounded"
-        />
-        <img
-          src={convetion}
-          className="w-[163px] h-[153px] absolute left-[185px] top-[194px] rounded"
-        />
-        <img
-          src={asnad}
-          className="w-[165px] h-[308px] absolute left-[0] top-[193px] rounded"
-        />
-        <img
-          src={work}
-          className="w-[540px] h-[135px] absolute left-[185px] top-[366px] rounded"
-        />
       </div>
     </section>
   );
