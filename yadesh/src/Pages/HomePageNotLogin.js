@@ -6,6 +6,7 @@ import CustomerYadesh from "../Components/HomePageNotLogin/CustomerYadesh";
 import PelaneSazmani from "../Components/HomePageNotLogin/PelaneSazmani";
 import Footer from "../Components/Footer";
 import HeaderHomePageNotLogin from "../Components/HomePageNotLogin/HeaderHomeNotLogin";
+import YadgiriDarSatheJahani from "../Pages/YadgiriDarSatheJahani";
 
 const HomePageNotLogin = () => {
   return (
@@ -18,6 +19,7 @@ const HomePageNotLogin = () => {
       <CustomerYadesh />
       <PelaneSazmani />
       <Footer />
+      
     </div>
   );
 };

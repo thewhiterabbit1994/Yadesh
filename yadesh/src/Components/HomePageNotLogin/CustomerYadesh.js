@@ -22,9 +22,9 @@ export default class CustomerYadesh extends Component {
     };
     return (
       <div className="bg-[#000] width-[100%] h-[60vh] ">
-        <section className="  mb-[4rem]  mr-[55px]">
-          <div className="text-[#E6FFF3] flex w-[183px] h-[31px]">
-            <div className="border-[#00FF85] opacity-80  border-r-[7px] h-[20px] mt-[7px] ml-[7px] rounded">
+        <section className="  mb-[4rem]  mr-[120px] ">
+          <div className="text-[#E6FFF3] flex w-[183px] h-[31px] ">
+            <div className="border-[#00FF85]   border-r-[7px] h-[20px] mt-[7px] ml-[7px] rounded">
               {" "}
             </div>
             <h6 className="text-[22px]"> مشتریان یادش</h6>
