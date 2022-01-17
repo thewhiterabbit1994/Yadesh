@@ -5,12 +5,14 @@ import HomePageNotLogin from "./Pages/HomePageNotLogin";
 import MyProgress from "./Pages/MyProgress";
 import UserProfile from "./Pages/UserProfile";
 import YadgiriDarSatheJahani from "./Pages/YadgiriDarSatheJahani";
+import Login from "./Pages/Login";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<HomePageNotLogin />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<HomePageLoggedIn />} />
         <Route path="/home/myprogress" element={<MyProgress />} />
         <Route path="/home/userprofile" element={<UserProfile />} />

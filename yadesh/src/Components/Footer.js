@@ -28,9 +28,11 @@ const Footer = () => {
 
         <div className="flex  ml-[80px]">
           <button className="border-[1.5px] border-[#80FFC2] flex mt-[11px] w-[72px] h-[33px] rounded-[6px] text-[#E6E9EB]">
-            <p className="mt-[7px] w-[80px] h-[25px]  text-[11px] ">
-              وارد شوید
-            </p>
+            <Link to={"/login"}>
+              <p className="mt-[7px] w-[80px] h-[25px]  text-[11px] ">
+                وارد شوید
+              </p>
+            </Link>
           </button>
           <select className="bg-[#001d29] w-[40px] h-[32px] rounded-[4px] mt-[11px] mr-[15px] text-[#E6E9EB]">
             <option value="1"></option>
@@ -48,7 +50,9 @@ const Footer = () => {
           <p className="text-[13px] mb-3 text-[#E6FFF3] ">گردش در یادش</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
-              <a className="my-4">صفحه اصلی</a>
+              <a href="/home" className="my-4">
+                صفحه اصلی
+              </a>
               <a className="my-4">پنل کاربری</a>
 
               <a href="/home/userprofile" className="my-4">

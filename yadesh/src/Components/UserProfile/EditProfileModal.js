@@ -64,12 +64,12 @@ const EditProfileModal = ({ editProfileModal, seteditProfileModal }) => {
             />
           </div>
           <div className="mt-3">
-            <label htmlFor="lastname" className=" text-[12px]">
+            <label htmlFor="bio" className=" text-[12px]">
               بیوگرافی شما
             </label>
             <br />
             <input
-              id="name"
+              id="bio"
               className="h-[45px] w-[360px] bg-[#E6E9EB]  rounded-[5px] pr-5 mt-2 text-[12px]"
               type="text"
             />
