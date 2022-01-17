@@ -4,6 +4,7 @@ import HomePageLoggedIn from "./Pages/HomePageLoggedIn";
 import HomePageNotLogin from "./Pages/HomePageNotLogin";
 import MyProgress from "./Pages/MyProgress";
 import UserProfile from "./Pages/UserProfile";
+import YadgiriDarSatheJahani from "./Pages/YadgiriDarSatheJahani";
 import Login from "./Pages/Login";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<HomePageLoggedIn />} />
         <Route path="/home/myprogress" element={<MyProgress />} />
         <Route path="/home/userprofile" element={<UserProfile />} />
+        <Route path="yadgiridarsathejahani" element={<YadgiriDarSatheJahani/>}/>
       </Routes>
     </div>
   );

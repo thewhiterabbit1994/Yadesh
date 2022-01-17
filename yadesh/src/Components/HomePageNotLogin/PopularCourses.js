@@ -2,6 +2,7 @@ import ModiriyateMali from "../../assets/Img/papoularCourses/modiriyateMali.png"
 import RavanshenasiRangha from "../../assets/Img/papoularCourses/ravanshenasirangha.png";
 import Hesabdari from "../../assets/Img/papoularCourses/hesabdari.png";
 import SarmayeGozari from "../../assets/Img/papoularCourses/sarmayegozari.png";
+import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse"
 
 const PopularCourses = () => {
   return (
@@ -50,12 +51,16 @@ const PopularCourses = () => {
           </div>
         </div>
 
-        <div className="relative  mr-[15px]">
+        <div className="relative mr-[15px] z-20">
+          <div className="absolute top-[-100px] left-[-170px] -z-10 ">
+            <Ellipse />
+          </div>
           <img
-            className=" rounded w-[550px] h-[350px] "
+            className=" rounded w-[550px] h-[350px]  "
             src={Hesabdari}
           />
-          <div className="absolute top-[0] left[0] flex w-[100%] h-[35px] text-[#E6FFF3] justify-between mt-[.6rem] ">
+          <div className=" absolute top-[0] left[0] flex w-[100%] h-[35px] text-[#E6FFF3] justify-between mt-[.6rem] ">
+            <div className="bg-gradient-to-t from-[#000000] to-[#00040511] h-[340px] w-full absolute"></div>
             <div>
               <h6 className=" text-[12px] w-[160px] h-[35px] mr-[1rem] mt-[.5rem] bg-[#394a4f] rounded text-center leading-[35px]">
                 3 ساعت و 46 دقیقه
@@ -69,7 +74,7 @@ const PopularCourses = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-[95px] right-[30px] text-[#06160e] flex font-extrabold">
+          <div className="absolute bottom-[95px] right-[30px] text-[#E6FFF3] flex font-medium">
             <div className="border-[#00FF85]  border-r-[7px] ml-[10px] mr-[7px] rounded h-[18px] mt-[5px]">
               {" "}
             </div>

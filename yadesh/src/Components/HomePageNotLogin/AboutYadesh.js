@@ -1,7 +1,11 @@
 import AboutYadesh from "../../assets/Img/AboutYadesh/Rectangle 857.jpg";
+import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse"
 const Aboutyadesh = () => {
   return (
-    <div className="w-full  bg-[#000] flex pb-[7rem]">
+    <div className="w-full  bg-[#000] flex pb-[7rem] relative z-10">
+      <div className="absolute top-[-100px] -z-10">
+      <Ellipse/>
+      </div>
       <section className=" flex justify-center mr-[10px] ">
         <img
           src={AboutYadesh}
