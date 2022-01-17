@@ -17,7 +17,7 @@ const Login = () => {
   };
   return (
     <div className="w-full h-full bg-[#000405]">
-      <img className="h-[569px] w-[569px]" src={LoginBackground} />
+      <img className="h-[100vh] w-[44.453125vw]" src={LoginBackground} />
       <div className="top-0 bg-gradient-to-r z-10 from-[#000000] to-[#00040511] h-full w-1/2 left-[55%] absolute"></div>
       <div className="absolute z-20 top-5 mr-6 flex flex-row w-[95%] justify-between">
         <div className="flex ">
