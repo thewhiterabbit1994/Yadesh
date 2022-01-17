@@ -15,9 +15,9 @@ const TodaySpecialCourses = () => {
     dots: true,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: -1,
+    slidesToScroll: 1,
     autoplay: false,
-    speed: 1000,
+    speed: 500,
     autoplaySpeed: 2000,
     cssEase: "linear",
   };

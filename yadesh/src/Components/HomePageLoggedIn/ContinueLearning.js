@@ -11,7 +11,7 @@ const ContinueLearning = () => {
     speed: 500,
     rtl: false,
     slidesToShow: 4,
-    slidesToScroll: -1,
+    slidesToScroll: 1,
   };
   return (
     <div className="flex h-[340px] bg-[#000E14] ">

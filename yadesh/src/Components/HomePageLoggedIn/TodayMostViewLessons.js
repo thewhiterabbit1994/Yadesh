@@ -11,7 +11,7 @@ const TodayMostViewLessons = () => {
     speed: 500,
     rtl: false,
     slidesToShow: 5,
-    slidesToScroll: -1,
+    slidesToScroll: 1,
   };
   return (
     <div className=" h-[400px] bg-[#000405] ">
