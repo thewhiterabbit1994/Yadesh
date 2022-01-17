@@ -14,7 +14,7 @@ export default () => (
         </p>
       </div>
     </div>
-    <div className="w-[100%] flex flex-wrap justify-center px-[6%] mt-[25px]">
+    <div className="w-[100%] flex flex-wrap pr-[6%]  mt-[25px]">
       <div className="ml-[20px] mb-[20px]">
         <img
           className="w-[200px] hover:blur-[2px] rounded"
