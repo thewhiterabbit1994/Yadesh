@@ -9,7 +9,7 @@ const EditProfileModal = ({ editProfileModal, seteditProfileModal }) => {
         editProfileModal ? null : "hidden"
       }`}
     >
-      <div className="w-[450px] h-[530px] fixed right-[30%] mt-[20px] rounded-[10px] bg-[#fff]">
+      <div className="w-[450px] h-[93vh] fixed right-[30%] mt-[20px] rounded-[10px] bg-[#fff]">
         <div
           onClick={() => seteditProfileModal(false)}
           className="cursor-pointer absolute left-6 top-6"
