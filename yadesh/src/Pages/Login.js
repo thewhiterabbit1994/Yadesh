@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <div className="w-full h-full bg-[#000405]">
       <img className="h-[100vh] w-[44.453125vw]" src={LoginBackground} />
-      <div className="top-0 bg-gradient-to-r z-10 from-[#000000] to-[#00040511] h-full w-1/2 left-[55%] absolute"></div>
+      <div className="top-0 bg-gradient-to-r z-10 from-[#000000] to-[#00040511] h-full w-1/2 left-[55.46875vw] absolute"></div>
       <div className="absolute z-20 top-5 mr-6 flex flex-row w-[95%] justify-between">
         <div className="flex ">
           <div className="">
@@ -45,7 +45,7 @@ const Login = () => {
           </select>
         </div>
       </div>
-      <div className="absolute z-20 bg-[#15262c7a] backdrop-blur-lg	border rounded-[10px] border-[#192225] right-20 top-16 w-[500px] h-[450px]  ">
+      <div className="absolute z-20 bg-[#15262c7a] backdrop-blur-lg	border rounded-[10px] border-[#192225] right-20 top-16 w-[39.0625vw] h-[79.08611599297012vh]  ">
         <div className="flex flex-col items-center m-auto text-center">
           <div className="mt-24">
             <Cup />
@@ -63,7 +63,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <div className="absolute z-20 w-[267px] left-52 top-16 flex flex-col m-auto">
+      <div className="absolute z-20 w-[20.859375vw] left-52 top-16 flex flex-col m-auto">
         <p className="text-[18px]  mb-3 text-[#E6FFF3]">
           وارد حساب کاربری خود شوید
         </p>
