@@ -11,7 +11,7 @@ const HeaderHomeNotLogin = () => {
       <div className="absolute">
         <Ellipse />
       </div>
-      <div className="w-[725px] h-[562px] mt-[100px] relative -mr-[80px] ">
+      <div className=" w-[725px] h-[562px] mt-[100px] relative -mr-[80px] ">
         <img
           src={classs}
           className="w-[300px] h-[150px] absolute  left-[0px] top-[0] rounded-lg"

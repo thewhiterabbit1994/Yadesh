@@ -1,10 +1,10 @@
 import AboutYadesh from "../../assets/Img/AboutYadesh/Rectangle 857.jpg";
-import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse"
+import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
 const Aboutyadesh = () => {
   return (
     <div className="w-full  bg-[#000] flex pb-[7rem] relative z-10">
       <div className="absolute top-[-100px] -z-10">
-      <Ellipse/>
+        <Ellipse />
       </div>
       <section className=" flex justify-center mr-[10px] ">
         <img
@@ -34,7 +34,7 @@ const Aboutyadesh = () => {
           </p>
         </div>
         <div className="mt-[30px] mr-[50px]">
-        <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
+          <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
             {" "}
             بیشتر بدانید
           </button>
