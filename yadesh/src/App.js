@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import HomePageLoggedIn from "./Pages/HomePageLoggedIn";
 import HomePageNotLogin from "./Pages/HomePageNotLogin";
 import MyProgress from "./Pages/MyProgress";
+import UserProfile from "./Pages/UserProfile";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<HomePageNotLogin />} />
         <Route path="/home" element={<HomePageLoggedIn />} />
         <Route path="/home/myprogress" element={<MyProgress />} />
+        <Route path="/home/userprofile" element={<UserProfile />} />
       </Routes>
     </div>
   );
