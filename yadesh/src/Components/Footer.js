@@ -11,6 +11,7 @@ import InstaLogo from "../assets/svg/InstaLogo";
 import WhatsAppLogo from "../assets/svg/WhatsAppLogo";
 import TwiterLogo from "../assets/svg/TwiterLogo";
 import LinkedinLogo from "../assets/svg/LinkedinLogo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -49,7 +50,11 @@ const Footer = () => {
             <div className="flex flex-col">
               <a className="my-4">صفحه اصلی</a>
               <a className="my-4">پنل کاربری</a>
-              <a className="my-4">پروفایل کاربری</a>
+
+              <a href="/home/userprofile" className="my-4">
+                پروفایل کاربری
+              </a>
+
               <a className="my-4">کلاس ها</a>
               <a className="my-4">پلی لیست های من</a>
             </div>

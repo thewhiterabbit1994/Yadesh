@@ -46,6 +46,7 @@ export default ({ menuDisplay }) => {
               <div className=" text-[#7e8d93] mt-[9px] opacity-80">
                 <UserPannel />
               </div>
+
               <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
                 پنل کاربری
               </p>
@@ -56,9 +57,11 @@ export default ({ menuDisplay }) => {
               <div className="mr-[10px] text-[#939fa5] mt-[9px] opacity-80">
                 <Profile />
               </div>
-              <p className="my-[9px] w-[92px] h-[19px] mr-[10px] text-[12.5px] ">
-                پروفایل کاربری
-              </p>
+              <Link to={"/home/userprofile"}>
+                <p className="my-[9px] w-[92px] h-[19px] mr-[10px] text-[12.5px] ">
+                  پروفایل کاربری
+                </p>
+              </Link>
             </button>
           </div>
           <div className="bg-[#0c2028] flex mr-[40px] mt-[7px] w-[124px] h-[46px] rounded-[4px] text-[#B3BDC2]">
