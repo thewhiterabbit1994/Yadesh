@@ -1,11 +1,13 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import Header from "../Components/PlayerEpisode/Header";
+import HeaderPlayerCourse from "../Components/PlayerCourse/HeaderPlayerCourse"
+import SliderPlayerEpisode from "../Components/PlayerEpisode/SliderPlayerEpisode"
 const PlayerEpisode = () => {
     return (
         <>
             <Navbar />
-            <Header />
+            <HeaderPlayerCourse />
+            <SliderPlayerEpisode />
             <Footer />
         </>
     )

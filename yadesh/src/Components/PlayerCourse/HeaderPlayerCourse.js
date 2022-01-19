@@ -16,10 +16,10 @@ import Tag from "../../assets/svg/PlayerEpisode/Tag"
 import Border from "../../assets/svg/PlayerEpisode/Border"
 import Book from "../../assets/svg/PlayerEpisode/Book"
 import Imgmap from "../../assets/Img/PlayerEpisode/imgMap.png"
+import ArrowUp from "../../assets/svg/PlayerEpisode/ArrowUp"
 import ArrowDown from "../../assets/svg/PlayerEpisode/ArrowDown"
 
-
-const Header = () => {
+const HeaderPlayerCourse = () => {
     const [lesson, setLesson] = useState([
         {
             img: Imgmap,
@@ -146,7 +146,7 @@ const Header = () => {
                     </section>
                 </div>
             </div>
-            <div className="w-[50%] bg-[#00141C] h-[480px] mx-[2rem] mt-[6rem] rounded-xl">
+            <div className="w-[50%] bg-[#00141C] h-fit mx-[2rem] mt-[6rem] rounded-xl">
                 <section className="flex  h-[100px] items-center w-[300px] justify-around">
                     <div>
                         <img src={Imgman} className="rounded-[50%]" />
@@ -184,12 +184,18 @@ const Header = () => {
                     </section>
                 </section>
                 <section>
-                    <section className="mt-[40px] w-[70%]  m-auto">
-                        <div className="flex  text-[16px]  ">
-                        <div className="border-[#00FF85] border-r-[6px]  rounded "></div>
-                            <h6 className="mr-[10px] text-[#E6FFF3]"> اپیزودهای مشابه</h6>
+                    <section className="mt-[20px] w-[75%] flex m-auto">
+                        <div className="flex text-[#C4C4C4] text-[14px] w-[87%] m-auto mr-[-10px] ">
+                            <div className="bg-[#030d11] w-[40px] h-[40px] rounded-lg relative">
+                                <div className="absolute top-[10px] right-[10px]">
+                                    <Book />
+                                </div>
+                            </div>
+                            <h6 className="mr-[10px]"> همه ی در س ها</h6>
                         </div>
-                        <h6 className="text-[#C4C4C4] text-[12px] mt-[15px]"> شاید این اپیزود ها را نیز دوست داشتع باشید</h6>
+                        <div>
+                            <ArrowUp />
+                        </div>
                     </section>
                     <section>
                         {
@@ -207,17 +213,17 @@ const Header = () => {
                                 )
                             })
                         }
-                        <div className="text-[12px] text-[#fff] rounded-lg w-[130px] h-[35px] m-auto mt-[20px] border-[#00FF85] border flex justify-center items-center">
-                            <h6 className="ml-[10px]"> موارد بیشتر</h6>
-                            <div>
-                                <ArrowDown />
-                            </div>
+                    <div className="bg-[#030d11] w-[40px] h-[40px] rounded-lg relative m-auto mb-[20px]">
+                        <div className="absolute top-[10px] right-[10px]">
+                            <ArrowDown />
                         </div>
+                    </div>
                     </section>
+
                 </section>
             </div>
 
         </section>
     )
 }
-export default Header
+export default HeaderPlayerCourse
