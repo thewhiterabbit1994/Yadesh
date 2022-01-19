@@ -7,16 +7,19 @@ import UserProfile from "./Pages/UserProfile";
 import ForBusiness from "./Pages/YadgiriDarSatheJahani";
 import Login from "./Pages/Login";
 import Course from "./Pages/Course";
-import SignUpForBusiness from "./Pages/SignUpForBusiness"
+import SignUpForBusiness from "./Pages/SignUpForBusiness";
 import PlayerEpisode from "./Pages/PlayerEpisode";
 import PlayerCourse from "./Pages/PlayerCourse";
 import AboutUs from "./Pages/AboutUs";
 
+import ContactSupport from "./Pages/ContactSupport";
+import Page404 from "./Pages/Page404";
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="*" element={<Page404 />} />
         <Route path="/" element={<HomePageNotLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<HomePageLoggedIn />} />
@@ -29,6 +32,8 @@ function App() {
         <Route path="/home/playercourse" element={<PlayerCourse />} />
         <Route path="aboutus" element={<AboutUs/>}/>
 
+        <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
+        <Route path="/home/contactsupport" element={<ContactSupport />} />
       </Routes>
     </div>
   );

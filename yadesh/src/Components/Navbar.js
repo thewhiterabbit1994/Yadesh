@@ -14,10 +14,13 @@ const Navbar = () => {
       <div className="backdrop-blur-xl bg-[#0105062d] flex  ">
         <div
           onClick={() => setmenuDisplay(!menuDisplay)}
-          className="cursor-pointer my-[22px] mr-[30px]"
+          className="menu flex flex-col relative cursor-pointer my-[22px] mr-[30px]"
         >
           <MenuIcon />
         </div>
+
+        <Menu menuDisplay={menuDisplay} />
+
         <div className="my-[16px] mr-[15px]">
           <YadeshLogo />
         </div>
@@ -59,7 +62,6 @@ const Navbar = () => {
           </select>
         </div>
       </div>
-      <Menu menuDisplay={menuDisplay} />
     </div>
   );
 };

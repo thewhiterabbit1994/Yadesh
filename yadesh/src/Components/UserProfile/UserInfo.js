@@ -27,7 +27,7 @@ export default () => {
           </div>
         </button>
       </div>
-      <div className="bg-gradient-to-t from-[#000000] to-[#00040511] h-[450px] w-full absolute"></div>
+      <div className="bg-gradient-to-t from-[#000000] to-[#00040511] h-[71.1775043936731vh] w-full absolute"></div>
       <div className="">
         <img className="" src={UserProfileBackground} />
         <div className="flex flex-col items-center m-auto w-full absolute top-[100px]">

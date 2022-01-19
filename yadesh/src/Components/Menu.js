@@ -17,9 +17,12 @@ import LinkedinLogo from "../assets/svg/LinkedinLogo";
 export default ({ menuDisplay }) => {
   return (
     <div
-      className={` w-full h-[460px] rounded-b-[10px] bg-[#17313c] ${
-        menuDisplay ? null : "hidden"
-      }`}
+      className={`menu absolute mt-[10vh] h-[460px] w-screen z-10 rounded-b-[10px] bg-[#17313c] 
+      `}
+      style={{
+        top: menuDisplay ? "0" : "-100vh",
+        transition: "0.5s",
+      }}
     >
       <div className="absolute left-[70px] mt-[20px]">
         <img className="h-[420px] rounded-[10px]  " src={MenuImg} />
@@ -93,9 +96,11 @@ export default ({ menuDisplay }) => {
               <div className="mr-[10px] text-[#939fa5] mt-[9px] opacity-80">
                 <Support />
               </div>
-              <p className="my-[9px] w-[74px] h-[19px] text-[12.5px] ">
-                پشتیبانی
-              </p>
+              <Link to={"/home/contactsupport"}>
+                <p className="my-[9px] w-[74px] h-[19px] text-[12.5px] ">
+                  پشتیبانی
+                </p>
+              </Link>
             </button>
           </div>
         </div>
