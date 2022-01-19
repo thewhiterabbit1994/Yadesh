@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="flex  ml-[80px]">
           <button className="border-[1.5px] border-[#80FFC2] flex mt-[11px] w-[72px] h-[33px] rounded-[6px] text-[#E6E9EB]">
             <Link to={"/login"}>
-              <p className="mt-[7px] w-[80px] h-[25px]  text-[11px] ">
+              <p className="mt-[7px] w-[80px] h-[25px] -mr-1.5 text-[11px] ">
                 وارد شوید
               </p>
             </Link>
@@ -50,21 +50,21 @@ const Footer = () => {
           <p className="text-[13px] mb-3 text-[#E6FFF3] ">گردش در یادش</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
-              <a href="/home" className="my-4">
-                صفحه اصلی
-              </a>
+              <Link to={"/home"}>
+                <p className="my-4">صفحه اصلی</p>
+              </Link>
               <a className="my-4">پنل کاربری</a>
-
-              <a href="/home/userprofile" className="my-4">
-                پروفایل کاربری
-              </a>
-
+              <Link to={"/home/userprofile"}>
+                <p className="my-4">پروفایل کاربری</p>
+              </Link>
               <a className="my-4">کلاس ها</a>
               <a className="my-4">پلی لیست های من</a>
             </div>
             <div className="flex flex-col">
               <a className="my-4">درباره ما</a>
-              <a className="my-4">پشتیبانی</a>
+              <Link to={"/home/contactsupport"}>
+                <p className="my-4">پشتیبانی</p>
+              </Link>
             </div>
           </div>
         </div>

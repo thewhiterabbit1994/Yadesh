@@ -5,13 +5,15 @@ import UpArrow from "../../assets/svg/UpArrow";
 const EditProfileModal = ({ editProfileModal, seteditProfileModal }) => {
   return (
     <div
-      className={`absolute z-30 w-full h-[2830px] bg-[#00000071]  ${
-        editProfileModal ? null : "hidden"
+      className={`absolute transform transition-opacity duration-500 scale-0 z-30 w-full h-[2830px] bg-[#00000071]  ${
+        editProfileModal ? "scale-100 opacity-100" : "opacity-0 "
       }`}
     >
-      <div className="w-[450px] h-[93vh] fixed right-[30%] mt-[20px] rounded-[10px] bg-[#fff]">
+      <div
+        className={` w-[450px] h-[93vh] fixed right-[30%] mt-[20px] rounded-[10px] bg-[#fff]`}
+      >
         <div
-          onClick={() => seteditProfileModal(false)}
+          onClick={() => seteditProfileModal(!editProfileModal)}
           className="cursor-pointer absolute left-6 top-6"
         >
           <CloseButtonEditProfileModal />
