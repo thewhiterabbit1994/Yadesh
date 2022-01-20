@@ -17,6 +17,8 @@ import Page404 from "./Pages/Page404";
 import AdminLogin from "./Pages/AdminDashboard/AdminLogin";
 import RequireAuth from "./Components/RequireAuth/index";
 import ForgotPassword from "./Pages/ForgotPassword";
+import EnterCode from "./Pages/AdminDashboard/EnterCode";
+
 
 function App() {
   return (
@@ -38,7 +40,9 @@ function App() {
         <Route path="/home/contactsupport" element={<ContactSupport />} />
         <Route path="adminlogin" element={<AdminLogin />} />
         <Route path="admindashboard" element={<AdminDashboardLayout />}></Route>
-        <Route path="forgotpassword" element={<ForgotPassword />} />
+        <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/adminlogin/entercode" element={<EnterCode />} />
+
 
         {/* <RequireAuth>
           <Route

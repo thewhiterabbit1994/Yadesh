@@ -58,7 +58,7 @@ const AdminLogin = () => {
           <input className="accent-[#008043] ml-2" type="checkbox" />
           <p className="text-[10px] text-[#7e8588]">مرا به خاطر بسپار</p>
           <div className="w-[1px] mx-[12px] h-[15px] bg-[#7e8588] "></div>
-          <Link to="/forgotpassword">
+          <Link to="/adminlogin/forgotpassword">
             <p className="text-[10px] text-[#7e8588]">
               رمز عبور خود را فراموش کردید؟
             </p>
