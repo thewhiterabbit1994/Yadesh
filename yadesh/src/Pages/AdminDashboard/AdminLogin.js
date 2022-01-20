@@ -1,7 +1,7 @@
-import UserIcon from "../assets/svg/Login/UserIcon";
-import Lock from "../assets/svg/Login/Lock";
-import ShowPass from "../assets/svg/Login/ShowPass";
-import YadeshLightLogo from "../assets/svg/AdminLogin/YadeshLightLogo";
+import UserIcon from "../../assets/svg/Login/UserIcon";
+import Lock from "../../assets/svg/Login/Lock";
+import ShowPass from "../../assets/svg/Login/ShowPass";
+import YadeshLightLogo from "../../assets/svg/AdminLogin/YadeshLightLogo";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
