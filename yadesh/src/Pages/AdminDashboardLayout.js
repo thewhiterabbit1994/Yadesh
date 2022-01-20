@@ -1,13 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import Sidebar from "../Components/AdminDashboardLayout/Sidebar";
 
-const AdminDashboard = () => {
+const AdminDashboardLayout = () => {
   return (
     <div>
-      <div>
-        <p>Hi im admin dashboard</p>
-      </div>
-      <Outlet />
+      <Sidebar />
     </div>
   );
 };
-export default AdminDashboard;
+export default AdminDashboardLayout;

@@ -11,8 +11,8 @@ const AdminLogin = () => {
     setPasswordShown(!passwordShown);
   };
   return (
-    <div className="h-[100vh] w-full bg-gradient-to-br from-[#5eca9f] via-[#60aef3] to-[#f3dd86] ">
-      <div className="absolute bg-white h-[85vh] w-[25vw] rounded-[10px] left-[40%] top-[8%] flex flex-col items-center m-auto">
+    <div className="h-[100vh] w-full flex justify-center items-center bg-gradient-to-br from-[#5eca9f] via-[#60aef3] to-[#f3dd86] ">
+      <div className=" bg-white h-[85vh] w-[25vw] rounded-[10px] flex flex-col items-center m-auto">
         <div className="my-7">
           <YadeshLightLogo />
         </div>
@@ -64,7 +64,7 @@ const AdminLogin = () => {
             </p>
           </Link>
         </div>
-        <Link to="/home">
+        <Link to="/admindashboard">
           <button className="h-[45px] w-[267px] mt-5 bg-[#008043] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
             ورود به پنل
           </button>
