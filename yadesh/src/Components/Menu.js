@@ -49,10 +49,11 @@ export default ({ menuDisplay }) => {
               <div className=" text-[#7e8d93] mt-[9px] opacity-80">
                 <UserPannel />
               </div>
-
-              <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
-                پنل کاربری
-              </p>
+              <Link to={"/adminlogin"}>
+                <p className="my-[9px] w-[70px] h-[19px] mr-[10px] text-[12.5px] ">
+                  پنل کاربری
+                </p>
+              </Link>
             </button>
           </div>
           <div>

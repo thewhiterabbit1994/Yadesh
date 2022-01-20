@@ -19,13 +19,12 @@ const PelaneSazmani = () => {
             </h6>
           </div>
           <div className="mt-[2rem]  w-[75%]">
-            <Link to="/home/ForBusiness">
+            <Link to="/home/forbusiness">
               <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded border-solid border-[#00FF85] border-2 ml-[7px] ">
                 {" "}
                 بیشتر بدانید
               </button>
             </Link>
-
           </div>
         </section>
         <section className="w-[350px]  h-[280px] relative flex  ">

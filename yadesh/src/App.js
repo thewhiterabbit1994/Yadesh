@@ -11,9 +11,11 @@ import SignUpForBusiness from "./Pages/SignUpForBusiness";
 import PlayerEpisode from "./Pages/PlayerEpisode";
 import PlayerCourse from "./Pages/PlayerCourse";
 import AboutUs from "./Pages/AboutUs";
-
+import AdminDashboardLayout from "./Pages/AdminDashboardLayout";
 import ContactSupport from "./Pages/ContactSupport";
 import Page404 from "./Pages/Page404";
+import AdminLogin from "./Pages/AdminLogin";
+import RequireAuth from "./Components/RequireAuth/index";
 
 function App() {
   return (
@@ -33,6 +35,14 @@ function App() {
         <Route path="aboutus" element={<AboutUs />} />
         <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
         <Route path="/home/contactsupport" element={<ContactSupport />} />
+        <Route path="adminlogin" element={<AdminLogin />} />
+        <Route path="admindashboard" element={<AdminDashboardLayout />}></Route>
+        {/* <RequireAuth>
+          <Route
+            path="admindashboard"
+            element={<AdminDashboardLayout />}
+          ></Route>
+        </RequireAuth> */}
       </Routes>
     </div>
   );
