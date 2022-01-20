@@ -5,7 +5,7 @@ import ForgotPasswords from "../assets/svg/ForgotPassword/ForgotPassword"
 const ForgotPassword = () => {
     return (
         <div className="h-[100vh] w-full bg-gradient-to-br from-[#5eca9f] via-[#60aef3] to-[#f3dd86] flex items-center  ">
-            <div className=" bg-white h-[50vh] w-[25vw] rounded-[10px]  flex flex-col items-center  m-auto">
+            <div className=" bg-white h-[300px] w-[25vw] rounded-[10px] flex flex-col items-center  m-auto">
                 <div className="my-7">
                     <YadeshLightLogo />
                 </div>
