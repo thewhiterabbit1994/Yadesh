@@ -16,6 +16,7 @@ import ContactSupport from "./Pages/ContactSupport";
 import Page404 from "./Pages/Page404";
 import AdminLogin from "./Pages/AdminLogin";
 import RequireAuth from "./Components/RequireAuth/index";
+import ForgotPassword from "./Pages/ForgotPassword";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
         <Route path="/home/contactsupport" element={<ContactSupport />} />
         <Route path="adminlogin" element={<AdminLogin />} />
         <Route path="admindashboard" element={<AdminDashboardLayout />}></Route>
+        <Route path="forgotpassword" element={<ForgotPassword />} />
+
         {/* <RequireAuth>
           <Route
             path="admindashboard"
