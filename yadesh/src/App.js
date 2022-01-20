@@ -11,10 +11,10 @@ import SignUpForBusiness from "./Pages/SignUpForBusiness";
 import PlayerEpisode from "./Pages/PlayerEpisode";
 import PlayerCourse from "./Pages/PlayerCourse";
 import AboutUs from "./Pages/AboutUs";
-import AdminDashboardLayout from "./Pages/AdminDashboardLayout";
+import AdminDashboardLayout from "./Pages/AdminDashboard/AdminDashboardLayout";
 import ContactSupport from "./Pages/ContactSupport";
 import Page404 from "./Pages/Page404";
-import AdminLogin from "./Pages/AdminLogin";
+import AdminLogin from "./Pages/AdminDashboard/AdminLogin";
 import RequireAuth from "./Components/RequireAuth/index";
 
 function App() {
