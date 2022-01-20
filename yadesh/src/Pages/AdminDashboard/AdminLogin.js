@@ -31,7 +31,7 @@ const AdminLogin = () => {
         </label>
         <input
           id="username"
-          className="h-[45px] w-[267px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+          className="h-[45px] w-[267px] bg-[#f0f2f3] outline-[#000] text-[#000000]   rounded-[5px] pr-5 text-[13px]"
           type="text"
         />
         <label
@@ -51,14 +51,14 @@ const AdminLogin = () => {
         </div>
         <input
           id="password"
-          className="h-[45px] w-[267px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]  rounded-[5px] pr-5 text-[13px]"
+          className="h-[45px] w-[267px] bg-[#f0f2f3] outline-[#000] text-[#000000]  rounded-[5px] pr-5 text-[13px]"
           type={passwordShown ? "text" : "password"}
         />
         <div className="flex mt-12">
           <input className="accent-[#008043] ml-2" type="checkbox" />
           <p className="text-[10px] text-[#7e8588]">مرا به خاطر بسپار</p>
           <div className="w-[1px] mx-[12px] h-[15px] bg-[#7e8588] "></div>
-          <Link to="/adminlogin/forgotpassword">
+          <Link to="forgotpassword">
             <p className="text-[10px] text-[#7e8588]">
               رمز عبور خود را فراموش کردید؟
             </p>

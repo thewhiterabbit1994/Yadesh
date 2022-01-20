@@ -16,9 +16,8 @@ import ContactSupport from "./Pages/ContactSupport";
 import Page404 from "./Pages/Page404";
 import AdminLogin from "./Pages/AdminDashboard/AdminLogin";
 import RequireAuth from "./Components/RequireAuth/index";
-import ForgotPassword from "./Pages/ForgotPassword";
 import EnterCode from "./Pages/AdminDashboard/EnterCode";
-
+import ForgotPassword from "./Pages/AdminDashboard/ForgotPassword";
 
 function App() {
   return (
@@ -38,7 +37,7 @@ function App() {
         <Route path="aboutus" element={<AboutUs />} />
         <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
         <Route path="/home/contactsupport" element={<ContactSupport />} />
-        <Route path="adminlogin" element={<AdminLogin />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="admindashboard" element={<AdminDashboardLayout />}></Route>
         <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
         <Route path="/adminlogin/entercode" element={<EnterCode />} />
