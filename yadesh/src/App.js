@@ -31,7 +31,6 @@ function App() {
         <Route path="/home/playerepisode" element={<PlayerEpisode />} />
         <Route path="/home/playercourse" element={<PlayerCourse />} />
         <Route path="aboutus" element={<AboutUs/>}/>
-
         <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
         <Route path="/home/contactsupport" element={<ContactSupport />} />
       </Routes>
