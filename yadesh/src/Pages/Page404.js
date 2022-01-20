@@ -9,10 +9,10 @@ export default () => (
     <Navbar />
     <div className="w-full flex flex-col relative z-10 items-center ">
       <_404 />
-      <div className="relative flex flex-col items-center z-10 mt-[-130px]">
-        <p className="text-[30px] mb-8 text-[#ffffff]">ریدی داداش!</p>
-        <p className="text-[14px] mb-8 text-[#646464]">
-          صفحه رو درست انتخاب کن بی نامووووس!!!
+      <div className="relative flex flex-col items-center z-10 mt-[-170px]">
+        <p className="text-[30px] mb-8 text-[#ffffff]">متاسفیم!</p>
+        <p className="text-[14px] mb-8 text-[#929292]">
+          صفحه مورد نظر شما یافت نشد لطفا از طریق منو به صفحات دیگر بروید
         </p>
         <button className="bg-[#00ff85] mt-[px] relative z-10 flex w-[150px] h-[33px] rounded-[6px] text-[#000000]">
           <Link to={"/"}>

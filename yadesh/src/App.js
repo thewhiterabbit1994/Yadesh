@@ -25,12 +25,12 @@ function App() {
         <Route path="/home" element={<HomePageLoggedIn />} />
         <Route path="/home/myprogress" element={<MyProgress />} />
         <Route path="/home/userprofile" element={<UserProfile />} />
-        <Route path="home/ForBusiness" element={<ForBusiness />} />
+        <Route path="home/forbusiness" element={<ForBusiness />} />
         <Route path="/home/course" element={<Course />} />
-        <Route path="/home/signUpForBusiness" element={<SignUpForBusiness />} />
+        <Route path="/home/signupforbusiness" element={<SignUpForBusiness />} />
         <Route path="/home/playerepisode" element={<PlayerEpisode />} />
         <Route path="/home/playercourse" element={<PlayerCourse />} />
-        <Route path="aboutus" element={<AboutUs/>}/>
+        <Route path="aboutus" element={<AboutUs />} />
         <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
         <Route path="/home/contactsupport" element={<ContactSupport />} />
       </Routes>
