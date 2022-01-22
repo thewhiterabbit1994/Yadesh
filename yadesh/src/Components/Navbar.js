@@ -10,7 +10,7 @@ const Navbar = () => {
   let location = useLocation();
   const [menuDisplay, setmenuDisplay] = useState(false);
   return (
-    <div className="fixed h-[56px] w-full  top-0 z-20">
+    <div className="fixed h-[56px] w-full  top-0 z-50">
       <div className="backdrop-blur-xl bg-[#0105062d] flex  ">
         <div
           onClick={() => setmenuDisplay(!menuDisplay)}
