@@ -1,6 +1,6 @@
 export default () => (
   <svg
-    width="18"
+    width="16"
     height="24"
     viewBox="0 0 18 24"
     fill="none"
