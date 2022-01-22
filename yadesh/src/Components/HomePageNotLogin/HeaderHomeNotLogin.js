@@ -5,13 +5,15 @@ import convetion from "../../assets/Img/imgHomeNotLogin/convertion.jpg";
 import reading from "../../assets/Img/imgHomeNotLogin/reading.jpg";
 import TicIcon from "../../assets/svg/HomePageNotLogin/TikIcon";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
+import { Link } from "react-router-dom";
+
 const HeaderHomeNotLogin = () => {
   return (
     <section className="w-full bg-black  h-[700px] flex justify-center mt-[-2rem] ">
-      <div className="absolute">
+      <div className="absolute z-[10]">
         <Ellipse />
       </div>
-      <div className=" w-[725px] h-[562px] mt-[100px] relative -mr-[80px] ">
+      <div className=" w-[725px] h-[562px] mt-[100px] relative -mr-[80px] z-[20]">
         <img
           src={classs}
           className="w-[300px] h-[150px] absolute  left-[0px] top-[0] rounded-lg"
@@ -46,16 +48,19 @@ const HeaderHomeNotLogin = () => {
           </p>
         </div>
 
-        <div className="flex mt-[20px]">
-          <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
-            {" "}
-            بیشتر بدانید
-          </button>
-          <button className="text-[12px] text-[#000] bg-[#00ff85] w-[140px] h-[43px] rounded-[6px]">
-            {" "}
-            ثبت نام
-          </button>
-        </div>
+         <div className="flex mt-[20px] w-full ">
+          <Link to="/aboutus" className="z-[40]">
+            <button className="text-[12px]  text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
+              {" "}
+              بیشتر بدانید
+            </button>
+          </Link>
+          <Link to={"/home/signupforbusiness"} className="z-[40]">
+            <button className="text-[12px]  cursor-pointer text-[#000] bg-[#00ff85] w-[140px] h-[43px] rounded-[6px]">
+              ثبت نام
+            </button>
+          </Link>
+        </div> 
 
         <div className="text-white  font-normal ">
           <div className="flex mt-[30px]">

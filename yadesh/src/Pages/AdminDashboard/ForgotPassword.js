@@ -1,4 +1,3 @@
-import UserIcon from "../../assets/svg/Login/UserIcon";
 import YadeshLightLogo from "../../assets/svg/AdminLogin/YadeshLightLogo";
 import { Link } from "react-router-dom";
 import ForgotPasswords from "../../assets/svg/ForgotPassword/ForgotPassword";

@@ -1,6 +1,5 @@
 import YadeshLightLogo from "../../assets/svg/AdminLogin/YadeshLightLogo";
 import { Link } from "react-router-dom";
-import ForgotPasswords from "../../assets/svg/ForgotPassword/ForgotPassword"
 
 const EnterCode = () => {
     return (
@@ -17,17 +16,49 @@ const EnterCode = () => {
                     htmlFor="username"
                     className="flex text-[#383838] mt-8 mb-3 -mr-[150px] font-bold text-[10px]"
                 >
-                     کد دریافتی را وارد کنید
+                    کد دریافتی را وارد کنید
                 </label>
-                <input
-                    id="username"
-                    className="h-[45px] w-[267px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
-                    type="text"
-                    placeholder="info_nftreact@"
-                />
-                <Link to="/home">
+                <sextion className="flex  w-[260px] justify-between">
+                    <input
+                        id="username"
+                        className="h-[45px] w-[30px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+                        type="text"
+                    />
+                    <div className="flex items-center">-</div>
+                    <input
+                        id="username"
+                        className="h-[45px] w-[30px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+                        type="text"
+                    />
+                    <div className="flex items-center">-</div>
+                    <input
+                        id="username"
+                        className="h-[45px] w-[30px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+                        type="text"
+                    />
+                    <div className="flex items-center">-</div>
+                    <input
+                        id="username"
+                        className="h-[45px] w-[30px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+                        type="text"
+                    />
+                    <div className="flex items-center">-</div>
+                    <input
+                        id="username"
+                        className="h-[45px] w-[30px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+                        type="text"
+                    />
+                    <div className="flex items-center">-</div>
+                    <input
+                        id="username"
+                        className="h-[45px] w-[30px] bg-[#f0f2f3] outline-[#000] text-[#E6FFF3]   rounded-[5px] pr-5 text-[13px]"
+                        type="text"
+                    />
+                </sextion>
+
+                <Link to="/">
                     <button className="h-[45px] w-[267px] mt-5 bg-[#008043] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
-                          تایید
+                        تایید
                     </button>
                 </Link>
             </div>

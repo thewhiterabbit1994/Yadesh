@@ -3,6 +3,7 @@ import RavanshenasiRangha from "../../assets/Img/papoularCourses/ravanshenasiran
 import Hesabdari from "../../assets/Img/papoularCourses/hesabdari.png";
 import SarmayeGozari from "../../assets/Img/papoularCourses/sarmayegozari.png";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
+import { Link } from "react-router-dom";
 
 const PopularCourses = () => {
   return (
@@ -21,7 +22,9 @@ const PopularCourses = () => {
 
       <div className="flex justify-center ml-[50px] ">
         <div className="relative ">
-          <img className="rounded w-[150px] h-[350px] " src={ModiriyateMali} />
+          <Link to="/home/course" className="">
+            <img className="rounded w-[150px] h-[350px] " src={ModiriyateMali} />
+          </Link>
           <div className="absolute top-[280px] left-[30px] text-[#E6FFF3] flex flex-col text-center leading-[30px]">
             <h6 className="text-[16px] "> مدیریت مالی</h6>
             <h6 className="text-[12px] text-[#C4C4C4]"> 26 اپیزود</h6>
@@ -29,10 +32,12 @@ const PopularCourses = () => {
         </div>
 
         <div className="relative mr-[15px]">
-          <img
-            className=" rounded w-[150px] h-[350px] "
-            src={RavanshenasiRangha}
-          />
+          <Link to="/home/course" className="">
+            <img
+              className=" rounded w-[150px] h-[350px] "
+              src={RavanshenasiRangha}
+            />          </Link>
+
           <div className="absolute top-[250px] left-[40px] text-[#E6FFF3] flex flex-col text-center leading-[30px]">
             <h6 className="text-[16px]">رنگ ها </h6>
             <h6 className="text-[16px]"> روانشناسی</h6>
@@ -40,21 +45,25 @@ const PopularCourses = () => {
           </div>
         </div>
 
-        <div className="relative  mr-[15px]">
-          <img className=" rounded  w-[150px] h-[350px] " src={SarmayeGozari} />
+        <div className="relative  mr-[15px] z-[40]">
+          <Link to="/home/course" className="z-[40]">
+            <img className=" rounded  w-[150px] h-[350px] " src={SarmayeGozari} />
+          </Link>
           <div className="absolute top-[280px] left-[30px] text-[#E6FFF3] flex flex-col text-center leading-[30px]">
             <h6 className="text-[16px]"> سرمایه گذاری </h6>
             <h6 className="text-[12px]"> 20 اپیزود</h6>
           </div>
         </div>
 
-        <div className="relative mr-[15px] z-20">
-          <div className="absolute top-[-100px] right-[-170px] -z-10 ">
+        <div className="relative mr-[15px] z-[50]">
+          <div className="absolute top-[-100px] right-[-170px] z-[-10] ">
             <Ellipse />
           </div>
-          <img className=" rounded w-[550px] h-[350px]  " src={Hesabdari} />
+          <Link to="/home/course" className="z-[40]">
+            <div className=" bg-gradient-to-t from-[#000000] to-[#00040511] h-[350px] w-full absolute"></div>
+            <img className=" rounded w-[550px] h-[350px]  " src={Hesabdari} />
+          </Link>
           <div className=" absolute top-[0] left[0] flex w-[100%] h-[35px] text-[#E6FFF3] justify-between mt-[.6rem] ">
-            <div className="bg-gradient-to-t from-[#000000] to-[#00040511] h-[345px] w-full absolute"></div>
             <div>
               <h6 className=" text-[12px] w-[160px] h-[35px] mr-[1rem] mt-[.5rem] bg-[#394a4f] rounded text-center leading-[35px]">
                 3 ساعت و 46 دقیقه

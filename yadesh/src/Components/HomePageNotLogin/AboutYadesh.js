@@ -1,5 +1,6 @@
 import AboutYadesh from "../../assets/Img/AboutYadesh/Rectangle 857.jpg";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
+import { Link } from "react-router-dom";
 const Aboutyadesh = () => {
   return (
     <div className="w-full  bg-[#000] flex pb-[7rem] relative z-10">
@@ -34,10 +35,13 @@ const Aboutyadesh = () => {
           </p>
         </div>
         <div className="mt-[30px] mr-[50px]">
-          <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
-            {" "}
-            بیشتر بدانید
-          </button>
+          <Link to="/aboutus">
+            <button className="text-[12px] text-[#E6FFF3] w-[140px] h-[43px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px] ml-[20px] ">
+              {" "}
+              بیشتر بدانید
+            </button>
+          </Link>
+
         </div>
       </section>
     </div>
