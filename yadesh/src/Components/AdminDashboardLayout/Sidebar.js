@@ -22,6 +22,7 @@ export default () => (
       <SiteManagmentIcon />
       <SettingIcon />
       <ExitIcon />
+      <p>hello world</p>
     </div>
   </div>
 );
