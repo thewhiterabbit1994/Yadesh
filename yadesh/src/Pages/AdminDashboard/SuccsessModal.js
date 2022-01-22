@@ -18,7 +18,7 @@ const SuccsessModal = () => {
                     className="flex text-[#383838] mt-8 mb-3 -mr-[190px] font-bold text-[10px]"
                 >
                 </label>
-                <Link to="/home">
+                <Link to="/adminlogin">
                     <button className="h-[45px] w-[267px] mt-5 bg-[#124e32] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
                        بازگشت به صفحه ورود
                     </button>

@@ -55,7 +55,7 @@ const ChangPassword = () => {
                     type={passwordShown ? "text" : "password"}
                 />
                
-                <Link to="/admindashboard">
+                <Link to="/adminlogin/succsess">
                     <button className="h-[45px] w-[267px] mt-5 bg-[#008043] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
                         تغییر رمز عبور
                     </button>

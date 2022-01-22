@@ -56,7 +56,7 @@ const EnterCode = () => {
                     />
                 </sextion>
 
-                <Link to="/">
+                <Link to="/adminlogin/changpassword">
                     <button className="h-[45px] w-[267px] mt-5 bg-[#008043] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
                         تایید
                     </button>

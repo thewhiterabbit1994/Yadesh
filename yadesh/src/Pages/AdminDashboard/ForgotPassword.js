@@ -27,7 +27,7 @@ const ForgotPassword = () => {
           type="text"
           placeholder="info_nftreact@"
         />
-        <Link to="/home">
+        <Link to="/adminlogin/entercode">
           <button className="h-[45px] w-[267px] mt-5 bg-[#008043] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
             ارسال کد تایید
           </button>
