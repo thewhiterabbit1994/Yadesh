@@ -21,6 +21,7 @@ import ForgotPassword from "./Pages/AdminDashboard/ForgotPassword";
 import FailureModal from "./Pages/AdminDashboard/FailureModal";
 import Succses from "./Pages/AdminDashboard/SuccsessModal";
 import ChangPassword from "./Pages/AdminDashboard/ChangPassword";
+import AdminPanelCompany from "./Pages/AdminDashboard/AminPanelCompany";
 
 
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
         <Route path="/adminlogin/succsess" element={<Succses />} />
         <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
+        <Route path="/adminlogin/AdminPanelCompany" element={<AdminPanelCompany />} />
 
 
         {/* <RequireAuth>
