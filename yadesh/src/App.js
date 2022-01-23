@@ -21,11 +21,7 @@ import ForgotPassword from "./Pages/AdminDashboard/ForgotPassword";
 import FailureModal from "./Pages/AdminDashboard/FailureModal";
 import Succses from "./Pages/AdminDashboard/SuccsessModal";
 import ChangPassword from "./Pages/AdminDashboard/ChangPassword";
-import AdminPanelCompany from "./Pages/AdminDashboard/AminPanelCompany";
-
-
-
-
+import AdminPanelCompany from "./Pages/AdminDashboard/AdminPanelCompany";
 
 function App() {
   return (
@@ -46,14 +42,19 @@ function App() {
         <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
         <Route path="/home/contactsupport" element={<ContactSupport />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
-        <Route path="admindashboard" element={<AdminDashboardLayout />}></Route>
         <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
         <Route path="/adminlogin/entercode" element={<EnterCode />} />
         <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
         <Route path="/adminlogin/succsess" element={<Succses />} />
         <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
-        <Route path="/adminlogin/AdminPanelCompany" element={<AdminPanelCompany />} />
+        <Route
+          path="/adminlogin/AdminPanelCompany"
+          element={<AdminPanelCompany />}
+        />
 
+        <Route path="admindashboard" element={<AdminDashboardLayout />}>
+          <Route path="adminpanelcompany" element={<AdminPanelCompany />} />
+        </Route>
 
         {/* <RequireAuth>
           <Route
