@@ -32,10 +32,13 @@ export default ({ showSidebarCollapsed, setshowSidebarCollapsed }) => {
           <YadeshLightLogo color2="#00FF85" color1="#a6a6a6" />
         </div>
         <div className="mt-12">
-          <div className="cursor-pointer flex mb-4">
-            <AdminPanelLogo />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">پنل کاربری</p>
-          </div>
+          <Link to="adminpanel">
+            <div className="cursor-pointer flex mb-4">
+              <AdminPanelLogo />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">پنل کاربری</p>
+            </div>
+          </Link>
+
           <div className="cursor-pointer flex my-8">
             <CoursesIcon />
             <p className="text-[12px] pr-3 text-[#4a5e67]">دوره ها</p>

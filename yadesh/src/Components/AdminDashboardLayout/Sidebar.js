@@ -44,7 +44,9 @@ export default () => {
             onMouseLeave={() => setshowTooltip1(false)}
             className="cursor-pointer mb-4"
           >
-            <AdminPanelLogo />
+            <Link to="adminpanel">
+              <AdminPanelLogo />
+            </Link>
             <div
               className={`absolute right-16 top-[84px] transform transition-opacity duration-300 scale-0 ${
                 showTooltip1 ? "scale-100 opacity-100" : "opacity-0 "

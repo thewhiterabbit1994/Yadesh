@@ -22,6 +22,7 @@ import FailureModal from "./Pages/AdminDashboard/FailureModal";
 import Succses from "./Pages/AdminDashboard/SuccsessModal";
 import ChangPassword from "./Pages/AdminDashboard/ChangPassword";
 import AdminPanelCompany from "./Pages/AdminDashboard/AdminPanelCompany";
+import AdminPanel from "./Pages/AdminDashboard/AdminPanel";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
 
         <Route path="admindashboard" element={<AdminDashboardLayout />}>
+          <Route path="adminpanel" element={<AdminPanel />} />
           <Route path="adminpanelcompany" element={<AdminPanelCompany />} />
         </Route>
 

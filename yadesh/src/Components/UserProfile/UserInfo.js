@@ -1,5 +1,5 @@
 import UserProfileBackground from "../../assets/Img/UserProfileBackground.png";
-import UserProfileImg from "../../assets/Img/UserProfileImg.png";
+import UserProfileImg from "../../assets/Img/UserProfileImg.jpg";
 import Hat from "../../assets/svg/Hat";
 import Star from "../../assets/svg/Star";
 import PenIcon from "../../assets/svg/PenIcon";
@@ -36,7 +36,7 @@ export default () => {
             src={UserProfileImg}
           />
           <p className="text-white text-[25px] mt-[25px] font-medium">
-            مرتضی بهمنش
+            محمد حسین ضرابی
           </p>
           <p className=" text-[#C4C4C4] mt-[15px] text-[12px]">
             به دنبال اهدافت برو
