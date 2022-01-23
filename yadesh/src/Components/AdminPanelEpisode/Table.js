@@ -8,9 +8,9 @@ const Table = () => {
     return (
         <section n className="w-full">
             <section className="w-[85%] m-auto text-[12px] text-[#001D29]">
-                <section className="w-full justify-between flex mb-[40px]">
-                    <section className="w-[50%]"> لیست شرکت ها</section>
-                    <section className="w-[48%] flex justify-between">
+                <section className="w-full justify-between rounded bg-[#F5F5F5] flex py-[30px] px-[15px]">
+                    <section className="w-[50%] font-semibold"> لیست اپیزود های شما</section>
+                    <section className="w-[50%] flex justify-between">
                         <div className="flex text-[12px] w-[300px] h-[35px] bg-[#E6E9EB] rounded">
                             <div className="mt-[13px] mx-[10px]">
                                 <Search />
@@ -31,30 +31,30 @@ const Table = () => {
                 <table id="customers">
                     <tr>
                         <th><p className="text-center">ردیف</p></th>
-                        <th><p className="text-center">ویدیوی اپیزود</p></th>
-                        <th><p className="text-center">نام اپیزود </p></th>
-                        <th><p className="text-center">نام مدرس </p></th>
-                        <th><p className="text-center">زمان اپیزود</p></th>
-                        <th><p className="text-center">دسته بندی ها</p></th>
-
+                        <th><p>ویدیوی اپیزود</p></th>
+                        <th><p>نام اپیزود </p></th>
+                        <th><p>نام مدرس </p></th>
+                        <th><p>زمان اپیزود</p></th>
+                        <th><p>دسته بندی ها</p></th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td className="text-center">1</td>
-                        <td ><img src={video} className="rounded m-auto" /> </td>
-                        <td><p className="text-center">اموزش مدیریت مالی -رکود و تورم</p></td>
-                        <td><p className="text-center">سهراب دل انگیزان </p></td>
-                        <td className="text-[#0050A8] font-semibold text-center"> 30 دقیقه</td>
-                        <td><p className="text-center">اقتصاد / مدیریت</p></td>
-                        <td className="flex items-center ">
+                        <td><p className="text-center">1</p></td>
+                        <td><img src={video} className="rounded " /> </td>
+                        <td><p>اموزش مدیریت مالی -رکود و تورم</p></td>
+                        <td><p>سهراب دل انگیزان </p></td>
+                        <td className="text-[#0050A8] font-semibold"> 30 دقیقه</td>
+                        <td><p>اقتصاد / مدیریت</p></td>
+                        <td className="flex h-[55px]  items-end ">
                             <div className="mt-[3px]">
                                 <Edit />{" "}
                             </div>
-                            <p className="mr-[10px] text-[#0050A8]">ویراش شرکت ها</p>
+                            <p className="mr-[10px] text-[#0050A8] text-[10px] font-semibold">ویراش شرکت ها</p>
                         </td>
                     </tr>
                 </table>
-                <section className="w-full h-[50px] bg-[#E6E9EB] flex justify-center items-center">
-                    <p>موارد بیشتر</p>
+                <section className="w-full h-[50px] my-[10px] bg-[#E6E9EB] rounded flex justify-center items-center">
+                    <p>مشاهده ی همه ی اپیزود ها</p>
                 </section>
             </section>
         </section>

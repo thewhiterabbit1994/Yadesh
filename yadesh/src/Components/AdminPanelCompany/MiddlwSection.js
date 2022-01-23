@@ -3,8 +3,8 @@ import Exele from "../../assets/svg/AdminPanelCourses/Exele";
 import Create from "../../assets/svg/AdminPanelCourses/Create";
 const MiddlwSection = () => {
   return (
-    <section className="w-full h-[100px] ">
-      <section className="w-[90%] flex text-[12px] m-auto justify-between font-semibold">
+    <section className="w-full h-[200px] relative top-[100px] ">
+      <section className="w-[85%] flex text-[12px] m-auto justify-between font-semibold ">
         <section className="flex w-[50%]">
           <div className=" ml-[10px]">
             <Company />

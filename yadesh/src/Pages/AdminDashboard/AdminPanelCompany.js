@@ -1,5 +1,5 @@
-import MiddlwSection from "../../Components/AdminPanelCourses/MiddlwSection";
-import Table from "../../Components/AdminPanelCourses/Table";
+import MiddlwSection from "../../Components/AdminPanelCompany/MiddlwSection";
+import Table from "../../Components/AdminPanelCompany/Table";
 import { Outlet } from "react-router-dom";
 
 const AdminPanelCompany = () => {

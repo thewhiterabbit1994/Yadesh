@@ -22,6 +22,11 @@ import FailureModal from "./Pages/AdminDashboard/FailureModal";
 import Succses from "./Pages/AdminDashboard/SuccsessModal";
 import ChangPassword from "./Pages/AdminDashboard/ChangPassword";
 import AdminPanelCompany from "./Pages/AdminDashboard/AdminPanelCompany";
+import AdminPanelEpisode from "./Pages/AdminDashboard/AdminPanelEpisode"
+import AdminPanelCourses from "./Pages/AdminDashboard/AdminPanelCourses"
+import AdminPanelFactor from "./Pages/AdminDashboard/AdminPanelFactor"
+import AdminPanelSubscription from "./Pages/AdminDashboard/AdminPanelSubscription"
+import AdminPanelUser from "./Pages/AdminDashboard/AdminPanelUser"
 
 function App() {
   return (
@@ -50,6 +55,11 @@ function App() {
 
         <Route path="admindashboard" element={<AdminDashboardLayout />}>
           <Route path="adminpanelcompany" element={<AdminPanelCompany />} />
+          <Route path="adminpanelepisode" element={<AdminPanelEpisode />} />
+          <Route path="adminpanelcourses" element={<AdminPanelCourses />} />
+          <Route path="adminpanelfactor" element={<AdminPanelFactor />} />
+          <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
+          <Route path="adminpaneluser" element={<AdminPanelUser />} />
         </Route>
 
         {/* <RequireAuth>
