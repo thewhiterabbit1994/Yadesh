@@ -27,7 +27,7 @@ export default () => {
   const [showSidebarCollapsed, setshowSidebarCollapsed] = useState(false);
 
   return (
-    <div className=" fixed right-0 w-[70px] h-screen bg-[#f5f5f5]">
+    <div className=" fixed right-0 w-[70px] z-40 h-screen bg-[#f5f5f5]">
       <div
         onClick={() => setshowSidebarCollapsed(true)}
         className="absolute cursor-pointer top-[20px] left-[-10px] "
@@ -60,7 +60,9 @@ export default () => {
             onMouseLeave={() => setshowTooltip2(false)}
             className="cursor-pointer my-8"
           >
-            <CoursesIcon />
+            <Link to="adminpanelcourses">
+              <CoursesIcon />
+            </Link>
             <div
               className={`absolute right-16 top-[132px] transform transition-opacity duration-300 scale-0 ${
                 showTooltip2 ? "scale-100 opacity-100" : "opacity-0 "
@@ -74,7 +76,9 @@ export default () => {
             onMouseLeave={() => setshowTooltip3(false)}
             className="cursor-pointer my-8"
           >
-            <EpisodeIcon />
+            <Link to="adminpanelepisode">
+              <EpisodeIcon />
+            </Link>
             <div
               className={`absolute right-16 top-[182px] transform transition-opacity duration-300 scale-0 ${
                 showTooltip3 ? "scale-100 opacity-100" : "opacity-0 "
@@ -104,7 +108,9 @@ export default () => {
             onMouseLeave={() => setshowTooltip5(false)}
             className="cursor-pointer my-8"
           >
-            <FactorIcon />
+            <Link to="adminpanelfactor">
+              <FactorIcon />
+            </Link>
             <div
               className={`absolute right-16 top-[289px] transform transition-opacity duration-300 scale-0 ${
                 showTooltip5 ? "scale-100 opacity-100" : "opacity-0 "
