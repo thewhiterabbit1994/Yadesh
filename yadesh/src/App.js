@@ -47,10 +47,6 @@ function App() {
         <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
         <Route path="/adminlogin/succsess" element={<Succses />} />
         <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
-        <Route
-          path="/adminlogin/AdminPanelCompany"
-          element={<AdminPanelCompany />}
-        />
 
         <Route path="admindashboard" element={<AdminDashboardLayout />}>
           <Route path="adminpanelcompany" element={<AdminPanelCompany />} />
