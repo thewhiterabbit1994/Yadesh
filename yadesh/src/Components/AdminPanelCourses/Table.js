@@ -5,7 +5,6 @@ import Search from "../../assets/svg/AdminPanelCourses/Search";
 const Table = () => {
   return (
     <section className="w-full">
-      <p>hi</p>
       <section className="w-[90%] m-auto text-[12px] text-[#001D29]">
         <section className="w-full justify-between flex mb-[40px]">
           <section className="w-[50%]"> لیست شرکت ها</section>

@@ -4,7 +4,6 @@ import Create from "../../assets/svg/AdminPanelCourses/Create";
 const MiddlwSection = () => {
   return (
     <section className="w-full h-[100px] ">
-      <p>hi</p>
       <section className="w-[90%] flex text-[12px] m-auto justify-between font-semibold">
         <section className="flex w-[50%]">
           <div className=" ml-[10px]">
