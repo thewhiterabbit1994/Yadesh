@@ -10,6 +10,7 @@ import SiteManagmentIcon from "../../assets/svg/AdminLogin/SiteManagmentIcon";
 import SettingIcon from "../../assets/svg/AdminLogin/SettingIcon";
 import ExitIcon from "../../assets/svg/AdminLogin/ExitIcon";
 import SidebarBtn from "../../assets/svg/AdminLogin/SidebarBtn";
+import { Link } from "react-router-dom";
 
 export default ({ showSidebarCollapsed, setshowSidebarCollapsed }) => {
   return (
@@ -43,10 +44,12 @@ export default ({ showSidebarCollapsed, setshowSidebarCollapsed }) => {
             <EpisodeIcon />
             <p className="text-[12px] pr-3 text-[#4a5e67]">اپیزود ها</p>
           </div>
-          <div className="cursor-pointer flex my-8">
-            <UserControlIcon />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">شرکت ها</p>
-          </div>
+          <Link to="adminpanelcompany">
+            <div className="cursor-pointer flex my-8">
+              <UserControlIcon />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">شرکت ها</p>
+            </div>
+          </Link>
           <div className="cursor-pointer flex my-8">
             <FactorIcon />
             <p className="text-[12px] pr-3 text-[#4a5e67]">فاکتور ها</p>

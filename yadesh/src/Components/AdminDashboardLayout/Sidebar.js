@@ -10,6 +10,7 @@ import SettingIcon from "../../assets/svg/AdminLogin/SettingIcon";
 import ExitIcon from "../../assets/svg/AdminLogin/ExitIcon";
 import Tooltip from "../../assets/svg/AdminLogin/Tooltip";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import SidebarCollapsed from "../../Components/AdminDashboardLayout/SidebarCollapsed";
 import SidebarBtn from "../../assets/svg/AdminLogin/SidebarBtn";
 
@@ -85,7 +86,9 @@ export default () => {
             onMouseLeave={() => setshowTooltip4(false)}
             className="cursor-pointer my-8"
           >
-            <UserControlIcon />
+            <Link to="adminpanelcompany">
+              <UserControlIcon />
+            </Link>
             <div
               className={`absolute right-16 top-[234px] transform transition-opacity duration-300 scale-0 ${
                 showTooltip4 ? "scale-100 opacity-100" : "opacity-0 "
