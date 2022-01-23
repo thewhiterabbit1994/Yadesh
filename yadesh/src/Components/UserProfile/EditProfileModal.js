@@ -1,11 +1,11 @@
 import CloseButtonEditProfileModal from "../../assets/svg/CloseButtonEditProfileModal";
-import UserProfileImg from "../../assets/Img/UserProfileImg.png";
+import UserProfileImg from "../../assets/Img/UserProfileImg.jpg";
 import UpArrow from "../../assets/svg/UpArrow";
 
 const EditProfileModal = ({ editProfileModal, seteditProfileModal }) => {
   return (
     <div
-      className={`absolute transform transition-opacity duration-500 scale-0 z-30 w-full h-[2830px] bg-[#00000071]  ${
+      className={`fixed transform transition-opacity duration-500 scale-0 z-50 w-full h-screen bg-[#00000071]  ${
         editProfileModal ? "scale-100 opacity-100" : "opacity-0 "
       }`}
     >

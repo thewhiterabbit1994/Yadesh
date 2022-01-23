@@ -27,6 +27,7 @@ import AdminPanelCourses from "./Pages/AdminDashboard/AdminPanelCourses"
 import AdminPanelFactor from "./Pages/AdminDashboard/AdminPanelFactor"
 import AdminPanelSubscription from "./Pages/AdminDashboard/AdminPanelSubscription"
 import AdminPanelUser from "./Pages/AdminDashboard/AdminPanelUser"
+import AdminPanel from "./Pages/AdminDashboard/AdminPanel";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
 
         <Route path="admindashboard" element={<AdminDashboardLayout />}>
+          <Route path="adminpanel" element={<AdminPanel />} />
           <Route path="adminpanelcompany" element={<AdminPanelCompany />} />
           <Route path="adminpanelepisode" element={<AdminPanelEpisode />} />
           <Route path="adminpanelcourses" element={<AdminPanelCourses />} />
