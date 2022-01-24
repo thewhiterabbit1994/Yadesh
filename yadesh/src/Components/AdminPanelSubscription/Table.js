@@ -8,20 +8,22 @@ import Oclock from "../../assets/svg/AdminPanelCourses/Oclock";
 const Table = () => {
     return (
         <sectio n className="w-full">
-            <section className="w-[85%] m-auto text-[12px] text-[#001D29]">
-                <section className="w-full justify-between flex mb-[40px]">
-                    <section className="w-[50%]"> لیست اشتراک ها</section>
-                    <section className="w-[48%] flex justify-between">
+            <section className="w-[90%] mr-[120px] m-auto text-[12px] text-[#001D29]">
+                <section className="w-full justify-between flex mb-[40px]  items-center">
+                    <section className="w-[50%] font-semibold	"> لیست اشتراک ها</section>
+                    <section className="w-[570px] flex justify-between">
                         <div className="flex text-[12px] w-[300px] h-[35px] bg-[#E6E9EB] rounded">
                             <div className="mt-[13px] mx-[10px]">
                                 <Search />
                             </div>
-                            <input
-                                className="w-[250px] h-[35px] bg-[#E6E9EB] outline-none text-[12px]"
-                                placeholder="جست وجو کنید"
-                            />
+                            <label className="z-20">
+                                <input
+                                    className=" placeholder:text-[10px] placeholder:text-[#0000008f] w-[250px] h-[35px] bg-[#E6E9EB] outline-none text-[12px]"
+                                    placeholder="جست وجو ی اشتراک"
+                                />
+                            </label>
                         </div>
-                        <div className="flex items-center justify-center text-[12px] w-[250px] h-[35px] bg-[#E6E9EB] rounded">
+                        <div className="flex items-center justify-center text-[10px] w-[250px] h-[35px] bg-[#E6E9EB] rounded">
                             <p> چیدمان بر اساس لیست شرکت ها</p>
                             <div className=" mx-[10px]">
                                 <Sort />
@@ -29,14 +31,17 @@ const Table = () => {
                         </div>
                     </section>
                 </section>
-                <table id="customers">
-                    <tr className="text-[#00000075]">
+                <table id="customers" className="text-[10px]">
+                    <tr className="text-[#000000e5]">
                         <th><p className="text-center">ردیف</p></th>
                         <th><p className="text-center">اشتراک</p></th>
                         <th><p className="text-center">وضعیت</p></th>
                         <th><p className="text-center">مبلغ</p></th>
                         <th><p className="text-center">تعداد کاربران</p></th>
                         <th><p className="text-center">تاریخ تمدید</p></th>
+                        <th></th>
+                        <th></th>
+
                     </tr>
                     <tr>
                         <td className="text-center">1</td>
@@ -51,10 +56,10 @@ const Table = () => {
                         <td className="text-center"> 132 نفر</td>
                         <td className="text-center">26 مهر 1399</td>
                         <td >
-                            <p className="mr-[10px] text-[#0050A8] text-center">جزییات اشتراک</p>
+                            <p className="mr-[10px] text-[#0050A8] text-center font-semibold">جزییات اشتراک</p>
                         </td>
                         <td >
-                            <p className="mr-[10px] text-[#AA0029] text-center">لغو اشتراک</p>
+                            <p className="mr-[10px] text-[#AA0029] text-center font-semibold">لغو اشتراک</p>
                         </td>
                     </tr>
                     <tr>
@@ -70,10 +75,10 @@ const Table = () => {
                         <td className="text-center"> 132 نفر</td>
                         <td className="text-center">26 مهر 1399</td>
                         <td >
-                            <p className="mr-[10px] text-[#0050A8] text-center">جزییات اشتراک</p>
+                            <p className="mr-[10px] text-[#0050A8] text-center font-semibold">جزییات اشتراک</p>
                         </td>
                         <td >
-                            <p className="mr-[10px] text-[#AA0029] text-center">لغو اشتراک</p>
+                            <p className="mr-[10px] text-[#AA0029] text-center font-semibold">لغو اشتراک</p>
                         </td>
                     </tr>
                     <tr>
@@ -89,10 +94,10 @@ const Table = () => {
                         <td className="text-center"> 132 نفر</td>
                         <td className="text-center">26 مهر 1399</td>
                         <td >
-                            <p className="mr-[10px] text-[#0050A8] text-center">جزییات اشتراک</p>
+                            <p className="mr-[10px] text-[#0050A8] text-center font-semibold">جزییات اشتراک</p>
                         </td>
                         <td >
-                            <p className="mr-[10px] text-[#AA0029] text-center">لغو اشتراک</p>
+                            <p className="mr-[10px] text-[#AA0029] text-center font-semibold">لغو اشتراک</p>
                         </td>
                     </tr>
                 </table>

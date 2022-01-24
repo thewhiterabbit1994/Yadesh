@@ -60,7 +60,7 @@ export default () => {
             onMouseLeave={() => setshowTooltip2(false)}
             className="cursor-pointer my-8"
           >
-            <Link to="adminpanelcourses">
+            <Link to="courses">
               <CoursesIcon />
             </Link>
             <div
@@ -76,7 +76,7 @@ export default () => {
             onMouseLeave={() => setshowTooltip3(false)}
             className="cursor-pointer my-8"
           >
-            <Link to="adminpanelepisode">
+            <Link to="elepisode">
               <EpisodeIcon />
             </Link>
             <div
@@ -92,7 +92,7 @@ export default () => {
             onMouseLeave={() => setshowTooltip4(false)}
             className="cursor-pointer my-8"
           >
-            <Link to="adminpanelcompany">
+            <Link to="company">
               <UserControlIcon />
             </Link>
             <div
@@ -108,7 +108,7 @@ export default () => {
             onMouseLeave={() => setshowTooltip5(false)}
             className="cursor-pointer my-8"
           >
-            <Link to="adminpanelfactor">
+            <Link to="factor">
               <FactorIcon />
             </Link>
             <div

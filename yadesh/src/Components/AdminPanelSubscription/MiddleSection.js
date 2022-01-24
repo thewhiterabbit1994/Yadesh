@@ -6,7 +6,7 @@ import ArrowLeft from "../../assets/svg/AdminPanelCourses/ArrowLeft";
 const MiddleSection = () => {
     return (
         <section className="w-full h-[200px] relative top-[100px] ">
-            <section className="w-[85%] flex text-[12px] m-auto justify-between font-semibold ">
+            <section className="w-[90%] mr-[120px] flex text-[12px] m-auto justify-between font-semibold ">
                 <section className="flex w-[50%]">
                     <div className="flex ml-[10px] opacity-70">
                         <p className="ml-[5px] ">شرکت ها</p>
@@ -44,9 +44,9 @@ const MiddleSection = () => {
                                 خرید اشتراک جدید
                             </p>
                         </section>
-                        <div className="tetx-[#001D29] text-[10px] font-semibold bg-[#fff] w-[80px] h-[40px] rounded flex justify-center items-center">
+                        <div className="tetx-[#001D29] text-[10px] font-semibold bg-[#fff] w-[100px] h-[35px] rounded flex justify-center items-center">
                             {" "}
-                            اضافه کنید
+                            خرید کنید
                         </div>
                     </section>
                 </section>

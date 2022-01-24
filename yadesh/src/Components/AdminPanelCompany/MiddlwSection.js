@@ -4,14 +4,14 @@ import Create from "../../assets/svg/AdminPanelCourses/Create";
 const MiddlwSection = () => {
   return (
     <section className="w-full h-[200px] relative top-[100px] ">
-      <section className="w-[85%] flex text-[12px] m-auto justify-between font-semibold ">
+      <section className="w-[90%] flex text-[12px] m-auto justify-between font-semibold mr-[120px] items-center ">
         <section className="flex w-[50%]">
           <div className=" ml-[10px]">
             <Company />
           </div>
           <p>شرکت ها</p>
         </section>
-        <section className="w-[42%] justify-between flex text-[10px] text-[#001D29]">
+        <section className="w-[500px] justify-between flex text-[10px] text-[#001D29]">
           <section className="flex justify-center items-center border-dashed border-2 w-[180px] h-[50px] rounded border-[#0000003d]">
             <p>دانلود به صورت فایل اکسل</p>
             <div className="mr-[10px]">
@@ -25,7 +25,7 @@ const MiddlwSection = () => {
                 افزودن شرکت های جدید
               </p>
             </section>
-            <div className="tetx-[#001D29] text-[10px] font-semibold bg-[#fff] w-[80px] h-[40px] rounded flex justify-center items-center">
+            <div className="tetx-[#001D29] text-[10px] font-semibold bg-[#fff] w-[100px] h-[35px] rounded flex justify-center items-center">
               {" "}
               اضافه کنید
             </div>

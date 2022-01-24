@@ -7,20 +7,22 @@ import Failed from "../../assets/svg/AdminPanelCourses/Failed";
 const Table = () => {
     return (
         <sectio n className="w-full">
-            <section className="w-[85%] m-auto text-[12px] text-[#001D29]">
-                <section className="w-full justify-between flex mb-[40px]">
-                    <section className="w-[50%]"> لیست فاکتور ها</section>
-                    <section className="w-[48%] flex justify-between">
+            <section className="w-[90%] mr-[120px] m-auto text-[12px] text-[#001D29]">
+                <section className="w-full justify-between flex py-[20px] bg-[#e6e9eb85]">
+                    <section className=" pr-[10px] w-[50%] font-semibold"> لیست فاکتور ها</section>
+                    <section className="w-[570px] flex justify-between pl-[10px]">
                         <div className="flex text-[12px] w-[300px] h-[35px] bg-[#E6E9EB] rounded">
                             <div className="mt-[13px] mx-[10px]">
                                 <Search />
                             </div>
-                            <input
-                                className="w-[250px] h-[35px] bg-[#E6E9EB] outline-none text-[12px]"
-                                placeholder="جست وجو کنید"
-                            />
+                            <label className="z-20">
+                                <input
+                                    className="placeholder:text-[#0000008a] placeholder:text-[10px]  w-[250px] h-[35px] bg-[#E6E9EB] outline-none text-[12px]"
+                                    placeholder="جست وجو ی فاکتور"
+                                />
+                            </label>
                         </div>
-                        <div className="flex items-center justify-center text-[12px] w-[250px] h-[35px] bg-[#E6E9EB] rounded">
+                        <div className="flex items-center justify-center text-[10px] w-[250px] h-[35px] bg-[#E6E9EB] rounded">
                             <p> چیدمان بر اساس لیست شرکت ها</p>
                             <div className=" mx-[10px]">
                                 <Sort />
@@ -28,8 +30,8 @@ const Table = () => {
                         </div>
                     </section>
                 </section>
-                <table id="customers">
-                    <tr className="text-[#00000075]">
+                <table id="customers" className="text-[10px] ">
+                    <tr className="text-[#000000]">
                         <th><p className="text-center">ردیف</p></th>
                         <th><p className="text-center">اشتراک</p></th>
                         <th><p className="text-center">وضعیت</p></th>
@@ -37,6 +39,7 @@ const Table = () => {
                         <th><p className="text-center">تعداد کاربران</p></th>
                         <th><p className="text-center">تاریخ تمدید</p></th>
                         <th><p className="text-center">مدت اعتبار</p></th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td className="text-center">1</td>
@@ -52,7 +55,7 @@ const Table = () => {
                         <td className="text-center">26 مهر 1399</td>
                         <td className="text-center">یک ساله</td>
                         <td className="flex">
-                            <p className="mr-[10px] text-[#0050A8]">پرداخت</p>
+                        <p className="mr-[10px] text-[#0050A8] font-semibold">پرداخت</p>
                         </td>
                     </tr>
                     <tr>
@@ -69,7 +72,7 @@ const Table = () => {
                         <td className="text-center">26 مهر 1399</td>
                         <td className="text-center">یک ساله</td>
                         <td className="flex">
-                            <p className="mr-[10px] text-[#0050A8]">پرداخت</p>
+                            <p className="mr-[10px] text-[#0050A8] font-semibold">پرداخت</p>
                         </td>
                     </tr>
                 </table>

@@ -56,10 +56,10 @@ function App() {
 
         <Route path="admindashboard" element={<AdminDashboardLayout />}>
           <Route path="adminpanel" element={<AdminPanel />} />
-          <Route path="adminpanelcompany" element={<AdminPanelCompany />} />
-          <Route path="adminpanelepisode" element={<AdminPanelEpisode />} />
-          <Route path="adminpanelcourses" element={<AdminPanelCourses />} />
-          <Route path="adminpanelfactor" element={<AdminPanelFactor />} />
+          <Route path="company" element={<AdminPanelCompany />} />
+          <Route path="elepisode" element={<AdminPanelEpisode />} />
+          <Route path="courses" element={<AdminPanelCourses />} />
+          <Route path="factor" element={<AdminPanelFactor />} />
           <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
           <Route path="adminpaneluser" element={<AdminPanelUser />} />
         </Route>
