@@ -42,7 +42,6 @@ const Table = () => {
     let loopResult = course[i];
     twoOfCourses.push(loopResult);
   }
-  console.log(twoOfCourses);
   return (
     <section className="w-[97vw]">
       <section className=" m-auto text-[12px] text-[#001D29] mr-[120px]">

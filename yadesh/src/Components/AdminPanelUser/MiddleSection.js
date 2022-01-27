@@ -6,8 +6,8 @@ import Statistics from "../../assets/svg/AdminPanelCourses/statistics";
 
 const MiddleSection = () => {
     return (
-        <section className="w-full h-[200px] relative top-[100px] ">
-            <section className="w-[90%] mr-[120px] flex text-[12px] m-auto justify-between font-semibold ">
+        <section className="w-[97vw] h-[200px] relative top-[100px] ">
+            <section className="w-[90%] mr-[120px] flex text-[12px] m-auto justify-between items-center font-semibold ">
                 <section className="flex w-[50%]">
                     <div className=" flex">
                         <p className="opacity-70">شرکت ها</p>

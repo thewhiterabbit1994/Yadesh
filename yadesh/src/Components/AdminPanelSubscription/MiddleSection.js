@@ -5,8 +5,8 @@ import ArrowLeft from "../../assets/svg/AdminPanelCourses/ArrowLeft";
 
 const MiddleSection = () => {
     return (
-        <section className="w-full h-[200px] relative top-[100px] ">
-            <section className="w-[90%] mr-[120px] flex text-[12px] m-auto justify-between font-semibold ">
+        <section className="w-[97vw] h-[200px] relative top-[100px] ">
+            <section className="w-[90%] mr-[120px] flex text-[12px] m-auto justify-between font-semibold  ">
                 <section className="flex w-[50%]">
                     <div className="flex ml-[10px] opacity-70">
                         <p className="ml-[5px] ">شرکت ها</p>

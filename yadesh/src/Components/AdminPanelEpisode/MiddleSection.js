@@ -5,7 +5,7 @@ import Statistics from "../../assets/svg/AdminPanelCourses/statistics";
 
 const MiddleSection = () => {
     return (
-        <section className="w-full h-[200px] relative top-[100px] ">
+        <section className="w-[97vw] h-[200px] relative top-[100px] ">
             <section className=" w-[90%] mr-[130px] flex text-[12px] m-auto justify-between font-semibold items-center">
                 <section className="flex w-[50%]">
                     <div className=" ml-[10px]">

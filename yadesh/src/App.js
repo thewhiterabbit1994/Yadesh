@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import HomePageLoggedIn from "./Pages/HomePageLoggedIn";
 import HomePageNotLogin from "./Pages/HomePageNotLogin";
 import MyProgress from "./Pages/MyProgress";
@@ -28,49 +28,53 @@ import AdminPanelFactor from "./Pages/AdminDashboard/AdminPanelFactor"
 import AdminPanelSubscription from "./Pages/AdminDashboard/AdminPanelSubscription"
 import AdminPanelUser from "./Pages/AdminDashboard/AdminPanelUser"
 import AdminPanel from "./Pages/AdminDashboard/AdminPanel";
+import TicketsCompany from "./Pages/AdminDashboard/TicketsCompany";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="*" element={<Page404 />} />
-        <Route path="/" element={<HomePageNotLogin />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<HomePageLoggedIn />} />
-        <Route path="/home/myprogress" element={<MyProgress />} />
-        <Route path="/home/userprofile" element={<UserProfile />} />
-        <Route path="home/forbusiness" element={<ForBusiness />} />
-        <Route path="/home/course" element={<Course />} />
-        <Route path="/home/signupforbusiness" element={<SignUpForBusiness />} />
-        <Route path="/home/playerepisode" element={<PlayerEpisode />} />
-        <Route path="/home/playercourse" element={<PlayerCourse />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
-        <Route path="/home/contactsupport" element={<ContactSupport />} />
-        <Route path="/adminlogin" element={<AdminLogin />} />
-        <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
-        <Route path="/adminlogin/entercode" element={<EnterCode />} />
-        <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
-        <Route path="/adminlogin/succsess" element={<Succses />} />
-        <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Page404 />} />
+          <Route path="/" element={<HomePageNotLogin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<HomePageLoggedIn />} />
+          <Route path="/home/myprogress" element={<MyProgress />} />
+          <Route path="/home/userprofile" element={<UserProfile />} />
+          <Route path="home/forbusiness" element={<ForBusiness />} />
+          <Route path="/home/course" element={<Course />} />
+          <Route path="/home/signupforbusiness" element={<SignUpForBusiness />} />
+          <Route path="/home/playerepisode" element={<PlayerEpisode />} />
+          <Route path="/home/playercourse" element={<PlayerCourse />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
+          <Route path="/home/contactsupport" element={<ContactSupport />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/adminlogin/entercode" element={<EnterCode />} />
+          <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
+          <Route path="/adminlogin/succsess" element={<Succses />} />
+          <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
 
-        <Route path="admindashboard" element={<AdminDashboardLayout />}>
-          <Route path="adminpanel" element={<AdminPanel />} />
-          <Route path="company" element={<AdminPanelCompany />} />
-          <Route path="elepisode" element={<AdminPanelEpisode />} />
-          <Route path="courses" element={<AdminPanelCourses />} />
-          <Route path="factor" element={<AdminPanelFactor />} />
-          <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
-          <Route path="adminpaneluser" element={<AdminPanelUser />} />
-        </Route>
+          <Route path="admindashboard" element={<AdminDashboardLayout />}>
+            <Route path="adminpanel" element={<AdminPanel />} />
+            <Route path="company" element={<AdminPanelCompany />} />
+            <Route path="elepisode" element={<AdminPanelEpisode />} />
+            <Route path="courses" element={<AdminPanelCourses />} />
+            <Route path="factor" element={<AdminPanelFactor />} />
+            <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
+            <Route path="adminpaneluser" element={<AdminPanelUser />} />
+            <Route path="ticketscompany" element={<TicketsCompany />} />
+          </Route>
 
-        {/* <RequireAuth>
+          {/* <RequireAuth>
           <Route
             path="admindashboard"
             element={<AdminDashboardLayout />}
           ></Route>
         </RequireAuth> */}
-      </Routes>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
