@@ -1,122 +1,148 @@
-import * as am5 from "@amcharts/amcharts5";
-import * as am5xy from "@amcharts/amcharts5/xy";
-import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-import * as am5radar from "@amcharts/amcharts5/radar";
 import { useEffect, useRef } from "react";
 import SeenIcon from "../../assets/svg/View";
 import { selectOptions } from "@testing-library/user-event/dist/select-options";
+import { ResponsiveLine } from "@nivo/line";
 
 export default () => {
-  useEffect(() => {
-    let root = am5.Root.new("chartdiv");
+  const height = 600;
+  const gradProps = {
+    gradientUnits: "userSpaceOnUse",
+    x1: "0",
+    y1: "0",
+    x2: height,
+    y2: "0",
+  };
+  const data = [
+    {
+      id: "japan",
+      data: [
+        {
+          x: "فروردین",
+          y: 279,
+        },
+        {
+          x: "اردیبهشت",
+          y: 10,
+        },
+        {
+          x: "خرداد",
+          y: 39,
+        },
+        {
+          x: "تیر",
+          y: 108,
+        },
+        {
+          x: "مرداد",
+          y: 46,
+        },
+        {
+          x: "شهریور",
+          y: 78,
+        },
+        {
+          x: "مهر",
+          y: 23,
+        },
+        {
+          x: "آبان",
+          y: 44,
+        },
+        {
+          x: "آذر",
+          y: 47,
+        },
+        {
+          x: "دی",
+          y: 86,
+        },
+        {
+          x: "بهمن",
+          y: 55,
+        },
+        {
+          x: "اسفند",
+          y: 229,
+        },
+      ],
+    },
+  ];
 
-    root.setThemes([am5themes_Animated.new(root)]);
-
-    let chart = root.container.children.push(
-      am5xy.XYChart.new(root, {
-        panY: false,
-        wheelY: "zoomX",
-        layout: root.verticalLayout,
-        maxTooltipDistance: 0,
-      })
-    );
-
-    let data = [
-      {
-        date: new Date(2021, 0, 1).getTime(),
-        value: 1,
-        value2: 2.5,
-      },
-      {
-        date: new Date(2021, 0, 2).getTime(),
-        value: 3,
-        value2: 2.1,
-      },
-      {
-        date: new Date(2021, 0, 3).getTime(),
-        value: 2,
-        value2: 3,
-      },
-      {
-        date: new Date(2021, 0, 4).getTime(),
-        value: 1,
-        value2: 2,
-      },
-      {
-        date: new Date(2021, 0, 5).getTime(),
-        value: 1.5,
-        value2: 0.5,
-      },
-    ];
-
-    // Create X-Axis
-    let xAxis = chart.xAxes.push(
-      am5xy.DateAxis.new(root, {
-        baseInterval: { timeUnit: "day", count: 1 },
-        renderer: am5xy.AxisRendererX.new(root, {
-          minGridDistance: 20,
-        }),
-      })
-    );
-
-    // Create Y-axis
-    let yAxis = chart.yAxes.push(
-      am5xy.ValueAxis.new(root, {
-        extraTooltipPrecision: 1,
-        renderer: am5xy.AxisRendererY.new(root, {}),
-      })
-    );
-
-    chart.set(
-      "cursor",
-      am5xy.XYCursor.new(root, {
-        behavior: "zoomXY",
-        xAxis: xAxis,
-      })
-    );
-
-    xAxis.set(
-      "tooltip",
-      am5.Tooltip.new(root, {
-        themeTags: ["axis"],
-      })
-    );
-
-    yAxis.set(
-      "tooltip",
-      am5.Tooltip.new(root, {
-        themeTags: ["axis"],
-      })
-    );
-
-    function createSeries(name, field) {
-      let series = chart.series.push(
-        am5xy.SmoothedXLineSeries.new(root, {
-          name: name,
-          xAxis: xAxis,
-          yAxis: yAxis,
-          valueYField: field,
-          valueXField: "date",
-          tooltip: am5.Tooltip.new(root, {}),
-          stroke: am5.color("#257b32"),
-        })
-      );
-
-      series.strokes.template.set("strokeWidth", 4);
-
-      series
-        .get("tooltip")
-        .label.set("text", "[bold]{name}[/]\n{valueX.formatDate()}: {valueY}");
-      series.data.setAll(data);
-    }
-    createSeries("Series #1", "value");
-
-    chart.appear(1000, 100);
-  }, []);
   return (
     <div className="absolute w-[770px] h-[380px] bg-[#f5f5f5] rounded-[10px] top-16 right-0">
-      <div></div>
-      <div id="chartdiv" className="w-[350px] h-[370px] "></div>
+      <svg className="mt-[-180px]">
+        <defs>
+          <linearGradient id="someGradientId" {...gradProps}>
+            <stop offset="10%" stopColor="#ecc113" />
+            <stop offset="20%" stopColor="#7c9f84" />
+            <stop offset="30%" stopColor="#5298c6" />
+            <stop offset="40%" stopColor="#019cdf" />
+            <stop offset="50%" stopColor="#00c8ae" />
+            <stop offset="90%" stopColor="#01f988" />
+            <stop offset="100%" stopColor="#16fe8e" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <ResponsiveLine
+        data={data}
+        curve="natural"
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: "point" }}
+        yScale={{ type: "linear", stacked: true, min: "auto", max: "auto" }}
+        axisTop={null}
+        axisRight={null}
+        lineWidth={3}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 20,
+          tickRotation: 0,
+          legend: "",
+          legendOffset: 36,
+          legendPosition: "middle",
+        }}
+        axisLeft={{
+          tickSize: 0,
+          tickPadding: 30,
+          tickRotation: 0,
+          legend: "",
+          legendOffset: -50,
+          legendPosition: "middle",
+        }}
+        colors={["url(#someGradientId)"]}
+        pointSize={5}
+        pointColor={{ theme: "background" }}
+        pointBorderWidth={2}
+        pointBorderColor={"#f5f5f500"}
+        pointLabel="y"
+        pointLabelYOffset={-1}
+        useMesh={true}
+        legends={[
+          {
+            anchor: "bottom-right",
+            direction: "column",
+            justify: false,
+            translateX: 100,
+            translateY: 0,
+            itemsSpacing: 0,
+            itemDirection: "left-to-right",
+            itemWidth: 80,
+            itemHeight: 20,
+            itemOpacity: 0,
+            symbolSize: 12,
+            symbolShape: "circle",
+            symbolBorderColor: "rgba(0, 0, 0, .5)",
+            effects: [
+              {
+                on: "hover",
+                style: {
+                  itemBackground: "rgba(0, 0, 0, .03)",
+                  itemOpacity: 1,
+                },
+              },
+            ],
+          },
+        ]}
+      />
     </div>
   );
 };
