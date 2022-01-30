@@ -40,13 +40,32 @@ const Context = (props) => {
         }
     ])
 
-
+    const [ticketDatabase , setticketDatabase] = useState({
+        userTicket:[
+            {
+                txt: "سلام من حسین ضرابی هستم",
+                name: "حسین ضرابی",
+                time: "12 : 00",
+                date: "22 شهریور"
+              }
+        ],
+        companyTicket:[
+            {
+                txt: "سلام من حسین ضرابی از شرکت مکین هستم",
+                name: "حسین ضرابی",
+                time: "12 : 00",
+                date: "22 شهریور"
+              }
+        ]
+    })
+  
     return (
         <MainCounter.Provider value={{
             comment, setComment,
             arrayComment, setArrayComment,
             arrayAnswer, setArrayAnswe,
-            tickets, setTickets
+            tickets, setTickets,
+            ticketDatabase,setticketDatabase
         }}>
             {props.children}
         </MainCounter.Provider>

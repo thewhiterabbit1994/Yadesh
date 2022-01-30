@@ -48,9 +48,8 @@ export default () => {
               <AdminPanelLogo />
             </Link>
             <div
-              className={`absolute right-16 top-[84px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip1 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[84px] transform transition-opacity duration-300 scale-0 ${showTooltip1 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"80px"} text={"پنل کاربری"} />
             </div>
@@ -64,9 +63,8 @@ export default () => {
               <CoursesIcon />
             </Link>
             <div
-              className={`absolute right-16 top-[132px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip2 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[132px] transform transition-opacity duration-300 scale-0 ${showTooltip2 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"70px"} text={"دوره ها"} />
             </div>
@@ -80,9 +78,8 @@ export default () => {
               <EpisodeIcon />
             </Link>
             <div
-              className={`absolute right-16 top-[182px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip3 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[182px] transform transition-opacity duration-300 scale-0 ${showTooltip3 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"75px"} text={"اپیزود ها"} />
             </div>
@@ -96,9 +93,8 @@ export default () => {
               <UserControlIcon />
             </Link>
             <div
-              className={`absolute right-16 top-[234px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip4 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[234px] transform transition-opacity duration-300 scale-0 ${showTooltip4 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"75px"} text={"شرکت ها"} />
             </div>
@@ -112,9 +108,8 @@ export default () => {
               <FactorIcon />
             </Link>
             <div
-              className={`absolute right-16 top-[289px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip5 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[289px] transform transition-opacity duration-300 scale-0 ${showTooltip5 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"75px"} text={"فاکتور ها"} />
             </div>
@@ -124,11 +119,12 @@ export default () => {
             onMouseLeave={() => setshowTooltip6(false)}
             className="cursor-pointer my-8"
           >
-            <TicketIcon />
+            <Link to="ticketscompany">
+              <TicketIcon />
+            </Link>
             <div
-              className={`absolute right-16 top-[340px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip6 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[340px] transform transition-opacity duration-300 scale-0 ${showTooltip6 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"75px"} text={"تیکت ها"} />
             </div>
@@ -140,11 +136,12 @@ export default () => {
             onMouseLeave={() => setshowTooltip7(false)}
             className="cursor-pointer mb-6"
           >
-            <SiteManagmentIcon />
+            <Link to="sitemanagment">
+              <SiteManagmentIcon />
+            </Link>
             <div
-              className={`absolute right-16 top-[423px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip7 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[423px] transform transition-opacity duration-300 scale-0 ${showTooltip7 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"92px"} text={"مدیریت سایت"} />
             </div>
@@ -156,9 +153,8 @@ export default () => {
           >
             <SettingIcon />
             <div
-              className={`absolute right-16 top-[466px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip8 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[466px] transform transition-opacity duration-300 scale-0 ${showTooltip8 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"73px"} text={"تنظیمات"} />
             </div>
@@ -170,9 +166,8 @@ export default () => {
           >
             <ExitIcon />
             <div
-              className={`absolute right-16 top-[510px] transform transition-opacity duration-300 scale-0 ${
-                showTooltip9 ? "scale-100 opacity-100" : "opacity-0 "
-              }`}
+              className={`absolute right-16 top-[510px] transform transition-opacity duration-300 scale-0 ${showTooltip9 ? "scale-100 opacity-100" : "opacity-0 "
+                }`}
             >
               <Tooltip x={"85px"} text={"خروج از پنل"} />
             </div>

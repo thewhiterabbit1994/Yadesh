@@ -29,6 +29,7 @@ import AdminPanelSubscription from "./Pages/AdminDashboard/AdminPanelSubscriptio
 import AdminPanelUser from "./Pages/AdminDashboard/AdminPanelUser"
 import AdminPanel from "./Pages/AdminDashboard/AdminPanel";
 import TicketsCompany from "./Pages/AdminDashboard/TicketsCompany";
+import SiteManagment from "./Pages/AdminDashboard/SiteManagment";
 
 function App() {
   return (
@@ -65,6 +66,8 @@ function App() {
             <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
             <Route path="adminpaneluser" element={<AdminPanelUser />} />
             <Route path="ticketscompany" element={<TicketsCompany />} />
+            <Route path="sitemanagment" element={<SiteManagment />} />
+
           </Route>
 
           {/* <RequireAuth>

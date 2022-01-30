@@ -50,7 +50,7 @@ const Header = () => {
   console.log("---------------------------------------");
 
   return (
-    <section className="absolute w-full  h-[70px] ">
+    <section className="absolute w-full  h-[70px] z-50 ">
       <SearchModal searchModal={searchModal} setsearchModal={setsearchModal} />
       <section className="w-[90%] m-auto mt-[15px] ml-5 flex  items-center justify-between">
         <section className="w-[50%] text-[#001D29]">
