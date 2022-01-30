@@ -15,7 +15,7 @@ const AdminPanel = () => {
   const [showAdminComponentModal, setshowAdminComponentModal] = useState(false);
 
   return (
-    <div className="bg-orange-400 relative top-[80px] right-[110px] w-[1150px] h-fit">
+    <div className=" relative top-[80px] right-[110px] w-[1150px] h-fit">
       <div className="flex justify-between">
         <div className=" flex mt-2">
           <AdminPanelLogo />
