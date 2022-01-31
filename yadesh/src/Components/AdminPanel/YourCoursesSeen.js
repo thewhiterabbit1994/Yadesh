@@ -1,7 +1,7 @@
 import { ResponsivePie } from "@nivo/pie";
 import CoursesIcon from "../../assets/svg/AdminLogin/CoursesIcon";
 
-const YourCoursesSeen = ({ showYourCoursesSeen }) => {
+const YourCoursesSeen = ({ showYourCoursesSeen, showYourUsers }) => {
   const data = [
     {
       id: "اقتصاد آنلاین",
@@ -60,8 +60,11 @@ const YourCoursesSeen = ({ showYourCoursesSeen }) => {
   ];
   return (
     <div
-      className={`transform transition-opacity duration-500 scale-0  absolute w-[770px] h-[280px] bg-[#f5f5f5] rounded-[10px] top-[460px] right-0 ${
-        showYourCoursesSeen ? "scale-100 opacity-100" : "opacity-0"
+      className={`transform transition-opacity duration-500 scale-0  absolute w-[770px] h-[280px] bg-[#f5f5f5] rounded-[10px]  right-0 ${
+        showYourCoursesSeen
+          ? `${showYourUsers ? "top-[460px]" : "top-16"}  scale-100 opacity-100`
+          : "opacity-0"
+      }
       }`}
     >
       <div className="flex mt-5 justify-between">

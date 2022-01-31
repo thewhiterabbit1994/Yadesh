@@ -62,6 +62,7 @@ const AdminPanel = () => {
         setshowYourUsers={setshowYourUsers}
       />
       <YourCoursesSeen
+        showYourUsers={showYourUsers}
         showYourCoursesSeen={showYourCoursesSeen}
         setshowYourCoursesSeen={setshowYourCoursesSeen}
       />
@@ -71,6 +72,7 @@ const AdminPanel = () => {
       />
       <NewTickets
         showNewTickets={showNewTickets}
+        showYourEpisodesSeen={showYourEpisodesSeen}
         setshowNewTickets={setshowNewTickets}
       />
     </div>

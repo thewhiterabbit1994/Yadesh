@@ -1,10 +1,14 @@
 import TicketIcon from "../../assets/svg/AdminLogin/TicketIcon";
 
-const NewTickets = ({ showNewTickets }) => {
+const NewTickets = ({ showNewTickets, showYourEpisodesSeen }) => {
   return (
     <div
-      className={`transform transition-opacity duration-500 scale-0 absolute w-[330px] h-[420px] bg-[#f5f5f5] rounded-[10px] top-[460px] left-0 ${
-        showNewTickets ? "scale-100 opacity-100" : "opacity-0"
+      className={`transform transition-opacity duration-500 scale-0 absolute w-[330px] h-[420px] bg-[#f5f5f5] rounded-[10px]  left-0 ${
+        showNewTickets
+          ? `${
+              showYourEpisodesSeen ? "top-[460px]" : "top-16"
+            }  scale-100 opacity-100`
+          : "opacity-0"
       }`}
     >
       <div>
