@@ -19,7 +19,7 @@ const AdminPanel = () => {
   const [showNewTickets, setshowNewTickets] = useState(true);
 
   return (
-    <div className=" relative top-[80px] right-[110px] w-[1130px] h-fit">
+    <div className="relative top-[80px] right-[110px] w-[1130px] h-fit">
       <div className="flex justify-between">
         <div className=" flex mt-2">
           <AdminPanelLogo />
