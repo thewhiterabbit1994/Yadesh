@@ -4,7 +4,7 @@ import SearchIcon from "../../assets/svg/AdminLogin/SearchIcon";
 
 export default ({ searchModal, setsearchModal }) => (
   <div
-    className={`fixed transform transition-opacity duration-300 scale-0 z-30 w-full h-screen bg-[#00000071]  ${
+    className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen bg-[#00000071]  ${
       searchModal ? "scale-100 opacity-100" : "opacity-0 "
     }`}
   >

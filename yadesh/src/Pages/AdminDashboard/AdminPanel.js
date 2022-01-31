@@ -13,15 +13,19 @@ import NewTickets from "../../Components/AdminPanel/NewTickets";
 const AdminPanel = () => {
   const [exportChartModal, setexportChartModal] = useState(false);
   const [showAdminComponentModal, setshowAdminComponentModal] = useState(false);
+  const [showYourUsers, setshowYourUsers] = useState(true);
+  const [showYourCoursesSeen, setshowYourCoursesSeen] = useState(true);
+  const [showYourEpisodesSeen, setshowYourEpisodesSeen] = useState(true);
+  const [showNewTickets, setshowNewTickets] = useState(true);
 
   return (
-    <div className=" relative top-[80px] right-[110px] w-[1150px] h-fit">
+    <div className=" relative top-[80px] right-[110px] w-[1130px] h-fit">
       <div className="flex justify-between">
         <div className=" flex mt-2">
           <AdminPanelLogo />
           <p className="text-[12px] font-bold pr-3 text-[#000]">پنل کاربری</p>
         </div>
-        <div className="flex">
+        <div className="flex ">
           <div
             onClick={() => setexportChartModal(!exportChartModal)}
             className="cursor-pointer"
@@ -40,15 +44,35 @@ const AdminPanel = () => {
             <Sort1 />
           </div>
           <ShowAdminComponentModal
+            showYourUsers={showYourUsers}
+            showYourCoursesSeen={showYourCoursesSeen}
+            showYourEpisodesSeen={showYourEpisodesSeen}
+            showNewTickets={showNewTickets}
+            setshowYourUsers={setshowYourUsers}
+            setshowYourCoursesSeen={setshowYourCoursesSeen}
+            setshowYourEpisodesSeen={setshowYourEpisodesSeen}
+            setshowNewTickets={setshowNewTickets}
             showAdminComponentModal={showAdminComponentModal}
             setshowAdminComponentModal={setshowAdminComponentModal}
           />
         </div>
       </div>
-      <YourUsers />
-      <YourCoursesSeen />
-      <YourEpisodesSeen />
-      <NewTickets />
+      <YourUsers
+        showYourUsers={showYourUsers}
+        setshowYourUsers={setshowYourUsers}
+      />
+      <YourCoursesSeen
+        showYourCoursesSeen={showYourCoursesSeen}
+        setshowYourCoursesSeen={setshowYourCoursesSeen}
+      />
+      <YourEpisodesSeen
+        showYourEpisodesSeen={showYourEpisodesSeen}
+        setshowYourEpisodesSeen={setshowYourEpisodesSeen}
+      />
+      <NewTickets
+        showNewTickets={showNewTickets}
+        setshowNewTickets={setshowNewTickets}
+      />
     </div>
   );
 };

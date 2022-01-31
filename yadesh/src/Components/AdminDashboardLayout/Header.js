@@ -50,71 +50,75 @@ const Header = () => {
   console.log("---------------------------------------");
 
   return (
-    <section className="absolute w-full  h-[70px] z-50 ">
+    <>
       <SearchModal searchModal={searchModal} setsearchModal={setsearchModal} />
-      <section className="w-[90%] m-auto mt-[15px] ml-5 flex  items-center justify-between">
-        <section className="w-[50%] text-[#001D29]">
-          <section className="flex">
-            <div className="flex ">
-              <img
-                src={imgProfile}
-                className="h-[45px] mt-[-3px] rounded-[50%]"
-              />
-              <div className="text-[10px] flex flex-col mt-[3px] mr-[10px]">
-                {3 >= getHour && getHour >= 0 ? (
-                  <p className="opacity-[60%] ">شب بخیر</p>
-                ) : 10 >= getHour && getHour >= 3 ? (
-                  <p className="opacity-[60%] ">صبح بخیر</p>
-                ) : 15 >= getHour && getHour >= 10 ? (
-                  <p className="opacity-[60%] ">ظهر بخیر</p>
-                ) : 19 >= getHour && getHour >= 15 ? (
-                  <p className="opacity-[60%] ">عصر بخیر</p>
-                ) : 24 >= getHour && getHour >= 19 ? (
-                  <p className="opacity-[60%] ">شب بخیر</p>
-                ) : null}
-                <div className="text-[12px] flex">
-                  <p>محمد حسین ضرابی</p>
-                  <div className="mr-[7px] mt-[5px]">
-                    <ArrowDown />
+      <section className="absolute w-full  h-[70px] z-30 ">
+        <section className="w-[90%] m-auto mt-[15px] ml-5 flex  items-center justify-between">
+          <section className="w-[50%] text-[#001D29]">
+            <section className="flex">
+              <div className="flex ">
+                <img
+                  src={imgProfile}
+                  className="h-[45px] mt-[-3px] rounded-[50%]"
+                />
+                <div className="text-[10px] flex flex-col mt-[3px] mr-[10px]">
+                  {3 >= getHour && getHour >= 0 ? (
+                    <p className="opacity-[60%] ">شب بخیر</p>
+                  ) : 10 >= getHour && getHour >= 3 ? (
+                    <p className="opacity-[60%] ">صبح بخیر</p>
+                  ) : 15 >= getHour && getHour >= 10 ? (
+                    <p className="opacity-[60%] ">ظهر بخیر</p>
+                  ) : 19 >= getHour && getHour >= 15 ? (
+                    <p className="opacity-[60%] ">عصر بخیر</p>
+                  ) : 24 >= getHour && getHour >= 19 ? (
+                    <p className="opacity-[60%] ">شب بخیر</p>
+                  ) : null}
+                  <div className="text-[12px] flex">
+                    <p>محمد حسین ضرابی</p>
+                    <div className="mr-[7px] mt-[5px]">
+                      <ArrowDown />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </section>
-        </section>
-        <section className="w-[38%] flex  justify-between">
-          <div className="flex w-fit px-2 h-[35px] bg-[#E6E9EB] rounded justify-center items-center">
-            <div className="mt-[2px] ml-[5px]">
-              <Calendar />
+          <section className="w-[38%] flex  justify-between">
+            <div className="flex w-fit px-2 h-[35px] bg-[#E6E9EB] rounded justify-center items-center">
+              <div className="mt-[2px] ml-[5px]">
+                <Calendar />
+              </div>
+              <p className="text-[10px] text-[#0050A8]">
+                {day + " " + month + " " + year}
+              </p>
             </div>
-            <p className="text-[10px] text-[#0050A8]">
-              {day + " " + month + " " + year}
-            </p>
-          </div>
-          <div className="flex text-[12px] w-[300px] h-[35px] bg-[#E6E9EB] rounded">
-            <div className="mt-[13px] mx-[10px]">
-              <Search />
+            <div className="flex text-[12px] w-[300px] h-[35px] bg-[#E6E9EB] rounded">
+              <div className="mt-[13px] mx-[10px]">
+                <Search />
+              </div>
+              <div
+                onClick={() => setsearchModal(!searchModal)}
+                className="w-[250px] h-[35px] cursor-pointer bg-[#E6E9EB] text-[11px]"
+              >
+                <p className="text-[#00000093] font-bold mt-[9px]">
+                  جستجو کنید
+                </p>
+              </div>
             </div>
             <div
-              onClick={() => setsearchModal(!searchModal)}
-              className="w-[250px] h-[35px] cursor-pointer bg-[#E6E9EB] text-[11px]"
+              onClick={() => setticketNotifDisplay(!ticketNotifDisplay)}
+              className="cursor-pointer mt-[10px]"
             >
-              <p className="text-[#00000093] font-bold mt-[9px]">جستجو کنید</p>
+              <Nnotification />
             </div>
-          </div>
-          <div
-            onClick={() => setticketNotifDisplay(!ticketNotifDisplay)}
-            className="cursor-pointer mt-[10px]"
-          >
-            <Nnotification />
-          </div>
-          <TicketNotif
-            ticketNotifDisplay={ticketNotifDisplay}
-            setticketNotifDisplay={setticketNotifDisplay}
-          />
+            <TicketNotif
+              ticketNotifDisplay={ticketNotifDisplay}
+              setticketNotifDisplay={setticketNotifDisplay}
+            />
+          </section>
         </section>
       </section>
-    </section>
+    </>
   );
 };
 export default Header;

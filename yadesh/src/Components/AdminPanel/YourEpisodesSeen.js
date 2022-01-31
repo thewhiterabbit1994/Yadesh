@@ -3,7 +3,7 @@ import SeenIcon from "../../assets/svg/View";
 import { ResponsiveBar } from "@nivo/bar";
 import chartbg from "../../assets/Img/chartbg.png";
 
-export default () => {
+export default ({ showYourEpisodesSeen }) => {
   const data = [
     {
       weekday: "شنبه",
@@ -42,7 +42,11 @@ export default () => {
     },
   ];
   return (
-    <div className="absolute w-[350px] h-[380px] bg-[#f5f5f5] rounded-[10px] top-16 left-4">
+    <div
+      className={`transform transition-opacity duration-500 scale-0 absolute w-[330px] h-[380px] bg-[#f5f5f5] rounded-[10px] top-16 left-0 ${
+        showYourEpisodesSeen ? "scale-100 opacity-100" : "opacity-0"
+      }`}
+    >
       <div>
         <div className="flex mt-5 justify-between">
           <div className="flex mr-5">
@@ -52,7 +56,7 @@ export default () => {
           <div className="ml-5">
             <select
               id="wodselect"
-              className="bg-[#e1e4e5] text-[12px] outline-none h-[30px] w-[80px] rounded-[5px]"
+              className="bg-[#e1e4e5] text-[12px] relative z-10 outline-none h-[30px] w-[80px] rounded-[5px]"
             >
               <option id="thisweek" className="" value="thisweek">
                 این هفته
@@ -64,13 +68,13 @@ export default () => {
           </div>
         </div>
       </div>
-      <img className="absolute z-10 mt-8 mr-[20px]" src={chartbg} />
-      <div className="w-[500px] mt-[-20px] mr-[-120px] h-[350px]">
+      <img className="absolute  mt-8 mr-[20px]" src={chartbg} />
+      <div className="w-[330px] mt-[-20px] mr-[-3px] h-[350px]">
         <ResponsiveBar
           data={data}
           keys={["episodeSeen"]}
           indexBy="weekday"
-          margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+          margin={{ top: 50, right: 0, bottom: 50, left: 0 }}
           padding={0.6}
           valueScale={{ type: "linear" }}
           indexScale={{ type: "band", round: true }}

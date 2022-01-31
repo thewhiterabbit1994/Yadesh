@@ -2,7 +2,7 @@ import UserUserIcon from "../../assets/svg/AdminLogin/UserUserIcon";
 import chartbg1 from "../../assets/Img/chartbg1.png";
 import { ResponsiveLine } from "@nivo/line";
 
-export default () => {
+export default ({ showYourUsers }) => {
   const gradProps = {
     gradientUnits: "userSpaceOnUse",
     x1: "0",
@@ -67,7 +67,11 @@ export default () => {
   ];
 
   return (
-    <div className="absolute w-[770px] h-[380px] bg-[#f5f5f5] rounded-[10px] top-16 right-0">
+    <div
+      className={`transform transition-opacity duration-500 scale-0 absolute w-[770px] h-[380px] bg-[#f5f5f5] rounded-[10px] top-16 right-0 ${
+        showYourUsers ? "scale-100 opacity-100" : "opacity-0"
+      }`}
+    >
       <img
         className="absolute mt-[28px] w-[386px] h-[304px] mr-[36px]"
         src={chartbg1}
@@ -163,7 +167,7 @@ export default () => {
             <div className="ml-5 -mt-1">
               <select
                 id="wodselect"
-                className="bg-[#e1e4e5] text-[12px] outline-none h-[30px] w-[80px] rounded-[5px]"
+                className="bg-[#e1e4e5] text-[12px] relative z-10 outline-none h-[30px] w-[80px] rounded-[5px]"
               >
                 <option id="oneyear" className="" value="oneyear">
                   یک ساله
