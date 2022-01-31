@@ -3,6 +3,9 @@ import HeroAboutYadesh from "../../Components/SiteManagMentAboutYadesh.js/HeroAb
 import VsionYadesh from "../../Components/SiteManagMentAboutYadesh.js/VsionYadesh"
 import MissionYadesh from "../../Components/SiteManagMentAboutYadesh.js/MissionYadesh"
 import ContactYadesh from "../../Components/SiteManagMentAboutYadesh.js/ContactYadesh"
+import Support from "../../Components/SiteManagMentAboutYadesh.js/Support"
+import Footer from "../../Components/SiteManagment/Footer"
+
 const AboutYadesh =()=>{
     const [openTab, setOpenTab] = useState(7)
     return (
@@ -35,7 +38,10 @@ const AboutYadesh =()=>{
                     <ContactYadesh />
                 </div>
                 <div className={`${openTab === 6 ? "block" : "hidden"}`}>
-                    <HeroAboutYadesh />
+                    <Support />
+                </div>
+                <div className={`${openTab === 7 ? "block" : "hidden"}`}>
+                    <Footer />
                 </div>
             </section>
         </section>

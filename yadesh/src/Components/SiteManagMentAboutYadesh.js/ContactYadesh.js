@@ -1,4 +1,5 @@
 import { useState } from "react"
+import LogoGoogleMap from "../../assets/svg/AdminPanelCourses/LogoGoogleMap"
 
 const ContactYadesh = () => {
     const [toggle, setToggle] = useState(false)
@@ -36,7 +37,7 @@ const ContactYadesh = () => {
                             <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]"> آدرس </p>
                             <lable>
                                 <input className="w-[400px] h-[70px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="تهران - میدان انقلاب - خ کارگر شمالی - خ اعتمادی - ک رها  - پ 20"
+                                    placeholder="تهران - میدان انقلاب - خ کارگر شمالی - خ اعتمادی - ک رها "
                                 />
                             </lable>
                         </div>
@@ -48,15 +49,20 @@ const ContactYadesh = () => {
                         <section className="flex w-[500px]">
                             <lable>
                                 <input className="w-[300px] h-[40px] rounded placeholder:w-[200px]  placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="melat-bank-logo.png "
+                                    placeholder="@35456.987426461z"
                                 />
                             </lable>
-                            <button className="w-[100px] rounded text-[#fff]  text-[10px] bg-[#008043]">جستجو فایل</button>
+                            <div className=" flex items-center justify-around relative w-[150px] h-[36px] rounded text-[#000]  text-[8px] bg-[#E6E9EB] font-semibold ">
+                                <p>انتخاب موقعیت در گوگل مپ</p>
+                                <div className="absolute left-[10px] ">
+                                    <LogoGoogleMap />
+                                </div>
+                            </div>
                         </section>
                     </div>
                     <section className="w-[400px] text-[12px] flex pt-[20px] text-[#7A7A7A]">
                         <p className="w-[150px] ml-[50px]">لوگو (نمایش داده شود)</p>
-                        <div onClick={() => setToggle(!toggle)} className={`${toggle ? "cursor-pointer w-[40px] h-[20px] bg-[#E6E9EB] rounded-[20px] mr-[20px] relative" : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"}`}>
+                        <div onClick={() => setToggle(!toggle)} className={`${toggle ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative" : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"}`}>
                             <div className={`${toggle ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]" : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"}`}></div>
                         </div>
                     </section>

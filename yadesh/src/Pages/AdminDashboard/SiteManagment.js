@@ -11,7 +11,7 @@ import Episode from "../../Components/SiteManagment/Episode"
 import ContactWithYadesh from "../../Components/SiteManagment/ContactWithYadesh"
 import { useState } from "react"
 const SiteManagment = () => {
-    const [openTab, setOpenTab] = useState(9)
+    const [openTab, setOpenTab] = useState(1)
     return (
         <section className="relative top-[100px] w-full">
             <section className="w-[85%] m-auto mr-[130px]">

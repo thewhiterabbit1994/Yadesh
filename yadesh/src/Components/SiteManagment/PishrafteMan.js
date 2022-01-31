@@ -5,6 +5,7 @@ import MyList from "../../Components/SiteManagmentPishrafteMan(myProgress)/MyLis
 import YouHaveSeenItBefore from "../../Components/SiteManagmentPishrafteMan(myProgress)/YouHaveSeenItBefore"
 import CompletedCourse from "../../Components/SiteManagmentPishrafteMan(myProgress)/CompletedCourse"
 import KeepLearning from "../../Components/StateManagmentSignIn/KeepLearning"
+import Footer from "../../Components/SiteManagment/Footer"
 
 
 const PishrafteMan =()=>{
@@ -42,6 +43,9 @@ const PishrafteMan =()=>{
                     </div>
                     <div className={`${openTab === 6 ? "block" : "hidden"}`}>
                         <CompletedCourse />
+                    </div>
+                    <div className={`${openTab === 7 ? "block" : "hidden"}`}>
+                        <Footer />
                     </div>
                 </section>
             </section>
