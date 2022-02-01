@@ -2,10 +2,12 @@ import Link from "../../assets/svg/AdminPanelCourses/Link"
 import Send from "../../assets/svg/AdminPanelCourses/Send"
 import { useContext } from "react"
 import { MainCounter } from "../../Context/Context"
+import { useState } from "react"
 const UserComent = () => {
-    const {
+    const [privetTicket, setprivetTicket] = useState({})
+
+    let {
         comment, setComment,
-        tickets, setTickets,
         ticketDatabase, setticketDatabase
     } = useContext(MainCounter)
 
@@ -14,10 +16,10 @@ const UserComent = () => {
             txt: comment,
             name: "حسین ضرابی",
             time: new Date().getTime(),
-            date: "22 شهریور"
+            date: "22 شهریور",
+
         }
         // tickets.push(obj)
-        const arr = [ obj]
         ticketDatabase.userTicket.push(obj)
         setComment("")
     }
@@ -27,18 +29,25 @@ const UserComent = () => {
             addComment()
         }
     }
+    let privetTickets = (user) => {
+        setprivetTicket(user)
+    }
 
     return (
         <div className="flex w-full justify-between" >
             <section className="w-[39%] h-fit relative">
                 <div className="w-full  justify-center ">
                     {
-                        tickets.map(item => {
+                        ticketDatabase.user.map(item => {
                             return (
-                                <div className="text-[12px] flex  relative bg-[#c5c1c134] my-[20px] w-[450px] h-[150px] rounded-lg pr-[10px] border-2 hover:border-[#007AFF]">
+
+                                <div key={item.id}
+                                    onClick={() => privetTickets(item)}
+                                    className={`cursor-pointer text-[12px] flex  relative bg-[#c5c1c134] my-[20px] w-[450px] h-[150px] rounded-lg pr-[10px] border-2 hover:border-[#007AFF]`}>
                                     <section className="mt-[20px]">
-                                        <img src={item.img} className="w-[60px] h-[40px] rounded-[50%]" />
+                                        <img src={item.img} className="w-[40px] h-[40px] rounded-[50%]" />
                                     </section>
+
                                     <section className="mt-[20px]">
                                         <p className="py-[10px] pr-[10px] text-[#00000091] ">{item.name}</p>
                                         <p className="py-[7px] leading-6">{item.txt}</p>
@@ -59,39 +68,25 @@ const UserComent = () => {
                     <p className=" text-[10px] font-semibold text-[#001D29]">مشاهده ی همه ی تیکت ها</p>
                 </div>
             </section>
-            <section className="w-[59%] pb-[50px] bg-[#0000001a] rounded-lg h-fit   ">
-                <div className="w-full h-fit justify-center py-[20px] ">
+            <section className="w-[59%] pb-[50px] bg-[#0000001a] rounded-lg h-fit mt-[20px] ">
+                <div className="w-full h-fit justify-center py-[20px]  flex items-center ">
                     {
-                        ticketDatabase.userTicket.map(item => {
-                            return (
-                                <div className="text-[12px] mb-[20px] relative bg-[#fff] w-[600px] h-fit rounded-lg mr-[20px] pr-[10px] border-l-4 border-[#007AFF]">
-                                    <p className="py-[10px] pr-[10px] text-[#00000091]">{item.name}</p>
-                                    <p className="py-[7px] leading-6">{item.txt}</p>
-                                    <section className="flex w-[100px] justify-between text-[#00000091] py-[5px]">
-                                        <p absolute="">{item.date}</p>
-                                        <p absolute="">{item.time}</p>
-                                    </section>
-                                </div>
-                            )
-                        })
+                        <section className="text-[12px] relative bg-[#F5F5F5] w-[500px] h-[130px] rounded-lg pr-[20px] pt-[10px]">
+                            <div className="flex w-[150px] justify-around">
+                                <img src={privetTicket.img} className="w-[40px] h-[40px] rounded-[50%]" />
+                                <p className="mt-[5px]">{privetTicket.name}</p>
+                            </div>
+                            <div className="mt-[15px] pr-[60px] leading-7">
+                                <p>{privetTicket.txt}</p>
+                                <p className="text-[10px] text-[#000000c4] font-semibold">{privetTicket.categories}</p>
+                            </div>
+                            <div className="absolute top-[0] left-[0] flex w-[150px] justify-around mt-[10px] text-[10px] text-[#000000af] font-semibold">
+                                <p>{privetTicket.time}</p>
+                                <p>{privetTicket.date}</p>
+                            </div>
+                        </section>
                     }
                 </div>
-                {/* <div className="w-full h-fit flex  justify-center  py-[20px]">
-              {
-                arrayAnswer.map(item => {
-                    return (
-                        <div className="text-[12px] relative bg-[#fff] w-[600px] h-[130px] rounded-lg pr-[10px] border-l-4 border-[#FF003D]">
-                            <p className="py-[10px] pr-[10px] text-[#00000091]">{item.name}</p>
-                            <p className="py-[7px] leading-6">{item.txt}</p>
-                            <section className="flex w-[100px] justify-between text-[#00000091] py-[10px]">
-                                <p absolute="">{item.date}</p>
-                                <p absolute="">{item.time}</p>
-                            </section>
-                        </div>
-                    )
-                })
-            } 
-            </div> */}
                 <div>
                     <label >
                         <div onClick={addComment} className="w-[17px] rotate-45 fixed cursor-pointer bottom-[20px] right-[625px] z-10">

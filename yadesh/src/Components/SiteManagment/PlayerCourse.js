@@ -1,9 +1,9 @@
 import { useState } from "react"
-import Tags from "../SiteManegMentPlayerEpisode/Tags"
-import MyNotes from "../SiteManegMentPlayerEpisode/MyNotes"
-import RelateEpisode from "../SiteManegMentPlayerEpisode/RelateEpisode"
+import Tags from "../../Components/SiteManagmentPlayerCourse/Tags"
+import MyNotes from "../../Components/SiteManagmentPlayerCourse/MyNotes"
+import RelateEpisode from "../../Components/SiteManagmentPlayerCourse/RelateEpisode"
 
-const Episode = () => {
+const PlayerCourse = () => {
     const [openTab, setOpenTab] = useState(1)
 
     return (
@@ -34,4 +34,4 @@ const Episode = () => {
         </section>
     )
 }
-export default Episode
+export default PlayerCourse

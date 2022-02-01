@@ -2,10 +2,17 @@ import Link from "../../assets/svg/AdminPanelCourses/Link"
 import Send from "../../assets/svg/AdminPanelCourses/Send"
 import { useContext } from "react"
 import { MainCounter } from "../../Context/Context"
+import {useState} from "react"
 const CompanyComent = () => {
+
+  const [privetTicket, setprivetTicket] = useState({})
+
+  const privetTickets = (user) => {
+    setprivetTicket(user)
+  }
+
   const {
     comment, setComment,
-    tickets, setTickets,
     ticketDatabase, setticketDatabase
   } = useContext(MainCounter)
 
@@ -32,9 +39,11 @@ const CompanyComent = () => {
       <section className="w-[39%] h-fit relative">
         <div className="w-full justify-center  ">
           {
-            tickets.map(item => {
+            ticketDatabase.user.map(item => {
               return (
-                <div className="text-[12px] flex  relative bg-[#c5c1c134] my-[20px] w-[450px] h-[150px] rounded-lg pr-[10px] border-2 hover:border-[#008043]">
+                <div
+                  onClick={() => privetTickets(item)}
+                  className="text-[12px] flex  relative bg-[#c5c1c134] my-[20px] w-[450px] h-[150px] rounded-lg pr-[10px] border-2 hover:border-[#008043]">
                   <section className="mt-[20px]">
                     <img src={item.img} className="w-[60px] h-[40px] rounded-[50%]" />
                   </section>
@@ -59,9 +68,9 @@ const CompanyComent = () => {
         </div>
       </section>
       <section className="w-[59%] h-fit bg-[#0000001a] rounded-lg relative">
-         <div className="w-full justify-center py-[20px]">
-           {
-             ticketDatabase.companyTicket.map(item => {
+        <div className="w-full justify-center py-[20px]">
+          {
+            ticketDatabase.companyTicket.map(item => {
               return (
                 <div className="text-[12px] mb-[20px] relative bg-[#fff] w-[600px] h-fit rounded-lg mr-[20px] pr-[10px] border-l-4 border-[#007AFF]">
                   <p className="py-[10px] pr-[10px] text-[#00000091]">{item.name}</p>
@@ -73,23 +82,25 @@ const CompanyComent = () => {
                 </div>
               )
             })
-          } 
-        </div> 
+          }
+        </div>
         <div className="w-full h-fit flex  justify-center  py-[20px]">
-          {/* {
-                  arrayAnswer.map(item => {
-                      return (
-                          <div className="text-[12px] relative bg-[#fff] w-[600px] h-[130px] rounded-lg pr-[10px] border-l-4 border-[#FF003D]">
-                              <p className="py-[10px] pr-[10px] text-[#00000091]">{item.name}</p>
-                              <p className="py-[7px] leading-6">{item.txt}</p>
-                              <section className="flex w-[100px] justify-between text-[#00000091] py-[10px]">
-                                  <p absolute="">{item.date}</p>
-                                  <p absolute="">{item.time}</p>
-                              </section>
-                          </div>
-                      )
-                  })
-              } */}
+          {
+            <section className="text-[12px] relative bg-[#F5F5F5] w-[500px] h-[130px] rounded-lg pr-[20px] pt-[10px]">
+              <div className="flex w-[150px] justify-around">
+                <img src={privetTicket.img} className="w-[40px] h-[40px] rounded-[50%]" />
+                <p className="mt-[5px]">{privetTicket.name}</p>
+              </div>
+              <div className="mt-[15px] pr-[60px] leading-7">
+                <p>{privetTicket.txt}</p>
+                <p className="text-[10px] text-[#000000c4] font-semibold">{privetTicket.categories}</p>
+              </div>
+              <div className="absolute top-[0] left-[0] flex w-[150px] justify-around mt-[10px] text-[10px] text-[#000000af] font-semibold">
+                <p>{privetTicket.time}</p>
+                <p>{privetTicket.date}</p>
+              </div>
+            </section>
+          }
         </div>
         <div >
           <label >

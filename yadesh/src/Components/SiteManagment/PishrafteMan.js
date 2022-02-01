@@ -9,7 +9,7 @@ import Footer from "../../Components/SiteManagment/Footer"
 
 
 const PishrafteMan =()=>{
-    const [openTab, setOpenTab] = useState(6)
+    const [openTab, setOpenTab] = useState(1)
 
     return(
         <section className="w-full h-[100vh]">
@@ -22,7 +22,6 @@ const PishrafteMan =()=>{
                         <p onClick={() => setOpenTab(4)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">لیست من </p>
                         <p onClick={() => setOpenTab(5)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">قبلا دیده اید</p>
                         <p onClick={() => setOpenTab(6)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">دوره های تکمیل شده</p>
-                        <p onClick={() => setOpenTab(7)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">فوتر</p>
                     </div>
                 </section>
                 <section className="w-[84%]">
@@ -43,9 +42,6 @@ const PishrafteMan =()=>{
                     </div>
                     <div className={`${openTab === 6 ? "block" : "hidden"}`}>
                         <CompletedCourse />
-                    </div>
-                    <div className={`${openTab === 7 ? "block" : "hidden"}`}>
-                        <Footer />
                     </div>
                 </section>
             </section>

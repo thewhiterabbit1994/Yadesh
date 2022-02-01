@@ -7,7 +7,7 @@ import CostomerYadesh from "../../Components/NotSignIn/CostomerYadesh";
 import PanelSazmani from "../../Components/NotSignIn/PanelSazmani";
 import Footer from "../../Components/SiteManagment/Footer";
 const NotSignIn = () => {
-    const [openTab, setOpenTab] = useState(7)
+    const [openTab, setOpenTab] = useState(1)
     return (
         <section className="w-full h-[100vh] flex justify-between">
             <section className="w-[10%]">

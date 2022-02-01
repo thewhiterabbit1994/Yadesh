@@ -11,6 +11,8 @@ import Episode from "../../Components/SiteManagment/Episode"
 import ContactWithYadesh from "../../Components/SiteManagment/ContactWithYadesh"
 import Footer from "../../Components/SiteManagment/Footer";
 import Login from "../../Components/SiteManagment/Login";
+import PlayerCourse from "../../Components/SiteManagment/PlayerCourse";
+
 
 import { useState } from "react"
 const SiteManagment = () => {
@@ -73,7 +75,7 @@ const SiteManagment = () => {
                         <Footer />
                     </div>
                     <div className={`${openTab === 12 ? "block" : "hidden"}`}>
-                        <ContactWithYadesh />
+                        <PlayerCourse />
                     </div>
 
                 </section>

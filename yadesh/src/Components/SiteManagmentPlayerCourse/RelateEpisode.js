@@ -12,7 +12,7 @@ const RelateEpisode = () => {
                             <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">عنوان</p>
                             <lable>
                                 <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="اپیزود های مشابه "
+                                    placeholder="درس های مرتبط "
                                 />
                             </lable>
                         </div>
@@ -20,7 +20,7 @@ const RelateEpisode = () => {
                             <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">زیر عنوان</p>
                             <lable>
                                 <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="شاید این اپیزود ها را دوست داشته باشید"
+                                    placeholder="درس های مرتبط با این درس"
                                 />
                             </lable>
                         </div>

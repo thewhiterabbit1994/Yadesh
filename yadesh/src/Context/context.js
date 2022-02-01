@@ -6,10 +6,10 @@ import work from "../assets/Img/imgHomeNotLogin/work.jpg";
 import convetion from "../assets/Img/imgHomeNotLogin/convertion.jpg";
 import reading from "../assets/Img/imgHomeNotLogin/reading.jpg";
 import AboutYadesh from "../assets/Img/AboutYadesh/Rectangle 857.jpg";
-
 export const MainCounter = createContext("");
 
 const Context = (props) => {
+
   const [siteManagmentDatabase, setsiteManagmentDatabase] = useState({
     HomePageNotLogin: {
       hero: {
@@ -54,24 +54,7 @@ const Context = (props) => {
   });
 
   const [comment, setComment] = useState("");
-  const [tickets, setTickets] = useState([
-    {
-      txt: "طرح‌نما یا لورم ایپسوم به نوشتاری آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی  و ارائهٔ اولیهٔ شکل ",
-      name: "حسین ضرابی",
-      time: "12:00",
-      date: "22 شهریور",
-      img: imgUser,
-      categories: "حساب کاربری",
-    },
-    {
-      txt: "طرح‌نما یا لورم ایپسوم به نوشتاری آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی  و ارائهٔ اولیهٔ شکل ",
-      name: "حسین ضرابی",
-      time: "12:00",
-      date: "22 شهریور",
-      img: imgUser,
-      categories: "اپیزودها",
-    },
-  ]);
+
   const [arrayAnswer, setArrayAnswe] = useState([
     {
       txt: "طرح‌نما یا لورم ایپسوم به نوشتاری آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این نوشتار به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ شکل ",
@@ -90,6 +73,25 @@ const Context = (props) => {
   ]);
 
   const [ticketDatabase, setticketDatabase] = useState({
+    user: [
+      {
+        txt: "سلام من حسین ضرابی هستم از شرکت دیجی کالا ",
+        name: "حسین ضرابی",
+        time: "12:00",
+        date: "22 شهریور",
+        img: imgUser,
+        categories: "حساب کاربری",
+      },
+      {
+        txt: "سلام من علی حسنی هستم از شرکت دیجی کالا ",
+        name: "علی حسنی ",
+        time: "12:00",
+        date: "22 شهریور",
+        img: imgUser,
+        categories: "اپیزودها",
+      }
+    ],
+    company: [],
     userTicket: [
       {
         txt: "سلام من حسین ضرابی هستم",
@@ -107,7 +109,6 @@ const Context = (props) => {
       },
     ],
   });
-
   return (
     <MainCounter.Provider
       value={{
@@ -117,12 +118,11 @@ const Context = (props) => {
         setArrayComment,
         arrayAnswer,
         setArrayAnswe,
-        tickets,
-        setTickets,
         ticketDatabase,
         setticketDatabase,
         siteManagmentDatabase,
         setsiteManagmentDatabase,
+      
       }}
     >
       {props.children}
