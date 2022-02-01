@@ -64,7 +64,7 @@ const AdminLogin = () => {
             </p>
           </Link>
         </div>
-        <Link to="/admindashboard">
+        <Link to="/admindashboard/adminpanel">
           <button className="h-[45px] w-[267px] mt-5 bg-[#008043] text-[#ffffff] font-bold rounded-[5px] text-[11px]">
             ورود به پنل
           </button>

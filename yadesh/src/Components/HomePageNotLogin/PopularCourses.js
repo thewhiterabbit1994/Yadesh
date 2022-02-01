@@ -4,26 +4,33 @@ import Hesabdari from "../../assets/Img/papoularCourses/hesabdari.png";
 import SarmayeGozari from "../../assets/Img/papoularCourses/sarmayegozari.png";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 
 const PopularCourses = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+  const data = siteManagmentDatabase.HomePageNotLogin.popularCourses;
   return (
     <div className="w-full h-[600px] bg-[black] ">
       <div className="mr-[135px] mb-[20px] ">
         <div className="flex mb-[20px] h-[20px] w-[219px]">
           <div className="border-[#00FF85] border-r-[7px] ml-[7px] rounded "></div>
           <h2 className="text-[#E6FFF3] w-[219px]  text-[22px] font-medium mt-[-10px]">
-            دوره های پرطرفدار
+            {data.title}
           </h2>
         </div>
         <h5 className="text-[#C4C4C4] text-[16px] font-normal	">
-          به انتخاب یادش
+          {data.subTitle}
         </h5>
       </div>
 
       <div className="flex justify-center ml-[50px] ">
         <div className="relative ">
           <Link to="/home/course" className="">
-            <img className="rounded w-[150px] h-[350px] " src={ModiriyateMali} />
+            <img
+              className="rounded w-[150px] h-[350px] "
+              src={ModiriyateMali}
+            />
           </Link>
           <div className="absolute top-[280px] left-[30px] text-[#E6FFF3] flex flex-col text-center leading-[30px]">
             <h6 className="text-[16px] "> مدیریت مالی</h6>
@@ -36,7 +43,8 @@ const PopularCourses = () => {
             <img
               className=" rounded w-[150px] h-[350px] "
               src={RavanshenasiRangha}
-            />          </Link>
+            />{" "}
+          </Link>
 
           <div className="absolute top-[250px] left-[40px] text-[#E6FFF3] flex flex-col text-center leading-[30px]">
             <h6 className="text-[16px]">رنگ ها </h6>
@@ -47,7 +55,10 @@ const PopularCourses = () => {
 
         <div className="relative  mr-[15px] z-[40]">
           <Link to="/home/course" className="z-[40]">
-            <img className=" rounded  w-[150px] h-[350px] " src={SarmayeGozari} />
+            <img
+              className=" rounded  w-[150px] h-[350px] "
+              src={SarmayeGozari}
+            />
           </Link>
           <div className="absolute top-[280px] left-[30px] text-[#E6FFF3] flex flex-col text-center leading-[30px]">
             <h6 className="text-[16px]"> سرمایه گذاری </h6>
