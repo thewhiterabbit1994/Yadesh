@@ -22,7 +22,7 @@ const SiteManagment = () => {
                     <Managment />
                     <p className="mr-[12px] font-semibold "> مدیریت سایت</p>
                 </div>
-                <div className="flex text-[12px] w-full justify-between">
+                <div className="flex text-[0.85vw] w-full justify-between">
                     <p className={`${openTab === 1 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"} `} onClick={() => setOpenTab(1)}>صفحه اول (not sign in)</p>
                     <p className={`${openTab === 2 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(2)}>صفحه اول (sign in)</p>
                     <p className={`${openTab === 3 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(3)}>پیشرفت من </p>
