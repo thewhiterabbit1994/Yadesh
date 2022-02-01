@@ -18,7 +18,6 @@ const NotSignIn = () => {
                     <p onClick={() => setOpenTab(4)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">پربازدیدترین اپیزودها</p>
                     <p onClick={() => setOpenTab(5)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">مشتریان یادش</p>
                     <p onClick={() => setOpenTab(6)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">پنل سازمانی</p>
-                    <p onClick={() => setOpenTab(7)} className=" hover:bg-[#e2e0e0] p-3 w-[140px] m-auto py-[15px] bg-[#C4C4C4] rounded-lg cursor-pointer">فوتر</p>
                 </div>
             </section>
             <section className={`w-[84%]`}>
@@ -40,9 +39,7 @@ const NotSignIn = () => {
                 <div className={`${openTab === 6 ? "block" : "hidden"}`}>
                     <PanelSazmani />
                 </div>
-                <div className={`${openTab === 7 ? "block" : "hidden"}`}>
-                    <Footer />
-                </div>
+               
             </section>
         </section>
     )

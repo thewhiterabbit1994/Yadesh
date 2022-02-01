@@ -9,6 +9,9 @@ import YadeshForSazman from "../../Components/SiteManagment/YadeshForSazman"
 import Course from "../../Components/SiteManagment/Course"
 import Episode from "../../Components/SiteManagment/Episode"
 import ContactWithYadesh from "../../Components/SiteManagment/ContactWithYadesh"
+import Footer from "../../Components/SiteManagment/Footer";
+import Login from "../../Components/SiteManagment/Login";
+
 import { useState } from "react"
 const SiteManagment = () => {
     const [openTab, setOpenTab] = useState(1)
@@ -28,7 +31,12 @@ const SiteManagment = () => {
                     <p className={`${openTab === 6 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(6)}>یادش برای سازمان ها</p>
                     <p className={`${openTab === 7 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(7)}>دوره</p>
                     <p className={`${openTab === 8 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(8)}>پلیر - اپیزود</p>
+                    <p className={`${openTab === 12 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(12)}> پلیر - دوره </p>
                     <p className={`${openTab === 9 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(9)}>تماس با یادش</p>
+                    <p className={`${openTab === 10 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(10)}> لاگین </p>
+                    <p className={`${openTab === 11 ? "bg-[#fff] border-[#00B35D] border-2 rounded p-3  cursor-pointer" : " rounded p-3  cursor-pointer bg-[#D5D5D5]"}`} onClick={() => setOpenTab(11)}> فوتر </p>
+
+
                 </div>
                 <section className="mt-[30px]" >
                     <div className={`${openTab === 1 ? "block" : "hidden"}`}>
@@ -56,6 +64,15 @@ const SiteManagment = () => {
                         <Episode />
                     </div>
                     <div className={`${openTab === 9 ? "block" : "hidden"}`}>
+                        <ContactWithYadesh />
+                    </div>
+                    <div className={`${openTab === 10 ? "block" : "hidden"}`}>
+                        <Login />
+                    </div>
+                    <div className={`${openTab === 11 ? "block" : "hidden"}`}>
+                        <Footer />
+                    </div>
+                    <div className={`${openTab === 12 ? "block" : "hidden"}`}>
                         <ContactWithYadesh />
                     </div>
 

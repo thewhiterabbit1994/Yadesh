@@ -31,8 +31,6 @@ const Footer = () => {
                     <div className={`${toggle3 ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]" : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"}`}></div>
                 </div>
             </section>
-
-
         </section>
     )
 }

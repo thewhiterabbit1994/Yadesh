@@ -5,8 +5,6 @@ import { MainCounter } from "../../Context/Context"
 const UserComent = () => {
     const {
         comment, setComment,
-        arrayComment, setArrayComment,
-        arrayAnswer, setArrayAnswe,
         tickets, setTickets,
         ticketDatabase, setticketDatabase
     } = useContext(MainCounter)
@@ -19,9 +17,8 @@ const UserComent = () => {
             date: "22 شهریور"
         }
         // tickets.push(obj)
-        const arr = [...arrayComment, obj]
+        const arr = [ obj]
         ticketDatabase.userTicket.push(obj)
-        setArrayComment(arr)
         setComment("")
     }
 

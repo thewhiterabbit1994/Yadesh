@@ -2,20 +2,22 @@ import Ekhtar from "../../assets/svg/AdminPanelCourses/Ekhtar"
 const Hero = () => {
     return (
         <section className="w-full h-[600px] bg-[#F5F5F5] flex justify-between rounded mt-[10px]">
-            <section className="w-[45%]">
+            <section className="w-[35%] text-[12px] text-[#7A7A7A]">
                 <section className="w-[93%] h-[550px] m-auto  my-[20px] ">
-                    <div>
-                        <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">عنوان</p>
-                        <lable>
-                            <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                placeholder="یادگیری به فاصله چند کلیک"
-                            />
-                        </lable>
+                    <div className="">
+                        <label className="" htmlFor="titleSlide1">
+                            (اسلاید 1عنوان )
+                        </label>
+                        <input
+                            className="w-[390px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
+                            id="titleSlide1"
+                            placeholder="مهارت های خود را افزایش دهید "
+                        />
                     </div>
                     <div className="my-[30px]">
                         <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">زیر عنوان</p>
                         <lable>
-                            <input className="w-[400px] h-[80px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
+                            <input className="w-[350px] h-[80px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
                                 placeholder="بیش از هزاران ویدبوی آموزش برای شما از بروزترین منابع آموزشی دنیا"
                             />
                         </lable>
@@ -23,7 +25,7 @@ const Hero = () => {
                     <div className="my-[30px]">
                         <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">توضیحات</p>
                         <lable>
-                            <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
+                            <input className="w-[350px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
                                 placeholder="مزایای ثبت نام در یادش"
                             />
                         </lable>
@@ -31,7 +33,7 @@ const Hero = () => {
                     <div className="my-[30px]">
                         <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]"> ویژگی ها (حد اقل 3 اکثر مورد) </p>
                         <lable>
-                            <input className="w-[400px] h-[150px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
+                            <input className="w-[350px] h-[150px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
                                 placeholder="دسترسی بیش از هزاران ویدیو "
                             />
                         </lable>
