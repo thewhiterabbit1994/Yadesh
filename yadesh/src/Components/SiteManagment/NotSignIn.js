@@ -1,11 +1,11 @@
-import { useState } from "react"
-import Hero from "../../Components/NotSignIn/Hero"
-import PopularCourses from "../../Components/NotSignIn/PopularCourses"
-import AboutYadesh from "../../Components/NotSignIn/AboutYadesh"
-import MostViewedEpisodes from "../../Components/NotSignIn/MostViewedEpisodes"
-import CostomerYadesh from "../../Components/NotSignIn/CostomerYadesh"
-import PanelSazmani from "../../Components/NotSignIn/PanelSazmani"
-import Footer  from "../../Components/SiteManagment/Footer"
+import { useState } from "react";
+import Hero from "../../Components/NotSignIn/Hero";
+import PopularCourses from "../../Components/NotSignIn/PopularCourses";
+import AboutYadesh from "../../Components/NotSignIn/AboutYadesh";
+import MostViewedEpisodes from "../../Components/NotSignIn/MostViewedEpisodes";
+import CostomerYadesh from "../../Components/NotSignIn/CostomerYadesh";
+import PanelSazmani from "../../Components/NotSignIn/PanelSazmani";
+import Footer from "../../Components/SiteManagment/Footer";
 const NotSignIn = () => {
     const [openTab, setOpenTab] = useState(7)
     return (

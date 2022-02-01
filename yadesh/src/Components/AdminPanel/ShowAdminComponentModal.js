@@ -41,7 +41,9 @@ export default ({
       <div className="flex mt-6 mb-6 justify-between  m-auto ">
         <div className="flex">
           <div className="mt-1 mr-[15px]">
-            <ShowTick />
+            <div className={`${showYourUsers === true ? "" : "hidden "}`}>
+              <ShowTick />
+            </div>
           </div>
           <p
             onClick={() => setshowYourUsers(!showYourUsers)}
@@ -54,7 +56,11 @@ export default ({
       <div className="flex my-7  justify-between divide-y-reverse divide-y m-auto ">
         <div className="flex">
           <div className="mt-1 mr-[15px]">
-            <ShowTick />
+            <div
+              className={`${showYourEpisodesSeen === true ? "" : "hidden "}`}
+            >
+              <ShowTick />
+            </div>
           </div>
           <p
             onClick={() => setshowYourEpisodesSeen(!showYourEpisodesSeen)}
@@ -67,7 +73,9 @@ export default ({
       <div className="flex my-7  justify-between divide-y-reverse divide-y m-auto ">
         <div className="flex">
           <div className="mt-1 mr-[15px]">
-            <ShowTick />
+            <div className={`${showYourCoursesSeen === true ? "" : "hidden "}`}>
+              <ShowTick />
+            </div>
           </div>
           <p
             onClick={() => setshowYourCoursesSeen(!showYourCoursesSeen)}
@@ -80,7 +88,9 @@ export default ({
       <div className="flex my-7  justify-between divide-y-reverse divide-y m-auto ">
         <div className="flex">
           <div className="mt-1 mr-[15px]">
-            <ShowTick />
+            <div className={`${showNewTickets === true ? "" : "hidden "}`}>
+              <ShowTick />
+            </div>
           </div>
 
           <p

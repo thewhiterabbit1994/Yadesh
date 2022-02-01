@@ -1,7 +1,11 @@
-import AboutYadesh from "../../assets/Img/AboutYadesh/Rectangle 857.jpg";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
+
 const Aboutyadesh = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+  const data = siteManagmentDatabase.HomePageNotLogin.aboutYadesh;
   return (
     <div className="w-full  bg-[#000] flex pb-[7rem] relative z-10">
       <div className="absolute top-[-100px] -z-10">
@@ -9,7 +13,7 @@ const Aboutyadesh = () => {
       </div>
       <section className=" flex justify-center mr-[10px] ">
         <img
-          src={AboutYadesh}
+          src={data.imagery}
           className="w-[500pxpx] h-[310px] rounded mr-[7rem] "
         />
         ّ
@@ -20,19 +24,14 @@ const Aboutyadesh = () => {
             <div className="border-[#00FF85]  border-r-[7px] ml-[7px] rounded h-[22px] mt-[8px]">
               {" "}
             </div>
-            <h6 className="font-medium">درباره یادش</h6>
+            <h6 className="font-medium">{data.title}</h6>
           </div>
           <h6 className="text-[#C4C4C4] text-[15px] w-[189px] h-[18px] mt-[23px]">
-            {" "}
-            درباره ما بیشتر بدانید
+            {data.subTitle}
           </h6>
         </div>
         <div className="text-[#C4C4C4] text-[13px] pt-[30px] leading-[40px] flex justify-center mr-[50px]">
-          <p className="w-[480px] h-[100px] text-justify">
-            یادگیری دغدغه همیشگی افراد است ولی بستر مناسبی برای آن وجود ندارد.
-            یادش یک پلتفرم آموزش برای شرکت هااساتید مدیران تولید محتواواراد است
-            که دسترسی دسرسی به ویدیوهای آموزشی را برای کاربران آسان کرده است.
-          </p>
+          <p className="w-[480px] h-[100px] text-justify">{data.attributes}</p>
         </div>
         <div className="mt-[30px] mr-[50px]">
           <Link to="/aboutus">
@@ -41,7 +40,6 @@ const Aboutyadesh = () => {
               بیشتر بدانید
             </button>
           </Link>
-
         </div>
       </section>
     </div>
