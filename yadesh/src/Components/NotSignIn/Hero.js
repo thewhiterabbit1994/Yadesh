@@ -307,9 +307,9 @@ const Hero = () => {
               display: "none",
             },
             dropzone: {
-              maxHeight: "18.59375vw",
-              minHeight: "18.59375vw",
-              maxWidth: "7.421875vw",
+              maxHeight: "238px",
+              minHeight: "238px",
+              maxWidth: "95px",
               borderRadius: 10,
               border: "0",
               top: "-618px",
