@@ -5,7 +5,6 @@ import { MainCounter } from "../../Context/Context";
 import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {

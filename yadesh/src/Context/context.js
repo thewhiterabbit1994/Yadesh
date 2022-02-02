@@ -6,10 +6,11 @@ import work from "../assets/Img/imgHomeNotLogin/work.jpg";
 import convetion from "../assets/Img/imgHomeNotLogin/convertion.jpg";
 import reading from "../assets/Img/imgHomeNotLogin/reading.jpg";
 import AboutYadesh from "../assets/Img/AboutYadesh/Rectangle 857.jpg";
+import imgPelaneSazmani from "../assets/Img/PelaneSazmani/imgPelaneSazmani.jpg";
+
 export const MainCounter = createContext("");
 
 const Context = (props) => {
-
   const [siteManagmentDatabase, setsiteManagmentDatabase] = useState({
     HomePageNotLogin: {
       hero: {
@@ -39,9 +40,8 @@ const Context = (props) => {
       aboutYadesh: {
         title: "درباره یادش",
         subTitle: "درباره ما بیشتر بدانید",
-        description: "مزایای ثبت نام در یادش",
-        attributes:
-          " یادگیری دغدغه همیشگی افراد است ولی بستر مناسبی برای آن وجود ندارد. یادش یک پلتفرم آموزش برای شرکت هااساتید مدیران تولید محتواواراد است که دسترسی دسرسی به ویدیوهای آموزشی را برای کاربران آسان کرده است.",
+        description:
+          "یادگیری دغدغه همیشگی افراد است ولی بستر مناسبی برای آن وجود ندارد. یادش یک پلتفرم آموزش برای شرکت هااساتید مدیران تولید محتواواراد است که دسترسی دسرسی به ویدیوهای آموزشی را برای کاربران آسان کرده است.",
         imagery: AboutYadesh,
       },
       mostViewedEpisodes: {
@@ -49,7 +49,12 @@ const Context = (props) => {
         subTitle: "اپیزودها پربازدید هفته",
       },
       costomerYadesh: [],
-      pelanSazmani: [],
+      pelanSazmani: {
+        title: "پلن سازمانی",
+        subTitle:
+          "سازمان ها و شرگت ها به جهت ارتقای سطح کیفی نیروی انسانی خود می توانند از پلن ویژه آموزشی یادش برای آموزش مهارت ها استفاده کنند.",
+        imagery: imgPelaneSazmani,
+      },
     },
   });
 
@@ -89,7 +94,7 @@ const Context = (props) => {
         date: "22 شهریور",
         img: imgUser,
         categories: "اپیزودها",
-      }
+      },
     ],
     company: [],
     userTicket: [
@@ -122,7 +127,6 @@ const Context = (props) => {
         setticketDatabase,
         siteManagmentDatabase,
         setsiteManagmentDatabase,
-      
       }}
     >
       {props.children}

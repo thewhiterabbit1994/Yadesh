@@ -31,7 +31,7 @@ const Aboutyadesh = () => {
           </h6>
         </div>
         <div className="text-[#C4C4C4] text-[13px] pt-[30px] leading-[40px] flex justify-center mr-[50px]">
-          <p className="w-[480px] h-[100px] text-justify">{data.attributes}</p>
+          <p className="w-[480px] h-[100px] text-justify">{data.description}</p>
         </div>
         <div className="mt-[30px] mr-[50px]">
           <Link to="/aboutus">
