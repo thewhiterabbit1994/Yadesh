@@ -7,6 +7,11 @@ import convetion from "../assets/Img/imgHomeNotLogin/convertion.jpg";
 import reading from "../assets/Img/imgHomeNotLogin/reading.jpg";
 import AboutYadesh from "../assets/Img/AboutYadesh/Rectangle 857.jpg";
 import imgPelaneSazmani from "../assets/Img/PelaneSazmani/imgPelaneSazmani.jpg";
+import HamraheAval from "../assets/svg/CustomerYadesh/hamraheaval.svg";
+import LogoBanafsh from "../assets/svg/CustomerYadesh/logo-banafsh.svg";
+import MelatBank from "../assets/svg/CustomerYadesh/melatBank.svg";
+import Shape from "../assets/svg/CustomerYadesh/shape.svg";
+import Snap from "../assets/svg/CustomerYadesh/snap.svg";
 
 export const MainCounter = createContext("");
 
@@ -48,7 +53,11 @@ const Context = (props) => {
         title: "پربازدیدترین اپیزودها",
         subTitle: "اپیزودها پربازدید هفته",
       },
-      costomerYadesh: [],
+      costomerYadesh: {
+        title: "مشتریان یادش",
+        subTitle: "یادش از انتخاب شما تشکر میکند",
+        imagery: [HamraheAval, LogoBanafsh, MelatBank, Shape, Snap],
+      },
       pelanSazmani: {
         title: "پلن سازمانی",
         subTitle:
