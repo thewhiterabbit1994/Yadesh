@@ -1,39 +1,38 @@
+import Danger from "../../assets/svg/AdminLogin/Danger"
 import { useState } from "react"
-
-const CompletedCourse = () => {
+const KeepLearning = () => {
     const [toggle, setToggle] = useState(false)
     const [titlevalue, setTitleValue] = useState("")
     const [subTitleValue, setSubTitleValue] = useState("")
-
     return (
         <section className="w-full h-[330px] bg-[#F5F5F5] flex justify-between rounded mt-[10px] ">
             <section className="w-[47%] ">
                 <section className="w-[93%] h-[280px] m-auto  my-[20px] ">
 
                     <div >
-                        <label htmlFor="Title20"
+                        <label htmlFor="Title12"
                             className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
                             عنوان
                         </label>
                         <input
                             onChange={(e) => setTitleValue(e.target.value)}
                             value={titlevalue}
-                            id='Title20'
-                            className="w-[400px] h-[40px]  rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
-                            placeholder="درس های پربازدید امروز"
+                            id='Title12'
+                            className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
+                            placeholder="به یادگیری ادامه دهید"
                         />
                     </div>
                     <div className="mt-[30px]" >
-                        <label htmlFor="Title21"
+                        <label htmlFor="Title13"
                             className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
                             زیر عنوان
                         </label>
                         <input
                             value={subTitleValue}
                             onChange={(e) => setSubTitleValue(e.target.value)}
-                            id='Title21'
+                            id='Title13'
                             className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
-                            placeholder="یادشی ها این ویدیو را بیشتر دیده اند"
+                            placeholder="ویدیوهای در حال تماشا"
                         />
                     </div>
 
@@ -42,7 +41,7 @@ const CompletedCourse = () => {
                             <p className="mr-[5px]">ذخیره کردن تغییرات</p>
                         </div>
                     </section>
-                    
+
                 </section>
             </section>
             <section className="w-[50%] text-[12px] mt-[60px] flex text-[#7A7A7A]">
@@ -54,4 +53,4 @@ const CompletedCourse = () => {
         </section>
     )
 }
-export default CompletedCourse
+export default KeepLearning

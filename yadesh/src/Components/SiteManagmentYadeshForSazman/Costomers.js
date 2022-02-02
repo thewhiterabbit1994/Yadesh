@@ -7,28 +7,44 @@ import Ekhtar from "../../assets/svg/AdminPanelCourses/Ekhtar"
 import { useState } from "react"
 const Costomers = () => {
     const [toggle, setToggle] = useState(false)
+    const [titlevalue, setTitleValue] = useState("")
+    const [subTitleValue, setSubTitleValue] = useState("")
+    const [comentCostomer, setComentCostomer] = useState("")
 
     return (
         <section className="w-full h-[450px] bg-[#F5F5F5] mt-[10px] rounded">
             <section className="w-[95%] m-auto flex justify-between">
                 <section className="w-[35%] pt-[10px] ">
-                    <section className="w-[93%] h-[550px] m-auto  my-[20px] ">
-                        <div>
-                            <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">عنوان</p>
-                            <lable>
-                                <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="مشتریان یادش"
-                                />
-                            </lable>
+                    <section className="w-[93%] h-[550px] m-auto  my-[10px] text-[12px]">
+
+                        <div >
+                            <label htmlFor="Title80"
+                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
+                                عنوان
+                            </label>
+                            <input
+                                onChange={(e) => setTitleValue(e.target.value)}
+                                value={titlevalue}
+                                id='Title80'
+                                className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
+                                placeholder=" مشتریان در مورد یادش چه می گویند "
+                            />
                         </div>
-                        <div className="my-[20px]">
-                            <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">زیر عنوان</p>
-                            <lable>
-                                <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="یادش از انتخاب شما تشکر میکند"
-                                />
-                            </lable>
+                        <div className="mt-[30px]" >
+                            <label htmlFor="Title81"
+                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
+                                زیر عنوان
+                            </label>
+                            <input
+                                value={subTitleValue}
+                                onChange={(e) => setSubTitleValue(e.target.value)}
+                                id='Title81'
+                                className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
+                                placeholder=" نشر مشتریان در مورد یادش "
+                            />
                         </div>
+
+
                         <div className="my-[20px]">
                             <p className="text-[12px] w-[400px] text-[#7A7A7A] mb-[15px] pr-[10px]">لوگوی مشتری (فرمت مورد نظر png یا svg  می باشد )</p>
                             <section className="flex w-[500px]">
@@ -42,14 +58,14 @@ const Costomers = () => {
                         </div>
                         <div className="flex w-[450px] items-center">
                             <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px] ml-[17px]">مشتریان (تعداد مشتریان در حال نمایش )</p>
-                            <form>
-                                <select className="w-[142px] text-[11px] pr-[15px] h-[38px] rounded ">
-                                    <option className="text-[10px]">1</option>
-                                    <option className="text-[10px]">2</option>
-                                    <option className="text-[10px]">3</option>
-                                    <option className="text-[10px]">4</option>
-                                </select>
-                            </form>
+
+                            <select className="w-[142px] text-[11px] pr-[15px] h-[38px] rounded ">
+                                <option className="text-[10px]">1</option>
+                                <option className="text-[10px]">2</option>
+                                <option className="text-[10px]">3</option>
+                                <option className="text-[10px]">4</option>
+                            </select>
+
                         </div>
                         <section className="w-[500px] text-[12px] mt-[20px] flex mr-[10px] text-[#7A7A7A]">
                             <p>این قسمت نمایش داده شود</p>
@@ -94,15 +110,25 @@ const Costomers = () => {
                             <img src={LogoBanafsh} className=" h-[40px]" />
                         </div>
                     </div>
-                    <div>
-                        <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">نظر مشتری</p>
-                        <lable>
-                            <input className="w-[440px] h-[70px] rounded-lg placeholder:text-[11px] placeholder:pr-[10px]"
-                                placeholder="با وجود یادش بخش بزرگی از این خلا آموزشی ...."
-                            />
-                        </lable>
+                    <div className="mt-[10px] text-[12px]" >
+                        <label htmlFor="Title89"
+                            className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
+                            نظر مشتری
+                        </label>
+                        <textarea
+                            onChange={(e) => setComentCostomer(e.target.value)}
+                            value={comentCostomer}
+                            id='Title89'
+                            className="w-[400px] resize-none leading-6 h-[70px] rounded mt-[15px] placeholder:text-[11px] placeholder:px-[10px] placeholder:py-[10px]"
+                            placeholder=" با وجود یادش بخش بزرگی از این خلاء آموزشی برای ما برطرف شد و ما خوشحالیم که در جمع یادشی ها هستیم  "
+                        />
                     </div>
                 </section>
+            </section>
+            <section className="w-[170px] h-[45px] rounded bg-[#0050A8] text-[12px] m-auto cursor-pointer mt-[-100px]">
+                <div className="text-[#fff] flex justify-center items-center h-[45px]" >
+                    <p className="mr-[5px]">ذخیره کردن تغییرات</p>
+                </div>
             </section>
         </section>
     )

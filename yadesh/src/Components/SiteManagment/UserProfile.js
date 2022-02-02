@@ -7,6 +7,7 @@ import Footer from "../../Components/SiteManagment/Footer"
 
 const UserProfile =()=>{
     const [openTab, setOpenTab] = useState(1)
+    
     return (
         <section className="w-full h-[100vh] flex justify-between">
             <section className="w-[10%]">

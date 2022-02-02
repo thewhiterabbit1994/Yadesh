@@ -9,7 +9,7 @@ const HeroUserProfile = () => {
 
     return (
         <section className="w-full h-[350px] text-[12px] ">
-            <section className="w-full h-[350px] flex justify-around bg-[#F5F5F5] rounded">
+            <section className="w-full h-[350px] mt-[10px] flex justify-around bg-[#F5F5F5] rounded">
                 <section className="mt-[15px] w-[58%] text-[#7A7A7A]">
                     <p>تصویر</p>
                     <img className="w-[600px] h-[200px] rounded-lg mt-[20px]" src={UserProfileImg} />
@@ -38,6 +38,11 @@ const HeroUserProfile = () => {
                         </div>
                     </section>
                 </section>
+            </section>
+            <section className="w-[170px] h-[45px] rounded bg-[#0050A8] text-[12px] m-auto  cursor-pointer mt-[50px]">
+                <div className="text-[#fff] flex justify-center items-center h-[45px]" >
+                    <p className="mr-[5px]">ذخیره کردن تغییرات</p>
+                </div>
             </section>
         </section>
     )

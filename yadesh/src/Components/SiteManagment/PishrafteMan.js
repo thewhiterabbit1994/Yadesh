@@ -4,8 +4,7 @@ import MyNotes from "../../Components/SiteManagmentPishrafteMan(myProgress)/MyNo
 import MyList from "../../Components/SiteManagmentPishrafteMan(myProgress)/MyList"
 import YouHaveSeenItBefore from "../../Components/SiteManagmentPishrafteMan(myProgress)/YouHaveSeenItBefore"
 import CompletedCourse from "../../Components/SiteManagmentPishrafteMan(myProgress)/CompletedCourse"
-import KeepLearning from "../../Components/StateManagmentSignIn/KeepLearning"
-import Footer from "../../Components/SiteManagment/Footer"
+import KeepLearning from "../../Components/SiteManagmentPishrafteMan(myProgress)/KeepLearning"
 
 
 const PishrafteMan =()=>{

@@ -4,7 +4,6 @@ import KeepLearning from "../../Components/StateManagmentSignIn/KeepLearning"
 import MostViewedEpisodes from "../../Components/NotSignIn/MostViewedEpisodes"
 import MostViewLesson from "../../Components/StateManagmentSignIn/MostViewLesson"
 import SelfManagMent from "../../Components/StateManagmentSignIn/SelfManagMent"
-import Footer from "../../Components/SiteManagment/Footer"
 
 
 const SignIn = () => {
@@ -41,7 +40,7 @@ const SignIn = () => {
                 </section>
             </section>
 
-            <section className="w-[200px] h-[45px] rounded bg-[#008043] text-[12px] m-auto cursor-pointer">
+            <section className="w-[200px] h-[45px] rounded bg-[#008043] text-[12px] m-auto cursor-pointer mt-[20px]">
                 <div className="text-[#fff] flex justify-center items-center h-[45px]" >
                     <p className="text-[15px]"> + </p>
                     <p className="mr-[5px]">افزودن بخش های جدید</p>
