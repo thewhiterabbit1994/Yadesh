@@ -1,7 +1,11 @@
-import imgPelaneSazmani from "../../assets/Img/PelaneSazmani/imgPelaneSazmani.jpg";
 import { Link } from "react-router-dom";
-import bgGradiant from "../../assets/Img/PelaneSazmani/bgGradiant.png";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
+
 const PelaneSazmani = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.HomePageNotLogin.pelanSazmani;
   return (
     <div className="bg-[#000] w-[100%] flex justify-center">
       <section className="w-[100%] bg-[#000E14] h-[50vh] flex rounded mb-[2rem]">
@@ -10,13 +14,10 @@ const PelaneSazmani = () => {
             <div className="border-[#00FF85]   border-r-[7px] ml-[7px] h-[20px] mt-[5px] rounded-[6px] ">
               {" "}
             </div>
-            <h6> پلن سازمانی</h6>
+            <h6>{data.title}</h6>
           </div>
           <div className=" text-[14px] leading-10 text-[#C4C4C4]">
-            <h6 className="w-[524px] h-[83px]">
-              سازمان ها و شرگت ها به جهت ارتقای سطح کیفی نیروی انسانی خود می
-              توانند از پلن ویژه آموزشی یادش برای آموزش مهارت ها استفاده کنند.
-            </h6>
+            <h6 className="w-[524px] h-[83px]">{data.subTitle}</h6>
           </div>
           <div className="mt-[2rem]  w-[75%]">
             <Link to="/home/forbusiness">
@@ -30,7 +31,7 @@ const PelaneSazmani = () => {
         <section className="w-[350px]  h-[280px] relative flex  ">
           <div>
             <img
-              src={imgPelaneSazmani}
+              src={data.imagery}
               className="w-[350px]  h-[280px] rounded absolute top-[-26px]"
             />
           </div>

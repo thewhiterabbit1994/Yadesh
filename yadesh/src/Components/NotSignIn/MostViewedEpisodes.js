@@ -1,53 +1,63 @@
-import { useState } from "react"
+import { useState } from "react";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 
 const MostViewedEpisodes = () => {
-    const [titlevalue, setTitleValue] = useState("")
-    const [subTitleValue, setSubTitleValue] = useState("")
+  const { siteManagmentDatabase, setsiteManagmentDatabase } =
+    useContext(MainCounter);
 
-    return (
-        <section className="w-full h-[330px] flex justify-between bg-[#F5F5F5] mt-[10px]">
-            <section className="w-[95%] m-auto flex justify-between">
-                <section className="w-[45%] h-[260px] flex items-center  ">
-                    <section >
+  const data = siteManagmentDatabase.HomePageNotLogin.mostViewedEpisodes;
 
-                        <div >
-                            <label htmlFor="title3"
-                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
-                                عنوان
-                            </label>
-                            <input
-                                onChange={(e) => setTitleValue(e.target.value)}
-                                value={titlevalue}
-                                id='title3'
-                                className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
-                                placeholder="پربازدید ترین اپیزودها"
-                            />
-                        </div>
+  const [titleValue, settitleValue] = useState(data.title);
+  const [subtitleValue, setsubtitleValue] = useState(data.subTitle);
 
-                        <div className="mt-[30px]" >
-                            <label htmlFor="title4"
-                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
-                                زیر عنوان
-                            </label>
-                            <input
-                                value={subTitleValue}
-                                onChange={(e) => setSubTitleValue(e.target.value)}
-                                id='title4'
-                                className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
-                                placeholder="اپیزود های پربازدید هفته"
-                            />
-                        </div>
+  const handleClick = () => {
+    let database = JSON.parse(JSON.stringify(siteManagmentDatabase));
+    database.HomePageNotLogin.mostViewedEpisodes.title = titleValue;
+    database.HomePageNotLogin.mostViewedEpisodes.subTitle = subtitleValue;
+    setsiteManagmentDatabase(database);
+  };
 
-                        <section className="w-[170px] h-[45px] rounded bg-[#0050A8] text-[12px] m-auto cursor-pointer mt-[40px]">
-                            <div className="text-[#fff] flex justify-center items-center h-[45px]" >
-                                <p className="mr-[5px]">ذخیره کردن تغییرات</p>
-                            </div>
-                        </section>
-
-                    </section>
-                </section>
-            </section>
+  return (
+    <section className="w-full h-[280px] flex justify-between bg-[#F5F5F5] mt-[10px]">
+      <section className="w-[95%] m-auto flex justify-between">
+        <section className="w-[45%] h-[260px] flex items-center  ">
+          <section>
+            <div>
+              <lable className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
+                عنوان
+              </lable>
+              <input
+                className="w-[400px] h-[40px] rounded text-[11px] pr-[10px]"
+                value={titleValue}
+                onChange={(e) => settitleValue(e.target.value)}
+                maxLength={30}
+              />
+            </div>
+            <div className="my-[30px]">
+              <lable className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
+                زیر عنوان
+              </lable>
+              <input
+                className="w-[400px] h-[40px] rounded text-[11px] pr-[10px]"
+                value={subtitleValue}
+                onChange={(e) => setsubtitleValue(e.target.value)}
+                maxLength={50}
+              />
+            </div>
+            <div className="w-[400px] m-auto">
+              <button
+                onClick={handleClick}
+                className="w-[400px] h-[45px] text-[13px] text-white bg-[#008043] rounded"
+              >
+                {" "}
+                ذخیره کردن تغییرات{" "}
+              </button>
+            </div>
+          </section>
         </section>
-    )
-}
-export default MostViewedEpisodes
+      </section>
+    </section>
+  );
+};
+export default MostViewedEpisodes;
