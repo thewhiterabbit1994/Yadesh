@@ -6,6 +6,7 @@ import MostViewedEpisodes from "../../Components/NotSignIn/MostViewedEpisodes";
 import CostomerYadesh from "../../Components/NotSignIn/CostomerYadesh";
 import PanelSazmani from "../../Components/NotSignIn/PanelSazmani";
 import Footer from "../../Components/SiteManagment/Footer";
+
 const NotSignIn = () => {
     const [openTab, setOpenTab] = useState(1)
     return (
