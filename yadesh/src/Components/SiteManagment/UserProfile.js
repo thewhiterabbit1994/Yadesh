@@ -6,7 +6,7 @@ import Footer from "../../Components/SiteManagment/Footer"
 
 
 const UserProfile =()=>{
-    const [openTab, setOpenTab] = useState(4)
+    const [openTab, setOpenTab] = useState(1)
     return (
         <section className="w-full h-[100vh] flex justify-between">
             <section className="w-[10%]">
@@ -14,7 +14,6 @@ const UserProfile =()=>{
                     <p onClick={() => setOpenTab(1)} className=" hover:bg-[#e2e0e0]  p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">قسمت hero</p>
                     <p onClick={() => setOpenTab(2)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer"> اپیزودها </p>
                     <p onClick={() => setOpenTab(3)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer"> دوره های شما </p>
-                    <p onClick={() => setOpenTab(4)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer"> فوتر </p>
                 </div>
             </section>
             <section className={`w-[84%]`}>
@@ -26,9 +25,6 @@ const UserProfile =()=>{
                 </div>
                 <div className={`${openTab === 3 ? "block" : "hidden"}`}>
                     <YourCourses />
-                </div>
-                <div className={`${openTab === 4 ? "block" : "hidden"}`}>
-                    <Footer />
                 </div>
             </section>
         </section>

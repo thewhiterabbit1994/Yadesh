@@ -2,7 +2,7 @@ import Play from "../../assets/svg/AdminPanelCourses/Play"
 const LessonCourses = () => {
     return (
         <section className="bg-[#F5F5F5] w-full h-[140px]">
-            <div className="my-[30px] pr-[30px] pt-[20px]">
+            <div className="my-[10px] pr-[30px] pt-[20px]">
                 <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">زیر عنوان</p>
                 <lable>
                     <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"

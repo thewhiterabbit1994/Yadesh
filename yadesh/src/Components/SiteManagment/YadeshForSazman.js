@@ -8,7 +8,7 @@ import Footer from "../../Components/SiteManagment/Footer"
 
 
 const YadeshForSazman = () => {
-    const [openTab, setOpenTab] = useState(7)
+    const [openTab, setOpenTab] = useState(1)
     return (
         <section className="w-full h-[100vh] flex justify-between">
             <section className="w-[10%]">
@@ -19,7 +19,6 @@ const YadeshForSazman = () => {
                     <p onClick={() => setOpenTab(4)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer"> چرا یادش ؟</p>
                     <p onClick={() => setOpenTab(5)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer"> به یادش بپیوندید </p>
                     <p onClick={() => setOpenTab(6)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer"> سوالات متداول</p>
-                    <p onClick={() => setOpenTab(7)} className=" hover:bg-[#e2e0e0] p-3 w-[140px] m-auto py-[15px] bg-[#C4C4C4] rounded-lg cursor-pointer">فوتر</p>
                 </div>
             </section>
             <section className={`w-[84%]`}>
@@ -40,9 +39,6 @@ const YadeshForSazman = () => {
                 </div>
                 <div className={`${openTab === 6 ? "block" : "hidden"}`}>
                     <HeroYadeshForSazman />
-                </div>
-                <div className={`${openTab === 7 ? "block" : "hidden"}`}>
-                    <Footer />
                 </div>
             </section>
         </section>

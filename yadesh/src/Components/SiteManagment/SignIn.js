@@ -8,7 +8,7 @@ import Footer from "../../Components/SiteManagment/Footer"
 
 
 const SignIn = () => {
-    const [openTab, setOpenTab] = useState(6)
+    const [openTab, setOpenTab] = useState(1)
 
     return (
         <section className="w-full h-[100vh]">
@@ -20,7 +20,6 @@ const SignIn = () => {
                         <p onClick={() => setOpenTab(3)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">پربازدیدترین اپیزودها</p>
                         <p onClick={() => setOpenTab(4)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">درس های پربازدید</p>
                         <p onClick={() => setOpenTab(5)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">مدیریت شخصی</p>
-                        <p onClick={() => setOpenTab(6)} className=" hover:bg-[#e2e0e0] p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">فوتر</p>
                     </div>
                 </section>
                 <section className="w-[84%]">
@@ -38,9 +37,6 @@ const SignIn = () => {
                     </div>
                     <div className={`${openTab === 5 ? "block" : "hidden"}`}>
                         <SelfManagMent />
-                    </div>
-                    <div className={`${openTab === 6 ? "block" : "hidden"}`}>
-                        <Footer />
                     </div>
                 </section>
             </section>

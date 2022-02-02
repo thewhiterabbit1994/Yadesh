@@ -66,6 +66,7 @@ function App() {
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />
             <Route path="company" element={<AdminPanelCompany />} />
+            <Route path="adminpaneluser" element={<AdminPanelUser />} />
             <Route path="elepisode" element={<AdminPanelEpisode />} />
             <Route path="courses" element={<AdminPanelCourses />} />
             <Route path="factor" element={<AdminPanelFactor />} />
@@ -73,7 +74,6 @@ function App() {
               path="adminPanelsubscription"
               element={<AdminPanelSubscription />}
             />
-            <Route path="adminpaneluser" element={<AdminPanelUser />} />
             <Route path="ticketscompany" element={<TicketsCompany />} />
             <Route path="sitemanagment" element={<SiteManagment />} />
           </Route>
