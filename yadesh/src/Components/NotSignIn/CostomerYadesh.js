@@ -78,7 +78,7 @@ const CostomerYadesh = () => {
         </section>
         <section className="w-[50%] h-[500px] text-[12px] text-[#7A7A7A] mt-[30px]">
           <p>مشتریان</p>
-          <div className="flex  justify-between flex-wrap  ">
+          <div className="grid grid-cols-5  justify-between   ">
             {data.imagery.map((image, i) => {
               return (
                 <div className="w-[70px] h-[70px] bg-[#fff] rounded-lg p-1 flex justify-center items-center my-[15px] ml-[15px]">
