@@ -1,7 +1,15 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
+
 const PersonalManagement = () => {
+  const { siteManagmentDatabase, setsiteManagmentDatabase } =
+    useContext(MainCounter);
+
+  const data = siteManagmentDatabase.HomePageLogin.PersonalManagement;
+
   const settings = {
     dots: true,
     infinite: true,
@@ -15,11 +23,11 @@ const PersonalManagement = () => {
       <div className="pt-[50px] mr-[80px]">
         <div className="flex ">
           <div className="w-[5.5px] h-[18px] bg-[#00FF85] rounded-[10px] mt-1.5 ml-2"></div>
-          <p className="text-[19px]  text-[#ffffff]">مدیریت شخصی</p>
+          <p className="text-[19px]  text-[#ffffff]">{data.title}</p>
         </div>
         <div>
           <p className="mt-[15px]  text-[#C4C4C4] text-[14px]">
-            پربازدیدترین های مدیریت شخصی
+            {data.subTitle}
           </p>
         </div>
       </div>

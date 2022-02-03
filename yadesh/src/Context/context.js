@@ -65,6 +65,58 @@ const Context = (props) => {
         imagery: imgPelaneSazmani,
       },
     },
+    HomePageLogin: {
+      hero: {
+        title: "دوره های ویژه امروز",
+        subTitle: "برای شما",
+      },
+      ContinueLearning: {
+        title: "به یادگیری ادامه دهید",
+        subTitle: "ویدیو های در حال تماشای شما",
+        isDisplayed: true,
+      },
+      TodayMostViewLessons: {
+        title: "درس های پربازدید امروز",
+        subTitle: "یادشی ها این ویدیو ها را بیشتر دیده اند",
+      },
+      PersonalManagement: {
+        title: "مدیریت شخصی",
+        subTitle: "پربازدیدترین های مدیریت شخصی",
+      },
+    },
+    MyProgress: {
+      YourProgressInYadesh: {
+        title: "پیشرفت شما در یادش",
+        subTitle: "لیست ویدیوها و دوره های شما",
+        seenCourseIsDisplayed: true,
+        seenVideoIsDisplayed: true,
+      },
+      KeepLearning: {
+        title: "به یادگیری ادامه دهید",
+        subTitle: "ویدیو های در حال تماشای شما",
+        isDisplayed: true,
+      },
+      MyNotes: {
+        title: "یادداشت های من",
+        subTitle: "یادداشت های شما روی ویدیو ها",
+        isDisplayed: true,
+      },
+      MyList: {
+        title: "لیست من",
+        subTitle: "لیست دوره های شما",
+        isDisplayed: true,
+      },
+      SeenBefore: {
+        title: "قبلا دیده اید",
+        subTitle: "ویدیو هایی که قبلا تماشا کردید",
+        isDisplayed: true,
+      },
+      DoneCourses: {
+        title: "دوره های تکمیل شده",
+        subTitle: "دوره هایی که شما کامل کرده اید",
+        isDisplayed: true,
+      },
+    },
   });
 
   const [comment, setComment] = useState("");

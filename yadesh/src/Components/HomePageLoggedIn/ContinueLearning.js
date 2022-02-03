@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 import MyProgressRocket from "../../assets/svg/MyProgressRocket";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
 
 const ContinueLearning = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.HomePageLogin.ContinueLearning;
   const settings = {
     dots: true,
     infinite: true,
@@ -14,15 +19,19 @@ const ContinueLearning = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className="flex h-[340px] bg-[#000E14] ">
+    <div
+      className={`flex h-[340px] bg-[#000E14] ${
+        data.isDisplayed ? "" : "hidden"
+      }`}
+    >
       <div className="pt-[50px] mr-[80px]">
         <div className="flex ">
           <div className="w-[5.5px] h-[18px] bg-[#00FF85] rounded-[10px] mt-1.5 ml-2"></div>
-          <p className="text-[19px]  text-[#ffffff]">به یادگیری ادامه دهید</p>
+          <p className="text-[19px]  text-[#ffffff]">{data.title}</p>
         </div>
         <div>
           <p className="mt-[15px]  text-[#C4C4C4] text-[14px]">
-            ویدیو های در حال تماشای شما
+            {data.subTitle}
           </p>
         </div>
         <div className="mt-[120px]">

@@ -1,65 +1,71 @@
-import Remove from "../../assets/svg/AdminPanelCourses/Remove"
-import { useState } from 'react'
+import Remove from "../../assets/svg/AdminPanelCourses/Remove";
+import { useState } from "react";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
+
 const SelfManagMent = () => {
-    const [titlevalue, setTitleValue] = useState("")
-    const [subTitleValue, setSubTitleValue] = useState("")
-    return (
-        <section className="w-full h-[330px] flex justify-between bg-[#F5F5F5] mt-[10px]">
-            <section className="w-[95%] m-auto flex justify-between">
-                <section className="w-[45%] h-[260px] flex items-center  ">
-                    <section >
-                        <div >
-                            <label htmlFor="Title7"
-                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
-                                عنوان
-                            </label>
-                            <input
-                                onChange={(e) => setTitleValue(e.target.value)}
-                                value={titlevalue}
-                                id='Title7'
-                                className="w-[400px] h-[40px]  rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
-                                placeholder="مدیریت شخصی"
-                            />
-                        </div>
-                        <div className="mt-[30px]" >
-                            <label htmlFor="Title8"
-                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
-                                زیر عنوان
-                            </label>
-                            <input
-                                value={subTitleValue}
-                                onChange={(e) => setSubTitleValue(e.target.value)}
-                                id='Title8'
-                                className="w-[400px] h-[40px] rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
-                                placeholder="پربازدیدترین های مدیریت شخصی"
-                            />
-                        </div>
+  const { siteManagmentDatabase, setsiteManagmentDatabase } =
+    useContext(MainCounter);
 
-                        <section className="w-[170px] h-[45px] rounded bg-[#0050A8] text-[12px] m-auto cursor-pointer mt-[40px]">
-                            <div className="text-[#fff] flex justify-center items-center h-[45px]" >
-                                <p className="mr-[5px]">ذخیره کردن تغییرات</p>
-                            </div>
-                        </section>
+  const data = siteManagmentDatabase.HomePageLogin.PersonalManagement;
+  const [titleValue, settitleValue] = useState(data.title);
+  const [subtitleValue, setsubtitleValue] = useState(data.subTitle);
 
-                    </section>
-                </section>
-                <section className="w-[45%] h-[100px] mt-[7px]">
-                    <div>
-                        <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">دسته بندی</p>
-                        <select className="w-[400px] text-[12px] h-[38px] rounded ">
-                            <option className="text-[10px]"> مدیریت شخصی</option>
-                            <option className="text-[10px]">مدیریت شخصی</option>
-                            <option className="text-[10px]"> مدیریت شخصی</option>
-                            <option className="text-[10px]">مدیریت شخصی</option>
-                        </select>
-                    </div>
-                    <div className=" cursor-pointer flex mt-[20px] text-[#BA0B22] text-[10px]">
-                        <Remove />
-                        <p className="mr-[10px]">حذف این قسمت</p>
-                    </div>
-                </section>
-            </section>
+  const handleClick = () => {
+    let database = JSON.parse(JSON.stringify(siteManagmentDatabase));
+    database.HomePageLogin.PersonalManagement.title = titleValue;
+    database.HomePageLogin.PersonalManagement.subTitle = subtitleValue;
+    setsiteManagmentDatabase(database);
+  };
+  return (
+    <section className="w-full h-[330px] flex justify-between bg-[#F5F5F5] mt-[10px]">
+      <section className="w-[95%] m-auto flex justify-between">
+        <section className="w-[45%] h-[260px] flex items-center  ">
+          <section>
+            <div>
+              <label
+                htmlFor="Title7"
+                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]"
+              >
+                عنوان
+              </label>
+              <input
+                onChange={(e) => settitleValue(e.target.value)}
+                value={titleValue}
+                id="Title7"
+                className="w-[400px] h-[40px]  rounded mt-[15px] text-[11px] pr-[10px]"
+                placeholder="مدیریت شخصی"
+              />
+            </div>
+            <div className="mt-[30px]">
+              <label
+                htmlFor="Title8"
+                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]"
+              >
+                زیر عنوان
+              </label>
+              <input
+                value={subtitleValue}
+                onChange={(e) => setsubtitleValue(e.target.value)}
+                id="Title8"
+                className="w-[400px] h-[40px] rounded mt-[15px] text-[11px] pr-[10px]"
+                placeholder="پربازدیدترین های مدیریت شخصی"
+              />
+            </div>
+
+            <div className="w-[400px] mt-12 m-auto">
+              <button
+                onClick={handleClick}
+                className="w-[400px] h-[45px] text-[13px] text-white bg-[#008043] rounded"
+              >
+                {" "}
+                ذخیره کردن تغییرات{" "}
+              </button>
+            </div>
+          </section>
         </section>
-    )
-}
-export default SelfManagMent
+      </section>
+    </section>
+  );
+};
+export default SelfManagMent;

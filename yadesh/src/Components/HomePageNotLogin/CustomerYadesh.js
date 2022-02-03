@@ -13,7 +13,8 @@ export default () => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow:
+      data.imagery.length === 1 ? data.imagery.length : data.imagery.length - 1,
     slidesToScroll: 1,
     autoplay: true,
     speed: 5000,

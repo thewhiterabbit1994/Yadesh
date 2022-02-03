@@ -9,8 +9,13 @@ import "slick-carousel/slick/slick.css";
 import "../../Css/TodaySpecialCoursesSlick.css";
 import Bookmark from "../../assets/svg/Bookmark";
 import Speakermute from "../../assets/svg/Speakermute";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 
 const TodaySpecialCourses = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.HomePageLogin.hero;
   const settings = {
     dots: true,
     infinite: true,
@@ -26,10 +31,10 @@ const TodaySpecialCourses = () => {
       <div className="mr-[88px]">
         <div className="flex  mt-[130px]">
           <div className="w-[5.5px] h-[18px] bg-[#00FF85] rounded-[10px] mt-1.5 ml-2"></div>
-          <p className="text-[19px]  text-[#ffffff]">دوره های ویژه امروز</p>
+          <p className="text-[19px]  text-[#ffffff]">{data.title}</p>
         </div>
         <div>
-          <p className="mt-[5px] text-[#C4C4C4] text-[14px]">برای شما</p>
+          <p className="mt-[5px] text-[#C4C4C4] text-[14px]">{data.subTitle}</p>
         </div>
         <div>
           <div className="bg-gradient-to-l from-[#00FF85] h-[0.5px] w-[200px]  mt-[25px] "></div>
