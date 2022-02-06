@@ -1,12 +1,17 @@
-import UserProfileBackground from "../../assets/Img/UserProfileBackground.png";
 import UserProfileImg from "../../assets/Img/UserProfileImg.jpg";
 import Hat from "../../assets/svg/Hat";
 import Star from "../../assets/svg/Star";
 import PenIcon from "../../assets/svg/PenIcon";
 import { useState } from "react";
 import EditProfileModal from "./EditProfileModal";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 
 export default () => {
+  const { siteManagmentDatabase, setsiteManagmentDatabase } =
+    useContext(MainCounter);
+
+  const data = siteManagmentDatabase.UserInfo.hero;
   const [editProfileModal, seteditProfileModal] = useState(false);
   return (
     <div className="h-[600px] w-full bg-[#000405] ">
@@ -29,10 +34,12 @@ export default () => {
       </div>
       <div className="bg-gradient-to-t from-[#000000] to-[#00040511] h-[71.1775043936731vh] w-full absolute"></div>
       <div className="">
-        <img className="" src={UserProfileBackground} />
+        <img className="" src={data.imagery} />
         <div className="flex flex-col items-center m-auto w-full absolute top-[100px]">
           <img
-            className="h-[80px] w-[80px] rounded-full"
+            className={`${
+              data.isUserImgDisplayed ? "" : "hidden"
+            } h-[80px] w-[80px] rounded-full`}
             src={UserProfileImg}
           />
           <p className="text-white text-[25px] mt-[25px] font-medium">
@@ -42,7 +49,11 @@ export default () => {
             به دنبال اهدافت برو
           </p>
           <div className="flex mt-[30px]  ">
-            <div className="flex flex-col items-center m-auto w-full">
+            <div
+              className={`${
+                data.seenCourseIsDisplayed ? "" : "hidden"
+              } flex flex-col items-center m-auto w-full`}
+            >
               <p className="text-white text-[25px] font-medium">۲۸</p>
               <div className=" ">
                 <p className="mt-[15px] text-[#C4C4C4]  text-[12px]">
@@ -53,8 +64,20 @@ export default () => {
                 </div>
               </div>
             </div>
-            <div className="h-[55px] w-[3.2px] mt-[35px]  mx-[30px] bg-[#c4c4c448]"></div>
-            <div className="flex flex-col items-center m-auto w-full">
+            <div
+              className={`${
+                data.seenCourseIsDisplayed && data.seenVideoIsDisplayed
+                  ? "h-[55px] w-[3.2px] mt-[35px]  mx-[30px] bg-[#c4c4c448]"
+                  : "hidden"
+              }`}
+            ></div>
+            <div
+              className={`${
+                data.seenVideoIsDisplayed
+                  ? "flex flex-col items-center m-auto w-full"
+                  : "hidden"
+              }`}
+            >
               <p className="text-white text-[25px]">۱۴۵</p>
               <div className="">
                 <p className="mt-[15px] text-[#C4C4C4] text-[12px]">

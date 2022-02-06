@@ -19,8 +19,6 @@ const KeepLearning = () => {
     setsiteManagmentDatabase(database);
   };
 
-  console.log("toggle", toggle);
-  console.log("data.isDisplayed", data.isDisplayed);
   return (
     <section className="w-full h-[330px] bg-[#F5F5F5] flex justify-between rounded mt-[10px] ">
       <section className="w-[47%] ">
