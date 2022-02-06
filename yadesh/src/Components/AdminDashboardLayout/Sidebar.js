@@ -177,8 +177,8 @@ export default () => {
           <section
             className={` ${
               settingsModal
-                ? "w-screen  fixed top-0 mr-[-40px] transform transition-opacity duration-300 scale-0  h-screen bg-[#00000034] bg-[#00000034] scale-100 opacity-100"
-                : " opacity-0 "
+                ? "w-screen  fixed top-0 mr-[-40px] transform transition-opacity duration-300   h-screen  bg-[#00000034] scale-100 opacity-100"
+                : " opacity-0 scale-0"
             } `}
           >
             <div className="z-50 absolute w-screen inset-x-11 h-[500px] top-10">
