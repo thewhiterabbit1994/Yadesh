@@ -1,0 +1,169 @@
+Date : 2022-02-06 16:52:32
+Directory : z:\Programming\Yadesh\yadesh
+Total : 112 files,  3869 codes, 557 comments, 285 blanks, all 4711 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |        109 |      3,752 |        557 |        285 |      4,594 |
+| JSON       |          2 |        111 |          0 |          0 |        111 |
+| CSS        |          1 |          6 |          0 |          0 |          6 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                     | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                        |        112 |      3,869 |        557 |        285 |      4,711 |
+| src                                                                                                      |        110 |      3,758 |        557 |        285 |      4,600 |
+| src\Components                                                                                           |         92 |      3,324 |        557 |        261 |      4,142 |
+| src\Components\AboutUs                                                                                   |          2 |         55 |          0 |          3 |         58 |
+| src\Components\AdminDashboardLayout                                                                      |          1 |         23 |          0 |          2 |         25 |
+| src\Components\HomePageLoggedIn                                                                          |          4 |         21 |          0 |          6 |         27 |
+| src\Components\HomePageNotLogin                                                                          |          3 |         -7 |          0 |          3 |         -4 |
+| src\Components\Modals                                                                                    |         10 |        651 |          0 |         17 |        668 |
+| src\Components\MyProgress                                                                                |          6 |         66 |          0 |         10 |         76 |
+| src\Components\NotSignIn                                                                                 |          6 |        194 |         78 |         26 |        298 |
+| src\Components\SettingsModal                                                                             |          4 |        257 |          0 |         12 |        269 |
+| src\Components\SiteManagMentAboutYadesh.js                                                               |          6 |        409 |         15 |         25 |        449 |
+| src\Components\SiteManagment                                                                             |         11 |         51 |          0 |         10 |         61 |
+| src\Components\SiteManagmentContactWithYadesh                                                            |          3 |        307 |          0 |         19 |        326 |
+| src\Components\SiteManagmentCourses                                                                      |          1 |          9 |          0 |          2 |         11 |
+| src\Components\SiteManagmentLogin                                                                        |          1 |        -41 |         99 |         -7 |         51 |
+| src\Components\SiteManagmentPishrafteMan(myProgress)                                                     |          6 |        351 |          0 |         29 |        380 |
+| src\Components\SiteManagmentPlayerCourse                                                                 |          3 |        101 |          0 |         13 |        114 |
+| src\Components\SiteManagmentUserProfile                                                                  |          3 |        144 |         89 |         10 |        243 |
+| src\Components\SiteManagmentYadeshForSazman                                                              |          6 |        509 |        288 |         31 |        828 |
+| src\Components\SiteManegMentPlayerEpisode                                                                |          3 |         22 |          0 |          7 |         29 |
+| src\Components\StateManagmentSignIn                                                                      |          4 |        118 |          0 |         25 |        143 |
+| src\Components\TicketsCompany                                                                            |          2 |         10 |        -12 |          7 |          5 |
+| src\Components\UserProfile                                                                               |          3 |         42 |          0 |          3 |         45 |
+| src\Components\YadgiriDarSatheJahani                                                                     |          4 |         32 |          0 |          8 |         40 |
+| src\Context                                                                                              |          1 |        290 |          0 |          0 |        290 |
+| src\Pages                                                                                                |          3 |         42 |          0 |          3 |         45 |
+| src\Pages\AdminDashboard                                                                                 |          2 |          0 |          0 |          1 |          1 |
+| src\assets                                                                                               |         12 |         89 |          0 |         19 |        108 |
+| src\assets\svg                                                                                           |         12 |         89 |          0 |         19 |        108 |
+| src\assets\svg\AdminPanelCourses                                                                         |          4 |         28 |          0 |          5 |         33 |
+| src\assets\svg\Modals                                                                                    |          8 |         61 |          0 |         14 |         75 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                 | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| z:\Programming\Yadesh\yadesh\package-lock.json                                                           | JSON       |        108 |          0 |          0 |        108 |
+| z:\Programming\Yadesh\yadesh\package.json                                                                | JSON       |          3 |          0 |          0 |          3 |
+| z:\Programming\Yadesh\yadesh\src\App.js                                                                  | JavaScript |          7 |          0 |          2 |          9 |
+| z:\Programming\Yadesh\yadesh\src\Components\AboutUs\Header.js                                            | JavaScript |          6 |          0 |          1 |          7 |
+| z:\Programming\Yadesh\yadesh\src\Components\AboutUs\Main.js                                              | JavaScript |         49 |          0 |          2 |         51 |
+| z:\Programming\Yadesh\yadesh\src\Components\AdminDashboardLayout\Sidebar.js                              | JavaScript |         23 |          0 |          2 |         25 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageLoggedIn\ContinueLearning.js                         | JavaScript |          8 |          0 |          1 |          9 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageLoggedIn\PersonalManagement.js                       | JavaScript |          5 |          0 |          3 |          8 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageLoggedIn\TodayMostViewLessons.js                     | JavaScript |          4 |          0 |          1 |          5 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageLoggedIn\TodaySpecialCourses.js                      | JavaScript |          4 |          0 |          1 |          5 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageNotLogin\CustomerYadesh.js                           | JavaScript |         -5 |          0 |          1 |         -4 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageNotLogin\HeaderHomeNotLogin.js                       | JavaScript |         -1 |          0 |          0 |         -1 |
+| z:\Programming\Yadesh\yadesh\src\Components\HomePageNotLogin\PelaneSazmani.js                            | JavaScript |         -1 |          0 |          2 |          1 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\AddCategorie.js                                       | JavaScript |         37 |          0 |          0 |         37 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\AddCompany.js                                         | JavaScript |         86 |          0 |          4 |         90 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\AddCourse.js                                          | JavaScript |        123 |          0 |          1 |        124 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\AddEpisode.js                                         | JavaScript |        110 |          0 |          5 |        115 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\AddNewUser.js                                         | JavaScript |         84 |          0 |          3 |         87 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\AddUser.js                                            | JavaScript |         72 |          0 |          0 |         72 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\ConfirmCourse.js                                      | JavaScript |         22 |          0 |          0 |         22 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\ConfirmEpisode.js                                     | JavaScript |         22 |          0 |          0 |         22 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\EditSubscription.js                                   | JavaScript |         75 |          0 |          4 |         79 |
+| z:\Programming\Yadesh\yadesh\src\Components\Modals\LogOut.js                                             | JavaScript |         20 |          0 |          0 |         20 |
+| z:\Programming\Yadesh\yadesh\src\Components\MyProgress\DoneCourses.js                                    | JavaScript |         11 |          0 |          1 |         12 |
+| z:\Programming\Yadesh\yadesh\src\Components\MyProgress\KeepLearning.js                                   | JavaScript |         11 |          0 |          1 |         12 |
+| z:\Programming\Yadesh\yadesh\src\Components\MyProgress\MyList.js                                         | JavaScript |         11 |          0 |          2 |         13 |
+| z:\Programming\Yadesh\yadesh\src\Components\MyProgress\MyNotes.js                                        | JavaScript |         11 |          0 |          2 |         13 |
+| z:\Programming\Yadesh\yadesh\src\Components\MyProgress\SeenBefore.js                                     | JavaScript |          9 |          0 |          1 |         10 |
+| z:\Programming\Yadesh\yadesh\src\Components\MyProgress\YourProgressInYadesh.js                           | JavaScript |         13 |          0 |          3 |         16 |
+| z:\Programming\Yadesh\yadesh\src\Components\NotSignIn\AboutYadesh.js                                     | JavaScript |         74 |         24 |          3 |        101 |
+| z:\Programming\Yadesh\yadesh\src\Components\NotSignIn\CostomerYadesh.js                                  | JavaScript |         27 |         30 |          9 |         66 |
+| z:\Programming\Yadesh\yadesh\src\Components\NotSignIn\Hero.js                                            | JavaScript |         -3 |          0 |         -1 |         -4 |
+| z:\Programming\Yadesh\yadesh\src\Components\NotSignIn\MostViewedEpisodes.js                              | JavaScript |         16 |          0 |          6 |         22 |
+| z:\Programming\Yadesh\yadesh\src\Components\NotSignIn\PanelSazmani.js                                    | JavaScript |         64 |         24 |          4 |         92 |
+| z:\Programming\Yadesh\yadesh\src\Components\NotSignIn\PopularCourses.js                                  | JavaScript |         16 |          0 |          5 |         21 |
+| z:\Programming\Yadesh\yadesh\src\Components\SettingsModal\Account.js                                     | JavaScript |        118 |          0 |          5 |        123 |
+| z:\Programming\Yadesh\yadesh\src\Components\SettingsModal\Notifications.js                               | JavaScript |         42 |          0 |          2 |         44 |
+| z:\Programming\Yadesh\yadesh\src\Components\SettingsModal\Protection.js                                  | JavaScript |         44 |          0 |          0 |         44 |
+| z:\Programming\Yadesh\yadesh\src\Components\SettingsModal\Settings.js                                    | JavaScript |         53 |          0 |          5 |         58 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagMentAboutYadesh.js\ContactYadesh.js                 | JavaScript |        103 |          0 |          8 |        111 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagMentAboutYadesh.js\HeroAboutYadesh.js               | JavaScript |         95 |         15 |          4 |        114 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagMentAboutYadesh.js\MissionYadesh.js                 | JavaScript |         33 |          0 |          2 |         35 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagMentAboutYadesh.js\Support.js                       | JavaScript |         52 |          0 |          4 |         56 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagMentAboutYadesh.js\VsionYadesh.js                   | JavaScript |         39 |          0 |          2 |         41 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagMentAboutYadesh.js\YadeshIdentify.js                | JavaScript |         87 |          0 |          5 |         92 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentContactWithYadesh\ContactForm.js                | JavaScript |        135 |          0 |          4 |        139 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentContactWithYadesh\Title.js                      | JavaScript |         35 |          0 |          6 |         41 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentContactWithYadesh\WhyYadesh.js                  | JavaScript |        137 |          0 |          9 |        146 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentCourses\LessonCourses.js                        | JavaScript |          9 |          0 |          2 |         11 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentLogin\SliderSiteManagment.js                    | JavaScript |        -41 |         99 |         -7 |         51 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPishrafteMan(myProgress)\CompletedCourse.js     | JavaScript |         50 |          0 |          5 |         55 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPishrafteMan(myProgress)\KeepLearning.js        | JavaScript |         86 |          0 |          6 |         92 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPishrafteMan(myProgress)\MyList.js              | JavaScript |         50 |          0 |          5 |         55 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPishrafteMan(myProgress)\MyNotes.js             | JavaScript |         50 |          0 |          5 |         55 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPishrafteMan(myProgress)\YouHaveSeenItBefore.js | JavaScript |         50 |          0 |          4 |         54 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPishrafteMan(myProgress)\YourProgres.js         | JavaScript |         65 |          0 |          4 |         69 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPlayerCourse\MyNotes.js                         | JavaScript |         20 |          0 |          4 |         24 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPlayerCourse\RelateEpisode.js                   | JavaScript |         61 |          0 |          4 |         65 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentPlayerCourse\Tags.js                            | JavaScript |         20 |          0 |          5 |         25 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentUserProfile\FaivoriteEpisode.js                 | JavaScript |         50 |          0 |          4 |         54 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentUserProfile\HeroUserProfile.js                  | JavaScript |         44 |         89 |          3 |        136 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentUserProfile\YourCourses.js                      | JavaScript |         50 |          0 |          3 |         53 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentYadeshForSazman\Costomers.js                    | JavaScript |        121 |         52 |          4 |        177 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentYadeshForSazman\FrequentlyAskedQuestions.js     | JavaScript |        156 |          0 |          8 |        164 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentYadeshForSazman\HeroYadeshForSazman.js          | JavaScript |         81 |         26 |          5 |        112 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentYadeshForSazman\JoinToYadesh.js                 | JavaScript |         86 |         23 |          5 |        114 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentYadeshForSazman\Teachers.js                     | JavaScript |         25 |          0 |          6 |         31 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagmentYadeshForSazman\WhyYadesh.js                    | JavaScript |         40 |        187 |          3 |        230 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\AboutYadesh.js                                 | JavaScript |         32 |          0 |          1 |         33 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\ContactWithYadesh.js                           | JavaScript |         -9 |          0 |          0 |         -9 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\Course.js                                      | JavaScript |         -4 |          0 |          0 |         -4 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\Episode.js                                     | JavaScript |         -9 |          0 |          1 |         -8 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\Footer.js                                      | JavaScript |          3 |          0 |          2 |          5 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\NotSignIn.js                                   | JavaScript |        -30 |          0 |          2 |        -28 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\PishrafteMan.js                                | JavaScript |         -5 |          0 |          0 |         -5 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\PlayerCourse.js                                | JavaScript |         30 |          0 |          3 |         33 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\SignIn.js                                      | JavaScript |         15 |          0 |         -1 |         14 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\UserProfile.js                                 | JavaScript |         -4 |          0 |          1 |         -3 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManagment\YadeshForSazman.js                             | JavaScript |         32 |          0 |          1 |         33 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManegMentPlayerEpisode\MyNotes.js                        | JavaScript |          5 |          0 |          2 |          7 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManegMentPlayerEpisode\RelateEpisode.js                  | JavaScript |         12 |          0 |          2 |         14 |
+| z:\Programming\Yadesh\yadesh\src\Components\SiteManegMentPlayerEpisode\Tags.js                           | JavaScript |          5 |          0 |          3 |          8 |
+| z:\Programming\Yadesh\yadesh\src\Components\StateManagmentSignIn\HeroSighin.js                           | JavaScript |         25 |          0 |          7 |         32 |
+| z:\Programming\Yadesh\yadesh\src\Components\StateManagmentSignIn\KeepLearning.js                         | JavaScript |         49 |          0 |          6 |         55 |
+| z:\Programming\Yadesh\yadesh\src\Components\StateManagmentSignIn\MostViewLesson.js                       | JavaScript |         24 |          0 |          7 |         31 |
+| z:\Programming\Yadesh\yadesh\src\Components\StateManagmentSignIn\SelfManagMent.js                        | JavaScript |         20 |          0 |          5 |         25 |
+| z:\Programming\Yadesh\yadesh\src\Components\TicketsCompany\CompanyComent.js                              | JavaScript |          5 |          2 |          3 |         10 |
+| z:\Programming\Yadesh\yadesh\src\Components\TicketsCompany\UserComent.js                                 | JavaScript |          5 |        -14 |          4 |         -5 |
+| z:\Programming\Yadesh\yadesh\src\Components\UserProfile\FavoriteEpisodes.js                              | JavaScript |          9 |          0 |          1 |         10 |
+| z:\Programming\Yadesh\yadesh\src\Components\UserProfile\UserCourses.js                                   | JavaScript |         11 |          0 |          1 |         12 |
+| z:\Programming\Yadesh\yadesh\src\Components\UserProfile\UserInfo.js                                      | JavaScript |         22 |          0 |          1 |         23 |
+| z:\Programming\Yadesh\yadesh\src\Components\YadgiriDarSatheJahani\EndSection.js                          | JavaScript |          7 |          0 |          2 |          9 |
+| z:\Programming\Yadesh\yadesh\src\Components\YadgiriDarSatheJahani\Header.js                              | JavaScript |        -35 |          0 |          2 |        -33 |
+| z:\Programming\Yadesh\yadesh\src\Components\YadgiriDarSatheJahani\QuestionFromYadesh.js                  | JavaScript |         19 |          0 |          2 |         21 |
+| z:\Programming\Yadesh\yadesh\src\Components\YadgiriDarSatheJahani\YouAsk.js                              | JavaScript |         41 |          0 |          2 |         43 |
+| z:\Programming\Yadesh\yadesh\src\Context\Context.js                                                      | JavaScript |        290 |          0 |          0 |        290 |
+| z:\Programming\Yadesh\yadesh\src\Pages\AdminDashboard\EnterCode.js                                       | JavaScript |         -1 |          0 |          0 |         -1 |
+| z:\Programming\Yadesh\yadesh\src\Pages\AdminDashboard\SiteManagment.js                                   | JavaScript |          1 |          0 |          1 |          2 |
+| z:\Programming\Yadesh\yadesh\src\Pages\ContactSupport.js                                                 | JavaScript |         42 |          0 |          2 |         44 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\AdminPanelCourses\ParchamIran.js                             | JavaScript |         13 |          0 |          2 |         15 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\AdminPanelCourses\Settings.js                                | JavaScript |          5 |          0 |          1 |          6 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\AdminPanelCourses\Trash.js                                   | JavaScript |          5 |          0 |          1 |          6 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\AdminPanelCourses\UserProfile.js                             | JavaScript |          5 |          0 |          1 |          6 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\Add.js                                                | JavaScript |          8 |          0 |          1 |          9 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\AddCategories.js                                      | JavaScript |          7 |          0 |          2 |          9 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\AddTeacher.js                                         | JavaScript |         10 |          0 |          1 |         11 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\ArrowTop.js                                           | JavaScript |          7 |          0 |          3 |         10 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\Course.js                                             | JavaScript |          7 |          0 |          0 |          7 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\Done.js                                               | JavaScript |          7 |          0 |          4 |         11 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\Logout.js                                             | JavaScript |          7 |          0 |          1 |          8 |
+| z:\Programming\Yadesh\yadesh\src\assets\svg\Modals\Pelas.js                                              | JavaScript |          8 |          0 |          2 |         10 |
+| z:\Programming\Yadesh\yadesh\src\index.css                                                               | CSS        |          6 |          0 |          0 |          6 |
+| Total                                                                                                    |            |      3,869 |        557 |        285 |      4,711 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

@@ -12,8 +12,13 @@ import WhatsAppLogo from "../assets/svg/WhatsAppLogo";
 import TwiterLogo from "../assets/svg/TwiterLogo";
 import LinkedinLogo from "../assets/svg/LinkedinLogo";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MainCounter } from "../Context/Context";
 
 const Footer = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.Footer;
   return (
     <div className=" w-full h-[567px] bg-[#000405] ">
       <div className="flex justify-between mr-[65px] pt-[30px] ">
@@ -46,7 +51,13 @@ const Footer = () => {
         </p>
       </div>
       <div className="flex ">
-        <div className="w-[208px] h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]">
+        <div
+          className={`${
+            data.exploreInYadesh
+              ? " w-[208px] h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]"
+              : "hidden"
+          }`}
+        >
           <p className="text-[13px] mb-3 text-[#E6FFF3] ">گردش در یادش</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
@@ -68,7 +79,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[120px] h-[300px] mr-[40px]  mt-[40px] divide-y divide-[#373b3c]">
+        <div
+          className={`${
+            data.FavoriteEpisodes
+              ? "w-[120px] h-[300px] mr-[40px]  mt-[40px] divide-y divide-[#373b3c]"
+              : "hidden"
+          } `}
+        >
           <p className="text-[13px]  mb-3 text-[#E6FFF3]">اپیزود های محبوب</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
@@ -80,7 +97,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[130px] h-[300px] mr-[40px] mt-[40px] divide-y divide-[#373b3c]">
+        <div
+          className={`${
+            data.bestCourses
+              ? "w-[130px] h-[300px] mr-[40px] mt-[40px] divide-y divide-[#373b3c]"
+              : "hidden"
+          } `}
+        >
           <p className="text-[13px] mb-3 text-[#E6FFF3]">دوره های برتر</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
@@ -92,7 +115,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-12 w-[400px] mr-[205px]">
+        <div
+          className={`${
+            data.contactInfo ? "mt-12 w-[400px] mr-[205px]" : "hidden"
+          } `}
+        >
           <div className="flex">
             <div className="w-[6px] h-[15px] bg-[#00FF85] rounded-[10px] mt-1 ml-2"></div>
             <p className="text-[#E6FFF3] text-[15px] ml-[90px] ">

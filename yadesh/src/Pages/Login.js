@@ -1,7 +1,5 @@
 import YadeshLogo from "../assets/svg/YadeshLogo";
 import YadeshNameLogo from "../assets/svg/YadeshNameLogo";
-import Cup from "../assets/svg/Login/Cup";
-import LoginBackground from "../assets/Img/LoginBackground.png";
 import Home from "../assets/svg/Login/Home";
 import UserIcon from "../assets/svg/Login/UserIcon";
 import Lock from "../assets/svg/Login/Lock";
@@ -9,15 +7,21 @@ import ShowPass from "../assets/svg/Login/ShowPass";
 import GoogleIcon from "../assets/svg/Login/GoogleIcon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useContext } from "react";
+import { MainCounter } from "../Context/Context";
 
 const Login = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.UserLogin;
+
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
   return (
     <div className="w-full h-full bg-[#000405]">
-      <img className="h-[100vh] w-[44.453125vw]" src={LoginBackground} />
+      <img className="h-[100vh] w-[44.453125vw]" src={data.imagery} />
       <div className="top-0 bg-gradient-to-r z-10 from-[#000000] to-[#00040511] h-full w-1/2 left-[55.46875vw] absolute"></div>
       <div className="absolute z-20 top-5 mr-6 flex flex-row w-[95%] justify-between">
         <div className="flex ">
@@ -48,17 +52,14 @@ const Login = () => {
       <div className="absolute z-20 bg-[#15262c7a] backdrop-blur-lg	border rounded-[10px] border-[#192225] right-20 top-16 w-[39.0625vw] h-[79.08611599297012vh]  ">
         <div className="flex flex-col items-center m-auto text-center">
           <div className="mt-24">
-            <Cup />
+            <img src={data.icon} />
           </div>
           <div className="mt-12">
-            <p className="text-[18px]  mb-3 text-[#E6FFF3]">
-              مهارت های خود را افزایش دهید
-            </p>
+            <p className="text-[18px]  mb-3 text-[#E6FFF3]">{data.title}</p>
           </div>
           <div className="mt-10">
             <p className=" text-[13px] w-[300px] h-[200px] leading-8 text-[#9ba4a8] ">
-              افزایش مهارت همیشه می تواند آینده شغلی شما را تضمین کند. هدف ما در
-              یادش این است که آینده شغلی شما همیشه واضح و درخشان باشد
+              {data.subTitle}
             </p>
           </div>
         </div>
