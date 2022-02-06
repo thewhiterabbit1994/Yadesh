@@ -159,19 +159,20 @@ export default () => {
             </div>
 
             <div
-              className={`absolute right-16 top-[466px] transform transition-opacity duration-300 scale-0 ${showTooltip8 ? "scale-100 opacity-100" : "opacity-0 "
+              className={`absolute  right-16 top-[466px] transform transition-opacity duration-300 scale-0 ${showTooltip8 ? "scale-100 opacity-100" : "opacity-0 "
                 }`}
             >
               <Tooltip x={"73px"} text={"تنظیمات"} />
             </div>
           </div>
 
-          <div className={`absolute w-[1200px] h-[500px] left-[-1270px] top-10 `}>
-            {
-              settingsModal ? <Settings /> : ""
-            }
-          </div>
-
+          <section className={`${settingsModal ? "w-screen fixed top-0 mr-[-40px]  h-screen bg-[#00000034]" :" hidden " } `}>
+            <div className={`${settingsModal ? "z-50 absolute w-[1200px]  h-[500px] left-[40px] top-10" : " z-50u absolute w-[1200px]  h-[500px] left-[-1270px] top-10"} `}>
+              {
+                settingsModal ? <Settings settingsModal={settingsModal} setSettingsModal={setSettingsModal}  /> : ""
+              }
+            </div>
+          </section>
           <div
             onMouseEnter={() => setshowTooltip9(true)}
             onMouseLeave={() => setshowTooltip9(false)}

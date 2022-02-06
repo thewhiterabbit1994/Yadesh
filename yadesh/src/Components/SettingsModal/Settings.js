@@ -4,7 +4,7 @@ import Setting from "../../assets/svg/AdminPanelCourses/Settings"
 import Notifications from "../../Components/SettingsModal/Notifications"
 import Protection from "../../Components/SettingsModal/Protection"
 
-const Settings = () => {
+const Settings = ({settingsModal , setSettingsModal}) => {
     const [openTab, setOpenTab] = useState(1)
 
     return (
@@ -15,7 +15,9 @@ const Settings = () => {
                 <p>تنظیمات</p>
             </section>
             <section className="bg-[#4e50505d] cursor-pointer w-[30px] h-[30px] rounded absolute left-[70px] top-[20px]">
-                <div className="flex justify-center items-center text-[20px]">x</div>
+                <div
+                onClick={()=>setSettingsModal(!settingsModal)}
+                className="flex justify-center items-center text-[20px]">x</div>
             </section>
 
             <section className="w-[20%] text-[11px]  text-center opacity-90 mt-[50px]">
