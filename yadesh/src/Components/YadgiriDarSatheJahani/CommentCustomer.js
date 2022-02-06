@@ -6,9 +6,7 @@ const CommentCustomer = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
   const data = siteManagmentDatabase.YadeshForOrganization.Customer;
   let [index, setindex] = useState(0);
-  const arr = ["12", "1", "2", "3", "6"];
 
-  // data.imagery.length - 1;
   const changeindex = () => {
     index === data.imagery.length - 1 ? setindex(0) : setindex(index + 1);
   };
