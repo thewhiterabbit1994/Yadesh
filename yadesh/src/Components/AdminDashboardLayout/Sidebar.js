@@ -167,7 +167,7 @@ export default () => {
           </div>
 
           <section className={`${settingsModal ? "w-screen fixed top-0 mr-[-40px]  h-screen bg-[#00000034]" :" hidden " } `}>
-            <div className={`${settingsModal ? "z-50 absolute w-[1200px]  h-[500px] left-[40px] top-10" : " z-50u absolute w-[1200px]  h-[500px] left-[-1270px] top-10"} `}>
+            <div className="z-50 absolute w-screen inset-x-11 h-[500px] top-10">
               {
                 settingsModal ? <Settings settingsModal={settingsModal} setSettingsModal={setSettingsModal}  /> : ""
               }
