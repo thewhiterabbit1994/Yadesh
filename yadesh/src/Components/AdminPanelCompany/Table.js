@@ -80,10 +80,10 @@ const Table = () => {
           <tbody className="w-full">
             {
               !showMore ?
-              twoOfCompany.map(item => {
+              twoOfCompany.map((item , i) => {
                 return (
                   <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                    <td className="text-center">1</td>
+                    <td className="text-center">{i}</td>
                     <td className="text-center"><p>{item.companyNmae}</p></td>
                     <td className="text-center"><p>{item.educationExpert}</p></td>
                     <td className=" text-[#0050A8] font-semibold text-center	"><p>{item.NumberOfEmployees}</p></td>
@@ -98,10 +98,10 @@ const Table = () => {
                 )
               })
               : 
-              company.map(item => {
+              company.map((item , i) => {
                 return (
                   <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                    <td className="text-center">1</td>
+                    <td className="text-center">{i}</td>
                     <td className="text-center"><p>{item.companyNmae}</p></td>
                     <td className="text-center"><p>{item.educationExpert}</p></td>
                     <td className=" text-[#0050A8] font-semibold text-center	"><p>{item.NumberOfEmployees}</p></td>

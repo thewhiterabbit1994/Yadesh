@@ -96,10 +96,10 @@ const Table = () => {
           </thead>
           <tbody className="w-full">
             {!showmore
-              ? twoOfCourses.map((item) => {
+              ? twoOfCourses.map((item , i) => {
                   return (
                     <tr className="hover:bg-[#e6e9ebc2]">
-                      <td className="text-center">1</td>
+                      <td className="text-center">{i}</td>
                       <td>
                         <img src={item.img} className="rounded m-auto" />{" "}
                       </td>
@@ -128,10 +128,10 @@ const Table = () => {
                     </tr>
                   );
                 })
-              : course.map((item) => {
+              : course.map((item , i) => {
                   return (
                     <tr className="hover:bg-[#e6e9ebc2]">
-                      <td className="text-center">1</td>
+                      <td className="text-center">{i}</td>
                       <td>
                         <img src={item.img} className="rounded m-auto" />{" "}
                       </td>

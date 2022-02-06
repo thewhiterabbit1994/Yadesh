@@ -101,14 +101,14 @@ const Table = () => {
                         {
                             !showMore ?
 
-                            twoOfFactor.map(item => {
+                            twoOfFactor.map((item , i) => {
                                 return (
                                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                                        <td className="text-center">1</td>
+                                        <td className="text-center">{i}</td>
                                         <td className="text-center">{item.Subscription}</td>
                                         <td className=" text-[#008043] font-semibold ">
                                             <div className="justify-center flex ">
-                                                <p className="ml-[5px]">{item.validityDuration}</p>
+                                                <p className="ml-[5px]">{item.Condition}</p>
                                                 <Successful />
                                             </div>
                                         </td>
@@ -123,14 +123,14 @@ const Table = () => {
                                 )
                             })
                             : 
-                            factor.map(item => {
+                            factor.map((item , i) => {
                                 return (
                                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                                        <td className="text-center">1</td>
+                                        <td className="text-center">{i}</td>
                                         <td className="text-center">{item.Subscription}</td>
                                         <td className=" text-[#008043] font-semibold ">
                                             <div className="justify-center flex ">
-                                                <p className="ml-[5px]">{item.validityDuration}</p>
+                                                <p className="ml-[5px]">{item.Condition}</p>
                                                 <Successful />
                                             </div>
                                         </td>

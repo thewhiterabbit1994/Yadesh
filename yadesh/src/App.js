@@ -39,6 +39,7 @@ import AddCompany from "./Components/Modals/AddCompany";
 import ConfirmCourse from "./Components/Modals/ConfirmCourse";
 import AddCourse from "./Components/Modals/AddCourse";
 import AddEpisode from "./Components/Modals/AddEpisode";
+import AddNewSubscription from "./Components/Modals/AddNewSubscription";
 
 function App() {
   return (
@@ -71,7 +72,7 @@ function App() {
           <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
           <Route path="/adminlogin/succsess" element={<Succses />} />
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
-          <Route path="/AddEpisode" element={<AddEpisode />} />
+          <Route path="/AddNewSubscription" element={<AddNewSubscription />} />
 
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
