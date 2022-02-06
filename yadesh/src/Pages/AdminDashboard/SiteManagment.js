@@ -65,6 +65,9 @@ const SiteManagment = () => {
                     <div className={`${openTab === 8 ? "block" : "hidden"}`}>
                         <Episode />
                     </div>
+                    <div className={`${openTab === 12 ? "block" : "hidden"}`}>
+                        <PlayerCourse />
+                    </div>
                     <div className={`${openTab === 9 ? "block" : "hidden"}`}>
                         <ContactWithYadesh />
                     </div>
@@ -73,9 +76,6 @@ const SiteManagment = () => {
                     </div>
                     <div className={`${openTab === 11 ? "block" : "hidden"}`}>
                         <Footer />
-                    </div>
-                    <div className={`${openTab === 12 ? "block" : "hidden"}`}>
-                        <PlayerCourse />
                     </div>
 
                 </section>

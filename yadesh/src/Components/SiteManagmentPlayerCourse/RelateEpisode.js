@@ -3,28 +3,42 @@ import Play from "../../assets/svg/AdminPanelCourses/Play"
 
 const RelateEpisode = () => {
     const [toggle, setToggle] = useState(false)
+    const [titlevalue, setTitleValue] = useState("")
+    const [subTitleValue, setSubTitleValue] = useState("")
     return (
         <section className="w-full ">
             <section className="bg-[#F5F5F5] h-[280px] flex justify-between rounded mt-[10px]">
                 <section className="w-[47%] ">
-                    <section className="w-[93%] h-[280px] m-auto  my-[20px] ">
-                        <div>
-                            <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">عنوان</p>
-                            <lable>
-                                <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="درس های مرتبط "
-                                />
-                            </lable>
+
+                    <section className="w-[93%] h-[280px] m-auto  my-[20px] text-[12px]">
+                        <div className="text-[12px]">
+                            <label htmlFor="Title125"
+                                className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">
+                                عنوان
+                            </label>
+                            <input
+                                onChange={(e) => setTitleValue(e.target.value)}
+                                value={titlevalue}
+                                id='Title125'
+                                className="w-[400px] h-[40px]  rounded mt-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
+                                placeholder="درس های مرتبط "
+                            />
                         </div>
-                        <div className="my-[30px]">
-                            <p className="text-[12px] text-[#7A7A7A] mb-[15px] pr-[10px]">زیر عنوان</p>
-                            <lable>
-                                <input className="w-[400px] h-[40px] rounded placeholder:text-[11px] placeholder:pr-[10px]"
-                                    placeholder="درس های مرتبط با این درس"
-                                />
-                            </lable>
+                        <div className="mt-[20px]" >
+                            <label htmlFor="Title126"
+                                className="text-[12px] text-[#7A7A7A]  pr-[10px]">
+                                زیر عنوان
+                            </label>
+                            <input
+                                value={subTitleValue}
+                                onChange={(e) => setSubTitleValue(e.target.value)}
+                                id='Title126'
+                                className="w-[400px] leading-5 px-[10px] py-[10px] h-[45px] rounded my-[15px] placeholder:text-[11px] placeholder:pr-[10px]"
+                                placeholder=" اپیزود های مرتبط با این درس"
+                            />
                         </div>
                     </section>
+
                 </section>
                 <section className="w-[50%]  mt-[60px]  ">
                     <section className="flex text-[12px] text-[#7A7A7A]">

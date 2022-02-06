@@ -29,15 +29,6 @@ const ContactWithYadesh = () => {
                     </div>
                 </section>
             </section>
-            <section className="flex text-[#fff] mt-[20px] text-[12px] w-[350px] justify-between m-auto">
-                <div className="relative ">
-                    <div className="absolute top-[18px] right-[10px]">
-                        <Play />
-                    </div>
-                    <button className="w-[170px] h-[45px] bg-[#0050A8] rounded"> پیش نمایش صفحه </button>
-                </div>
-                <button className="w-[170px] h-[45px] bg-[#008043] rounded"> ذخیره کردن تغییرات </button>
-            </section>
         </section>
     )
 }

@@ -1,9 +1,9 @@
 import { useState } from "react"
 const Footer = () => {
     const [toggle, setToggle] = useState(true)
-    const [toggle1, setToggle1] = useState(false)
+    const [toggle1, setToggle1] = useState(true)
     const [toggle2, setToggle2] = useState(true)
-    const [toggle3, setToggle3] = useState(false)
+    const [toggle3, setToggle3] = useState(true)
 
     return (
         <section className="w-full h-[500px]  ">
@@ -31,6 +31,11 @@ const Footer = () => {
                     <div className={`${toggle3 ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]" : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"}`}></div>
                 </div>
             </section>
+
+            <section className="text-[#fff] text-[12px] m-auto w-[170px] mt-[20px]">
+                <button className="w-[170px] h-[45px] bg-[#008043] rounded"> ذخیره کردن تغییرات </button>
+            </section>
+
         </section>
     )
 }

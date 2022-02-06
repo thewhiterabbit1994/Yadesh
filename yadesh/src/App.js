@@ -30,6 +30,15 @@ import AdminPanelUser from "./Pages/AdminDashboard/AdminPanelUser";
 import AdminPanel from "./Pages/AdminDashboard/AdminPanel";
 import TicketsCompany from "./Pages/AdminDashboard/TicketsCompany";
 import SiteManagment from "./Pages/AdminDashboard/SiteManagment";
+import AddCategories from "./Components/Modals/AddCategorie";
+import LogOut from "./Components/Modals/LogOut";
+import AddUser from "./Components/Modals/AddUser";
+import AddNewUser from "./Components/Modals/AddNewUser";
+import EditSubscription from "./Components/Modals/EditSubscription";
+import AddCompany from "./Components/Modals/AddCompany";
+import ConfirmCourse from "./Components/Modals/ConfirmCourse";
+import AddCourse from "./Components/Modals/AddCourse";
+import AddEpisode from "./Components/Modals/AddEpisode";
 
 function App() {
   return (
@@ -62,6 +71,8 @@ function App() {
           <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
           <Route path="/adminlogin/succsess" element={<Succses />} />
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
+          <Route path="/AddEpisode" element={<AddEpisode />} />
+
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />
@@ -70,12 +81,10 @@ function App() {
             <Route path="elepisode" element={<AdminPanelEpisode />} />
             <Route path="courses" element={<AdminPanelCourses />} />
             <Route path="factor" element={<AdminPanelFactor />} />
-            <Route
-              path="adminPanelsubscription"
-              element={<AdminPanelSubscription />}
-            />
+            <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
             <Route path="ticketscompany" element={<TicketsCompany />} />
             <Route path="sitemanagment" element={<SiteManagment />} />
+
           </Route>
 
           {/* <RequireAuth>

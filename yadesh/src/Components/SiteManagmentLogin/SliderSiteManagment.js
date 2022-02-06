@@ -1,9 +1,20 @@
 import Ekhtar from "../../assets/svg/AdminPanelCourses/Ekhtar"
 import img from "../../assets/Img/joinToYadesh.png"
 import Play from "../../assets/svg/AdminPanelCourses/Play"
+import { useState } from "react"
 
 
 const SliderSiteManagment = () => {
+
+    const [titeSlide1, setTiteSlide1] = useState("")
+    const [descriptionSlide1, setDescriptionSlide1] = useState("")
+
+    const [titeSlide2, setTiteSlide2] = useState("")
+    const [descriptionSlide2, setDescriptionSlide2] = useState("")
+
+    const [titeSlide3, setTiteSlide3] = useState("")
+    const [descriptionSlide3, setDescriptionSlide3] = useState("")
+
     return (
         <section className="w-full h-[1100px] bg-[#F5F5F5] rounded-lg mt-[10px]">
             <section className="w-[90%] m-auto">
@@ -24,18 +35,19 @@ const SliderSiteManagment = () => {
                             عنوان (اسلاید 1)
                         </label>
                         <input
+                            value={titeSlide1}
+                            onChange={(e) => setTiteSlide1(e.target.value)}
                             className="w-[390px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
                             id="titleSlide1"
                             placeholder="مهارت های خود را افزایش دهید "
                         />
 
-                        <label className=" mt-[30px]" htmlFor="search">
+                        <label className=" mt-[30px]" >
                             آیکون فقط فرمت (svg یا  png ) باشد
                         </label>
                         <div className="">
                             <input
                                 className="w-[300px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
-                                id="search"
                                 placeholder="مهارت های خود را افزایش دهید "
                             />
                             <button className="text-[#fff] text-[10px] bg-[#008043] w-[90px] h-[40px] rounded">جستجو فایل</button>
@@ -47,14 +59,15 @@ const SliderSiteManagment = () => {
                             </div>
                         </div>
                     </section>
-
                     <section className="w-[50%] text-[12px]  pt-[20px]">
-                        <label className="text-[#7A7A7A]" htmlFor="description ">
+                        <label className="text-[#7A7A7A]" htmlFor="description10 ">
                             توضیحات (اسلاید 1)
                         </label>
                         <textarea
+                            value={descriptionSlide1}
+                            onChange={(e) => setDescriptionSlide1(e.target.value)}
                             className="w-[400px] placeholder: px-[20px] placeholder: py-[20px] placeholder:leading-7 placeholder: text-[#000000fa] resize-none h-[150px] bg-[#fff] pr-[15px] rounded mt-[20px]"
-                            id="description"
+                            id="description10"
                             placeholder=" افزایش مهارت همیشه می تواند آینده شغلی شما را تضمین کند . هدف ما در یادش اینست که آینده شغلی شما واضح و درخشان باشد .   "
                         />
                     </section>
@@ -67,18 +80,19 @@ const SliderSiteManagment = () => {
                             عنوان (اسلاید 2)
                         </label>
                         <input
+                            value={titeSlide2}
+                            onChange={(e) => setTiteSlide2(e.target.value)}
                             className="w-[390px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
                             id="titleSlide2"
                             placeholder="مهارت های خود را افزایش دهید "
                         />
 
-                        <label className=" mt-[30px]" htmlFor="search">
+                        <label className=" mt-[30px]" >
                             آیکون فقط فرمت (svg یا  png ) باشد
                         </label>
                         <div className="">
                             <input
                                 className="w-[300px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
-                                id="search"
                                 placeholder="مهارت های خود را افزایش دهید "
                             />
                             <button className="text-[#fff] text-[10px] bg-[#008043] w-[90px] h-[40px] rounded">جستجو فایل</button>
@@ -96,6 +110,8 @@ const SliderSiteManagment = () => {
                             توضیحات (اسلاید 2)
                         </label>
                         <textarea
+                            value={descriptionSlide2}
+                            onChange={(e) => setDescriptionSlide2(e.target.value)}
                             className="w-[400px] placeholder: px-[20px] placeholder: py-[20px] placeholder:leading-7 placeholder: text-[#000000fa] resize-none h-[150px] bg-[#fff] pr-[15px] rounded mt-[20px]"
                             id="description"
                             placeholder=" افزایش مهارت همیشه می تواند آینده شغلی شما را تضمین کند . هدف ما در یادش اینست که آینده شغلی شما واضح و درخشان باشد .   "
@@ -109,18 +125,19 @@ const SliderSiteManagment = () => {
                             عنوان (اسلاید 3)
                         </label>
                         <input
+                            value={titeSlide3}
+                            onChange={(e) => setTiteSlide3(e.target.value)}
                             className="w-[390px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
                             id="titleSlide3"
                             placeholder="مهارت های خود را افزایش دهید "
                         />
 
-                        <label className=" mt-[30px]" htmlFor="search">
+                        <label className=" mt-[30px]" >
                             آیکون فقط فرمت (svg یا  png ) باشد
                         </label>
                         <div className="">
                             <input
                                 className="w-[300px] h-[40px] bg-[#fff] pr-[15px] rounded mt-[20px]"
-                                id="search"
                                 placeholder="مهارت های خود را افزایش دهید "
                             />
                             <button className="text-[#fff] text-[10px] bg-[#008043] w-[90px] h-[40px] rounded">جستجو فایل</button>
@@ -138,6 +155,8 @@ const SliderSiteManagment = () => {
                             توضیحات (اسلاید 3)
                         </label>
                         <textarea
+                            value={descriptionSlide3}
+                            onChange={(e) => setDescriptionSlide3(e.target.value)}
                             className="w-[400px] placeholder: px-[20px] placeholder: py-[20px] placeholder:leading-7 placeholder: text-[#000000fa] resize-none h-[150px] bg-[#fff] pr-[15px] rounded mt-[20px]"
                             id="description"
                             placeholder=" افزایش مهارت همیشه می تواند آینده شغلی شما را تضمین کند . هدف ما در یادش اینست که آینده شغلی شما واضح و درخشان باشد .   "
@@ -147,7 +166,7 @@ const SliderSiteManagment = () => {
 
             </section>
             <section className="text-[#fff] text-[12px]  pt-[40px] relative w-[200px] m-auto">
-                <p className="absolute top-10 right-5 text-[20px] "> + </p>
+                <p className="absolute top-12 right-5 text-[20px] "> + </p>
                 <button className="bg-[#008043] w-[200px] h-[50px] rounded">افزودن اسلاید جدید</button>
             </section>
 
