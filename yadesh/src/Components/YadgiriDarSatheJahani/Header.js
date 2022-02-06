@@ -1,53 +1,28 @@
-import img1 from "../../assets/Img/yadgiriDarSatheJahani/img1.png";
-import img2 from "../../assets/Img/yadgiriDarSatheJahani/img2.png";
-import img3 from "../../assets/Img/yadgiriDarSatheJahani/img3.png";
-import img4 from "../../assets/Img/yadgiriDarSatheJahani/img4.png";
-import img5 from "../../assets/Img/yadgiriDarSatheJahani/im4.png";
-import image1 from "../../assets/Img/yadgiriDarSatheJahani/image1.png";
-import image2 from "../../assets/Img/yadgiriDarSatheJahani/image2.png";
-import image3 from "../../assets/Img/yadgiriDarSatheJahani/image3.png";
-import image4 from "../../assets/Img/yadgiriDarSatheJahani/image4.png";
-import image5 from "../../assets/Img/yadgiriDarSatheJahani/image5.png";
-import image6 from "../../assets/Img/yadgiriDarSatheJahani/image6.png";
 import Star from "../../assets/svg/Star";
 import Arrow from "../../assets/svg/Aroow";
 import FatAroow from "../../assets/svg/FatAroow";
 import manPng from "../../assets/Img/yadgiriDarSatheJahani/manPng.png";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 
 const Header = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const herodata = siteManagmentDatabase.YadeshForOrganization.hero;
+  const teacherdata = siteManagmentDatabase.YadeshForOrganization.Teachers;
   return (
     <div className="bg-[#000]">
       <section className="relative h-[600px] ">
-        <div className="flex w-[25.546875vw] ">
-          <img src={img4} className=" ml-[20px] opacity-60" />
-          <img src={img1} className=" ml-[20px] opacity-60" />
-          <img src={img2} className=" ml-[20px] opacity-60" />
-          <img src={img3} className=" ml-[20px] opacity-60" />
-          <img src={img5} className=" opacity-60" />
+        <div className=" w-full ">
+          <img src={herodata.imagery} />
         </div>
-        <div className="mt-[20px] h-[40.421792618629176vh] w-[30.078125vw] flex relative">
-          <img src={image3} className=" ml-[20px] opacity-25	" />
-          <img src={image1} className=" ml-[20px] opacity-25	" />
-          <img
-            src={image2}
-            className=" top-[180px] right-[500px] ml-[20px] opacity-25	"
-          />
-          <img src={image5} className=" ml-[20px] opacity-25	" />
-          <img
-            src={image6}
-            className=" ml-[20px] absolute top-[200px] right-[510px] opacity-25	"
-          />
-          <img src={image4} className="w-[609px] h-[348px] opacity-25	" />
-        </div>
+
         <section className=" absolute text-[#E6E9EB] flex flex-col items-center w-full top-[200px] z-10">
           <div className="mb-[20px] text-[40px]">
-            <p>یادگیری در سطح جهانی</p>
+            <p>{herodata.title}</p>
           </div>
           <div className="mb-[20px] text-[17px] w-[467px] h-[71px] text-center leading-[33px]">
-            <p>
-              سازمان ها در یادش جایگاه ویژه ای دارند , پس ما هم برای سازمان ها
-              برنامه ویژه ای داریم.
-            </p>
+            <p>{herodata.subTitle}</p>
           </div>
           <div>
             <button className="text-[12px] bg-[#00000073] text-[#E6FFF3] w-[150px] h-[46px] rounded border-solid border-[#00FF85] border-2 ml-[20px] ">
@@ -63,9 +38,7 @@ const Header = () => {
             <Star />
           </div>
           <div className="mt-[20px] w-[319px] h-[44px] text-[10px]">
-            <p>
-              اشتراک ویژه ی سالانه برای گروه ها به همراه تخفیف 5 تا 25 درصدی{" "}
-            </p>
+            <p>{herodata.description}</p>
           </div>
           <div className="mb-[-50px]  absolute top-[250px]">
             <FatAroow />
@@ -79,14 +52,8 @@ const Header = () => {
 
       <section className="bg-[#000] w-[100%] h-[600px] ">
         <div className="flex flex-col items-center leading-[40px] justify-center mt-[100px] mb-[50px] ">
-          <p className="text-[22px] text-[#E6E9EB]">
-            {" "}
-            تجربه ی اساتید یادش را به کارمندان خود هدیه دهید
-          </p>
-          <p className="text-[16px] text-[#C4C4C4]">
-            {" "}
-            اساتید یادش در حرفه خود بهتریند
-          </p>
+          <p className="text-[22px] text-[#E6E9EB]">{teacherdata.title}</p>
+          <p className="text-[16px] text-[#C4C4C4]">{teacherdata.subTitle}</p>
           <div className="border-t-[7px] w-[20px] rounded border-[#00FF85]"></div>
         </div>
         <div className="flex bg-[#000] w-[100%] h-[80vh] justify-center">

@@ -7,7 +7,6 @@ import { MainCounter } from "../../Context/Context";
 const HeaderHomeNotLogin = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
   const data = siteManagmentDatabase.HomePageNotLogin.hero;
-  console.log("header", siteManagmentDatabase);
   return (
     <section className="w-full bg-black  h-[700px] flex justify-center mt-[-2rem] ">
       <div className="absolute z-[10]">

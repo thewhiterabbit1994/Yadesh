@@ -14,7 +14,6 @@ const Hero = () => {
   const [uploadImg4, setuploadImg4] = useState(null);
   const [uploadImg5, setuploadImg5] = useState(null);
 
-  console.log("uploadImg5", uploadImg5);
   const getUploadParams1 = ({ meta }) => {
     return { url: "https://httpbin.org/post" };
   };
@@ -75,7 +74,6 @@ const Hero = () => {
     allFiles.forEach((f) => f.remove());
   };
 
-  console.log("uploadImg1", uploadImg1);
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
@@ -115,7 +113,6 @@ const Hero = () => {
 
     setsiteManagmentDatabase(database);
   };
-  console.log("data ===", data);
 
   return (
     <section className="w-full h-[600px] bg-[#F5F5F5] flex justify-around rounded mt-[10px]">

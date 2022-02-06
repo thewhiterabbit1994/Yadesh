@@ -3,7 +3,13 @@ import Almas from "../../assets/svg/questionFromYadesh/Almas";
 import Achar from "../../assets/svg/questionFromYadesh/Achar";
 import Tick from "../../assets/svg/questionFromYadesh/Tick";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
+
 const QuestionFromYadesh = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.YadeshForOrganization.QuestionFromYadesh;
   return (
     <div>
       <section className="w-full h-[700px] flex bg-[#000] justify-around relative z-20">
@@ -11,48 +17,63 @@ const QuestionFromYadesh = () => {
           <Ellipse />
         </div>
         <div className="w-[32%] mt-[120px]  flex justify-end relative">
-          <img src={img} className="rounded-lg w-[350px] h-[420px] z-30" />
+          <img
+            src={data.imagery}
+            className="rounded-lg w-[350px] h-[420px] z-30"
+          />
         </div>
         <section className="w-[50%]  h-[420px] mt-[120px] flex flex-col justify-center">
           <div className="flex ">
-            <h6 className="text-[#E6FFF3] text-[18px]">
-              چرا ما از بقیه متفاوت هستیم
-            </h6>
+            <h6 className="text-[#E6FFF3] text-[18px]">{data.title}</h6>
           </div>
           <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
-            {" "}
-            دلیل تفاوت یادش از دیگران
+            {data.subTitle}
           </h6>
-          <div className="flex mt-[25px] ">
-            <Almas />
-            <h6 className="text-[#E6FFF3] text-[18px] mr-[10px] ">
-              تنوع موضوع و مهارت در یادش{" "}
+          <div
+            className={`${
+              data.Subheadings.Subheading1.isDisplayed ? "" : "hidden"
+            } `}
+          >
+            <div className="flex mt-[25px] ">
+              <Almas />
+              <h6 className="text-[#E6FFF3] text-[18px] mr-[10px] ">
+                {data.Subheadings.Subheading1.title}
+              </h6>
+            </div>
+            <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
+              {data.Subheadings.Subheading1.subTitle}
             </h6>
           </div>
-          <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
-            سازمان ها در یادش جایکاه ویيه ای دارند پس ما هم برای سازمان ها
-            برنامه ویژه ای داریم.{" "}
-          </h6>
-          <div className="flex mt-[25px]">
-            <Achar />
-            <h6 className="text-[#E6FFF3] text-[18px] mr-[10px]">
-              اساتید برتر و نمونه
+          <div
+            className={`${
+              data.Subheadings.Subheading2.isDisplayed ? "" : "hidden"
+            } `}
+          >
+            <div className="flex mt-[25px]">
+              <Achar />
+              <h6 className="text-[#E6FFF3] text-[18px] mr-[10px]">
+                {data.Subheadings.Subheading2.title}
+              </h6>
+            </div>
+            <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
+              {data.Subheadings.Subheading2.subTitle}
             </h6>
           </div>
-          <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
-            سازمان ها در یادش جایکاه ویيه ای دارند پس ما هم برای سازمان ها
-            برنامه ویژه ای داریم
-          </h6>
-          <div className="flex mt-[25px]">
-            <Tick />
-            <h6 className="text-[#E6FFF3] text-[18px] mr-[10px]">
-              ویدئو و محتوای با کیفیت
+          <div
+            className={`${
+              data.Subheadings.Subheading3.isDisplayed ? "" : "hidden"
+            } `}
+          >
+            <div className="flex mt-[25px]">
+              <Tick />
+              <h6 className="text-[#E6FFF3] text-[18px] mr-[10px]">
+                {data.Subheadings.Subheading3.title}
+              </h6>
+            </div>
+            <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
+              {data.Subheadings.Subheading3.subTitle}
             </h6>
           </div>
-          <h6 className="text-[#C4C4C4] text-[14px] mt-[15px]">
-            سازمان ها در یادش جایکاه ویيه ای دارند پس ما هم برای سازمان ها
-            برنامه ویژه ای داریم
-          </h6>
         </section>
       </section>
     </div>

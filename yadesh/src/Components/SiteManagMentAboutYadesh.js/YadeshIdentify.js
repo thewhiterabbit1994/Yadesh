@@ -2,20 +2,20 @@ import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
 
-const VsionYadesh = () => {
+const YadeshIdentify = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
-  const data = siteManagmentDatabase.AboutYadesh.VisionYadesh;
+  const data = siteManagmentDatabase.AboutYadesh.YadeshIdentify;
   const [toggle, setToggle] = useState(data.isLogoDisplayed);
   const [titleValue, settitleValue] = useState(data.title);
   const [subtitleValue, setsubtitleValue] = useState(data.subTitle);
 
   const handleClick = () => {
     let database = JSON.parse(JSON.stringify(siteManagmentDatabase));
-    database.AboutYadesh.VisionYadesh.title = titleValue;
-    database.AboutYadesh.VisionYadesh.subTitle = subtitleValue;
-    database.AboutYadesh.VisionYadesh.isLogoDisplayed = toggle;
+    database.AboutYadesh.YadeshIdentify.title = titleValue;
+    database.AboutYadesh.YadeshIdentify.subTitle = subtitleValue;
+    database.AboutYadesh.YadeshIdentify.isLogoDisplayed = toggle;
     setsiteManagmentDatabase(database);
   };
 
@@ -88,4 +88,4 @@ const VsionYadesh = () => {
     </section>
   );
 };
-export default VsionYadesh;
+export default YadeshIdentify;

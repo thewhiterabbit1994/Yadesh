@@ -135,7 +135,6 @@ const EnterCode = () => {
           </button>
         </Link>
       </div>
-      {console.log(enterCode)}
     </div>
   );
 };
