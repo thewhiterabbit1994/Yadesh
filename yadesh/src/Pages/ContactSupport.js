@@ -6,8 +6,17 @@ import Tick from "../assets/svg/questionFromYadesh/Tick";
 import Footer from "../Components/Footer";
 import Info from "../assets/svg/Info";
 import Support from "../assets/svg/Support";
+import { useContext } from "react";
+import { MainCounter } from "../Context/Context";
 
 const ContactSupport = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const titledata = siteManagmentDatabase.ContactWithYadesh.Title;
+  const subheadingsdata =
+    siteManagmentDatabase.ContactWithYadesh.WhyYadesh.Subheadings;
+  const fieldsdata = siteManagmentDatabase.ContactWithYadesh.ContactForm.Fields;
+
   return (
     <div className="h-[1000px] w-full bg-[#000405] ">
       <Navbar />
@@ -18,11 +27,11 @@ const ContactSupport = () => {
       <div className="absolute top-[-40px] right-[80px]">
         <div className="flex  mt-[130px]">
           <div className="w-[5.5px] h-[18px] bg-[#00FF85] rounded-[10px] mt-1.5 ml-2"></div>
-          <p className="text-[19px]  text-[#ffffff]">با یادش در تماس باشید</p>
+          <p className="text-[19px]  text-[#ffffff]">{titledata.title}</p>
         </div>
         <div>
           <p className="mt-[5px] text-[#C4C4C4] text-[14px]">
-            از طریق فرم روبه رو با ما در تماس باشید
+            {titledata.subTitle}
           </p>
         </div>
         <div>
@@ -32,39 +41,54 @@ const ContactSupport = () => {
           <div className="flex">
             <p className="text-[#E6FFF3] text-[19px]">چرا یادش؟</p>
           </div>
-          <div className="flex mt-[25px] ">
-            <Achar />
-            <p className="text-[#E6FFF3] text-[14px] mr-[10px] ">
-              تنوع موضوع و مهارت در یادش{" "}
+          <div
+            className={`${
+              subheadingsdata.Subheading1.isDisplayed ? "" : "hidden"
+            }`}
+          >
+            <div className="flex mt-[25px] ">
+              <Achar />
+              <p className="text-[#E6FFF3] text-[14px] mr-[10px] ">
+                {subheadingsdata.Subheading1.title}
+              </p>
+            </div>
+            <p className="text-[#C4C4C4] text-[12px] mt-[25px] mb-6">
+              {subheadingsdata.Subheading1.subTitle}
             </p>
           </div>
-          <p className="text-[#C4C4C4] text-[12px] mt-[25px] mb-6">
-            سازمان ها در یادش جایکاه ویژه ای دارند پس ما هم برای سازمان ها
-            برنامه ویژه ای داریم
-          </p>
-          <div className="flex mt-[25px]">
-            <Tick />
-            <p className="text-[#E6FFF3] text-[14px] mr-[10px]">
-              اساتید برتر و نمونه
+          <div
+            className={`${
+              subheadingsdata.Subheading2.isDisplayed ? "" : "hidden"
+            }`}
+          >
+            <div className="flex mt-[25px]">
+              <Tick />
+              <p className="text-[#E6FFF3] text-[14px] mr-[10px]">
+                {subheadingsdata.Subheading2.title}
+              </p>
+            </div>
+            <p className="text-[#C4C4C4] text-[12px] mt-[25px] mb-6">
+              {subheadingsdata.Subheading2.subTitle}
             </p>
           </div>
-          <p className="text-[#C4C4C4] text-[12px] mt-[25px] mb-6">
-            سازمان ها در یادش جایکاه ویژه ای دارند پس ما هم برای سازمان ها
-            برنامه ویژه ای داریم
-          </p>
-          <div className="flex mt-[25px]">
-            <Almas />
-            <p className="text-[#E6FFF3] text-[14px] mr-[10px]">
-              ویدئو و محتوای با کیفیت
+          <div
+            className={`${
+              subheadingsdata.Subheading3.isDisplayed ? "" : "hidden"
+            }`}
+          >
+            <div className="flex mt-[25px]">
+              <Almas />
+              <p className="text-[#E6FFF3] text-[14px] mr-[10px]">
+                {subheadingsdata.Subheading3.title}
+              </p>
+            </div>
+            <p className="text-[#C4C4C4] text-[12px] mt-[25px] mb-6">
+              {subheadingsdata.Subheading3.subTitle}
             </p>
           </div>
-          <p className="text-[#C4C4C4] text-[12px] mt-[25px] mb-6">
-            سازمان ها در یادش جایکاه ویژه ای دارند پس ما هم برای سازمان ها
-            برنامه ویژه ای داریم
-          </p>
         </section>
       </div>
-      <div className="w-[46.875vw] h-[120vh] absolute top-[110px]  left-[50px] mt-[20px] rounded-[10px] bg-[#ffffff]">
+      <div className="w-[46.875vw] h-fit absolute top-[110px]  left-[50px] mt-[20px] rounded-[10px] bg-[#ffffff]">
         <div className="flex relative top-[-45px]">
           <div className="ml-3">
             <Support />
@@ -74,45 +98,65 @@ const ContactSupport = () => {
             بود
           </p>
         </div>
-        <div className="flex flex-col mr-[50px] mt-[-10px]">
+        <div
+          className={`${
+            fieldsdata.Field1.isDisplayed ? "" : "hidden"
+          } flex flex-col mr-[50px] mt-[-10px]`}
+        >
           <lable className="text-[#002433] flex mt-8 mb-3 text-[12px] font-bold">
-            نام و نام خانوادگی
+            {fieldsdata.Field1.title}
           </lable>
           <input
             placeholder="مانند کامران جمشیدی"
             className="outline-[#302f2f] pr-5 text-[10px] w-[500px] h-[40px] border-[#c2c2c2] border-[2px] rounded"
           />
         </div>
-        <div className="flex flex-col mr-[50px] mt-[-10px]">
+        <div
+          className={`${
+            fieldsdata.Field2.isDisplayed ? "" : "hidden"
+          } flex flex-col mr-[50px] mt-[-10px]`}
+        >
           <lable className="text-[#002433] flex mt-8 mb-3 text-[12px] font-bold">
-            آدرس ایمیل
+            {fieldsdata.Field2.title}
           </lable>
           <input
             placeholder="مانند example@email.com"
             className="outline-[#302f2f] pr-5 text-[10px] w-[500px] h-[40px] border-[#c2c2c2] border-[2px] rounded"
           />
         </div>
-        <div className="flex flex-col mr-[50px] mt-[-10px]">
+        <div
+          className={`${
+            fieldsdata.Field3.isDisplayed ? "" : "hidden"
+          } flex flex-col mr-[50px] mt-[-10px]`}
+        >
           <lable className="text-[#002433] flex mt-8 mb-3 text-[12px] font-bold">
-            عنوان شما در سازمان
+            {fieldsdata.Field3.title}
           </lable>
           <input
             placeholder="مانند سرپرست برنامه ریزی و بودجه"
             className="outline-[#302f2f] pr-5 text-[10px] w-[500px] h-[40px] border-[#c2c2c2] border-[2px] rounded"
           />
         </div>
-        <div className="flex flex-col mr-[50px] mt-[-10px]">
+        <div
+          className={`${
+            fieldsdata.Field4.isDisplayed ? "" : "hidden"
+          } flex flex-col mr-[50px] mt-[-10px]`}
+        >
           <lable className="text-[#002433] flex mt-8 mb-3 text-[12px] font-bold">
-            نام سازمان شما
+            {fieldsdata.Field4.title}
           </lable>
           <input
             placeholder="مانند شرکت اسنپ فود"
             className="outline-[#302f2f] pr-5 text-[10px] w-[500px] h-[40px] border-[#c2c2c2] border-[2px] rounded"
           />
         </div>
-        <div className="flex flex-col mr-[50px] mt-[-10px]">
+        <div
+          className={`${
+            fieldsdata.Field5.isDisplayed ? "" : "hidden"
+          } flex flex-col mr-[50px] mt-[-10px]`}
+        >
           <lable className="text-[#002433] flex mt-8 mb-3 text-[12px] font-bold">
-            متن پیام
+            {fieldsdata.Field5.title}
           </lable>
           <textarea
             style={{ resize: "none" }}
@@ -128,7 +172,7 @@ const ContactSupport = () => {
             اطلاعات سازمانی و شخصی شما نزد یادش در امان است
           </p>
         </div>
-        <button className="bg-[#00ff85] mr-[50px] mt-3 text-[10px] w-[500px] h-[40px] font-bold rounded">
+        <button className="bg-[#00ff85] mr-[50px] mt-3 text-[10px] w-[500px] h-[40px] mb-10 font-bold rounded">
           ارسال درخواست
         </button>
       </div>

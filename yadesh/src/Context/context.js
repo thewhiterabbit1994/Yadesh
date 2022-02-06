@@ -17,6 +17,8 @@ import UserProfileBackground from "../assets/Img/UserProfileBackground.png";
 import bgYDSJ from "../assets/Img/yadgiriDarSatheJahani/bgYDSJ.png";
 import imgauestion from "../assets/Img/qustionFromYadesh/img-auestion.png";
 import endSection from "../assets/Img/yadgiriDarSatheJahani/endSection.png";
+import LoginBackground from "../assets/Img/LoginBackground.png";
+import Cup from "../assets/Img/cup.png";
 
 export const MainCounter = createContext("");
 
@@ -309,7 +311,43 @@ const Context = (props) => {
           },
         },
       },
-      ContactForm: {},
+      ContactForm: {
+        Fields: {
+          Field1: {
+            title: "نام و نام خانوادگی",
+            isDisplayed: true,
+          },
+          Field2: {
+            title: "آدرس ایمیل",
+            isDisplayed: true,
+          },
+          Field3: {
+            title: "عنوان شما در سازمان",
+            isDisplayed: true,
+          },
+          Field4: {
+            title: "نام سازمان شما",
+            isDisplayed: true,
+          },
+          Field5: {
+            title: "متن پیام",
+            isDisplayed: true,
+          },
+        },
+      },
+    },
+    UserLogin: {
+      title: "مهارت های خود را افزایش دهید",
+      subTitle:
+        "افزایش مهارت همیشه می تواند آینده شغلی شما را تضمین کند. هدف ما در یادش این است که آینده شغلی شما همیشه واضح و درخشان باشد",
+      icon: Cup,
+      imagery: LoginBackground,
+    },
+    Footer: {
+      exploreInYadesh: true,
+      FavoriteEpisodes: true,
+      bestCourses: true,
+      contactInfo: true,
     },
   });
 
