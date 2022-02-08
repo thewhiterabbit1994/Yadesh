@@ -121,8 +121,8 @@ const Table = () => {
                         <div className="mt-[3px]">
                           <Edit />{" "}
                         </div>
-                        <p className="mr-[10px] text-[#0050A8]  text-[10px]">
-                          ویراش شرکت ها
+                        <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
+                          ویراش دوره 
                         </p>
                       </td>
                     </tr>
@@ -153,8 +153,8 @@ const Table = () => {
                         <div className="mt-[3px]">
                           <Edit />{" "}
                         </div>
-                        <p className="mr-[10px] text-[#0050A8]  text-[10px]">
-                          ویراش شرکت ها
+                        <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
+                          ویراش دوره 
                         </p>
                       </td>
                     </tr>

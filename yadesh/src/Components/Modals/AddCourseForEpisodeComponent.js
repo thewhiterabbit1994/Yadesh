@@ -1,36 +1,38 @@
-import Course from "../../assets/svg/Modals/Course"
+import Player from "../../assets/svg/adminPanelEpisode/Player"
 import Trash from "../../assets/svg/AdminPanelCourses/Trash"
 import Add from "../../assets/svg/Modals/Add"
 import cover from "../../assets/Img/cover.png"
 import { useState } from "react"
 import AddEpisode from "../../Components/Modals/AddEpisode"
+import AddEpisodeForEpisodeComponenet from "./AddEpisodeForEpisodeComponenet"
 
-const AddCourse = ({ AddCourseModal, setAddCourseModal }) => {
-    const [AddEpisodeModal, setAddEpisodeModal] = useState(false)
+
+const AddCourseForEpisodeComponent = ({ ModalEpisode, setModalEpisode }) => {
+    const [EpisodeModal, setEpisodeModal] = useState(false)
     const [courseName, setCourseNmae] = useState("")
     const [Teacher, setTeacher] = useState("")
     const [Categories, setCategories] = useState("")
     const [Description, setDescription] = useState("")
-    return (
 
+    return (
         <section
-            className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen mt-[-100px] bg-[#00000071]  ${AddCourseModal ? "scale-100 opacity-100" : "opacity-0 "
+            className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen mt-[-100px] bg-[#00000071]  ${ModalEpisode ? "scale-100 opacity-100" : "opacity-0 "
                 }`}
         >
             <section
                 className={` w-[1000px] h-[96vh] fixed inset-x-[140px] mt-[20px] rounded-[10px] bg-[#fff]`}
             >
-                <AddEpisode AddEpisodeModal={AddEpisodeModal} setAddEpisodeModal={setAddEpisodeModal} />
+                <AddEpisodeForEpisodeComponenet EpisodeModal={EpisodeModal} setEpisodeModal={setEpisodeModal} />
 
                 <section className="w-[900px] h-[50px] text-[12px]  m-auto  ">
                     <section className="flex w-[90%] h-[50px] m-auto  justify-between  pt-[20px]">
                         <div className="flex w-[130px]  justify-between  ">
-                            <Course />
-                            <p> افزودن دوره جدید</p>
+                            <Player />
+                            <p> افزودن اپیزود جدید</p>
                         </div>
                         <div className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
                             <p
-                                onClick={() => setAddCourseModal(!AddCourseModal)}
+                                onClick={() => setModalEpisode(!ModalEpisode)}
                                 className=" right-[8px] text-[17px] absolute ">x</p>
                         </div>
                     </section>
@@ -77,7 +79,7 @@ const AddCourse = ({ AddCourseModal, setAddCourseModal }) => {
                                     />
                                 </div>
                             </section>
-                            <p className="mt-[10px] pr-[10px]">کاور دوره</p>
+                            <p className="mt-[10px] pr-[10px]">کاور اپیزود</p>
                             <section className="flex justify-between w-[370px] h-[100px] items-center ">
                                 <img src={cover} className="w-[120px] h-[80px] rounded-lg" />
                                 <div className="bg-[#d5d5d5c9] cursor-pointer w-[100px] flex justify-center items-center h-[40px] rounded-lg">
@@ -100,7 +102,7 @@ const AddCourse = ({ AddCourseModal, setAddCourseModal }) => {
                                         onChange={(e) => setDescription(e.target.value)}
                                         value={Description}
                                         id='Description'
-                                        className="w-[380px] resize-none bg-[#d5d5d5c9] h-[70px]  rounded mt-[5px] placeholder:text-[10px] placeholder:py-[15px] placeholder:px-[10px]"
+                                        className="w-[380px] resize-none bg-[#d5d5d5c9] h-[70px]  rounded mt-[10px] placeholder:text-[10px] placeholder:py-[15px] placeholder:px-[10px]"
                                         placeholder=" تحلیل روند صعود و فرودابر ایچککو از الزامات تحلیل تکنیکال در بورس و بازار های مالی است. "
                                     />
                                 </div>
@@ -110,7 +112,7 @@ const AddCourse = ({ AddCourseModal, setAddCourseModal }) => {
                             <div className="w-[400px] mb-[15px] flex justify-between">
                                 <p>اپیزود های دوره</p>
                                 <div
-                                    onClick={() => setAddEpisodeModal(!AddEpisodeModal)}
+                                    onClick={() => setEpisodeModal(!EpisodeModal)}
                                     className="flex cursor-pointer w-[90px] justify-between">
                                     <Add />
                                     <p>افزودن اپیزود</p>
@@ -141,4 +143,4 @@ const AddCourse = ({ AddCourseModal, setAddCourseModal }) => {
         </section>
     )
 }
-export default AddCourse
+export default AddCourseForEpisodeComponent

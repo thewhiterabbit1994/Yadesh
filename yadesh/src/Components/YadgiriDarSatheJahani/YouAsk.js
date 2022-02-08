@@ -9,8 +9,11 @@ const YouAsk = () => {
     useContext(MainCounter);
 
   const data = siteManagmentDatabase.YadeshForOrganization.QuestionAndAnswers;
+  const [answerSlider, setanswerSlider] = useState([data]);
+  const [index , setindex] = useState(0)
 
   const [openAnswerTab, setopenAnswerTab] = useState(0);
+  console.log(answerSlider);
 
   return (
     <div className="bg-[#000]">

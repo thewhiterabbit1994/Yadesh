@@ -52,39 +52,45 @@ const Footer = () => {
       </div>
       <div className="flex ">
         <div
-          className={`${
-            data.exploreInYadesh
-              ? " w-[208px] h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]"
-              : "hidden"
-          }`}
+          className={`${data.exploreInYadesh
+            ? " w-[208px]  h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]"
+            : "hidden"
+            }`}
         >
           <p className="text-[13px] mb-3 text-[#E6FFF3] ">گردش در یادش</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
-            <div className="flex flex-col">
+            <div className="flex flex-col leading-[51px]">
               <Link to={"/home"}>
-                <p className="my-4">صفحه اصلی</p>
+                <p className="">صفحه اصلی</p>
               </Link>
-              <a className="my-4">پنل کاربری</a>
+              <Link to="/home/userprofile">
+                <a className="">پنل کاربری</a>
+              </Link>
               <Link to={"/home/userprofile"}>
-                <p className="my-4">پروفایل کاربری</p>
+                <p className="">پروفایل کاربری</p>
               </Link>
-              <a className="my-4">کلاس ها</a>
-              <a className="my-4">پلی لیست های من</a>
+              <Link to="/home/course">
+                <a className="">کلاس ها</a>
+              </Link>
+              <Link to="/home/playerepisode">
+                <a className="">پلی لیست های من</a>
+              </Link>
             </div>
-            <div className="flex flex-col">
-              <a className="my-4">درباره ما</a>
+            <div className="flex flex-col mt-[17px] ">
+              <Link to="/aboutus">
+                <a className="my-4">درباره ما</a>
+              </Link>
               <Link to={"/home/contactsupport"}>
-                <p className="my-4">پشتیبانی</p>
+                <p className="my-8">پشتیبانی</p>
               </Link>
             </div>
           </div>
         </div>
         <div
-          className={`${
-            data.FavoriteEpisodes
-              ? "w-[120px] h-[300px] mr-[40px]  mt-[40px] divide-y divide-[#373b3c]"
-              : "hidden"
-          } `}
+          className={`${data.FavoriteEpisodes
+            ? "w-[120px] h-[300px] mr-[40px]  mt-[40px] divide-y divide-[#373b3c]"
+            : "hidden"
+            } `}
         >
           <p className="text-[13px]  mb-3 text-[#E6FFF3]">اپیزود های محبوب</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
@@ -98,11 +104,10 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className={`${
-            data.bestCourses
-              ? "w-[130px] h-[300px] mr-[40px] mt-[40px] divide-y divide-[#373b3c]"
-              : "hidden"
-          } `}
+          className={`${data.bestCourses
+            ? "w-[130px] h-[300px] mr-[40px] mt-[40px] divide-y divide-[#373b3c]"
+            : "hidden"
+            } `}
         >
           <p className="text-[13px] mb-3 text-[#E6FFF3]">دوره های برتر</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
@@ -116,9 +121,8 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className={`${
-            data.contactInfo ? "mt-12 w-[400px] mr-[205px]" : "hidden"
-          } `}
+          className={`${data.contactInfo ? "mt-12 w-[400px] mr-[205px]" : "hidden"
+            } `}
         >
           <div className="flex">
             <div className="w-[6px] h-[15px] bg-[#00FF85] rounded-[10px] mt-1 ml-2"></div>

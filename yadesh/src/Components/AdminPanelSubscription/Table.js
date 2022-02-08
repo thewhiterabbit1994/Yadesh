@@ -1,11 +1,12 @@
 import Sort from "../../assets/svg/AdminPanelCourses/Sort";
 import Search from "../../assets/svg/AdminPanelCourses/Search";
 import Successful from "../../assets/svg/AdminPanelCourses/Successful";
-import Failed from "../../assets/svg/AdminPanelCourses/Failed";
-import Oclock from "../../assets/svg/AdminPanelCourses/Oclock";
 import { useState } from "react"
+import EditSubscription from "../../Components/Modals/EditSubscription"
+
 
 const Table = () => {
+    const [EditSubscriptionModal, setEditSubscriptionModal] = useState(false)
     const [showmore, setShowmore] = useState(false);
     const [Subscription, setSubscription] = useState([
         {
@@ -49,8 +50,20 @@ const Table = () => {
         let loopResult = Subscription[i];
         twoOfSubscription.push(loopResult);
     }
+
+    const removeItemOftwoOfSubscription = (i) => {
+        const arr = [...twoOfSubscription]
+        arr.splice(i, 1)
+    }
+
+    const removeItemOfSubscription = (i) => {
+        const arr = [...Subscription]
+        arr.splice(i, 1)
+        setSubscription(arr)
+    }
     return (
         <sectio n className="w-[97vw]">
+            <EditSubscription EditSubscriptionModal={EditSubscriptionModal} setEditSubscriptionModal={setEditSubscriptionModal} />
             <section className="w-[87%] mr-[120px] m-auto text-[12px] text-[#001D29]">
                 <section className="w-full justify-between flex py-[20px]  items-center  bg-[#e6e9eb6e]">
                     <section className="w-[50%] font-semibold pr-[10px]"> لیست اشتراک ها</section>
@@ -90,49 +103,57 @@ const Table = () => {
                     <tbody>
                         {
                             !showmore ?
-                                twoOfSubscription.map(item => {
+                                twoOfSubscription.map((item, i) => {
                                     return (
                                         <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                                            <td className="text-center">1</td>
-                                            <td className="text-center">مخابرات ایران </td>
+                                            <td className="text-center">{i + 1}</td>
+                                            <td className="text-center">{item.name}</td>
                                             <td className=" text-[#008043] font-semibold ">
                                                 <div className="justify-center flex ">
-                                                    <p className="ml-[5px]">فعال</p>
+                                                    <p className="ml-[5px]">{item.Condition}</p>
                                                     <Successful />
                                                 </div>
                                             </td>
-                                            <td className="text-center text-[#0050A8] font-semibold">735 هزار تومان </td>
-                                            <td className="text-center"> 132 نفر</td>
-                                            <td className="text-center">26 مهر 1399</td>
+                                            <td className="text-center text-[#0050A8] font-semibold">{item.Amount}</td>
+                                            <td className="text-center">{item.numberOfUsers}</td>
+                                            <td className="text-center">{item.DateOfRenewal}</td>
                                             <td >
-                                                <p className="mr-[10px] text-[#0050A8] text-center font-semibold">جزییات اشتراک</p>
+                                                <p
+                                                    onClick={() => setEditSubscriptionModal(!EditSubscriptionModal)}
+                                                    className="mr-[10px] text-[#0050A8] cursor-pointer text-center font-semibold">جزییات اشتراک</p>
                                             </td>
                                             <td >
-                                                <p className="mr-[10px] text-[#AA0029] text-center font-semibold">لغو اشتراک</p>
+                                                <p
+                                                    onClick={() => removeItemOftwoOfSubscription(i)}
+                                                    className={`mr-[10px] text-[#AA0029]   cursor-pointer text-center font-semibold`}>لغو اشتراک</p>
                                             </td>
                                         </tr>
                                     )
                                 })
                                 :
-                                Subscription.map(item => {
+                                Subscription.map((item, i) => {
                                     return (
                                         <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                                            <td className="text-center">1</td>
-                                            <td className="text-center">مخابرات ایران </td>
+                                            <td className="text-center">{i + 1}</td>
+                                            <td className="text-center">{item.name}</td>
                                             <td className=" text-[#008043] font-semibold ">
                                                 <div className="justify-center flex ">
-                                                    <p className="ml-[5px]">فعال</p>
+                                                    <p className="ml-[5px]">{item.Condition}</p>
                                                     <Successful />
                                                 </div>
                                             </td>
-                                            <td className="text-center text-[#0050A8] font-semibold">735 هزار تومان </td>
-                                            <td className="text-center"> 132 نفر</td>
-                                            <td className="text-center">26 مهر 1399</td>
+                                            <td className="text-center text-[#0050A8] font-semibold"> {item.Amount} </td>
+                                            <td className="text-center"> {item.numberOfUsers}</td>
+                                            <td className="text-center">{item.DateOfRenewal}</td>
                                             <td >
-                                                <p className="mr-[10px] text-[#0050A8] text-center font-semibold">جزییات اشتراک</p>
+                                                <p
+                                                    onClick={() => setEditSubscriptionModal(!EditSubscriptionModal)}
+                                                    className="mr-[10px] text-[#0050A8]  cursor-pointer text-center font-semibold">جزییات اشتراک</p>
                                             </td>
                                             <td >
-                                                <p className="mr-[10px] text-[#AA0029] text-center font-semibold">لغو اشتراک</p>
+                                                <p
+                                                    onClick={() => removeItemOfSubscription(i)}
+                                                    className="mr-[10px] text-[#AA0029] cursor-pointer text-center font-semibold">لغو اشتراک</p>
                                             </td>
                                         </tr>
                                     )

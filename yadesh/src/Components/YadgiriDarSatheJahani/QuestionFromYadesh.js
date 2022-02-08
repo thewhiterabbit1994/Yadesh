@@ -30,9 +30,8 @@ const QuestionFromYadesh = () => {
             {data.subTitle}
           </h6>
           <div
-            className={`${
-              data.Subheadings.Subheading1.isDisplayed ? "" : "hidden"
-            } `}
+            className={`${data.Subheadings.Subheading1.isDisplayed ? "" : "hidden"
+              } `}
           >
             <div className="flex mt-[25px] ">
               <Almas />
@@ -45,9 +44,8 @@ const QuestionFromYadesh = () => {
             </h6>
           </div>
           <div
-            className={`${
-              data.Subheadings.Subheading2.isDisplayed ? "" : "hidden"
-            } `}
+            className={`${data.Subheadings.Subheading2.isDisplayed ? "" : "hidden"
+              } `}
           >
             <div className="flex mt-[25px]">
               <Achar />
@@ -60,9 +58,8 @@ const QuestionFromYadesh = () => {
             </h6>
           </div>
           <div
-            className={`${
-              data.Subheadings.Subheading3.isDisplayed ? "" : "hidden"
-            } `}
+            className={`${data.Subheadings.Subheading3.isDisplayed ? "" : "hidden"
+              } `}
           >
             <div className="flex mt-[25px]">
               <Tick />

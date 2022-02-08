@@ -13,7 +13,6 @@ const CommentCustomer = () => {
   setTimeout(() => {
     changeindex();
   }, 5000);
-  console.log(index);
   return (
     <div>
       <section className="w-full h-[400px] bg-[#000E14] flex ">

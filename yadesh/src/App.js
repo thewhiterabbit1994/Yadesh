@@ -40,6 +40,7 @@ import ConfirmCourse from "./Components/Modals/ConfirmCourse";
 import AddCourse from "./Components/Modals/AddCourse";
 import AddEpisode from "./Components/Modals/AddEpisode";
 import AddNewSubscription from "./Components/Modals/AddNewSubscription";
+import CompanySubMenu from "./Components/Modals/CompanySubMenu";
 
 function App() {
   return (
@@ -72,7 +73,7 @@ function App() {
           <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
           <Route path="/adminlogin/succsess" element={<Succses />} />
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
-          <Route path="/AddNewSubscription" element={<AddNewSubscription />} />
+          <Route path="/AddNewUser" element={<AddNewUser />} />
 
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
@@ -82,7 +83,7 @@ function App() {
             <Route path="elepisode" element={<AdminPanelEpisode />} />
             <Route path="courses" element={<AdminPanelCourses />} />
             <Route path="factor" element={<AdminPanelFactor />} />
-            <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
+            <Route path="subscription" element={<AdminPanelSubscription />} />
             <Route path="ticketscompany" element={<TicketsCompany />} />
             <Route path="sitemanagment" element={<SiteManagment />} />
 

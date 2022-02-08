@@ -2,14 +2,14 @@ import { useState } from "react"
 import Company from "../../assets/svg/AdminPanelCourses/Company"
 import Trash from "../../assets/svg/AdminPanelCourses/Trash"
 
-const AddCompany = ({ ComponyModal, setComponyModal }) => {
+const EditCompany = ({ EditComponyModal, setEditComponyModal }) => {
     const [nymber, setNymber] = useState("")
     const [nameCompany, setNameCompany] = useState("")
 
     return (
 
         <section
-            className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen mt-[-100px] bg-[#00000071]  ${ComponyModal ? "scale-100 opacity-100" : "opacity-0 "
+            className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen mt-[-200px] bg-[#00000071]  ${EditComponyModal ? "scale-100 opacity-100" : "opacity-0 "
                 }`}
         >
             <section
@@ -17,14 +17,14 @@ const AddCompany = ({ ComponyModal, setComponyModal }) => {
             >
                 <section className="w-[450px] text-[12px] h-[540px] m-auto rounded-lg  bg-[#d5d5d556]">
                     <section className="flex w-[85%]  justify-between m-auto pt-[20px]">
-                        <div className="flex w-[130px]  justify-between  ">
+                        <div className="flex w-[100px]  justify-between  ">
                             <Company />
-                            <p> افزودن شرکت جدید</p>
+                            <p> ویرایش شرکت </p>
                         </div>
                         <div className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
                             <p
-                                onClick={() => setComponyModal(false)}
-                                className=" right-[8px] absolute text-[18px]">x</p>
+                            onClick={()=> setEditComponyModal(false)}
+                            className=" right-[8px] cursor-pointer absolute text-[18px]">x</p>
                         </div>
                     </section>
                     <section className=" mt-[20px] flex justify-center ">
@@ -100,4 +100,4 @@ const AddCompany = ({ ComponyModal, setComponyModal }) => {
 
     )
 }
-export default AddCompany
+export default EditCompany
