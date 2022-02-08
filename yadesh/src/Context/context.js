@@ -20,56 +20,33 @@ import endSection from "../assets/Img/yadgiriDarSatheJahani/endSection.png";
 import LoginBackground from "../assets/Img/LoginBackground.png";
 import Cup from "../assets/Img/cup.png";
 import ZtoMPrev from "../assets/videos/ZeroToMastery/ZtoMPrew.jpg";
-import ZtoM_Intro from "../assets/videos/ZeroToMastery/Intro.mp4";
 import ZtoM_IntroImg from "../assets/videos/ZeroToMastery/Intro.png";
-import ZtoM_CSS from "../assets/videos/ZeroToMastery/CSS.mp4";
 import ZtoM_CSSImg from "../assets/videos/ZeroToMastery/CSS.png";
-import ZtoM_HTML from "../assets/videos/ZeroToMastery/HTML.mp4";
 import ZtoM_HTMLImg from "../assets/videos/ZeroToMastery/HTML.png";
 import ZtoMReactPrew from "../assets/videos/ZerToMasteryReact/ZtoMReactPrew.jpg";
-import ZtoMReactintro from "../assets/videos/ZerToMasteryReact/IntroductionToReact.mp4";
 import ZtoMReactintroImg from "../assets/videos/ZerToMasteryReact/introreact.png";
-import ZtoMReactcreate from "../assets/videos/ZerToMasteryReact/create-react-app.mp4";
 import ZtoMReactcreateImg from "../assets/videos/ZerToMasteryReact/creatreact.png";
-import ZtoMReactcomponent from "../assets/videos/ZerToMasteryReact/ReactComponent.mp4";
 import ZtoMReactcomponentImg from "../assets/videos/ZerToMasteryReact/ReactComponent.png";
 import ZtoMBackPrew from "../assets/videos/ZerToMasteryBackend/prew.jpg";
-import ZtoMBackHTTPS from "../assets/videos/ZerToMasteryBackend/HTTPS.mp4";
 import ZZtoMBackHTTPSImg from "../assets/videos/ZerToMasteryBackend/HTTPS.png";
-import ZtoMBackAJAX from "../assets/videos/ZerToMasteryBackend/AJAX.mp4";
 import ZtoMBackAJAXImg from "../assets/videos/ZerToMasteryBackend/AJAX.png";
-import ZtoMBackBasics from "../assets/videos/ZerToMasteryBackend/BackendBasics.mp4";
 import ZtoMBackBasicsImg from "../assets/videos/ZerToMasteryBackend/BackendBasics.png";
-import ZtoMBackJSON from "../assets/videos/ZerToMasteryBackend/JSON.mp4";
 import ZtoMBackJSONImg from "../assets/videos/ZerToMasteryBackend/JSON.png";
 import BuildingPrew from "../assets/videos/Buildingandminingsafety/prewImg.png";
-import BuildingEpisode1 from "../assets/videos/Buildingandminingsafety/Episode1.mp4";
 import BuildingEpisode1Img from "../assets/videos/Buildingandminingsafety/Episode1Img.png";
-import BuildingEpisode2 from "../assets/videos/Buildingandminingsafety/Episode2.mp4";
 import BuildingEpisode2Img from "../assets/videos/Buildingandminingsafety/Episode2Img.png";
-import BuildingEpisode3 from "../assets/videos/Buildingandminingsafety/Episode3.mp4";
 import BuildingEpisode3Img from "../assets/videos/Buildingandminingsafety/Episode3Img.png";
-import BuildingEpisode4 from "../assets/videos/Buildingandminingsafety/Episode4.mp4";
 import BuildingEpisode4Img from "../assets/videos/Buildingandminingsafety/Episode4Img.png";
 import PowerPrew from "../assets/videos/FundamentalsofElectricEngineering/prewimg.jpg";
-import PowerEpisode1 from "../assets/videos/FundamentalsofElectricEngineering/Episode1.mp4";
 import PowerEpisode1Img from "../assets/videos/FundamentalsofElectricEngineering/Episode1Img.png";
-import PowerEpisode2 from "../assets/videos/FundamentalsofElectricEngineering/Episode2.mp4";
 import PowerEpisode2Img from "../assets/videos/FundamentalsofElectricEngineering/Episode2Img.png";
-import PowerEpisode3 from "../assets/videos/FundamentalsofElectricEngineering/Episode3.mp4";
 import PowerEpisode3Img from "../assets/videos/FundamentalsofElectricEngineering/Episode3Img.png";
-import PowerEpisode4 from "../assets/videos/FundamentalsofElectricEngineering/Episode4.mp4";
 import PowerEpisode4Img from "../assets/videos/FundamentalsofElectricEngineering/Episode4Img.png";
-import PowerEpisode5 from "../assets/videos/FundamentalsofElectricEngineering/Episode5.mp4";
 import PowerEpisode5Img from "../assets/videos/FundamentalsofElectricEngineering/Episode5Img.png";
-import PowerEpisode6 from "../assets/videos/FundamentalsofElectricEngineering/Episode6.mp4";
 import PowerEpisode6Img from "../assets/videos/FundamentalsofElectricEngineering/Episode6Img.png";
 import MashinPrew from "../assets/videos/Safetyofindustrialmachineryandequipment/prewimg.jpg";
-import MashinEpisode1 from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode1.mp4";
 import MashinEpisode1Img from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode1Img.png";
-import MashinEpisode2 from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode2.mp4";
 import MashinEpisode2Img from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode2Img.png";
-import MashinEpisode3 from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode3.mp4";
 import MashinEpisode3Img from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode3Img.png";
 
 export const MainCounter = createContext("");
@@ -85,7 +62,8 @@ const Context = (props) => {
         CourseCategory: "صفر تا صد تسلط وب",
         Episodes: [
           {
-            Video: ZtoM_Intro,
+            Video:
+              "https://31.filelu.com/d/w53jaflpjqqnjjtak2m5q77tremgifjxuy4sdeo2djqoizsi3qqzbmvhiqc4vkudyegmpbq7/Intro.mp4",
             PreviewImg: ZtoM_IntroImg,
             NameOfEpisode: "معرفی دوره",
             TimeOfEpisode: "9 دقیقه",
@@ -93,7 +71,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoM_CSS,
+            Video:
+              "https://31.filelu.com/d/w53j2flpjqqnjjtak2m4w3fqzkiwe7zkyht5n26k2wzbozzrkftqd5hdnpebphk56ted2tay/CSS.mp4",
             PreviewImg: ZtoM_CSSImg,
             NameOfEpisode: "معرفی CSS",
             TimeOfEpisode: "10 دقیقه",
@@ -101,7 +80,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoM_HTML,
+            Video:
+              "https://31.filelu.com/d/w53j6flpjqqnjjtak2m4w6fwry4prqhbztm7ce3wxqtpz4rvbsl2cvkzfhhez5btudfmpkje/HTML.mp4",
             PreviewImg: ZtoM_HTMLImg,
             NameOfEpisode: "معرفی HTML",
             TimeOfEpisode: "8 دقیقه",
@@ -118,7 +98,8 @@ const Context = (props) => {
         CourseCategory: "صفر تا صد تسلط ریکت",
         Episodes: [
           {
-            Video: ZtoMReactintro,
+            Video:
+              "https://31.filelu.com/d/w53joflpjqqnjjtak2m5gjhhrd44xw2dg4jbrx2mxxvyo6bjuyj24ovt6nrdqfn7aq337mfo/IntroductionToReact.mp4",
             PreviewImg: ZtoMReactintroImg,
             NameOfEpisode: "معرفی ری اکت",
             TimeOfEpisode: "12 دقیقه",
@@ -126,7 +107,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoMReactcreate,
+            Video:
+              "https://31.filelu.com/d/w53jmflpjqqnjjtak2m4s5nutiqcod5hr6liurmvker4ekorpbvkii4ekia7a7bnlhe46egy/create-react-app.mp4",
             PreviewImg: ZtoMReactcreateImg,
             NameOfEpisode: "ساخت اپ ری اکت",
             TimeOfEpisode: "12 دقیقه",
@@ -134,7 +116,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoMReactcomponent,
+            Video:
+              "https://31.filelu.com/d/w53gqfdpjqqnjjtak2myy57ly6l5md2uemg4gkrghprnuqv2tvdcyla6m6na7p2n5pesj63f/ReactComponent.mp4",
             PreviewImg: ZtoMReactcomponentImg,
             NameOfEpisode: "آموزش ری اکت کامپوننت",
             TimeOfEpisode: "20 دقیقه",
@@ -151,7 +134,8 @@ const Context = (props) => {
         CourseCategory: "صفر تا صد تسلط بک اند",
         Episodes: [
           {
-            Video: ZtoMBackBasics,
+            Video:
+              "https://31.filelu.com/d/w53jeflpjqqnjjtak2myqyvszktjit5y2ipn4e4qbpsksjmyukus6xfoazvv2f4ybsbr7jo6/BackendBasics.mp4",
             PreviewImg: ZtoMBackBasicsImg,
             NameOfEpisode: "معرفی بک اند",
             TimeOfEpisode: "12 دقیقه",
@@ -159,7 +143,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoMBackHTTPS,
+            Video:
+              "https://31.filelu.com/d/w53jiflpjqqnjjtak2my2yhmr326buk3xqrj2646xtq53hv4gheb5cfzotzsv4ef2q5plwrk/HTTPS.mp4",
             PreviewImg: ZZtoMBackHTTPSImg,
             NameOfEpisode: "معرفی HTTPS",
             TimeOfEpisode: "20 دقیقه",
@@ -167,7 +152,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoMBackAJAX,
+            Video:
+              "https://31.filelu.com/d/w53jcflpjqqnjjtak2m4s4f3rcyebrdv26ojjevz662ifbt5imkv3i34uhrtpozs6jttuugk/AJAX.mp4",
             PreviewImg: ZtoMBackAJAXImg,
             NameOfEpisode: "معرفی AJAX",
             TimeOfEpisode: "13 دقیقه",
@@ -175,7 +161,8 @@ const Context = (props) => {
             TeacherName: "آندره نیگوا",
           },
           {
-            Video: ZtoMBackJSON,
+            Video:
+              "https://31.filelu.com/d/w53jkflpjqqnjjtak2m5m65vtsgnupepebgqbwftnc6srndbc4w7uxi6qcgvl5aqpgpy3mnc/JSON.mp4",
             PreviewImg: ZtoMBackJSONImg,
             NameOfEpisode: "معرفی JSON",
             TimeOfEpisode: "7 دقیقه",
@@ -192,7 +179,8 @@ const Context = (props) => {
         CourseCategory: "ایمنی ساختمان و معدن",
         Episodes: [
           {
-            Video: BuildingEpisode1,
+            Video:
+              "https://23.filelu.com/d/x53g4fdpjqqnjjtak2m5mihrsumbqyhy2afsklmu2ef4xy3lfkkqpj7nfrro4altyiqkdra3/Episode1.mp4",
             PreviewImg: BuildingEpisode1Img,
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "30 دقیقه",
@@ -200,7 +188,8 @@ const Context = (props) => {
             TeacherName: "داوود پناهی",
           },
           {
-            Video: BuildingEpisode2,
+            Video:
+              "https://23.filelu.com/d/x53g6fdpjqqnjjtak2m5ijhwzcylxpsad237dnk27xt25zcy6ntqvafdzsaruo2qyvn6o3cd/Episode2.mp4",
             PreviewImg: BuildingEpisode2Img,
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "30 دقیقه",
@@ -208,7 +197,8 @@ const Context = (props) => {
             TeacherName: "داوود پناهی",
           },
           {
-            Video: BuildingEpisode3,
+            Video:
+              "https://23.filelu.com/d/x53gafdpjqqnjjtak2my4ypqscotf4lfxdd52rluizxcjzixe6hi5hp3cnyzroc2plzlaukl/Episode3.mp4",
             PreviewImg: BuildingEpisode3Img,
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "54 دقیقه",
@@ -216,7 +206,8 @@ const Context = (props) => {
             TeacherName: "داوود پناهی",
           },
           {
-            Video: BuildingEpisode4,
+            Video:
+              "https://23.filelu.com/d/x53gcfdpjqqnjjtak2m5a57ur2va7lbshystwgatewwi53vcuqku7gfenuhqzjcylt2y3mzx/Episode4.mp4",
             PreviewImg: BuildingEpisode4Img,
             NameOfEpisode: "قسمت چهارم",
             TimeOfEpisode: "33 دقیقه",
@@ -228,44 +219,49 @@ const Context = (props) => {
       {
         CourseImg: PowerPrew,
         TeacherName: "جواد جباری",
-        CourseDurationTime: "175 دقیقه",
+        CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "6 اپیزود",
         CourseCategory: "مبانی مهندسی برق",
         Episodes: [
           {
-            Video: PowerEpisode1,
+            Video:
+              "https://23.filelu.com/d/x53ggfdpjqqnjjtak2myo5h3sumnuxivheigkgfmews4pcrq4olanunlang6mpdriuv4626v/Episode1.mp4",
             PreviewImg: PowerEpisode1Img,
             NameOfEpisode: "قسمت اول",
-            TimeOfEpisode: "40 دقیقه",
+            TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
             TeacherName: "جواد جباری",
           },
           {
-            Video: PowerEpisode2,
+            Video:
+              "https://23.filelu.com/d/x53gifdpjqqnjjtak2m5c3v3q3mtycdtywwl4rry3fji6nqrzta7szc6ryiefaoigqzj3us5/Episode2.mp4",
             PreviewImg: PowerEpisode2Img,
             NameOfEpisode: "قسمت دوم",
-            TimeOfEpisode: "34 دقیقه",
+            TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
             TeacherName: "جواد جباری",
           },
           {
-            Video: PowerEpisode3,
+            Video:
+              "https://23.filelu.com/d/x53gkfdpjqqnjjtak2m52ixwrxsj3bsi3z33tbishdyaj2cbhzm5xtwkpn5gfpytoq7dw37q/Episode3.mp4",
             PreviewImg: PowerEpisode3Img,
             NameOfEpisode: "قسمت سوم",
-            TimeOfEpisode: "33 دقیقه",
+            TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
             TeacherName: "جواد جباری",
           },
           {
-            Video: PowerEpisode4,
+            Video:
+              "https://23.filelu.com/d/x53gmfdpjqqnjjtak2myo5h3sv4ww54tfpi3s6ltttwje6nridhqcbi7twg6kuutr7kzau4b/Episode4.mp4",
             PreviewImg: PowerEpisode4Img,
             NameOfEpisode: "قسمت چهارم",
-            TimeOfEpisode: "27 دقیقه",
+            TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
             TeacherName: "جواد جباری",
           },
           {
-            Video: PowerEpisode5,
+            Video:
+              "https://23.filelu.com/d/x53gofdpjqqnjjtak2m5c3v3qycuuncwmd3y4xpyvuutnkhsvksr6qlywdtk6h6efo5bokhs/Episode5.mp4",
             PreviewImg: PowerEpisode5Img,
             NameOfEpisode: "قسمت پنجم",
             TimeOfEpisode: "30 دقیقه",
@@ -273,7 +269,8 @@ const Context = (props) => {
             TeacherName: "جواد جباری",
           },
           {
-            Video: PowerEpisode6,
+            Video:
+              "https://23.filelu.com/d/x53hqfdpjqqnjjtak2m52ixwrxouy4m3xk3klvbgni5hrfamuijmmy6h4mjgfmpeihpuxsfq/Episode6.mp4",
             PreviewImg: PowerEpisode6Img,
             NameOfEpisode: "قسمت ششم",
             TimeOfEpisode: "20 دقیقه",
@@ -290,7 +287,8 @@ const Context = (props) => {
         CourseCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
         Episodes: [
           {
-            Video: MashinEpisode1,
+            Video:
+              "https://23.filelu.com/d/x53hsfdpjqqnjjtak2my47prtvarvps7kwunerfer5jm6l7nq6m2o3ta4g7r66xq7t2p6tdm/Episode1.mp4",
             PreviewImg: MashinEpisode1Img,
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "34 دقیقه",
@@ -298,7 +296,8 @@ const Context = (props) => {
             TeacherName: "مصطفی پویا کیان",
           },
           {
-            Video: MashinEpisode2,
+            Video:
+              "https://23.filelu.com/d/x53hufdpjqqnjjtak2myoivtr6r4l4paoug2l2jgnp6ges57kmoq7teiphxij5jhvvfwd4gz/Episode2.mp4",
             PreviewImg: MashinEpisode2Img,
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "25 دقیقه",
@@ -306,7 +305,8 @@ const Context = (props) => {
             TeacherName: "مصطفی پویا کیان",
           },
           {
-            Video: MashinEpisode3,
+            Video:
+              "https://23.filelu.com/d/x53hwfdpjqqnjjtak2m4467ozpxk7gvkzquk5pt2pgi46cxoasn3jdm7ewb5edlumjooqgbg/Episode3.mp4",
             PreviewImg: MashinEpisode3Img,
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "28 دقیقه",
