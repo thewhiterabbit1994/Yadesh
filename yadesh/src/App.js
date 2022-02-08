@@ -72,8 +72,7 @@ function App() {
           <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
           <Route path="/adminlogin/succsess" element={<Succses />} />
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
-          <Route path="/AddNewSubscription" element={<AddNewSubscription />} />
-
+          <Route path="/AddCourse" element={<AddCourse />} />
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />
@@ -82,10 +81,12 @@ function App() {
             <Route path="elepisode" element={<AdminPanelEpisode />} />
             <Route path="courses" element={<AdminPanelCourses />} />
             <Route path="factor" element={<AdminPanelFactor />} />
-            <Route path="adminPanelsubscription" element={<AdminPanelSubscription />} />
+            <Route
+              path="adminPanelsubscription"
+              element={<AdminPanelSubscription />}
+            />
             <Route path="ticketscompany" element={<TicketsCompany />} />
             <Route path="sitemanagment" element={<SiteManagment />} />
-
           </Route>
 
           {/* <RequireAuth>
