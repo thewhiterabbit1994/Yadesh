@@ -75,6 +75,7 @@ function App() {
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
           <Route path="/AddNewUser" element={<AddNewUser />} />
 
+          <Route path="/AddCourse" element={<AddCourse />} />
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />
@@ -84,9 +85,12 @@ function App() {
             <Route path="courses" element={<AdminPanelCourses />} />
             <Route path="factor" element={<AdminPanelFactor />} />
             <Route path="subscription" element={<AdminPanelSubscription />} />
+            <Route
+              path="adminPanelsubscription"
+              element={<AdminPanelSubscription />}
+            />
             <Route path="ticketscompany" element={<TicketsCompany />} />
             <Route path="sitemanagment" element={<SiteManagment />} />
-
           </Route>
 
           {/* <RequireAuth>

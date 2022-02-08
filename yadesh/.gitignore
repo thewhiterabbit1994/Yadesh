@@ -1,7 +1,33 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+ /src/assets/videos/ZeroToMastery/Intro.mp4
+ /src/assets/videos/ZeroToMastery/CSS.mp4
+ /src/assets/videos/ZeroToMastery/HTML.mp4
+ /src/assets/videos/ZerToMasteryReact/IntroductionToReact.mp4
+ /src/assets/videos/ZerToMasteryReact/create-react-app.mp4
+ /src/assets/videos/ZerToMasteryReact/ReactComponent.mp4
+ /src/assets/videos/ZerToMasteryBackend/HTTPS.mp4
+ /src/assets/videos/ZerToMasteryBackend/AJAX.mp4
+ /src/assets/videos/ZerToMasteryBackend/BackendBasics.mp4
+ /src/assets/videos/ZerToMasteryBackend/JSON.mp4
+ /src/assets/videos/Buildingandminingsafety/Episode1.mp4
+ /src/assets/videos/Buildingandminingsafety/Episode2.mp4
+ /src/assets/videos/Buildingandminingsafety/Episode3.mp4
+ /src/assets/videos/Buildingandminingsafety/Episode4.mp4
+ /src/assets/videos/FundamentalsofElectricEngineering/Episode1.mp4
+ /src/assets/videos/FundamentalsofElectricEngineering/Episode2.mp4
+ /src/assets/videos/FundamentalsofElectricEngineering/Episode3.mp4
+ /src/assets/videos/FundamentalsofElectricEngineering/Episode4.mp4
+ /src/assets/videos/FundamentalsofElectricEngineering/Episode5.mp4
+ /src/assets/videos/FundamentalsofElectricEngineering/Episode6.mp4
+ /src/assets/videos/Safetyofindustrialmachineryandequipment/Episode1.mp4
+ /src/assets/videos/Safetyofindustrialmachineryandequipment/Episode2.mp4
+ /src/assets/videos/Safetyofindustrialmachineryandequipment/Episode3.mp4
+ 
 
 # dependencies
 /node_modules
+/.mp4
+*.mp4
 /.pnp
 .pnp.js
 package-lock

@@ -3,43 +3,18 @@ import Sort from "../../assets/svg/AdminPanelCourses/Sort";
 import Search from "../../assets/svg/AdminPanelCourses/Search";
 import video from "../../assets/Img/adminPanelEpisode/video.png";
 import { useState } from "react";
+import { useContext } from "react";
+import { MainCounter } from "../../Context/Context";
 
 const Table = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+
+  const data = siteManagmentDatabase.Courses;
   const [showmore, setShowmore] = useState(false);
-  const [course, setCourse] = useState([
-    {
-      img: video,
-      teacherName: "سهراب دل انگیزان ",
-      courseTime: "20 دقیقه",
-      NumberOfEpisodes: "30 اپیزود",
-      category: "اقتصاد / مدیریت",
-    },
-    {
-      img: video,
-      teacherName: "سهراب دل انگیزان ",
-      courseTime: "20 دقیقه",
-      NumberOfEpisodes: "30 اپیزود",
-      category: "اقتصاد / مدیریت",
-    },
-    {
-      img: video,
-      teacherName: "سهراب دل انگیزان ",
-      courseTime: "20 دقیقه",
-      NumberOfEpisodes: "30 اپیزود",
-      category: "اقتصاد / مدیریت",
-    },
-    {
-      img: video,
-      teacherName: "سهراب دل انگیزان ",
-      courseTime: "20 دقیقه",
-      NumberOfEpisodes: "30 اپیزود",
-      category: "اقتصاد / مدیریت",
-    },
-  ]);
 
   let twoOfCourses = [];
   for (let i = 0; i < 2; i++) {
-    let loopResult = course[i];
+    let loopResult = data[i];
     twoOfCourses.push(loopResult);
   }
   return (
@@ -48,7 +23,7 @@ const Table = () => {
         <section className="w-full justify-between flex  py-[20px] bg-[#e6e9eb6e] rounded-lg">
           <section className="w-[50%] pr-[10px] font-semibold">
             {" "}
-            لیست دور های شما
+            لیست دوره های شما
           </section>
           <section className="w-[600px] flex justify-between pl-[10px]">
             <div className="flex text-[12px] w-[300px] h-[35px] bg-[#E6E9EB] rounded">
@@ -96,65 +71,71 @@ const Table = () => {
           </thead>
           <tbody className="w-full">
             {!showmore
-              ? twoOfCourses.map((item , i) => {
+              ? twoOfCourses.map((item, i) => {
                   return (
                     <tr className="hover:bg-[#e6e9ebc2]">
-                      <td className="text-center">{i}</td>
+                      <td className="text-center">{i + 1}</td>
                       <td>
-                        <img src={item.img} className="rounded m-auto" />{" "}
+                        <img
+                          src={item.CourseImg}
+                          className="rounded m-auto h-[50px]"
+                        />{" "}
                       </td>
                       <td>
-                        <p className="text-center">{item.teacherName}</p>
+                        <p className="text-center">{item.TeacherName}</p>
                       </td>
                       <td>
                         <p className="text-center text-[#0050A8] font-semibold">
-                          {item.courseTime}
+                          {item.CourseDurationTime}
                         </p>
                       </td>
                       <td className="text-[#0050A8] font-semibold text-center">
                         {item.NumberOfEpisodes}
                       </td>
                       <td>
-                        <p className="text-center">{item.category}</p>
+                        <p className="text-center">{item.CourseCategory}</p>
                       </td>
                       <td className="flex items-center h-[80px]">
                         <div className="mt-[3px]">
                           <Edit />{" "}
                         </div>
-                        <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
-                          ویراش دوره 
+                        <p className="mr-[10px] text-[#0050A8]  text-[10px]">
+                          ویرایش دوره
                         </p>
                       </td>
                     </tr>
                   );
                 })
-              : course.map((item , i) => {
+              : data.map((item, i) => {
                   return (
                     <tr className="hover:bg-[#e6e9ebc2]">
-                      <td className="text-center">{i}</td>
+                      <td className="text-center">{i + 1}</td>
                       <td>
-                        <img src={item.img} className="rounded m-auto" />{" "}
+                        <img
+                          src={item.CourseImg}
+                          className="rounded m-auto h-[50px]"
+                        />{" "}
                       </td>
                       <td>
-                        <p className="text-center">{item.teacherName}</p>
+                        <p className="text-center">{item.TeacherName}</p>
                       </td>
                       <td>
                         <p className="text-center text-[#0050A8] font-semibold">
-                          {item.courseTime}
+                          {item.CourseDurationTime}
                         </p>
                       </td>
                       <td className="text-[#0050A8] font-semibold text-center">
                         {item.NumberOfEpisodes}
                       </td>
                       <td>
-                        <p className="text-center">{item.category}</p>
+                        <p className="text-center">{item.CourseCategory}</p>
                       </td>
                       <td className="flex items-center h-[80px]">
                         <div className="mt-[3px]">
                           <Edit />{" "}
                         </div>
-                        <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
-                          ویراش دوره 
+                        <p className="mr-[10px] text-[#0050A8]  text-[10px]">
+                          ویرایش دوره
                         </p>
                       </td>
                     </tr>

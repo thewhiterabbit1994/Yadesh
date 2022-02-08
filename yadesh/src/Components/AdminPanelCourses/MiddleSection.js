@@ -2,6 +2,7 @@ import Exele from "../../assets/svg/AdminPanelCourses/Exele";
 import Create from "../../assets/svg/AdminPanelCourses/Create";
 import Doreha from "../../assets/svg/AdminPanelCourses/Doreha";
 import Statistics from "../../assets/svg/AdminPanelCourses/statistics";
+import { Link } from "react-router-dom";
 import { useState } from "react"
 import AddCourse from "../Modals/AddCourse";
 
@@ -42,6 +43,7 @@ const MiddleSection = () => {
                 </section>
             </section>
         </section>
-    );
-}
-export default MiddleSection
+       
+  );
+};
+export default MiddleSection;

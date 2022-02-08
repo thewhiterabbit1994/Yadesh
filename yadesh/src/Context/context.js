@@ -19,11 +19,303 @@ import imgauestion from "../assets/Img/qustionFromYadesh/img-auestion.png";
 import endSection from "../assets/Img/yadgiriDarSatheJahani/endSection.png";
 import LoginBackground from "../assets/Img/LoginBackground.png";
 import Cup from "../assets/Img/cup.png";
+import ZtoMPrev from "../assets/videos/ZeroToMastery/ZtoMPrew.jpg";
+import ZtoM_Intro from "../assets/videos/ZeroToMastery/Intro.mp4";
+import ZtoM_IntroImg from "../assets/videos/ZeroToMastery/Intro.png";
+import ZtoM_CSS from "../assets/videos/ZeroToMastery/CSS.mp4";
+import ZtoM_CSSImg from "../assets/videos/ZeroToMastery/CSS.png";
+import ZtoM_HTML from "../assets/videos/ZeroToMastery/HTML.mp4";
+import ZtoM_HTMLImg from "../assets/videos/ZeroToMastery/HTML.png";
+import ZtoMReactPrew from "../assets/videos/ZerToMasteryReact/ZtoMReactPrew.jpg";
+import ZtoMReactintro from "../assets/videos/ZerToMasteryReact/IntroductionToReact.mp4";
+import ZtoMReactintroImg from "../assets/videos/ZerToMasteryReact/introreact.png";
+import ZtoMReactcreate from "../assets/videos/ZerToMasteryReact/create-react-app.mp4";
+import ZtoMReactcreateImg from "../assets/videos/ZerToMasteryReact/creatreact.png";
+import ZtoMReactcomponent from "../assets/videos/ZerToMasteryReact/ReactComponent.mp4";
+import ZtoMReactcomponentImg from "../assets/videos/ZerToMasteryReact/ReactComponent.png";
+import ZtoMBackPrew from "../assets/videos/ZerToMasteryBackend/prew.jpg";
+import ZtoMBackHTTPS from "../assets/videos/ZerToMasteryBackend/HTTPS.mp4";
+import ZZtoMBackHTTPSImg from "../assets/videos/ZerToMasteryBackend/HTTPS.png";
+import ZtoMBackAJAX from "../assets/videos/ZerToMasteryBackend/AJAX.mp4";
+import ZtoMBackAJAXImg from "../assets/videos/ZerToMasteryBackend/AJAX.png";
+import ZtoMBackBasics from "../assets/videos/ZerToMasteryBackend/BackendBasics.mp4";
+import ZtoMBackBasicsImg from "../assets/videos/ZerToMasteryBackend/BackendBasics.png";
+import ZtoMBackJSON from "../assets/videos/ZerToMasteryBackend/JSON.mp4";
+import ZtoMBackJSONImg from "../assets/videos/ZerToMasteryBackend/JSON.png";
+import BuildingPrew from "../assets/videos/Buildingandminingsafety/prewImg.png";
+import BuildingEpisode1 from "../assets/videos/Buildingandminingsafety/Episode1.mp4";
+import BuildingEpisode1Img from "../assets/videos/Buildingandminingsafety/Episode1Img.png";
+import BuildingEpisode2 from "../assets/videos/Buildingandminingsafety/Episode2.mp4";
+import BuildingEpisode2Img from "../assets/videos/Buildingandminingsafety/Episode2Img.png";
+import BuildingEpisode3 from "../assets/videos/Buildingandminingsafety/Episode3.mp4";
+import BuildingEpisode3Img from "../assets/videos/Buildingandminingsafety/Episode3Img.png";
+import BuildingEpisode4 from "../assets/videos/Buildingandminingsafety/Episode4.mp4";
+import BuildingEpisode4Img from "../assets/videos/Buildingandminingsafety/Episode4Img.png";
+import PowerPrew from "../assets/videos/FundamentalsofElectricEngineering/prewimg.jpg";
+import PowerEpisode1 from "../assets/videos/FundamentalsofElectricEngineering/Episode1.mp4";
+import PowerEpisode1Img from "../assets/videos/FundamentalsofElectricEngineering/Episode1Img.png";
+import PowerEpisode2 from "../assets/videos/FundamentalsofElectricEngineering/Episode2.mp4";
+import PowerEpisode2Img from "../assets/videos/FundamentalsofElectricEngineering/Episode2Img.png";
+import PowerEpisode3 from "../assets/videos/FundamentalsofElectricEngineering/Episode3.mp4";
+import PowerEpisode3Img from "../assets/videos/FundamentalsofElectricEngineering/Episode3Img.png";
+import PowerEpisode4 from "../assets/videos/FundamentalsofElectricEngineering/Episode4.mp4";
+import PowerEpisode4Img from "../assets/videos/FundamentalsofElectricEngineering/Episode4Img.png";
+import PowerEpisode5 from "../assets/videos/FundamentalsofElectricEngineering/Episode5.mp4";
+import PowerEpisode5Img from "../assets/videos/FundamentalsofElectricEngineering/Episode5Img.png";
+import PowerEpisode6 from "../assets/videos/FundamentalsofElectricEngineering/Episode6.mp4";
+import PowerEpisode6Img from "../assets/videos/FundamentalsofElectricEngineering/Episode6Img.png";
+import MashinPrew from "../assets/videos/Safetyofindustrialmachineryandequipment/prewimg.jpg";
+import MashinEpisode1 from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode1.mp4";
+import MashinEpisode1Img from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode1Img.png";
+import MashinEpisode2 from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode2.mp4";
+import MashinEpisode2Img from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode2Img.png";
+import MashinEpisode3 from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode3.mp4";
+import MashinEpisode3Img from "../assets/videos/Safetyofindustrialmachineryandequipment/Episode3Img.png";
 
 export const MainCounter = createContext("");
 
 const Context = (props) => {
   const [siteManagmentDatabase, setsiteManagmentDatabase] = useState({
+    Courses: [
+      {
+        CourseImg: ZtoMPrev,
+        TeacherName: "آندره نیگوا",
+        CourseDurationTime: "27 دقیقه",
+        NumberOfEpisodes: "3 اپیزود",
+        CourseCategory: "صفر تا صد تسلط وب",
+        Episodes: [
+          {
+            Video: ZtoM_Intro,
+            PreviewImg: ZtoM_IntroImg,
+            NameOfEpisode: "معرفی دوره",
+            TimeOfEpisode: "9 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط وب",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoM_CSS,
+            PreviewImg: ZtoM_CSSImg,
+            NameOfEpisode: "معرفی CSS",
+            TimeOfEpisode: "10 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط وب",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoM_HTML,
+            PreviewImg: ZtoM_HTMLImg,
+            NameOfEpisode: "معرفی HTML",
+            TimeOfEpisode: "8 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط وب",
+            TeacherName: "آندره نیگوا",
+          },
+        ],
+      },
+      {
+        CourseImg: ZtoMReactPrew,
+        TeacherName: "آندره نیگوا",
+        CourseDurationTime: "44 دقیقه",
+        NumberOfEpisodes: "3 اپیزود",
+        CourseCategory: "صفر تا صد تسلط ریکت",
+        Episodes: [
+          {
+            Video: ZtoMReactintro,
+            PreviewImg: ZtoMReactintroImg,
+            NameOfEpisode: "معرفی ری اکت",
+            TimeOfEpisode: "12 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط ریکت",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoMReactcreate,
+            PreviewImg: ZtoMReactcreateImg,
+            NameOfEpisode: "ساخت اپ ری اکت",
+            TimeOfEpisode: "12 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط ریکت",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoMReactcomponent,
+            PreviewImg: ZtoMReactcomponentImg,
+            NameOfEpisode: "آموزش ری اکت کامپوننت",
+            TimeOfEpisode: "20 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط ریکت",
+            TeacherName: "آندره نیگوا",
+          },
+        ],
+      },
+      {
+        CourseImg: ZtoMBackPrew,
+        TeacherName: "آندره نیگوا",
+        CourseDurationTime: "52 دقیقه",
+        NumberOfEpisodes: "4 اپیزود",
+        CourseCategory: "صفر تا صد تسلط بک اند",
+        Episodes: [
+          {
+            Video: ZtoMBackBasics,
+            PreviewImg: ZtoMBackBasicsImg,
+            NameOfEpisode: "معرفی بک اند",
+            TimeOfEpisode: "12 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط بک اند",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoMBackHTTPS,
+            PreviewImg: ZZtoMBackHTTPSImg,
+            NameOfEpisode: "معرفی HTTPS",
+            TimeOfEpisode: "20 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط بک اند",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoMBackAJAX,
+            PreviewImg: ZtoMBackAJAXImg,
+            NameOfEpisode: "معرفی AJAX",
+            TimeOfEpisode: "13 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط بک اند",
+            TeacherName: "آندره نیگوا",
+          },
+          {
+            Video: ZtoMBackJSON,
+            PreviewImg: ZtoMBackJSONImg,
+            NameOfEpisode: "معرفی JSON",
+            TimeOfEpisode: "7 دقیقه",
+            EpisodeCategory: "صفر تا صد تسلط بک اند",
+            TeacherName: "آندره نیگوا",
+          },
+        ],
+      },
+      {
+        CourseImg: BuildingPrew,
+        TeacherName: "داوود پناهی",
+        CourseDurationTime: "160 دقیقه",
+        NumberOfEpisodes: "4 اپیزود",
+        CourseCategory: "ایمنی ساختمان و معدن",
+        Episodes: [
+          {
+            Video: BuildingEpisode1,
+            PreviewImg: BuildingEpisode1Img,
+            NameOfEpisode: "قسمت اول",
+            TimeOfEpisode: "30 دقیقه",
+            EpisodeCategory: "ایمنی ساختمان و معدن",
+            TeacherName: "داوود پناهی",
+          },
+          {
+            Video: BuildingEpisode2,
+            PreviewImg: BuildingEpisode2Img,
+            NameOfEpisode: "قسمت دوم",
+            TimeOfEpisode: "30 دقیقه",
+            EpisodeCategory: "ایمنی ساختمان و معدن",
+            TeacherName: "داوود پناهی",
+          },
+          {
+            Video: BuildingEpisode3,
+            PreviewImg: BuildingEpisode3Img,
+            NameOfEpisode: "قسمت سوم",
+            TimeOfEpisode: "54 دقیقه",
+            EpisodeCategory: "ایمنی ساختمان و معدن",
+            TeacherName: "داوود پناهی",
+          },
+          {
+            Video: BuildingEpisode4,
+            PreviewImg: BuildingEpisode4Img,
+            NameOfEpisode: "قسمت چهارم",
+            TimeOfEpisode: "33 دقیقه",
+            EpisodeCategory: "ایمنی ساختمان و معدن",
+            TeacherName: "داوود پناهی",
+          },
+        ],
+      },
+      {
+        CourseImg: PowerPrew,
+        TeacherName: "جواد جباری",
+        CourseDurationTime: "175 دقیقه",
+        NumberOfEpisodes: "6 اپیزود",
+        CourseCategory: "مبانی مهندسی برق",
+        Episodes: [
+          {
+            Video: PowerEpisode1,
+            PreviewImg: PowerEpisode1Img,
+            NameOfEpisode: "قسمت اول",
+            TimeOfEpisode: "40 دقیقه",
+            EpisodeCategory: "مبانی مهندسی برق",
+            TeacherName: "جواد جباری",
+          },
+          {
+            Video: PowerEpisode2,
+            PreviewImg: PowerEpisode2Img,
+            NameOfEpisode: "قسمت دوم",
+            TimeOfEpisode: "34 دقیقه",
+            EpisodeCategory: "مبانی مهندسی برق",
+            TeacherName: "جواد جباری",
+          },
+          {
+            Video: PowerEpisode3,
+            PreviewImg: PowerEpisode3Img,
+            NameOfEpisode: "قسمت سوم",
+            TimeOfEpisode: "33 دقیقه",
+            EpisodeCategory: "مبانی مهندسی برق",
+            TeacherName: "جواد جباری",
+          },
+          {
+            Video: PowerEpisode4,
+            PreviewImg: PowerEpisode4Img,
+            NameOfEpisode: "قسمت چهارم",
+            TimeOfEpisode: "27 دقیقه",
+            EpisodeCategory: "مبانی مهندسی برق",
+            TeacherName: "جواد جباری",
+          },
+          {
+            Video: PowerEpisode5,
+            PreviewImg: PowerEpisode5Img,
+            NameOfEpisode: "قسمت پنجم",
+            TimeOfEpisode: "30 دقیقه",
+            EpisodeCategory: "مبانی مهندسی برق",
+            TeacherName: "جواد جباری",
+          },
+          {
+            Video: PowerEpisode6,
+            PreviewImg: PowerEpisode6Img,
+            NameOfEpisode: "قسمت ششم",
+            TimeOfEpisode: "20 دقیقه",
+            EpisodeCategory: "مبانی مهندسی برق",
+            TeacherName: "جواد جباری",
+          },
+        ],
+      },
+      {
+        CourseImg: MashinPrew,
+        TeacherName: "مصطفی پویا کیان",
+        CourseDurationTime: "90 دقیقه",
+        NumberOfEpisodes: "3 اپیزود",
+        CourseCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+        Episodes: [
+          {
+            Video: MashinEpisode1,
+            PreviewImg: MashinEpisode1Img,
+            NameOfEpisode: "قسمت اول",
+            TimeOfEpisode: "34 دقیقه",
+            EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+            TeacherName: "مصطفی پویا کیان",
+          },
+          {
+            Video: MashinEpisode2,
+            PreviewImg: MashinEpisode2Img,
+            NameOfEpisode: "قسمت دوم",
+            TimeOfEpisode: "25 دقیقه",
+            EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+            TeacherName: "مصطفی پویا کیان",
+          },
+          {
+            Video: MashinEpisode3,
+            PreviewImg: MashinEpisode3Img,
+            NameOfEpisode: "قسمت سوم",
+            TimeOfEpisode: "28 دقیقه",
+            EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+            TeacherName: "مصطفی پویا کیان",
+          },
+        ],
+      },
+    ],
     HomePageNotLogin: {
       hero: {
         title: "یادگیری به فاصله چند کلیک",
