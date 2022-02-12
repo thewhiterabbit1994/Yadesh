@@ -23,23 +23,17 @@ const EditCompany = ({ EditComponyModal, setEditComponyModal }) => {
                         </div>
                         <div className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
                             <p
-                            onClick={()=> setEditComponyModal(false)}
-                            className=" right-[8px] cursor-pointer absolute text-[18px]">x</p>
+                                onClick={() => setEditComponyModal(false)}
+                                className=" right-[8px] cursor-pointer absolute text-[18px]">x</p>
                         </div>
                     </section>
-                    <section className=" mt-[20px] flex justify-center ">
+                    <section className=" mt-[20px] pr-[35px] ">
                         <div className=" flex flex-col">
                             <label htmlFor="nameCompany"
                                 className=" text-[#000] mr-[10px] ">
                                 نام شرکت
                             </label>
-                            <input
-                                onChange={(e) => setNameCompany(e.target.value)}
-                                value={nameCompany}
-                                id='nameCompany'
-                                className="w-[380px] h-[40px]  rounded mt-[15px] placeholder:text-[10px] placeholder:pr-[10px]"
-                                placeholder=" سازمان فناوری و اطلاعات ایران "
-                            />
+                            <p className="mt-[10px]">سازمان فناوری و اطلاعات ایران</p>
                         </div>
                     </section>
 

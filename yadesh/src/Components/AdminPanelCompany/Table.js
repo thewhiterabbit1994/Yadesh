@@ -90,7 +90,7 @@ const Table = () => {
                 twoOfCompany.map((item, i) => {
                   return (
                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                      <td className="text-center">{i}</td>
+                      <td className="text-center">{i + 1}</td>
                       <td className="text-center"><p>{item.companyNmae}</p></td>
                       <td className="text-center"><p>{item.educationExpert}</p></td>
                       <td className=" text-[#0050A8] font-semibold text-center	"><p>{item.NumberOfEmployees}</p></td>
@@ -99,9 +99,9 @@ const Table = () => {
                         <div className="mt-[3px]">
                           <Edit />{" "}
                         </div>
-                        <p 
-                        onClick={()=>setEditComponyModal(!EditComponyModal)}
-                        className="mr-[10px] cursor-pointer text-[#0050A8] ">ویراش شرکت ها</p>
+                        <p
+                          onClick={() => setEditComponyModal(!EditComponyModal)}
+                          className="mr-[10px] cursor-pointer text-[#0050A8] ">ویراش شرکت ها</p>
                       </td>
                     </tr>
                   )
@@ -110,7 +110,7 @@ const Table = () => {
                 company.map((item, i) => {
                   return (
                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                      <td className="text-center">{i}</td>
+                      <td className="text-center">{i + 1}</td>
                       <td className="text-center"><p>{item.companyNmae}</p></td>
                       <td className="text-center"><p>{item.educationExpert}</p></td>
                       <td className=" text-[#0050A8] font-semibold text-center	"><p>{item.NumberOfEmployees}</p></td>
@@ -119,7 +119,9 @@ const Table = () => {
                         <div className="mt-[3px]">
                           <Edit />{" "}
                         </div>
-                        <p className="mr-[10px] text-[#0050A8]">ویراش شرکت ها</p>
+                        <p
+                          onClick={() => setEditComponyModal(!EditComponyModal)}
+                          className="mr-[10px] cursor-pointer text-[#0050A8]">ویراش شرکت ها</p>
                       </td>
                     </tr>
                   )

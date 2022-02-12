@@ -93,7 +93,7 @@ export default () => {
             onMouseLeave={() => setshowTooltip4(false)}
             className="cursor-pointer my-8"
           >
-            <Link to="company">
+            <Link to="listofcompanies">
               <UserControlIcon />
             </Link>
             <div

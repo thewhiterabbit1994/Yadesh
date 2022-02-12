@@ -20,10 +20,10 @@ const EditSubscription = ({ EditSubscriptionModal, setEditSubscriptionModal }) =
                             <Company />
                             <p> ویرایش اشتراک</p>
                         </div>
-                        <div className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
-                            <p
-                                onClick={() => setEditSubscriptionModal(false)}
-                                className=" right-[8px] absolute text-[18px]">x</p>
+                        <div
+                            onClick={() => setEditSubscriptionModal(false)}
+                            className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
+                            <p className=" right-[8px] absolute text-[18px]">x</p>
                         </div>
                     </section>
                     <p className="m-auto w-[360px] h-[40px] my-[20px]">سازمان فناوری اطلاعات و ارتباطات ایران</p>

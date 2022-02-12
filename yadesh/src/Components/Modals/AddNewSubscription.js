@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Company from "../../assets/svg/AdminPanelCourses/Company"
 
-const AddNewSubscription = ({ModalNewSubscription , setModalNewSubscription}) => {
+const AddNewSubscription = ({ ModalNewSubscription, setModalNewSubscription }) => {
     const [price, setPrice] = useState("")
     const [CompanyName, setCompanyName] = useState("")
     const [coursetoggle, setcoursetoggle] = useState(true);
@@ -21,10 +21,10 @@ const AddNewSubscription = ({ModalNewSubscription , setModalNewSubscription}) =>
                             <Company />
                             <p> ویرایش اشتراک</p>
                         </div>
-                        <div className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
-                            <p 
-                            onClick={()=>setModalNewSubscription(false)}
-                            className=" right-[8px] cursor-pointer absolute text-[18px]">x</p>
+                        <div
+                            onClick={() => setModalNewSubscription(false)}
+                            className=" relative cursor-pointer w-[25px] h-[25px] bg-[#d5d5d5c9] rounded">
+                            <p className=" right-[8px] cursor-pointer absolute text-[18px]">x</p>
                         </div>
                     </section>
                     <section className="mt-[20px] m-auto w-[400px] pr-[10px]">

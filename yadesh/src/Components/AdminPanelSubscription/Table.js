@@ -6,14 +6,6 @@ import EditSubscription from "../../Components/Modals/EditSubscription";
 
 const Table = () => {
   const [EditSubscriptionModal, setEditSubscriptionModal] = useState(false);
-  const [twoOfSubscription, setTwoOfSubscription] = useState([]);
-  let loopResult = [];
-  for (let i = 0; i < 3; i++) {
-    loopResult = Subscription[i];
-    let arr = [...twoOfSubscription, loopResult];
-    setTwoOfSubscription(arr);
-  }
-
   const [showmore, setShowmore] = useState(false);
   const [Subscription, setSubscription] = useState([
     {
@@ -52,11 +44,15 @@ const Table = () => {
       DateOfRenewal: "26 مهر 1399",
     },
   ]);
+  let twoOfSubscription = [];
+  for (let i = 0; i < 3; i++) {
+    let loopResult = Subscription[i];
+    twoOfSubscription.push(loopResult)
+  }
 
   const removeItemOftwoOfSubscription = (i) => {
     const arr = [...twoOfSubscription];
     arr.splice(i, 1);
-    setTwoOfSubscription(arr);
   };
 
   const removeItemOfSubscription = (i) => {
@@ -70,7 +66,6 @@ const Table = () => {
         EditSubscriptionModal={EditSubscriptionModal}
         setEditSubscriptionModal={setEditSubscriptionModal}
       />
-
       {Subscription.le}
       <section className="w-[87%] mr-[120px] m-auto text-[12px] text-[#001D29]">
         <section className="w-full justify-between flex py-[20px]  items-center  bg-[#e6e9eb6e]">
@@ -166,7 +161,7 @@ const Table = () => {
                   return (
                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
                       <td className="text-center">{i + 1}</td>
-                      <td className="text-center">{item.name}</td>
+                      <td className="text-center">{item.Subscription}</td>
                       <td className=" text-[#008043] font-semibold ">
                         <div className="justify-center flex ">
                           <p className="ml-[5px]">{item.Condition}</p>

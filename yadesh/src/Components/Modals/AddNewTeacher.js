@@ -2,7 +2,7 @@ import AddTeacher from "../../assets/svg/Modals/AddTeacher"
 import ArrowTop from "../../assets/svg/Modals/ArrowTop"
 import imgMan from "../../assets/Img/PlayerEpisode/imgman.png"
 import { useState } from "react"
-const AddUser = () => {
+const AddNewTeacher = () => {
     const [name, setName] = useState("")
     const [lastName, setlastName] = useState("")
     return (
@@ -69,4 +69,4 @@ const AddUser = () => {
         </section>
     )
 }
-export default AddUser
+export default AddNewTeacher
