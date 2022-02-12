@@ -1,5 +1,11 @@
 import "./App.css";
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+  useParams,
+} from "react-router-dom";
 import HomePageLoggedIn from "./Pages/HomePageLoggedIn";
 import HomePageNotLogin from "./Pages/HomePageNotLogin";
 import MyProgress from "./Pages/MyProgress";
@@ -59,10 +65,9 @@ function App() {
             path="/home/signupforbusiness"
             element={<SignUpForBusiness />}
           />
-          <Route path="/home/playerepisode" element={<PlayerEpisode />} />
           <Route path="/home/playercourse" element={<PlayerCourse />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/home/PlayerEpisode" element={<PlayerEpisode />} />
+          <Route path="/home/PlayerEpisode/:id" element={<PlayerEpisode />} />
           <Route path="/home/contactsupport" element={<ContactSupport />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route

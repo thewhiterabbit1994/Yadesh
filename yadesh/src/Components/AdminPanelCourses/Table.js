@@ -15,6 +15,7 @@ const Table = () => {
   } = useContext(MainCounter);
 
   const data = siteManagmentDatabase.Courses;
+  console.log(data);
   const [showmore, setShowmore] = useState(false);
   let [clickCount, setclickCount] = useState(0);
 
