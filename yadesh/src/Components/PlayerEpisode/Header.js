@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 
-import "../../../node_modules/video-react/dist/video-react.css";
 import ImgPlayer from "../../assets/Img/PlayerEpisode/imgPlayer.png";
 import Imgman from "../../assets/Img/PlayerEpisode/imgman.png";
 import Yaddasht from "../../assets/svg/PlayerEpisode/Yaddasht";
@@ -19,7 +18,6 @@ import Border from "../../assets/svg/PlayerEpisode/Border";
 import Book from "../../assets/svg/PlayerEpisode/Book";
 import Imgmap from "../../assets/Img/PlayerEpisode/imgMap.png";
 import ArrowDown from "../../assets/svg/PlayerEpisode/ArrowDown";
-import { Control, map } from "leaflet";
 
 const Header = () => {
   const [isPlaying, setisPlaying] = useState(false);
