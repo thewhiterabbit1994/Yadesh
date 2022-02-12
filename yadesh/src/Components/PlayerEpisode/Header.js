@@ -1,25 +1,43 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import { MainCounter } from "../../Context/Context";
 
-import ImgPlayer from "../../assets/Img/PlayerEpisode/imgPlayer.png";
 import Imgman from "../../assets/Img/PlayerEpisode/imgman.png";
 import Yaddasht from "../../assets/svg/PlayerEpisode/Yaddasht";
-import Cc from "../../assets/svg/PlayerEpisode/Cc";
 import Dislike from "../../assets/svg/PlayerEpisode/Dislike";
-import Hd from "../../assets/svg/PlayerEpisode/Hd";
 import Humborger from "../../assets/svg/PlayerEpisode/Humborgrt";
 import Like from "../../assets/svg/PlayerEpisode/Like";
 import Resize from "../../assets/svg/PlayerEpisode/Resize";
 import Play from "../../assets/svg/PlayerEpisode/Nexd";
-import Setting from "../../assets/svg/PlayerEpisode/Setting";
 import Stop from "../../assets/svg/PlayerEpisode/Stop";
 import Volume from "../../assets/svg/PlayerEpisode/Volume";
-import Tag from "../../assets/svg/PlayerEpisode/Tag";
-import Border from "../../assets/svg/PlayerEpisode/Border";
-import Book from "../../assets/svg/PlayerEpisode/Book";
 import Imgmap from "../../assets/Img/PlayerEpisode/imgMap.png";
 import ArrowDown from "../../assets/svg/PlayerEpisode/ArrowDown";
 
 const Header = () => {
+  const { siteManagmentDatabase } = useContext(MainCounter);
+  let database = [];
+  const { id } = useParams();
+  const data = siteManagmentDatabase.Courses.forEach((Course) => {
+    Course.Episodes.forEach((Episode) => {
+      database.push(Episode);
+    });
+  });
+  const Coursedata = siteManagmentDatabase.Courses;
+  const Episode = database.find((Episode) => Episode.EpisodeID === id);
+
+  const Course = Coursedata.filter(
+    (Course) => Course.CourseID === Episode.CourseID
+  );
+  const fourOfCourse = [
+    Course[0].Episodes[0],
+    Course[0].Episodes[1],
+    Course[0].Episodes[2],
+    Course[0].Episodes[3],
+  ];
+  console.log("Episode", Episode);
+  console.log("Course", Course);
+
   const [isPlaying, setisPlaying] = useState(false);
   const player = useRef();
 
@@ -32,9 +50,10 @@ const Header = () => {
   function handlepause() {
     player.current.pause();
   }
-
+  const [ismuteiconshow, setismuteiconshow] = useState(false);
   function handlemute() {
     player.current.muted = !player.current.muted;
+    setismuteiconshow(!ismuteiconshow);
   }
   function formatTime(timeInSeconds) {
     const result = new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
@@ -60,6 +79,7 @@ const Header = () => {
   const [seekValue, setseekValue] = useState(0);
   const [maxbar, setmaxbar] = useState(0);
   const [barValue, setbarValue] = useState(0);
+  const [showControlBar, setshowControlBar] = useState(false);
 
   function updateTimeElapsed() {
     setCurrentTime(formatTime(Math.round(player.current.currentTime)));
@@ -107,191 +127,98 @@ const Header = () => {
     }
   }
 
-  const [lesson, setLesson] = useState([
-    {
-      img: Imgmap,
-      txt: "سهراب دل انگیزان - اقتصاددان",
-      title: "مقدمات حسابداری کلان -تورم",
-      time: "18 دقیقه",
-    },
-    {
-      img: Imgmap,
-      txt: "سهراب دل انگیزان - اقتصاددان",
-      title: "مقدمات حسابداری کلان -تورم",
-      time: "18 دقیقه",
-    },
-    {
-      img: Imgmap,
-      txt: "سهراب دل انگیزان - اقتصاددان",
-      title: "مقدمات حسابداری کلان -تورم",
-      time: "18 دقیقه",
-    },
-    {
-      img: Imgmap,
-      txt: "سهراب دل انگیزان - اقتصاددان",
-      title: "مقدمات حسابداری کلان -تورم",
-      time: "18 دقیقه",
-    },
-    {
-      img: Imgmap,
-      txt: "سهراب دل انگیزان - اقتصاددان",
-      title: "مقدمات حسابداری کلان -تورم",
-      time: "18 دقیقه",
-    },
-  ]);
-
   return (
     <section className="w-full h-[1300px] bg-[#000] flex">
-      <div className="w-[800px] mt-[100px] mr-[50px] relative h-[450px]">
-        <img
-          src={ImgPlayer}
-          className="rounded-lg w-[730px] h-[450px] relative"
-        />
-        <sction className="absolute bottom-[85px] right-[20px] text-[#fff]">
-          <p className="absolute bottom-[130px] right-[110px] w-[450px] text-[14px] leading-[30px] bg-[#00121ad2]">
-            {" "}
-            طرح‌نما یا لورم ایپسوم به نوشتاری آزمایشی و بی‌معنی در صنعت چاپ،
-            صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این نوشتار{" "}
-          </p>
-        </sction>
-        <section className="absolute bottom-[85px] right-[20px]">
-          <Border />
+      <div className="w-[800px] mt-[80px] mr-[50px] relative h-[450px]">
+        <section className="text-[#fff] text-[20px] mr-[15px] mt-[15px]">
+          <h6>
+            {Episode.EpisodeCategory} - {Episode.NameOfEpisode}
+          </h6>
         </section>
-        <section className=" absolute bottom-[10px] right-[20px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Cc />
-          </div>
-        </section>
-        <section className=" absolute bottom-[10px] right-[70px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Hd />
-          </div>
-        </section>
-        <section className=" absolute bottom-[10px] right-[120px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Resize />
-          </div>
-        </section>
-        <section className=" absolute bottom-[10px] right-[170px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Setting />
-          </div>
-        </section>
-        <section className=" absolute bottom-[10px] right-[220px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%] text-[#fff]">
-          <h6 className="absolute top-[8px] right-[13px]">1x</h6>
-        </section>
-
-        <section className=" absolute bg-[#00121ad2] w-[150px] h-[40px] rounded-[50px] bottom-[10px] left-[160px] text-[#fff]">
-          <p className="absolute top-[8px] right-[25px]"> 0:25/01:45.36</p>
-        </section>
-        <section className=" absolute bottom-[10px] left-[110px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Volume />
-          </div>
-        </section>
-        <section className=" absolute bottom-[10px] left-[60px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Play />
-          </div>
-        </section>
-        <section className=" absolute bottom-[10px] left-[10px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
-          <div className="absolute right-[10px] top-[10px]">
-            <Stop />
-          </div>
-        </section>
-        <section className="flex text-[#fff] mt-[30px]  justify-around text-[11px]">
-          <div className="bg-[#00141C]  rounded-lg w-[90px] h-[40px] flex justify-center items-center">
-            <Tag />
-            <h6 className="rounded-lg mr-[9px]">تگ ها </h6>
-          </div>
-          <div className="bg-[#00141C] rounded-lg w-[110px] h-[40px] flex justify-center items-center">
-            <h6># مقاله نویسی</h6>
-          </div>
-          <div className="bg-[#00141C] rounded-lg w-[110px] h-[40px] flex justify-center items-center">
-            <h6># انگیزشی</h6>
-          </div>
-          <div className="bg-[#00141C] rounded-lg w-[110px] h-[40px] flex justify-center items-center">
-            <h6># آداب نگارش</h6>
-          </div>
-          <div className="bg-[#00141C] rounded-lg w-[110px] h-[40px] flex justify-center items-center">
-            <h6># دوره مقاله نویسی</h6>
-          </div>
-          <div className="bg-[#00141C] rounded-lg w-[110px] h-[40px] flex justify-center items-center">
-            <h6># دوره نگارش</h6>
-          </div>
-        </section>
-        <div style={{ borderRadius: "10px", width: "730px", height: "450px" }}>
+        <div
+          className="cursor-pointer"
+          onMouseEnter={() => setshowControlBar(true)}
+          onMouseLeave={() => setshowControlBar(false)}
+          style={{ borderRadius: "10px", width: "730px", height: "450px" }}
+        >
           <video
             ref={player}
             onTimeUpdate={updateTimeElapsed}
+            onClick={() => {
+              if (isPlaying) {
+                handlepause();
+                setisPlaying(false);
+              }
+              if (!isPlaying) {
+                handleplay();
+                setisPlaying(true);
+              }
+            }}
+            poster={Episode.PreviewImg}
             controls={isFullScreen ? true : false}
-            style={{ borderRadius: "10px", width: "730px", height: "450px" }}
-            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-            data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+            controlsList={"nodownload"}
+            style={{ width: 730, height: 450 }}
+            src={Episode.Video}
           ></video>
         </div>
 
-        <div className="bg-white relative z-50 mt-20">
-          <div class="video-progress">
-            <progress
-              id="progress-bar"
-              value={barValue}
-              min="0"
-              max={maxbar}
-            ></progress>
-            <input
-              class="seek"
-              id="seek"
-              value={seekValue}
-              onChange={skipAhead}
-              min="0"
-              max={maxseek}
-              type="range"
-              step="1"
-            />
-          </div>
-          <input
-            class="volume"
-            id="volume"
-            value={volumeValue}
-            onChange={(e) => updateVolume(e)}
-            type="range"
-            max="1"
-            min="0"
-            step="0.01"
-          />
-        </div>
-        <div className="bg-white h-[40px] absolute mt-[-48px] w-[730px]">
-          <div className="flex relative bg-white  z-50 mt-12">
-            <section className=" absolute bottom-[10px] right-[20px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
+        <div
+          className={`${
+            showControlBar
+              ? " h-[40px] absolute mt-[-48px] w-[730px]"
+              : " hidden"
+          }`}
+        >
+          <div
+            onMouseEnter={() => setshowControlBar(true)}
+            onMouseLeave={() => setshowControlBar(false)}
+            className="flex relative bg-white   mt-12"
+          >
+            <section className=" absolute bottom-[385px] cursor-pointer right-[5px] z-10 bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
               <div
                 onClick={toggleFullScreen}
-                className="absolute right-[10px] top-[10px]"
+                className="absolute right-[11px] top-[11.5px]"
               >
                 <Resize />
               </div>
             </section>
-            <section className=" absolute bottom-[10px] right-[70px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
+            {/* <section className=" absolute bottom-[10px] right-[70px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
               <div className="absolute right-[10px] top-[10px]">
                 <Setting />
               </div>
-            </section>
+            </section> */}
           </div>
-          <div className="flex relative z-50 mt-">
-            <section className=" absolute bg-[#00121ad2] w-[150px] h-[40px] rounded-[50px] bottom-[10px] left-[160px] text-[#fff]">
-              <p className="absolute top-[8px] right-[10px]">
+          <div
+            onMouseEnter={() => setshowControlBar(true)}
+            onMouseLeave={() => setshowControlBar(false)}
+            className="flex relative   "
+          >
+            <div className="absolute w-[730px] h-[60px]  bg-gradient-to-t from-[#000000cc] bottom-[100px] to-[#0000]"></div>
+            <div className="absolute w-[730px] h-[60px]  bg-gradient-to-b from-[#000000cc] top-[-432px] to-[#0000]"></div>
+
+            <section className=" absolute bg-[#00121ad2] w-[155px] h-[40px] rounded-[50px] bottom-[110px] left-[50px] text-[#fff]">
+              <p className="absolute top-[8.5px] right-[6px]">
                 {" "}
-                {currentTime.hours}:{currentTime.minutes}:{currentTime.seconds}/
                 {durationTime.hours}:{durationTime.minutes}:
-                {durationTime.seconds}
+                {durationTime.seconds} / {currentTime.hours}:
+                {currentTime.minutes}:{currentTime.seconds}
               </p>
             </section>
             <section
               onClick={handlemute}
-              className=" absolute bottom-[10px] left-[110px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
+              className="cursor-pointer absolute bottom-[110px] right-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
             >
-              <div className="absolute right-[10px] top-[10px]">
+              <div className={`absolute right-[11px] top-[11.5px]`}>
                 <Volume />
+                <div
+                  className={`${
+                    ismuteiconshow
+                      ? "text-[30px] text-white rotate-[190deg] ml-1 mt-[-33px]"
+                      : "hidden"
+                  }`}
+                >
+                  /
+                </div>
               </div>
             </section>
             <section
@@ -303,10 +230,10 @@ const Header = () => {
               className={`transform transition-opacity duration-500  ${
                 isPlaying
                   ? "opacity-0"
-                  : "opacity-100 cursor-pointer absolute bottom-[10px] left-[10px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
+                  : "opacity-100 cursor-pointer absolute bottom-[110px] left-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
               }`}
             >
-              <div className="absolute right-[8px] top-[11px]">
+              <div className="absolute right-[8px] top-[11.5px]">
                 <Play />
               </div>
             </section>
@@ -318,19 +245,55 @@ const Header = () => {
               className={`transform transition-opacity duration-500 ${
                 !isPlaying
                   ? "opacity-0"
-                  : "opacity-100 cursor-pointer absolute bottom-[10px] left-[10px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
+                  : "opacity-100 cursor-pointer absolute bottom-[110px] left-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
               }`}
             >
               <div className="absolute right-[11px] top-[11px]">
                 <Stop />
               </div>
             </section>
+            <div className=" relative  mt-20">
+              <div class="absolute rotate-180 right-[px] top-[-113px]">
+                <progress
+                  className="w-[730px] h-2  appearance-none cursor-pointer bg-[#] accent-[#]"
+                  id="progress-bar"
+                  value={barValue}
+                  min="0"
+                  max={maxbar}
+                ></progress>
+              </div>
+              <div className="absolute z-10 rotate-180 right-[px] top-[-113px]">
+                <input
+                  className="w-[730px] h-2  appearance-none cursor-pointer bg-[#0000003d] accent-[#dadada]"
+                  id="seek"
+                  value={seekValue}
+                  onChange={skipAhead}
+                  min="0"
+                  max={maxseek}
+                  type="range"
+                  step="1"
+                />
+              </div>
+
+              <div className="absolute flex justify-center right-[50px] top-[-150px] bg-[#00121ad2] w-[150px] h-[40px] rounded-[50px]">
+                <input
+                  className=" cursor-pointer accent-gray-400 "
+                  id="volume"
+                  value={volumeValue}
+                  onChange={(e) => updateVolume(e)}
+                  type="range"
+                  max="1"
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         <hr className="bg-[#c4c4c43d] h-[2px] rounded-xl w-[52vw]  mt-[10px]"></hr>
         <section className="text-[#fff] text-[20px] mr-[15px] mt-[15px]">
-          <h6> رضا استوار</h6>
+          <h6>{Episode.TeacherName}</h6>
         </section>
         <section className="m-auto w-[680px] h-[80px] text-[#fff] text-[12px] leading-[30px] text-justify mt-[20px]">
           <p className="">
@@ -356,7 +319,7 @@ const Header = () => {
           </section>
         </div>
       </div>
-      <div className="w-[50%] bg-[#00141C] h-[480px] mx-[2rem] mt-[6rem] rounded-xl">
+      <div className="w-[400px] bg-[#00141C] h-[480px] mx-[2rem] mt-[6rem] rounded-xl">
         <section className="flex  h-[100px] items-center w-[300px] justify-around">
           <div>
             <img src={Imgman} className="rounded-[50%]" />
@@ -369,7 +332,7 @@ const Header = () => {
             </h6>
           </div>
         </section>
-        <hr className="w-[500px] m-auto"></hr>
+        <hr className="w-[400px] m-auto"></hr>
         <section className="flex  mr-[30px] h-[60px]  items-center w-[200px] justify-around">
           <div className="bg-[#0d0f0f] w-[40px] h-[40px] rounded-lg mt-[10px] relative ">
             <div className="absolute right-[10px] top-[5px]">
@@ -383,7 +346,7 @@ const Header = () => {
             </h6>
           </div>
         </section>
-        <section className="text-[14px] bg-[#fff] w-[450px] h-[280px] rounded-xl mx-[30px] mt-[20px]   ">
+        <section className="text-[14px] bg-[#fff] w-[340px] h-[280px] rounded-xl mx-[30px] mt-[20px]   ">
           <section className="flex  mt-[20px] h-[50px] items-center justify-between w-[80%] m-auto text-[#00121A]">
             <div>
               <h6 className="">مقاله نویس تاثیر گذار</h6>
@@ -416,24 +379,23 @@ const Header = () => {
             </h6>
           </section>
           <section>
-            {lesson.map((item) => {
+            {fourOfCourse.map((item) => {
               return (
-                <section className="flex w-[80%] m-auto  justify-center justify-around mt-[25px]">
-                  <img src={item.img} className="rounded-lg" />
-                  <div className="text-[#C4C4C4] text-[14px] flex flex-col justify-center">
-                    <p>{item.txt}</p>
-                    <h6>{item.title}</h6>
-                    <h6 className="text-[12px]">{item.time}</h6>
-                  </div>
-                </section>
+                <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
+                  <section className="flex w-[80%] m-auto  justify-center  mt-[25px]">
+                    <img
+                      src={item.PreviewImg}
+                      className="rounded-lg h-[90px]"
+                    />
+                    <div className="text-[#C4C4C4] text-[14px] flex flex-col mr-5 justify-center">
+                      <p>{item.EpisodeCategory}</p>
+                      <h6>{item.NameOfEpisode}</h6>
+                      <h6 className="text-[12px]">{item.TimeOfEpisode}</h6>
+                    </div>
+                  </section>
+                </Link>
               );
             })}
-            <div className="text-[12px] text-[#fff] rounded-lg w-[130px] h-[35px] m-auto mt-[20px] border-[#00FF85] border flex justify-center items-center">
-              <h6 className="ml-[10px]"> موارد بیشتر</h6>
-              <div>
-                <ArrowDown />
-              </div>
-            </div>
           </section>
         </section>
       </div>

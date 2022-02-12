@@ -60,33 +60,40 @@ const Context = (props) => {
         CourseDurationTime: "27 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
         CourseCategory: "صفر تا صد تسلط وب",
+        CourseID: "C-kzk1z7me4gb2djwyszv",
         Episodes: [
           {
             Video:
-              "https://31.filelu.com/d/w53jaflpjqqnjjtak2m5q77tremgifjxuy4sdeo2djqoizsi3qqzbmvhiqc4vkudyegmpbq7/Intro.mp4",
+              "https://as9.cdn.asset.aparat.com/aparat-video/f279540e8b2c78012ced857a12bda21c32731810-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjU2ZWQ1ZTUxNDExOWIyZmI0YWI2ZDk4NmE5YzU1ZmQwIiwiZXhwIjoxNjQ0NzAyODExLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.frqQN5XFvmYmPosRoLVOyR1Zilr8cUWbZv7E0WlPP_M",
             PreviewImg: ZtoM_IntroImg,
             NameOfEpisode: "معرفی دوره",
             TimeOfEpisode: "9 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط وب",
+            CourseID: "C-kzk1z7me4gb2djwyszv",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0sn2tp0xy7m2bi39",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53j2flpjqqnjjtak2m4w3fqzkiwe7zkyht5n26k2wzbozzrkftqd5hdnpebphk56ted2tay/CSS.mp4",
+              "https://hw18.cdn.asset.aparat.com/aparat-video/5f44db28d045bff54c3941bb817cc7b132732665-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjcwMTdhZTk5MTgzZjIxMWJlNzE5MmY3OWVlNDBhNjE4IiwiZXhwIjoxNjQ0NzAyOTA1LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.CrXRaR6D_Y_-aAdyQFdohcm2ZkgeLcUj9dNr5loQHFc",
             PreviewImg: ZtoM_CSSImg,
             NameOfEpisode: "معرفی CSS",
             TimeOfEpisode: "10 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط وب",
+            CourseID: "C-kzk1z7me4gb2djwyszv",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0tk4uketo09lgr",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53j6flpjqqnjjtak2m4w6fwry4prqhbztm7ce3wxqtpz4rvbsl2cvkzfhhez5btudfmpkje/HTML.mp4",
+              "https://as2.cdn.asset.aparat.com/aparat-video/85b5c99ee857f8bdc0aee1371be8f1f032782066-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjA5YThhZTM5MWNmZDRlNGYyZjUzNTlmMzgwMWExMzc1IiwiZXhwIjoxNjQ0NzAyOTM4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.THta7dxEUKEmEenW7M68Nf_euOECcnNx5WQuFpCljHA",
             PreviewImg: ZtoM_HTMLImg,
             NameOfEpisode: "معرفی HTML",
             TimeOfEpisode: "8 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط وب",
+            CourseID: "C-kzk1z7me4gb2djwyszv",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0u8dmkqj2lqjguh",
           },
         ],
       },
@@ -96,33 +103,40 @@ const Context = (props) => {
         CourseDurationTime: "44 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
         CourseCategory: "صفر تا صد تسلط ریکت",
+        CourseID: "C-kzk21d0melc7o7zw0vv",
         Episodes: [
           {
             Video:
-              "https://31.filelu.com/d/w53joflpjqqnjjtak2m5gjhhrd44xw2dg4jbrx2mxxvyo6bjuyj24ovt6nrdqfn7aq337mfo/IntroductionToReact.mp4",
+              "https://aspb13.cdn.asset.aparat.com/aparat-video/3042523d1e99fb4b9a0739db181c5e0223100892-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjcxYjYyOGZkYTc5YTliMWEzMDNjN2I0ZjY3MTkxYmUyIiwiZXhwIjoxNjQ0NzAyOTk4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.kLbTfb_94gzp6vfIFMGu06nv46-YF1N9YHRfDv6Dy1o",
             PreviewImg: ZtoMReactintroImg,
             NameOfEpisode: "معرفی ری اکت",
             TimeOfEpisode: "12 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط ریکت",
+            CourseID: "C-kzk21d0melc7o7zw0vv",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0upxalu58xm2hsk",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53jmflpjqqnjjtak2m4s5nutiqcod5hr6liurmvker4ekorpbvkii4ekia7a7bnlhe46egy/create-react-app.mp4",
+              "https://aspb10.cdn.asset.aparat.com/aparat-video/43d7641998eaad8f39bfc4599d7000a423203600-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImExNWNmMTBkNmZmYjJlNzNkYzA5ZjI2YWIwY2FmOWZhIiwiZXhwIjoxNjQ0NzAzMDM3LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.Djg-p0B1wpvdgnN8fwTzNlW_6Uht1fkA5k9OiSSWR-4",
             PreviewImg: ZtoMReactcreateImg,
             NameOfEpisode: "ساخت اپ ری اکت",
             TimeOfEpisode: "12 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط ریکت",
+            CourseID: "C-kzk21d0melc7o7zw0vv",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0v69k817emsuz186",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53gqfdpjqqnjjtak2myy57ly6l5md2uemg4gkrghprnuqv2tvdcyla6m6na7p2n5pesj63f/ReactComponent.mp4",
+              "https://aspb12.cdn.asset.aparat.com/aparat-video/ee7ad6a740b8c971863698a211e8568a23323324-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjY1NDUxMzk1ZTgxNDhkZDEzNjhlZjc0YmMwMDBiOTM4IiwiZXhwIjoxNjQ0NzAzMDcxLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.95ft0XnTvYgy2bsAzReYVHKAAUgMuHhVawp3rnpg0Ok",
             PreviewImg: ZtoMReactcomponentImg,
             NameOfEpisode: "آموزش ری اکت کامپوننت",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط ریکت",
+            CourseID: "C-kzk21d0melc7o7zw0vv",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0vse79odulf2k6l5",
           },
         ],
       },
@@ -132,42 +146,51 @@ const Context = (props) => {
         CourseDurationTime: "52 دقیقه",
         NumberOfEpisodes: "4 اپیزود",
         CourseCategory: "صفر تا صد تسلط بک اند",
+        CourseID: "C-kzk227bet6b11z7vgk",
         Episodes: [
           {
             Video:
-              "https://31.filelu.com/d/w53jeflpjqqnjjtak2myqyvszktjit5y2ipn4e4qbpsksjmyukus6xfoazvv2f4ybsbr7jo6/BackendBasics.mp4",
+              "https://as8.cdn.asset.aparat.com/aparat-video/c2a7b7679c93a253edd7e140ebf970a325340055-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjZhZDBiNzU4NDhiMTQ2ZWFjM2YxZDYwNDM2NzQ1YTIzIiwiZXhwIjoxNjQ0NzAzMTMzLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.h3ZlJyFBqBQucecIYDkwc-lkUDJnaE9huLyqjhGadkk",
             PreviewImg: ZtoMBackBasicsImg,
             NameOfEpisode: "معرفی بک اند",
             TimeOfEpisode: "12 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
+            CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0w4zhk1411b5k2b",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53jiflpjqqnjjtak2my2yhmr326buk3xqrj2646xtq53hv4gheb5cfzotzsv4ef2q5plwrk/HTTPS.mp4",
+              "https://aspb22.cdn.asset.aparat.com/aparat-video/2a26cf225eaa421a133852ca54a58c5331880633-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjYwYTMyMjAyMGRjYTc3ZjBhZWYyZGVjODliNzhmYzA2IiwiZXhwIjoxNjQ0NzAzMjE2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.PmLLTuMOP7pu5HRCQrLtjDxmFfYE4C_fSmIWyA2T2OU",
             PreviewImg: ZZtoMBackHTTPSImg,
             NameOfEpisode: "معرفی HTTPS",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
+            CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0wqzjxoi2wpbpq5c",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53jcflpjqqnjjtak2m4s4f3rcyebrdv26ojjevz662ifbt5imkv3i34uhrtpozs6jttuugk/AJAX.mp4",
+              "https://as3.cdn.asset.aparat.com/aparat-video/fc6ef984b2533ca04ec3beb73743a32a32591962-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjA1MjMwY2I2OTNjOTFkYjE1YzM3MjhhNjcyZjBjZDAwIiwiZXhwIjoxNjQ0NzAzMjUyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.gsC4Oh5Zm71vD2w5mdjps4_M8EMiVu8xwhaw-QgrQjc",
             PreviewImg: ZtoMBackAJAXImg,
             NameOfEpisode: "معرفی AJAX",
             TimeOfEpisode: "13 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
+            CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0x3od1o7heb4sf5o",
           },
           {
             Video:
-              "https://31.filelu.com/d/w53jkflpjqqnjjtak2m5m65vtsgnupepebgqbwftnc6srndbc4w7uxi6qcgvl5aqpgpy3mnc/JSON.mp4",
+              "https://aspb30.cdn.asset.aparat.com/aparat-video/9818dadce74208b521ef30957780182a35167946-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjEwYmFlYzJhNjczMDA2Y2VjODZmZmM2NTRhMzBjOTM3IiwiZXhwIjoxNjQ0NzAzMjgwLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.GK4yBWMpZgUKLOZ6SGuf2vE0P1c0COUB6rRcxI891K0",
             PreviewImg: ZtoMBackJSONImg,
             NameOfEpisode: "معرفی JSON",
             TimeOfEpisode: "7 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
+            CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            EpisodeID: "E-kzk0xoer6iyvsz1i28n",
           },
         ],
       },
@@ -177,42 +200,51 @@ const Context = (props) => {
         CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "4 اپیزود",
         CourseCategory: "ایمنی ساختمان و معدن",
+        CourseID: "C-kzk23gmcoxdxs2dc7xb",
         Episodes: [
           {
             Video:
-              "https://23.filelu.com/d/x53g4fdpjqqnjjtak2m5mihrsumbqyhy2afsklmu2ef4xy3lfkkqpj7nfrro4altyiqkdra3/Episode1.mp4",
+              "https://aspb19.cdn.asset.aparat.com/aparat-video/026b9e29df8e23c43887b796d7172c6c18713092-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjY0ZjA3NmFlNTE3ODAwYzY5ZTZlN2JjYTFmMzcwOTNmIiwiZXhwIjoxNjQ0NzAzMzI0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.Xk92TkldX1Wj59rfSKrb81wmczg5-FXyFoJtLfYDYy8",
             PreviewImg: BuildingEpisode1Img,
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
+            CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            EpisodeID: "E-kzk0y78s9pzgnmmdzr7",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53g6fdpjqqnjjtak2m5ijhwzcylxpsad237dnk27xt25zcy6ntqvafdzsaruo2qyvn6o3cd/Episode2.mp4",
+              "https://aspb1.cdn.asset.aparat.com/aparat-video/3f88156cda1e07e063e1b4d8b9dc38497033536-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImIyMzI5NmVjMDgwZjEzYmZlZjM4NzI2YjQ4MGI2MTRlIiwiZXhwIjoxNjQ0NzAzMzg3LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.5T64WQ0ATUbwM6ThDxKE-dlj-bZkxvfj3fgjtzyr_ho",
             PreviewImg: BuildingEpisode2Img,
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
+            CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            EpisodeID: "E-kzk0ymjgx17dq7v5j5e",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53gafdpjqqnjjtak2my4ypqscotf4lfxdd52rluizxcjzixe6hi5hp3cnyzroc2plzlaukl/Episode3.mp4",
+              "https://aspb3.cdn.asset.aparat.com/aparat-video/86a477cdd352e891a251f500bd2fd91e7034681-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImZlMWEzMjQ4Zjc1NjdlYjI3YzQyZmYxN2ZjMTQxOGQ1IiwiZXhwIjoxNjQ0NzAzNDExLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.jFe-8U4nK4t5CHtbWArt2_le7N4VCRzvLC3PssCRTuY",
             PreviewImg: BuildingEpisode3Img,
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "54 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
+            CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            EpisodeID: "E-kzk0yy7tv2bj8uc5lfi",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53gcfdpjqqnjjtak2m5a57ur2va7lbshystwgatewwi53vcuqku7gfenuhqzjcylt2y3mzx/Episode4.mp4",
+              "https://aspb3.cdn.asset.aparat.com/aparat-video/20ed75fcb39291c13322c757da06bdc57059788-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImIzMGMxNmYzOWIxNjBlZTk4OGJmMDBhOGMwZTI0MGNjIiwiZXhwIjoxNjQ0NzAzNDQ2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.-meeeDKR1io8WJ-F2PUMIsyO9aBD-JU9MBcJA0MhtII",
             PreviewImg: BuildingEpisode4Img,
             NameOfEpisode: "قسمت چهارم",
             TimeOfEpisode: "33 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
+            CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            EpisodeID: "E-kzk0zb8dllaw0b293y",
           },
         ],
       },
@@ -222,60 +254,73 @@ const Context = (props) => {
         CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "6 اپیزود",
         CourseCategory: "مبانی مهندسی برق",
+        CourseID: "C-kzk24912hm86scientb",
         Episodes: [
           {
             Video:
-              "https://23.filelu.com/d/x53ggfdpjqqnjjtak2myo5h3sumnuxivheigkgfmews4pcrq4olanunlang6mpdriuv4626v/Episode1.mp4",
+              "https://aspb27.cdn.asset.aparat.com/aparat-video/3e65873dddc5ababd55127de48654c3625755147-240p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImZjOGFjNWUwZDJmZmY2ZTE3M2IzZmJkZjQyMGVkMWMzIiwiZXhwIjoxNjQ0NzAzNTAyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.ausYMJ6lg7XGQqHLmoNuQWqj31DnZ5CE3dStdR27tOU",
             PreviewImg: PowerEpisode1Img,
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
+            CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            EpisodeID: "E-kzk10e7otd1qu6i0dfi",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53gifdpjqqnjjtak2m5c3v3q3mtycdtywwl4rry3fji6nqrzta7szc6ryiefaoigqzj3us5/Episode2.mp4",
+              "https://aspb32.cdn.asset.aparat.com/aparat-video/3b1c8274c6ba5c540617ac9c24e2d7be40702367-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImJlZDc2ZjFlMjgwNjQ3ZDRhZDI2YmFkODdhYTc4NTcyIiwiZXhwIjoxNjQ0NzAzNDk2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.CGWO3vnGF6-_s0lslJ122e9WdYiPFzxhRi5RY12XIxM",
             PreviewImg: PowerEpisode2Img,
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
+            CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            EpisodeID: "E-kzk1108phftxtkb0gg6",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53gkfdpjqqnjjtak2m52ixwrxsj3bsi3z33tbishdyaj2cbhzm5xtwkpn5gfpytoq7dw37q/Episode3.mp4",
+              "https://aspb19.cdn.asset.aparat.com/aparat-video/a87eed5f52efe40cca72903dce9d713831304520-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjdhOWE2NzdmOWFmYzQ5ZGQ5OTM3YjI5ODg2NzQ0OGUyIiwiZXhwIjoxNjQ0NzAzNTUzLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.9Dq7c-uEDo_NApC9Lz9zOnISuZjV1CNHf_liItZECfk",
             PreviewImg: PowerEpisode3Img,
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
+            CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            EpisodeID: "E-kzk11hgrmh0x4kprnkm",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53gmfdpjqqnjjtak2myo5h3sv4ww54tfpi3s6ltttwje6nridhqcbi7twg6kuutr7kzau4b/Episode4.mp4",
+              "https://aspb21.cdn.asset.aparat.com/aparat-video/3e65873dddc5ababd55127de48654c3625755147-240p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjcyNWE4NTI1NGRiMjM4NGZhMjdjNzY3ZTE0OGQyMTgxIiwiZXhwIjoxNjQ0NzAzNTkzLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.O4-93D7IXgPauH24sDVrCqV7Au61Nb84ablAiazqclU",
             PreviewImg: PowerEpisode4Img,
             NameOfEpisode: "قسمت چهارم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
+            CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            EpisodeID: "E-kzk11vj5tfrq7fp8q4",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53gofdpjqqnjjtak2m5c3v3qycuuncwmd3y4xpyvuutnkhsvksr6qlywdtk6h6efo5bokhs/Episode5.mp4",
+              "https://aspb35.cdn.asset.aparat.com/aparat-video/d549e049c220d57d4f269fb2239be63d34668563-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImY3MTIyNzE2ODAzMmVmOGMzN2YxZTYwZWI3YzkwMzk4IiwiZXhwIjoxNjQ0NzAzNTk0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.6fbzEAK5cwf7194UHICMN1nj-TRCyDm7v9Pmcr_bdDM",
             PreviewImg: PowerEpisode5Img,
             NameOfEpisode: "قسمت پنجم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
+            CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            EpisodeID: "E-kzk127mw1s78a3dd8c9",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53hqfdpjqqnjjtak2m52ixwrxouy4m3xk3klvbgni5hrfamuijmmy6h4mjgfmpeihpuxsfq/Episode6.mp4",
+              "https://aspb28.cdn.asset.aparat.com/aparat-video/fb9ae6b9e73f0fafbec41667a718dab936145160-240p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImUyMDg5MzgzZTFjN2MzYzEyY2YzZDNkY2UyOWM0N2VkIiwiZXhwIjoxNjQ0NzAzNjQ2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.unlJt1ofJC3J5gIfiaDTl-iJHpXslE0VoFQpnw6T6-0",
             PreviewImg: PowerEpisode6Img,
             NameOfEpisode: "قسمت ششم",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
+            CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            EpisodeID: "E-kzk12m4knhl63re06p",
           },
         ],
       },
@@ -285,33 +330,40 @@ const Context = (props) => {
         CourseDurationTime: "90 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
         CourseCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+        CourseID: "C-kzk24waa5vrc2hpf7go",
         Episodes: [
           {
             Video:
-              "https://23.filelu.com/d/x53hsfdpjqqnjjtak2my47prtvarvps7kwunerfer5jm6l7nq6m2o3ta4g7r66xq7t2p6tdm/Episode1.mp4",
+              "https://aspb3.cdn.asset.aparat.com/aparat-video/73c883747422f9255d6bea77484f05477491719-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjUxMTU2N2MwZGM2YmE5M2RjZTJjNzE4OWEwZjQzOTIwIiwiZXhwIjoxNjQ0NzAzNjk0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.xlzwLKx4BgiU9NUjYDsOrxEVVJWmw7gDjIdI_GIJb8Y",
             PreviewImg: MashinEpisode1Img,
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "34 دقیقه",
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+            CourseID: "C-kzk24waa5vrc2hpf7go",
             TeacherName: "مصطفی پویا کیان",
+            EpisodeID: "E-kzk1349flbz92hjx6ho",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53hufdpjqqnjjtak2myoivtr6r4l4paoug2l2jgnp6ges57kmoq7teiphxij5jhvvfwd4gz/Episode2.mp4",
+              "https://aspb22.cdn.asset.aparat.com/aparat-video/5ef89d9500796fd1c64de05f87779ffe23620599-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjMzNTJmYTgzMzRjM2YyNTE3YTY0MWZkNmJiMWEwYjI1IiwiZXhwIjoxNjQ0NzAzNzU2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.ASMon6EpetV8AEHZXcZkKpvnFkeBrug50guPm_m4o1o",
             PreviewImg: MashinEpisode2Img,
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "25 دقیقه",
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+            CourseID: "C-kzk24waa5vrc2hpf7go",
             TeacherName: "مصطفی پویا کیان",
+            EpisodeID: "E-kzk13h9vyo0oa95fpj",
           },
           {
             Video:
-              "https://23.filelu.com/d/x53hwfdpjqqnjjtak2m4467ozpxk7gvkzquk5pt2pgi46cxoasn3jdm7ewb5edlumjooqgbg/Episode3.mp4",
+              "https://hajifirouz2.cdn.asset.aparat.com/aparat-video/4bc9905e407fbc76530b2eb9102a6e9141615126-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjZlMzFmOGFjZjM2NGUzNDNiZTIzN2RhMGFmZTkzN2I3IiwiZXhwIjoxNjQ0NzAzNzg5LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.j7xmwePnN0ssyZKRGZgj9xYw0AlIx8zah6qcWsdEX-k",
             PreviewImg: MashinEpisode3Img,
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "28 دقیقه",
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
+            CourseID: "C-kzk24waa5vrc2hpf7go",
             TeacherName: "مصطفی پویا کیان",
+            EpisodeID: "E-kzk13tsjhb8iicrx9ft",
           },
         ],
       },
@@ -662,7 +714,7 @@ const Context = (props) => {
     },
   ]);
 
-  const [ emtyCourse , setemtyCourse] = useState(true)
+  const [emtyCourse, setemtyCourse] = useState(true);
 
   const [ticketDatabase, setticketDatabase] = useState({
     user: [
@@ -715,7 +767,7 @@ const Context = (props) => {
         siteManagmentDatabase,
         setsiteManagmentDatabase,
         emtyCourse,
-        setemtyCourse
+        setemtyCourse,
       }}
     >
       {props.children}
