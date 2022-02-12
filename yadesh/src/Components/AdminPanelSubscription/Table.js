@@ -1,59 +1,68 @@
 import Sort from "../../assets/svg/AdminPanelCourses/Sort";
 import Search from "../../assets/svg/AdminPanelCourses/Search";
 import Successful from "../../assets/svg/AdminPanelCourses/Successful";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import EditSubscription from "../../Components/Modals/EditSubscription"
 
 
 const Table = () => {
     const [EditSubscriptionModal, setEditSubscriptionModal] = useState(false)
+    const [twoOfSubscription, setTwoOfSubscription] = useState([])
+    let loopResult = ""
+    useEffect(() => {
+        for (let i = 0; i < 3; i++) {
+            loopResult = Subscription[i];
+             let arr = [...twoOfSubscription, loopResult]
+            setTwoOfSubscription(arr)
+        }
+    }, []
+    
+    
+    )
     const [showmore, setShowmore] = useState(false);
     const [Subscription, setSubscription] = useState([
         {
-            Subscription: "مخابرات ایران",
+            Subscription: "1 مخابرات ایران",
             Condition: "پرداخت شده",
             Amount: "735 هزار تومان",
             numberOfUsers: "132 نفر",
             DateOfRenewal: "26 مهر 1399",
         },
         {
-            Subscription: "مخابرات ایران",
+            Subscription: " 2 مخابرات ایران",
             Condition: "پرداخت شده",
             Amount: "735 هزار تومان",
             numberOfUsers: "132 نفر",
             DateOfRenewal: "26 مهر 1399",
         },
         {
-            Subscription: "مخابرات ایران",
+            Subscription: " 3 مخابرات ایران",
             Condition: "پرداخت شده",
             Amount: "735 هزار تومان",
             numberOfUsers: "132 نفر",
             DateOfRenewal: "26 مهر 1399",
         },
         {
-            Subscription: "مخابرات ایران",
+            Subscription: " 4 مخابرات ایران",
             Condition: "پرداخت شده",
             Amount: "735 هزار تومان",
             numberOfUsers: "132 نفر",
             DateOfRenewal: "26 مهر 1399",
         },
         {
-            Subscription: "مخابرات ایران",
+            Subscription: "مخابرات ایران 5",
             Condition: "پرداخت شده",
             Amount: "735 هزار تومان",
             numberOfUsers: "132 نفر",
             DateOfRenewal: "26 مهر 1399",
         },
     ])
-    let twoOfSubscription = [];
-    for (let i = 0; i < 2; i++) {
-        let loopResult = Subscription[i];
-        twoOfSubscription.push(loopResult);
-    }
+
 
     const removeItemOftwoOfSubscription = (i) => {
         const arr = [...twoOfSubscription]
         arr.splice(i, 1)
+        setTwoOfSubscription(arr)
     }
 
     const removeItemOfSubscription = (i) => {
@@ -62,8 +71,12 @@ const Table = () => {
         setSubscription(arr)
     }
     return (
-        <sectio n className="w-[97vw]">
+        <section className="w-[97vw]">
             <EditSubscription EditSubscriptionModal={EditSubscriptionModal} setEditSubscriptionModal={setEditSubscriptionModal} />
+
+            {
+                Subscription.le
+            }
             <section className="w-[87%] mr-[120px] m-auto text-[12px] text-[#001D29]">
                 <section className="w-full justify-between flex py-[20px]  items-center  bg-[#e6e9eb6e]">
                     <section className="w-[50%] font-semibold pr-[10px]"> لیست اشتراک ها</section>
@@ -107,7 +120,7 @@ const Table = () => {
                                     return (
                                         <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
                                             <td className="text-center">{i + 1}</td>
-                                            <td className="text-center">{item.name}</td>
+                                            <td className="text-center">{item.Subscription}</td>
                                             <td className=" text-[#008043] font-semibold ">
                                                 <div className="justify-center flex ">
                                                     <p className="ml-[5px]">{item.Condition}</p>
@@ -165,7 +178,7 @@ const Table = () => {
                     <p>موارد بیشتر</p>
                 </section>
             </section>
-        </sectio>
+        </section>
     );
 }
 export default Table
