@@ -45,16 +45,16 @@ const Header = () => {
       seconds: result.substr(6, 2),
     };
   }
-  const [time, settime] = useState({
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+  const [durationTime, setdurationTime] = useState({
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
   });
 
   const [currentTime, setCurrentTime] = useState({
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
   });
   const [maxseek, setmaxseek] = useState(0);
   const [seekValue, setseekValue] = useState(0);
@@ -86,7 +86,7 @@ const Header = () => {
 
   function initializeVideoDuration() {
     const videoDuration = Math.round(player.current.duration);
-    settime(formatTime(videoDuration));
+    setdurationTime(formatTime(videoDuration));
     setmaxseek(videoDuration);
     setmaxbar(videoDuration);
   }
@@ -282,7 +282,8 @@ const Header = () => {
               <p className="absolute top-[8px] right-[10px]">
                 {" "}
                 {currentTime.hours}:{currentTime.minutes}:{currentTime.seconds}/
-                {time.hours}:{time.minutes}:{time.seconds}
+                {durationTime.hours}:{durationTime.minutes}:
+                {durationTime.seconds}
               </p>
             </section>
             <section
