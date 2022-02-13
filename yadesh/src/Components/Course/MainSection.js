@@ -46,7 +46,7 @@ const MainSection = () => {
                 <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
                   <img
                     src={item.PreviewImg}
-                    className="rounded-lg w-[230px] h-[150px] mt-[5px] "
+                    className="rounded-lg w-[230px] h-[150px] object-cover mt-[5px] "
                   />
                 </Link>
                 <div>

@@ -44,7 +44,7 @@ export default () => {
               <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
                 <div className="absolute w-[310px] h-[310px] bg-gradient-to-t from-black to-[#0000]"></div>
                 <img
-                  className="w-[310px] h-[310px] rounded "
+                  className="w-[310px] h-[310px] object-cover rounded "
                   src={item.PreviewImg}
                 />
                 <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">

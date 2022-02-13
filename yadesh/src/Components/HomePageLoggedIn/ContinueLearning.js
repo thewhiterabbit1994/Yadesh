@@ -64,7 +64,7 @@ const ContinueLearning = () => {
               <div className="">
                 <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
                   <img
-                    className="w-[200px] h-[120px] rounded"
+                    className="w-[200px] h-[120px] object-cover rounded"
                     src={item.PreviewImg}
                   />
                 </Link>

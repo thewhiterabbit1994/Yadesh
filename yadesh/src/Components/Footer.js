@@ -87,7 +87,7 @@ const Footer = () => {
               <Link to={"/home/userprofile"}>
                 <p className="">پروفایل کاربری</p>
               </Link>
-              <Link to="/home/course">
+              <Link to="/home/myprogress">
                 <a className="">کلاس ها</a>
               </Link>
               <Link to="/home/myprogress">

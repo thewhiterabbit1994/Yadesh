@@ -57,7 +57,7 @@ const HeaderCourse = () => {
       <section className=" w-[49%]  m-auto relative z-20 ">
         <img
           src={Course[0].CourseImg}
-          className="w-[600px] rounded h-[380px] "
+          className="w-[600px] rounded object-cover h-[380px] "
         />
       </section>
     </section>

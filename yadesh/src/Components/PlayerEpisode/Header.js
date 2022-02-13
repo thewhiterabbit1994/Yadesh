@@ -392,7 +392,7 @@ const Header = () => {
                   <section className="flex w-[80%] m-auto  justify-center  mt-[25px]">
                     <img
                       src={item.PreviewImg}
-                      className="rounded-lg h-[90px]"
+                      className="rounded-lg object-cover w-[150px] h-[100px]"
                     />
                     <div className="text-[#C4C4C4] text-[14px] flex flex-col mr-5 justify-center">
                       <p>{item.EpisodeCategory}</p>

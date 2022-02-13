@@ -51,7 +51,7 @@ export default () => {
               <div>
                 <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
                   <img
-                    className="w-[270px] h-[200px] rounded"
+                    className="w-[270px] h-[200px] object-cover rounded"
                     src={item.PreviewImg}
                   />
                 </Link>
