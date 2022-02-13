@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 const EndSection = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
@@ -8,9 +9,8 @@ const EndSection = () => {
   const data = siteManagmentDatabase.YadeshForOrganization.JoinToYadesh;
   return (
     <section
-      className={`${
-        data.isDisplayed ? "w-full h-[60vh] bg-[#000] pt-[3rem] " : "hidden"
-      }`}
+      className={`${data.isDisplayed ? "w-full h-[60vh] bg-[#000] pt-[3rem] " : "hidden"
+        }`}
     >
       <section className="relative ">
         <img src={data.imagery} />
@@ -24,10 +24,12 @@ const EndSection = () => {
           </div>
           <div className="border-t-[7px] w-[20px] rounded border-[#00FF85] mb-[15px]"></div>
           <div>
-            <button className="text-[12px] text-[#000] bg-[#00ff85] w-[140px] h-[43px] rounded-[6px]">
-              {" "}
-              به یادش بپیوندید
-            </button>
+            <Link to="/home/signupforbusiness">
+              <button className="text-[12px] text-[#000] bg-[#00ff85] w-[140px] h-[43px] rounded-[6px]">
+                {" "}
+                به یادش بپیوندید
+              </button>
+            </Link>
           </div>
         </section>
       </section>

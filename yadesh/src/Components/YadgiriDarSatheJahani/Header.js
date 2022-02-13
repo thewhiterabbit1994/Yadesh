@@ -4,6 +4,7 @@ import FatAroow from "../../assets/svg/FatAroow";
 import manPng from "../../assets/Img/yadgiriDarSatheJahani/manPng.png";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
@@ -26,14 +27,18 @@ const Header = () => {
             <p>{herodata.subTitle}</p>
           </div>
           <div>
-            <button className="text-[12px] bg-[#00000073] text-[#E6FFF3] w-[150px] h-[46px] rounded border-solid border-[#00FF85] border-2 ml-[20px] ">
-              {" "}
-              بیشتر بدانید
-            </button>
-            <button className=" font-black text-[12px] text-[#000] bg-[#00FF85] w-[150px] h-[46px] rounded">
-              {" "}
-              به یادش بپیوندید
-            </button>
+            <Link to="/aboutus">
+              <button className="text-[12px] bg-[#00000073] text-[#E6FFF3] w-[150px] h-[46px] rounded border-solid border-[#00FF85] border-2 ml-[20px] ">
+                {" "}
+                بیشتر بدانید
+              </button>
+            </Link>
+            <Link to="/home/signupforbusiness">
+              <button className=" font-black text-[12px] text-[#000] bg-[#00FF85] w-[150px] h-[46px] rounded">
+                {" "}
+                به یادش بپیوندید
+              </button>
+            </Link>
           </div>
           <div className="mt-[20px]">
             <Star />
