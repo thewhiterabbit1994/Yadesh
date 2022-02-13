@@ -56,6 +56,7 @@ const Context = (props) => {
     Courses: [
       {
         CourseImg: ZtoMPrev,
+        CourseView: "12084 بازدید",
         TeacherName: "آندره نیگوا",
         CourseDurationTime: "27 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
@@ -66,6 +67,7 @@ const Context = (props) => {
             Video:
               "https://as9.cdn.asset.aparat.com/aparat-video/f279540e8b2c78012ced857a12bda21c32731810-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjU2ZWQ1ZTUxNDExOWIyZmI0YWI2ZDk4NmE5YzU1ZmQwIiwiZXhwIjoxNjQ0NzAyODExLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.frqQN5XFvmYmPosRoLVOyR1Zilr8cUWbZv7E0WlPP_M",
             PreviewImg: ZtoM_IntroImg,
+            EpisodeView: "3652 بازدید",
             NameOfEpisode: "معرفی دوره",
             TimeOfEpisode: "9 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط وب",
@@ -77,6 +79,7 @@ const Context = (props) => {
             Video:
               "https://hw18.cdn.asset.aparat.com/aparat-video/5f44db28d045bff54c3941bb817cc7b132732665-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjcwMTdhZTk5MTgzZjIxMWJlNzE5MmY3OWVlNDBhNjE4IiwiZXhwIjoxNjQ0NzAyOTA1LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.CrXRaR6D_Y_-aAdyQFdohcm2ZkgeLcUj9dNr5loQHFc",
             PreviewImg: ZtoM_CSSImg,
+            EpisodeView: "4200 بازدید",
             NameOfEpisode: "معرفی CSS",
             TimeOfEpisode: "10 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط وب",
@@ -88,6 +91,7 @@ const Context = (props) => {
             Video:
               "https://as2.cdn.asset.aparat.com/aparat-video/85b5c99ee857f8bdc0aee1371be8f1f032782066-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjA5YThhZTM5MWNmZDRlNGYyZjUzNTlmMzgwMWExMzc1IiwiZXhwIjoxNjQ0NzAyOTM4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.THta7dxEUKEmEenW7M68Nf_euOECcnNx5WQuFpCljHA",
             PreviewImg: ZtoM_HTMLImg,
+            EpisodeView: "7000 بازدید",
             NameOfEpisode: "معرفی HTML",
             TimeOfEpisode: "8 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط وب",
@@ -99,6 +103,7 @@ const Context = (props) => {
       },
       {
         CourseImg: ZtoMReactPrew,
+        CourseView: "98656 بازدید",
         TeacherName: "آندره نیگوا",
         CourseDurationTime: "44 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
@@ -109,6 +114,7 @@ const Context = (props) => {
             Video:
               "https://aspb13.cdn.asset.aparat.com/aparat-video/3042523d1e99fb4b9a0739db181c5e0223100892-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjcxYjYyOGZkYTc5YTliMWEzMDNjN2I0ZjY3MTkxYmUyIiwiZXhwIjoxNjQ0NzAyOTk4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.kLbTfb_94gzp6vfIFMGu06nv46-YF1N9YHRfDv6Dy1o",
             PreviewImg: ZtoMReactintroImg,
+            EpisodeView: "8405 بازدید",
             NameOfEpisode: "معرفی ری اکت",
             TimeOfEpisode: "12 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط ریکت",
@@ -120,6 +126,7 @@ const Context = (props) => {
             Video:
               "https://aspb10.cdn.asset.aparat.com/aparat-video/43d7641998eaad8f39bfc4599d7000a423203600-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImExNWNmMTBkNmZmYjJlNzNkYzA5ZjI2YWIwY2FmOWZhIiwiZXhwIjoxNjQ0NzAzMDM3LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.Djg-p0B1wpvdgnN8fwTzNlW_6Uht1fkA5k9OiSSWR-4",
             PreviewImg: ZtoMReactcreateImg,
+            EpisodeView: "1238 بازدید",
             NameOfEpisode: "ساخت اپ ری اکت",
             TimeOfEpisode: "12 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط ریکت",
@@ -131,6 +138,7 @@ const Context = (props) => {
             Video:
               "https://aspb12.cdn.asset.aparat.com/aparat-video/ee7ad6a740b8c971863698a211e8568a23323324-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjY1NDUxMzk1ZTgxNDhkZDEzNjhlZjc0YmMwMDBiOTM4IiwiZXhwIjoxNjQ0NzAzMDcxLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.95ft0XnTvYgy2bsAzReYVHKAAUgMuHhVawp3rnpg0Ok",
             PreviewImg: ZtoMReactcomponentImg,
+            EpisodeView: "7482 بازدید",
             NameOfEpisode: "آموزش ری اکت کامپوننت",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط ریکت",
@@ -142,6 +150,7 @@ const Context = (props) => {
       },
       {
         CourseImg: ZtoMBackPrew,
+        CourseView: "32584 بازدید",
         TeacherName: "آندره نیگوا",
         CourseDurationTime: "52 دقیقه",
         NumberOfEpisodes: "4 اپیزود",
@@ -152,6 +161,7 @@ const Context = (props) => {
             Video:
               "https://as8.cdn.asset.aparat.com/aparat-video/c2a7b7679c93a253edd7e140ebf970a325340055-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjZhZDBiNzU4NDhiMTQ2ZWFjM2YxZDYwNDM2NzQ1YTIzIiwiZXhwIjoxNjQ0NzAzMTMzLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.h3ZlJyFBqBQucecIYDkwc-lkUDJnaE9huLyqjhGadkk",
             PreviewImg: ZtoMBackBasicsImg,
+            EpisodeView: "4895 بازدید",
             NameOfEpisode: "معرفی بک اند",
             TimeOfEpisode: "12 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
@@ -163,6 +173,7 @@ const Context = (props) => {
             Video:
               "https://aspb22.cdn.asset.aparat.com/aparat-video/2a26cf225eaa421a133852ca54a58c5331880633-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjYwYTMyMjAyMGRjYTc3ZjBhZWYyZGVjODliNzhmYzA2IiwiZXhwIjoxNjQ0NzAzMjE2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.PmLLTuMOP7pu5HRCQrLtjDxmFfYE4C_fSmIWyA2T2OU",
             PreviewImg: ZZtoMBackHTTPSImg,
+            EpisodeView: "3215 بازدید",
             NameOfEpisode: "معرفی HTTPS",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
@@ -174,6 +185,7 @@ const Context = (props) => {
             Video:
               "https://as3.cdn.asset.aparat.com/aparat-video/fc6ef984b2533ca04ec3beb73743a32a32591962-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjA1MjMwY2I2OTNjOTFkYjE1YzM3MjhhNjcyZjBjZDAwIiwiZXhwIjoxNjQ0NzAzMjUyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.gsC4Oh5Zm71vD2w5mdjps4_M8EMiVu8xwhaw-QgrQjc",
             PreviewImg: ZtoMBackAJAXImg,
+            EpisodeView: "7846 بازدید",
             NameOfEpisode: "معرفی AJAX",
             TimeOfEpisode: "13 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
@@ -185,6 +197,7 @@ const Context = (props) => {
             Video:
               "https://aspb30.cdn.asset.aparat.com/aparat-video/9818dadce74208b521ef30957780182a35167946-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjEwYmFlYzJhNjczMDA2Y2VjODZmZmM2NTRhMzBjOTM3IiwiZXhwIjoxNjQ0NzAzMjgwLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.GK4yBWMpZgUKLOZ6SGuf2vE0P1c0COUB6rRcxI891K0",
             PreviewImg: ZtoMBackJSONImg,
+            EpisodeView: "6547 بازدید",
             NameOfEpisode: "معرفی JSON",
             TimeOfEpisode: "7 دقیقه",
             EpisodeCategory: "صفر تا صد تسلط بک اند",
@@ -196,6 +209,7 @@ const Context = (props) => {
       },
       {
         CourseImg: BuildingPrew,
+        CourseView: "78496 بازدید",
         TeacherName: "داوود پناهی",
         CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "4 اپیزود",
@@ -206,6 +220,7 @@ const Context = (props) => {
             Video:
               "https://aspb19.cdn.asset.aparat.com/aparat-video/026b9e29df8e23c43887b796d7172c6c18713092-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjY0ZjA3NmFlNTE3ODAwYzY5ZTZlN2JjYTFmMzcwOTNmIiwiZXhwIjoxNjQ0NzAzMzI0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.Xk92TkldX1Wj59rfSKrb81wmczg5-FXyFoJtLfYDYy8",
             PreviewImg: BuildingEpisode1Img,
+            EpisodeView: "4576 بازدید",
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
@@ -217,6 +232,7 @@ const Context = (props) => {
             Video:
               "https://aspb1.cdn.asset.aparat.com/aparat-video/3f88156cda1e07e063e1b4d8b9dc38497033536-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImIyMzI5NmVjMDgwZjEzYmZlZjM4NzI2YjQ4MGI2MTRlIiwiZXhwIjoxNjQ0NzAzMzg3LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.5T64WQ0ATUbwM6ThDxKE-dlj-bZkxvfj3fgjtzyr_ho",
             PreviewImg: BuildingEpisode2Img,
+            EpisodeView: "1287 بازدید",
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
@@ -228,6 +244,7 @@ const Context = (props) => {
             Video:
               "https://aspb3.cdn.asset.aparat.com/aparat-video/86a477cdd352e891a251f500bd2fd91e7034681-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImZlMWEzMjQ4Zjc1NjdlYjI3YzQyZmYxN2ZjMTQxOGQ1IiwiZXhwIjoxNjQ0NzAzNDExLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.jFe-8U4nK4t5CHtbWArt2_le7N4VCRzvLC3PssCRTuY",
             PreviewImg: BuildingEpisode3Img,
+            EpisodeView: "3569 بازدید",
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "54 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
@@ -239,6 +256,7 @@ const Context = (props) => {
             Video:
               "https://aspb3.cdn.asset.aparat.com/aparat-video/20ed75fcb39291c13322c757da06bdc57059788-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImIzMGMxNmYzOWIxNjBlZTk4OGJmMDBhOGMwZTI0MGNjIiwiZXhwIjoxNjQ0NzAzNDQ2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.-meeeDKR1io8WJ-F2PUMIsyO9aBD-JU9MBcJA0MhtII",
             PreviewImg: BuildingEpisode4Img,
+            EpisodeView: "7541 بازدید",
             NameOfEpisode: "قسمت چهارم",
             TimeOfEpisode: "33 دقیقه",
             EpisodeCategory: "ایمنی ساختمان و معدن",
@@ -250,6 +268,7 @@ const Context = (props) => {
       },
       {
         CourseImg: PowerPrew,
+        CourseView: "65823 بازدید",
         TeacherName: "جواد جباری",
         CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "6 اپیزود",
@@ -260,6 +279,7 @@ const Context = (props) => {
             Video:
               "https://aspb27.cdn.asset.aparat.com/aparat-video/3e65873dddc5ababd55127de48654c3625755147-240p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImZjOGFjNWUwZDJmZmY2ZTE3M2IzZmJkZjQyMGVkMWMzIiwiZXhwIjoxNjQ0NzAzNTAyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.ausYMJ6lg7XGQqHLmoNuQWqj31DnZ5CE3dStdR27tOU",
             PreviewImg: PowerEpisode1Img,
+            EpisodeView: "6732 بازدید",
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
@@ -271,6 +291,7 @@ const Context = (props) => {
             Video:
               "https://aspb32.cdn.asset.aparat.com/aparat-video/3b1c8274c6ba5c540617ac9c24e2d7be40702367-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImJlZDc2ZjFlMjgwNjQ3ZDRhZDI2YmFkODdhYTc4NTcyIiwiZXhwIjoxNjQ0NzAzNDk2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.CGWO3vnGF6-_s0lslJ122e9WdYiPFzxhRi5RY12XIxM",
             PreviewImg: PowerEpisode2Img,
+            EpisodeView: "1679 بازدید",
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
@@ -282,6 +303,7 @@ const Context = (props) => {
             Video:
               "https://aspb19.cdn.asset.aparat.com/aparat-video/a87eed5f52efe40cca72903dce9d713831304520-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjdhOWE2NzdmOWFmYzQ5ZGQ5OTM3YjI5ODg2NzQ0OGUyIiwiZXhwIjoxNjQ0NzAzNTUzLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.9Dq7c-uEDo_NApC9Lz9zOnISuZjV1CNHf_liItZECfk",
             PreviewImg: PowerEpisode3Img,
+            EpisodeView: "3457 بازدید",
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
@@ -293,6 +315,7 @@ const Context = (props) => {
             Video:
               "https://aspb21.cdn.asset.aparat.com/aparat-video/3e65873dddc5ababd55127de48654c3625755147-240p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjcyNWE4NTI1NGRiMjM4NGZhMjdjNzY3ZTE0OGQyMTgxIiwiZXhwIjoxNjQ0NzAzNTkzLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.O4-93D7IXgPauH24sDVrCqV7Au61Nb84ablAiazqclU",
             PreviewImg: PowerEpisode4Img,
+            EpisodeView: "9652 بازدید",
             NameOfEpisode: "قسمت چهارم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
@@ -304,6 +327,7 @@ const Context = (props) => {
             Video:
               "https://aspb35.cdn.asset.aparat.com/aparat-video/d549e049c220d57d4f269fb2239be63d34668563-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImY3MTIyNzE2ODAzMmVmOGMzN2YxZTYwZWI3YzkwMzk4IiwiZXhwIjoxNjQ0NzAzNTk0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.6fbzEAK5cwf7194UHICMN1nj-TRCyDm7v9Pmcr_bdDM",
             PreviewImg: PowerEpisode5Img,
+            EpisodeView: "1255 بازدید",
             NameOfEpisode: "قسمت پنجم",
             TimeOfEpisode: "30 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
@@ -315,6 +339,7 @@ const Context = (props) => {
             Video:
               "https://aspb28.cdn.asset.aparat.com/aparat-video/fb9ae6b9e73f0fafbec41667a718dab936145160-240p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImUyMDg5MzgzZTFjN2MzYzEyY2YzZDNkY2UyOWM0N2VkIiwiZXhwIjoxNjQ0NzAzNjQ2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.unlJt1ofJC3J5gIfiaDTl-iJHpXslE0VoFQpnw6T6-0",
             PreviewImg: PowerEpisode6Img,
+            EpisodeView: "6549 بازدید",
             NameOfEpisode: "قسمت ششم",
             TimeOfEpisode: "20 دقیقه",
             EpisodeCategory: "مبانی مهندسی برق",
@@ -326,6 +351,7 @@ const Context = (props) => {
       },
       {
         CourseImg: MashinPrew,
+        CourseView: "45813 بازدید",
         TeacherName: "مصطفی پویا کیان",
         CourseDurationTime: "90 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
@@ -336,6 +362,7 @@ const Context = (props) => {
             Video:
               "https://aspb3.cdn.asset.aparat.com/aparat-video/73c883747422f9255d6bea77484f05477491719-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjUxMTU2N2MwZGM2YmE5M2RjZTJjNzE4OWEwZjQzOTIwIiwiZXhwIjoxNjQ0NzAzNjk0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.xlzwLKx4BgiU9NUjYDsOrxEVVJWmw7gDjIdI_GIJb8Y",
             PreviewImg: MashinEpisode1Img,
+            EpisodeView: "7448 بازدید",
             NameOfEpisode: "قسمت اول",
             TimeOfEpisode: "34 دقیقه",
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
@@ -347,6 +374,7 @@ const Context = (props) => {
             Video:
               "https://aspb22.cdn.asset.aparat.com/aparat-video/5ef89d9500796fd1c64de05f87779ffe23620599-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjMzNTJmYTgzMzRjM2YyNTE3YTY0MWZkNmJiMWEwYjI1IiwiZXhwIjoxNjQ0NzAzNzU2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.ASMon6EpetV8AEHZXcZkKpvnFkeBrug50guPm_m4o1o",
             PreviewImg: MashinEpisode2Img,
+            EpisodeView: "3266 بازدید",
             NameOfEpisode: "قسمت دوم",
             TimeOfEpisode: "25 دقیقه",
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
@@ -358,6 +386,7 @@ const Context = (props) => {
             Video:
               "https://hajifirouz2.cdn.asset.aparat.com/aparat-video/4bc9905e407fbc76530b2eb9102a6e9141615126-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjZlMzFmOGFjZjM2NGUzNDNiZTIzN2RhMGFmZTkzN2I3IiwiZXhwIjoxNjQ0NzAzNzg5LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.j7xmwePnN0ssyZKRGZgj9xYw0AlIx8zah6qcWsdEX-k",
             PreviewImg: MashinEpisode3Img,
+            EpisodeView: "7754 بازدید",
             NameOfEpisode: "قسمت سوم",
             TimeOfEpisode: "28 دقیقه",
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",

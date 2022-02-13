@@ -4,21 +4,29 @@ import TeacherImg1 from "../../assets/Img/TeacherImg1.png";
 import BigVerifiedIcon from "../../assets/svg/BigVerifiedIcon";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  rtl: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-};
+import { Link } from "react-router-dom";
 
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
   const data = siteManagmentDatabase.MyProgress.DoneCourses;
+  let episodesData = [];
+  const episodesDatabase = siteManagmentDatabase.Courses.forEach((Course) => {
+    Course.Episodes.forEach((Episode) => {
+      episodesData.push(Episode);
+    });
+  });
+  let episodes = [];
+  for (let i = 0; i < 10; i++) {
+    episodes.push(episodesData[i]);
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+  };
   return (
     <div
       className={`h-[450px] w-full bg-[#000405] ${
@@ -38,156 +46,43 @@ export default () => {
       </div>
       <div className="pl-1 mt-[25px] w-[95%] text-white">
         <Slider {...settings}>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[220px] -top-[190px]">
-              <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
-                <BigVerifiedIcon />
-              </div>
-            </div>
-
-            <div className="flex -mt-[20px]">
+          {episodes.map((item) => {
+            return (
               <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[220px] -top-[190px]">
-              <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
-                <BigVerifiedIcon />
-              </div>
-            </div>
+                <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
+                  <img
+                    className="w-[270px] h-[200px] rounded"
+                    src={item.PreviewImg}
+                  />
+                </Link>
+                <div className="relative  -right-[220px] -top-[190px]">
+                  <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
+                    <BigVerifiedIcon />
+                  </div>
+                </div>
 
-            <div className="flex -mt-[20px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
+                <div className="flex -mt-[20px]">
+                  <div>
+                    <img
+                      className="relative -right-[215px] rounded-full h-[55px]"
+                      src={TeacherImg1}
+                    />
+                  </div>
+                  <div className="mt-[-15px] -ml-[5px]">
+                    <p className="text-right text-[13px] mt-2 text-[#ffffff]">
+                      {item.EpisodeCategory}
+                    </p>
+                    <p className="text-right text-[12px] mt-2 text-[#ffffff]">
+                      {item.NameOfEpisode}
+                    </p>
+                    <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
+                      {item.TeacherName}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[220px] -top-[190px]">
-              <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
-                <BigVerifiedIcon />
-              </div>
-            </div>
-
-            <div className="flex -mt-[20px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[220px] -top-[190px]">
-              <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
-                <BigVerifiedIcon />
-              </div>
-            </div>
-
-            <div className="flex -mt-[20px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[220px] -top-[190px]">
-              <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
-                <BigVerifiedIcon />
-              </div>
-            </div>
-
-            <div className="flex -mt-[20px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[220px] -top-[190px]">
-              <div className="h-[40px] w-[40px] cursor-pointer rounded-full  pt-1.5 px-[6px] bg-[#626765]">
-                <BigVerifiedIcon />
-              </div>
-            </div>
-
-            <div className="flex -mt-[20px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </Slider>
       </div>
     </div>

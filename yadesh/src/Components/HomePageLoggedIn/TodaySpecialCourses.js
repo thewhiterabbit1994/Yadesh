@@ -9,23 +9,34 @@ import "slick-carousel/slick/slick.css";
 import "../../Css/TodaySpecialCoursesSlick.css";
 import Bookmark from "../../assets/svg/Bookmark";
 import Speakermute from "../../assets/svg/Speakermute";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MainCounter } from "../../Context/Context";
 
 const TodaySpecialCourses = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
 
   const data = siteManagmentDatabase.HomePageLogin.hero;
+  const coursesdata = siteManagmentDatabase.Courses;
+  let threeOfCourses = [];
+  for (let i = 0; i < 3; i++) {
+    threeOfCourses.push(coursesdata[i]);
+  }
+  console.log(threeOfCourses);
+  let [index, setindex] = useState(2);
+
   const settings = {
     dots: true,
     infinite: true,
+    centerMode: false,
+    pauseOnHover: true,
+    rtl: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    speed: 500,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 5000,
   };
+  console.log(index);
   return (
     <div className="h-[650px] bg-[#000506] flex">
       <div className="mr-[88px]">
@@ -40,7 +51,7 @@ const TodaySpecialCourses = () => {
           <div className="bg-gradient-to-l from-[#00FF85] h-[0.5px] w-[200px]  mt-[25px] "></div>
         </div>
         <p className="text-[24px] mt-[30px] text-[#ffffff]">
-          دوره فرهنگ سازمانی
+          دوره {threeOfCourses[index].CourseCategory}
         </p>
         <div className="flex mt-[23px]">
           <div>
@@ -48,7 +59,9 @@ const TodaySpecialCourses = () => {
           </div>
           <div className="mr-[15px]">
             <p className="text-[#C4C4C4] text-[12px]">مدرس دوره</p>
-            <p className="text-[13px] mt-2 text-[#ffffff]">محمد صادقی کیا</p>
+            <p className="text-[13px] mt-2 text-[#ffffff]">
+              {threeOfCourses[index].TeacherName}
+            </p>
           </div>
         </div>
         <div className="flex mt-[30px] text-[#C4C4C4] text-[11px]">
@@ -56,14 +69,14 @@ const TodaySpecialCourses = () => {
             <div className="-mt-[2.5px] ml-2 ">
               <Clock />
             </div>
-            ۴۵ دقیقه و ۲۶ ثانیه
+            {threeOfCourses[index].CourseDurationTime}
           </p>
           <p className="text-[35px] px-4 -mt-[25px]">.</p>
           <p className="flex">
             <div className=" ml-2 ">
               <View />
             </div>
-            ۳۶۵۲ بازدید
+            {threeOfCourses[index].CourseView}
           </p>
         </div>
         <div className="mt-7 flex">
@@ -83,8 +96,8 @@ const TodaySpecialCourses = () => {
       </div>
       <section className=" mt-[70px] rounded-lg mr-[120px] w-[670px]">
         <div className="flex w-[670px] justify-between">
-          <p className="relative rounded text-[12px] mr-5 py-2 pr-[18px] text-[#fff] w-[120px] h-[32px] bg-[#7b9199] top-[50px] z-10 ">
-            فرهنگ سازمانی
+          <p className="relative rounded text-[12px] mr-5 py-2  text-[#fff] w-fit px-3 h-[32px] bg-[#7b9199] top-[55px] z-10 ">
+            {threeOfCourses[index].CourseCategory}
           </p>
           <div className="flex relative left-4 top-14 z-10">
             <div className="bg-[#13273d] w-[35px] p-2">
@@ -95,13 +108,24 @@ const TodaySpecialCourses = () => {
             </div>
           </div>
         </div>
-        <Slider {...settings}>
-          <div>
-            <img className="rounded-lg" src={FarhangeSazmani} />
-          </div>
-          <div>
-            <img className="rounded-lg" src={FarhangeSazmani} />
-          </div>
+        <Slider
+          {...settings}
+          beforeChange={() => {
+            if (index === 0) {
+              setindex(2);
+            } else {
+              setindex(index - 1);
+            }
+          }}
+        >
+          {threeOfCourses.map((item) => {
+            console.log("item", item);
+            return (
+              <div>
+                <img className="rounded-lg" src={item.CourseImg} />
+              </div>
+            );
+          })}
         </Slider>
       </section>
     </div>

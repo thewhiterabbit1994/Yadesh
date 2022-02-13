@@ -5,21 +5,29 @@ import _3Dots from "../../assets/svg/3Dots";
 import BtnPlay from "../../assets/svg/BtnPlay";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  rtl: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-};
+import { Link } from "react-router-dom";
 
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
   const data = siteManagmentDatabase.UserInfo.UserCourses;
+  let episodesData = [];
+  const episodesDatabase = siteManagmentDatabase.Courses.forEach((Course) => {
+    Course.Episodes.forEach((Episode) => {
+      episodesData.push(Episode);
+    });
+  });
+  let episodes = [];
+  for (let i = 0; i < 10; i++) {
+    episodes.push(episodesData[i]);
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+  };
   return (
     <div
       className={`${
@@ -39,228 +47,54 @@ export default () => {
       </div>
       <div className="pl-1 mt-[25px] w-[95%] text-white">
         <Slider {...settings}>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[230px] -top-[190px]">
-              <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-                <_3Dots />
-              </div>
-            </div>
-            <div className="relative -right-[70px] -top-[90px]">
-              <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
-                <div className="mt-3 mr-6">
-                  <BtnPlay />
-                </div>
-                <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
-              </button>
-            </div>
-            <div className="flex -mt-[50px]">
+          {episodes.map((item) => {
+            return (
               <div>
                 <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
+                  className="w-[270px] h-[180px] rounded"
+                  src={item.PreviewImg}
                 />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[10px]">
-                  {"11"}
-                  {"   ویدیو دیده شده از"}
-                  {"9 "}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[230px] -top-[190px]">
-              <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-                <_3Dots />
-              </div>
-            </div>
-            <div className="relative -right-[70px] -top-[90px]">
-              <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
-                <div className="mt-3 mr-6">
-                  <BtnPlay />
+                <div className="relative  -right-[230px] -top-[170px]">
+                  <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
+                    <_3Dots />
+                  </div>
                 </div>
-                <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
-              </button>
-            </div>
-            <div className="flex -mt-[50px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[10px]">
-                  {"11"}
-                  {"   ویدیو دیده شده از"}
-                  {"9 "}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[230px] -top-[190px]">
-              <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-                <_3Dots />
-              </div>
-            </div>
-            <div className="relative -right-[70px] -top-[90px]">
-              <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
-                <div className="mt-3 mr-6">
-                  <BtnPlay />
+                <div className="relative -right-[70px] -top-[90px]">
+                  <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
+                    <Link
+                      className="flex flex-row-reverse"
+                      to={`/home/PlayerEpisode/${item.EpisodeID}`}
+                    >
+                      <div className="mt-3 mr-6">
+                        <BtnPlay />
+                      </div>
+                      <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
+                    </Link>
+                  </button>
                 </div>
-                <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
-              </button>
-            </div>
-            <div className="flex -mt-[50px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[10px]">
-                  {"11"}
-                  {"   ویدیو دیده شده از"}
-                  {"9 "}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[230px] -top-[190px]">
-              <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-                <_3Dots />
-              </div>
-            </div>
-            <div className="relative -right-[70px] -top-[90px]">
-              <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
-                <div className="mt-3 mr-6">
-                  <BtnPlay />
+                <div className="flex -mt-[50px]">
+                  <div>
+                    <img
+                      className="relative -right-[215px] top-[-5px] rounded-full h-[55px]"
+                      src={TeacherImg1}
+                    />
+                  </div>
+                  <div className=" mt-[-15px] -ml-[5px]">
+                    <p className="text-right  text-[13px] mt-2 text-[#ffffff]">
+                      {item.EpisodeCategory}
+                    </p>
+                    <p className="text-right text-[12px] mt-2 text-[#ffffff]">
+                      {item.NameOfEpisode}
+                    </p>
+
+                    <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
+                      {item.TeacherName} - {item.EpisodeView}
+                    </p>
+                  </div>
                 </div>
-                <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
-              </button>
-            </div>
-            <div className="flex -mt-[50px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
               </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[10px]">
-                  {"11"}
-                  {"   ویدیو دیده شده از"}
-                  {"9 "}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[230px] -top-[190px]">
-              <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-                <_3Dots />
-              </div>
-            </div>
-            <div className="relative -right-[70px] -top-[90px]">
-              <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
-                <div className="mt-3 mr-6">
-                  <BtnPlay />
-                </div>
-                <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
-              </button>
-            </div>
-            <div className="flex -mt-[50px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[10px]">
-                  {"11"}
-                  {"   ویدیو دیده شده از"}
-                  {"9 "}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-[270px] h-[200px] rounded" src={BrandImg} />
-            <div className="relative  -right-[230px] -top-[190px]">
-              <div className="h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-                <_3Dots />
-              </div>
-            </div>
-            <div className="relative -right-[70px] -top-[90px]">
-              <button className="flex flex-row-reverse font-semibold w-[135px] h-[40px] text-[11px] rounded-[6px] bg-[#80ffc2] ">
-                <div className="mt-3 mr-6">
-                  <BtnPlay />
-                </div>
-                <p className="mt-3 mr-3  text-black"> ادامه دهید</p>
-              </button>
-            </div>
-            <div className="flex -mt-[50px]">
-              <div>
-                <img
-                  className="relative -right-[215px] rounded-full h-[55px]"
-                  src={TeacherImg1}
-                />
-              </div>
-              <div className=" -ml-[50px]">
-                <p className="text-right text-[13px] mt-2 text-[#ffffff]">
-                  آموزش مدیریت مالی - رکود و تورم
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[11px]">
-                  سهراب دل انگیزان ، اقتصادان مالی
-                </p>
-                <p className="text-right mt-2 text-[#C4C4C4] text-[10px]">
-                  {"11"}
-                  {"   ویدیو دیده شده از"}
-                  {"9 "}
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </Slider>
       </div>
     </div>

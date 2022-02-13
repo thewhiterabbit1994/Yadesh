@@ -2,6 +2,7 @@ import { useState, useRef, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { MainCounter } from "../../Context/Context";
 
+import "../../index.css";
 import Imgman from "../../assets/Img/PlayerEpisode/imgman.png";
 import Yaddasht from "../../assets/svg/PlayerEpisode/Yaddasht";
 import Dislike from "../../assets/svg/PlayerEpisode/Dislike";
@@ -29,19 +30,19 @@ const Header = () => {
   const Course = Coursedata.filter(
     (Course) => Course.CourseID === Episode.CourseID
   );
-  const fourOfCourse = [
-    Course[0].Episodes[0],
-    Course[0].Episodes[1],
-    Course[0].Episodes[2],
-    Course[0].Episodes[3],
-  ];
-  console.log("Episode", Episode);
-  console.log("Course", Course);
+  let forIndex = 0;
+  if (Course[0].Episodes.length < 4) {
+    forIndex = Course[0].Episodes.length;
+  } else {
+    forIndex = 4;
+  }
+  const fourOfCourse = [];
+  for (let i = 0; i < forIndex; i++) {
+    fourOfCourse.push(Course[0].Episodes[i]);
+  }
 
   const [isPlaying, setisPlaying] = useState(false);
   const player = useRef();
-
-  console.log(player);
 
   function handleplay() {
     player.current.play();
@@ -135,32 +136,34 @@ const Header = () => {
             {Episode.EpisodeCategory} - {Episode.NameOfEpisode}
           </h6>
         </section>
-        <div
+        {/* <div
           className="cursor-pointer"
           onMouseEnter={() => setshowControlBar(true)}
           onMouseLeave={() => setshowControlBar(false)}
           style={{ borderRadius: "10px", width: "730px", height: "450px" }}
-        >
-          <video
-            ref={player}
-            onTimeUpdate={updateTimeElapsed}
-            onClick={() => {
-              if (isPlaying) {
-                handlepause();
-                setisPlaying(false);
-              }
-              if (!isPlaying) {
-                handleplay();
-                setisPlaying(true);
-              }
-            }}
-            poster={Episode.PreviewImg}
-            controls={isFullScreen ? true : false}
-            controlsList={"nodownload"}
-            style={{ width: 730, height: 450 }}
-            src={Episode.Video}
-          ></video>
-        </div>
+        > */}
+        <video
+          ref={player}
+          onTimeUpdate={updateTimeElapsed}
+          onMouseEnter={() => setshowControlBar(true)}
+          onMouseLeave={() => setshowControlBar(false)}
+          onClick={() => {
+            if (isPlaying) {
+              handlepause();
+              setisPlaying(false);
+            }
+            if (!isPlaying) {
+              handleplay();
+              setisPlaying(true);
+            }
+          }}
+          poster={Episode.PreviewImg}
+          controls={isFullScreen ? true : false}
+          controlsList={"nodownload"}
+          class="video"
+          src={Episode.Video}
+        ></video>
+        {/* </div> */}
 
         <div
           className={`${
@@ -174,7 +177,7 @@ const Header = () => {
             onMouseLeave={() => setshowControlBar(false)}
             className="flex relative bg-white   mt-12"
           >
-            <section className=" absolute bottom-[385px] cursor-pointer right-[5px] z-10 bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
+            <section className=" absolute bottom-[355px] cursor-pointer right-[5px] z-10 bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]">
               <div
                 onClick={toggleFullScreen}
                 className="absolute right-[11px] top-[11.5px]"
@@ -193,10 +196,10 @@ const Header = () => {
             onMouseLeave={() => setshowControlBar(false)}
             className="flex relative   "
           >
-            <div className="absolute w-[730px] h-[60px]  bg-gradient-to-t from-[#000000cc] bottom-[100px] to-[#0000]"></div>
-            <div className="absolute w-[730px] h-[60px]  bg-gradient-to-b from-[#000000cc] top-[-432px] to-[#0000]"></div>
+            <div className="absolute w-[730px] h-[60px]  bg-gradient-to-t from-[#000000cc] bottom-[80px] to-[#0000]"></div>
+            <div className="absolute w-[730px] h-[60px]  bg-gradient-to-b from-[#000000cc] top-[-400px] to-[#0000]"></div>
 
-            <section className=" absolute bg-[#00121ad2] w-[155px] h-[40px] rounded-[50px] bottom-[110px] left-[50px] text-[#fff]">
+            <section className=" absolute bg-[#00121ad2] w-[155px] h-[40px] rounded-[50px] bottom-[80px] left-[50px] text-[#fff]">
               <p className="absolute top-[8.5px] right-[6px]">
                 {" "}
                 {durationTime.hours}:{durationTime.minutes}:
@@ -206,7 +209,7 @@ const Header = () => {
             </section>
             <section
               onClick={handlemute}
-              className="cursor-pointer absolute bottom-[110px] right-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
+              className="cursor-pointer absolute bottom-[80px] right-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
             >
               <div className={`absolute right-[11px] top-[11.5px]`}>
                 <Volume />
@@ -230,7 +233,7 @@ const Header = () => {
               className={`transform transition-opacity duration-500  ${
                 isPlaying
                   ? "opacity-0"
-                  : "opacity-100 cursor-pointer absolute bottom-[110px] left-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
+                  : "opacity-100 cursor-pointer absolute bottom-[80px] left-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
               }`}
             >
               <div className="absolute right-[8px] top-[11.5px]">
@@ -245,7 +248,7 @@ const Header = () => {
               className={`transform transition-opacity duration-500 ${
                 !isPlaying
                   ? "opacity-0"
-                  : "opacity-100 cursor-pointer absolute bottom-[110px] left-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
+                  : "opacity-100 cursor-pointer absolute bottom-[80px] left-[5px] bg-[#00121ad2] w-[40px] h-[40px] rounded-[50%]"
               }`}
             >
               <div className="absolute right-[11px] top-[11px]">
@@ -253,7 +256,7 @@ const Header = () => {
               </div>
             </section>
             <div className=" relative  mt-20">
-              <div class="absolute rotate-180 right-[px] top-[-113px]">
+              <div class="absolute z-[] rotate-180 right-[px] top-[-87px]">
                 <progress
                   className="w-[730px] h-2  appearance-none cursor-pointer bg-[#] accent-[#]"
                   id="progress-bar"
@@ -262,7 +265,7 @@ const Header = () => {
                   max={maxbar}
                 ></progress>
               </div>
-              <div className="absolute z-10 rotate-180 right-[px] top-[-113px]">
+              <div className="absolute z-10 rotate-180 right-[px] top-[-87px]">
                 <input
                   className="w-[730px] h-2  appearance-none cursor-pointer bg-[#0000003d] accent-[#dadada]"
                   id="seek"
@@ -275,7 +278,7 @@ const Header = () => {
                 />
               </div>
 
-              <div className="absolute flex justify-center right-[50px] top-[-150px] bg-[#00121ad2] w-[150px] h-[40px] rounded-[50px]">
+              <div className="absolute flex justify-center right-[50px] top-[-120px] bg-[#00121ad2] w-[150px] h-[40px] rounded-[50px]">
                 <input
                   className=" cursor-pointer accent-gray-400 "
                   id="volume"
@@ -353,7 +356,10 @@ const Header = () => {
             </div>
             <div className="flex">
               <h6 className="">در حال تماشا</h6>
-              <span className="w-[10px] h-[10px] rounded-[50%] bg-[#00FF85] mr-[10px] mt-[5px]"></span>
+              <span class="flex mr-[10px] mt-[5px] h-3 w-3">
+                <span class="animate-ping  absolute inline-flex h-3 w-3 rounded-full bg-[#00FF85] opacity-75"></span>
+                <span class="relative inline-flex  rounded-full h-3 w-3 bg-[#00FF85]"></span>
+              </span>
             </div>
           </section>
           <section>

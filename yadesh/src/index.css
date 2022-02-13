@@ -24,3 +24,8 @@ progress::-webkit-progress-value {
 progress {
   color: #dadada;
 }
+
+.video {
+  width: 730px !important;
+  height: 400px !important;
+}

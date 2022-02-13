@@ -2,12 +2,23 @@ import MyListImg from "../../assets/Img/MyListImg.png";
 import _3Dots from "../../assets/svg/3Dots";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
   const data = siteManagmentDatabase.MyProgress.MyList;
+  let episodesData = [];
+  const episodesDatabase = siteManagmentDatabase.Courses.forEach((Course) => {
+    Course.Episodes.forEach((Episode) => {
+      episodesData.push(Episode);
+    });
+  });
+  let episodes = [];
+  for (let i = 0; i < 6; i++) {
+    episodes.push(episodesData[i]);
+  }
 
   return (
     <div
@@ -26,97 +37,31 @@ export default () => {
           </p>
         </div>
       </div>
-      <div className="w-[100%] flex flex-wrap justify-center mt-[25px]">
-        <div>
-          <img className="w-[310px] h-[310px] " src={MyListImg} />
-          <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-            <_3Dots />
-          </div>
-          <div className=" relative right-[10px] -top-[100px]">
-            <p className="text-[14px]  text-[#ffffff]">
-              برندسازی شخصی - رفتار حرفه ای
-            </p>
-            <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
-              گلاره عباسی، کارآفرین
-            </p>
-          </div>
-        </div>
-        <div>
-          <img className="w-[310px] h-[310px] mr-[70px]" src={MyListImg} />
-          <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-            <_3Dots />
-          </div>
-          <div className=" relative right-[80px] -top-[100px]">
-            <p className="text-[14px]  text-[#ffffff]">
-              برندسازی شخصی - رفتار حرفه ای
-            </p>
-            <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
-              گلاره عباسی، کارآفرین
-            </p>
-          </div>
-        </div>
-        <div>
-          <img className="w-[310px] h-[310px] mr-[70px]" src={MyListImg} />
-          <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-            <_3Dots />
-          </div>
-          <div className=" relative right-[80px] -top-[100px]">
-            <p className="text-[14px]  text-[#ffffff]">
-              برندسازی شخصی - رفتار حرفه ای
-            </p>
-            <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
-              گلاره عباسی، کارآفرین
-            </p>
-          </div>
-        </div>
-        <div>
-          <img className="w-[310px] h-[310px] " src={MyListImg} />
-          <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-            <_3Dots />
-          </div>
-          <div className=" relative right-[10px] -top-[100px]">
-            <p className="text-[14px]  text-[#ffffff]">
-              برندسازی شخصی - رفتار حرفه ای
-            </p>
-            <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
-              گلاره عباسی، کارآفرین
-            </p>
-          </div>
-        </div>
-        <div>
-          <img className="w-[310px] h-[310px] mr-[70px]" src={MyListImg} />
-          <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-            <_3Dots />
-          </div>
-          <div className=" relative right-[80px] -top-[100px]">
-            <p className="text-[14px]  text-[#ffffff]">
-              برندسازی شخصی - رفتار حرفه ای
-            </p>
-            <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
-              گلاره عباسی، کارآفرین
-            </p>
-          </div>
-        </div>
-        <div>
-          <img className="w-[310px] h-[310px] mr-[70px]" src={MyListImg} />
-          <div className=" relative -top-[300px] right-[80px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
-            <_3Dots />
-          </div>
-          <div className=" relative right-[80px] -top-[100px]">
-            <p className="text-[14px]  text-[#ffffff]">
-              برندسازی شخصی - رفتار حرفه ای
-            </p>
-            <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
-              گلاره عباسی، کارآفرین
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center h-[100px] -mt-[30px]">
-        <button className="flex flex-row w-[190px] h-[40px] text-[12px] border-[1.5px] ml-[20px] text-[#ffffff] rounded-[6px] border-[#80FFC2]">
-          <p className="mt-2.5 mr-5">نمایش همه (46 مورد)</p>
-          <span className="mt-[2px] text-[25px] mr-[10px]">+</span>
-        </button>
+      <div className="w-[100%] grid grid-cols-3 align-center place-items-center  mt-[25px]">
+        {episodes.map((item) => {
+          return (
+            <div className="ml-[px]">
+              <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
+                <div className="absolute w-[310px] h-[310px] bg-gradient-to-t from-black to-[#0000]"></div>
+                <img
+                  className="w-[310px] h-[310px] rounded "
+                  src={item.PreviewImg}
+                />
+                <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
+                  <_3Dots />
+                </div>
+                <div className=" relative right-[10px] -top-[110px]">
+                  <p className="text-[14px] w-[310px]   text-[#ffffff]">
+                    {item.EpisodeCategory} - {item.NameOfEpisode}
+                  </p>
+                  <p className="text-[#C4C4C4] mt-[8px] text-[13px]">
+                    {item.TeacherName}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

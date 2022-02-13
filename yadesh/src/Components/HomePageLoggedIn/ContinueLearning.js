@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MainCounter } from "../../Context/Context";
 import MyProgressRocket from "../../assets/svg/MyProgressRocket";
 import Slider from "react-slick";
@@ -10,13 +10,21 @@ const ContinueLearning = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
 
   const data = siteManagmentDatabase.HomePageLogin.ContinueLearning;
+  let episodesData = [];
+  const episodesDatabase = siteManagmentDatabase.Courses.forEach((Course) => {
+    Course.Episodes.forEach((Episode) => {
+      episodesData.push(Episode);
+    });
+  });
+  let episodes = [];
+  for (let i = 0; i < 10; i++) {
+    episodes.push(episodesData[i]);
+  }
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    rtl: false,
     slidesToShow: 4,
-    slidesToScroll: 1,
   };
   return (
     <div
@@ -51,72 +59,26 @@ const ContinueLearning = () => {
 
       <div className="pl-1 mt-24 w-[75%] text-white">
         <Slider {...settings}>
-          <div className="">
-            <img className="w-[200px] rounded" src={conlearnImg1} />
-            <p className="text-right mr-[37px] mt-5 text-[13px]">
-              بازار مالی و شناخت آن
-            </p>
-            <div className="flex ml-14 mt-[10px] text-[#C4C4C4] text-[11px]">
-              <p className=" flex">درس ۱۴ </p>
-              <p className=" text-[35px] px-4 -mt-[25px]">.</p>
-              <p className="flex ">علی الله یاری</p>
-            </div>
-          </div>
-          <div>
-            <img className="w-[200px] rounded" src={conlearnImg1} />
-            <p className="text-right mr-[37px] mt-5 text-[13px]">
-              بازار مالی و شناخت آن
-            </p>
-            <div className="flex ml-14 mt-[10px] text-[#C4C4C4] text-[11px]">
-              <p className=" flex">درس ۱۴ </p>
-              <p className=" text-[35px] px-4 -mt-[25px]">.</p>
-              <p className="flex ">علی الله یاری</p>
-            </div>
-          </div>
-          <div>
-            <img className="w-[200px] rounded" src={conlearnImg1} />
-            <p className="text-right mr-[37px] mt-5 text-[13px]">
-              بازار مالی و شناخت آن
-            </p>
-            <div className="flex ml-14 mt-[10px] text-[#C4C4C4] text-[11px]">
-              <p className=" flex">درس ۱۴ </p>
-              <p className=" text-[35px] px-4 -mt-[25px]">.</p>
-              <p className="flex ">علی الله یاری</p>
-            </div>
-          </div>
-          <div>
-            <img className="w-[200px] rounded" src={conlearnImg1} />
-            <p className="text-right mr-[37px] mt-5 text-[13px]">
-              بازار مالی و شناخت آن
-            </p>
-            <div className="flex ml-14 mt-[10px] text-[#C4C4C4] text-[11px]">
-              <p className=" flex">درس ۱۴ </p>
-              <p className=" text-[35px] px-4 -mt-[25px]">.</p>
-              <p className="flex ">علی الله یاری</p>
-            </div>
-          </div>
-          <div>
-            <img className="w-[200px] rounded" src={conlearnImg1} />
-            <p className="text-right mr-[37px] mt-5 text-[13px]">
-              بازار مالی و شناخت آن
-            </p>
-            <div className="flex ml-14 mt-[10px] text-[#C4C4C4] text-[11px]">
-              <p className=" flex">درس ۱۴ </p>
-              <p className=" text-[35px] px-4 -mt-[25px]">.</p>
-              <p className="flex ">علی الله یاری</p>
-            </div>
-          </div>
-          <div>
-            <img className="w-[200px] rounded" src={conlearnImg1} />
-            <p className="text-right mr-[37px] mt-5 text-[13px]">
-              بازار مالی و شناخت آن
-            </p>
-            <div className="flex ml-14 mt-[10px] text-[#C4C4C4] text-[11px]">
-              <p className=" flex">درس ۱۴ </p>
-              <p className=" text-[35px] px-4 -mt-[25px]">.</p>
-              <p className="flex ">علی الله یاری</p>
-            </div>
-          </div>
+          {episodes.map((item) => {
+            return (
+              <div className="">
+                <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
+                  <img
+                    className="w-[200px] h-[120px] rounded"
+                    src={item.PreviewImg}
+                  />
+                </Link>
+                <p className="text-right mr-[37px] mt-5 text-[13px]">
+                  {item.EpisodeCategory}
+                </p>
+                <div className="flex flex-row justify-end w-[200px] mt-[10px] text-[#C4C4C4] text-[11px]">
+                  <p className=" flex">{item.NameOfEpisode}</p>
+                  <p className=" text-[35px] px-1 -mt-[25px]">.</p>
+                  <p className="flex ">{item.TeacherName}</p>
+                </div>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </div>
