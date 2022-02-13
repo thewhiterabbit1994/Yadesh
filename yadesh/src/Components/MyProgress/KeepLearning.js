@@ -52,7 +52,7 @@ export default () => {
             return (
               <div>
                 <img
-                  className="w-[270px] h-[180px] rounded"
+                  className="w-[270px] h-[180px] object-cover rounded"
                   src={item.PreviewImg}
                 />
                 <div className="relative  -right-[230px] -top-[170px]">

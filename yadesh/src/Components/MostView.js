@@ -50,7 +50,7 @@ const MostView = () => {
           >
             <img
               src={episodesData[7].PreviewImg}
-              className="rounded w-[420px] h-[260px] blur-[2px] bg-current"
+              className="rounded w-[420px] h-[260px] object-cover blur-[2px] bg-current"
             />
 
             <img
@@ -85,7 +85,7 @@ const MostView = () => {
                 <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
                   <img
                     src={item.PreviewImg}
-                    className="rounded w-[175px] h-[120px]"
+                    className="rounded w-[175px] object-cover h-[120px]"
                   />
                 </Link>
                 <div className="leading-7 mt-[0.5rem] ">

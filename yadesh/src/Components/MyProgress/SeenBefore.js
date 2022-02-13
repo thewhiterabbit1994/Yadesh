@@ -49,7 +49,7 @@ export default () => {
               <div className="">
                 <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
                   <img
-                    className="w-[200px] h-[120px] rounded"
+                    className="w-[200px] h-[120px] object-cover rounded"
                     src={item.PreviewImg}
                   />
                 </Link>
@@ -62,7 +62,7 @@ export default () => {
                   <p className="flex ">{item.TeacherName}</p>
                 </div>
                 <p className="text-[#C4C4C4] text-[11px] text-right mr-[30px]">
-                  ۱۸ دقیقه
+                  {item.TimeOfEpisode}
                 </p>
               </div>
             );

@@ -127,7 +127,7 @@ const TodaySpecialCourses = () => {
             console.log("item", item);
             return (
               <div>
-                <img className="rounded-lg" src={item.CourseImg} />
+                <img className="rounded-lg object-cover" src={item.CourseImg} />
               </div>
             );
           })}

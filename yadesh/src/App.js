@@ -66,7 +66,7 @@ function App() {
             path="/home/signupforbusiness"
             element={<SignUpForBusiness />}
           />
-          <Route path="/home/playerepisode" element={<PlayerEpisode />} />
+
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/home/PlayerEpisode/:id" element={<PlayerEpisode />} />
           <Route path="/home/contactsupport" element={<ContactSupport />} />
