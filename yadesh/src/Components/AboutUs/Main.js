@@ -13,6 +13,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
+import { Link } from "react-router-dom";
 
 let DefaultIcon = L.icon({
   iconUrl: icon,
@@ -34,9 +35,8 @@ const Main = () => {
     <section className="w-full h-[1700px] bg-[#000]">
       <section className="w-[600px] m-auto text-center leading-[30px] ">
         <div
-          className={`mb-[20px] m-auto flex justify-center ${
-            visiondata.isLogoDisplayed ? "" : "hidden"
-          }`}
+          className={`mb-[20px] m-auto flex justify-center ${visiondata.isLogoDisplayed ? "" : "hidden"
+            }`}
         >
           <Dart />
         </div>
@@ -48,9 +48,8 @@ const Main = () => {
       <div className="bg-gradient-to-r mt-[50px] h-[2px] w-[70%] m-auto from-[#0004052d] via-[#E6E9EB] to-[#0004052a]"></div>
       <section className="w-[600px]   m-auto text-center leading-[30px]">
         <div
-          className={`m-auto flex justify-center my-[50px] ${
-            missiondata.isLogoDisplayed ? "" : "hidden"
-          }`}
+          className={`m-auto flex justify-center my-[50px] ${missiondata.isLogoDisplayed ? "" : "hidden"
+            }`}
         >
           <Tick />
         </div>
@@ -62,9 +61,8 @@ const Main = () => {
       <div className="bg-gradient-to-r mt-[50px] h-[2px] w-[70%] m-auto from-[#0004052d] via-[#E6E9EB] to-[#0004052a]"></div>
       <section className="w-[600px]   m-auto text-center leading-[30px]">
         <div
-          className={` m-auto flex justify-center my-[50px] ${
-            identifydata.isLogoDisplayed ? "" : "hidden"
-          }`}
+          className={` m-auto flex justify-center my-[50px] ${identifydata.isLogoDisplayed ? "" : "hidden"
+            }`}
         >
           <Person />
         </div>
@@ -115,9 +113,8 @@ const Main = () => {
         </div>
       </section>
       <section
-        className={`${
-          supportdata.isDisplayed ? "" : "hidden"
-        } w-full bg-[#000E14] h-[270px] flex flex-col justify-center items-center leading-[40px]`}
+        className={`${supportdata.isDisplayed ? "" : "hidden"
+          } w-full bg-[#000E14] h-[270px] flex flex-col justify-center items-center leading-[40px]`}
       >
         <div>
           <p className="text-[#E6FFF3] text-[20px]">{supportdata.title}</p>
@@ -125,10 +122,13 @@ const Main = () => {
         </div>
         <div className="border-b-4 border-[#00FF85] w-[15px] rounded-xl mt-[10px]"></div>
         <div>
-          <button className=" mt-[30px] text-[12px] text-[#E6FFF3] w-[130px] h-[40px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px]  ">
-            {" "}
-            تماس با پشتیبانی
-          </button>
+          <Link to="/home/contactsupport">
+            <button className=" mt-[30px] text-[12px] text-[#E6FFF3] w-[130px] h-[40px] rounded-[6px] border-solid border-[#80ffc2] border-[1.5px]  ">
+              {" "}
+              تماس با پشتیبانی
+            </button>
+          </Link>
+
         </div>
       </section>
     </section>

@@ -30,6 +30,7 @@ const Header = () => {
   const Course = Coursedata.filter(
     (Course) => Course.CourseID === Episode.CourseID
   );
+
   let forIndex = 0;
   if (Course[0].Episodes.length < 4) {
     forIndex = Course[0].Episodes.length;

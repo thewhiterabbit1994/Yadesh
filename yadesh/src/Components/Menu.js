@@ -83,14 +83,16 @@ export default ({ menuDisplay }) => {
         </div>
         <div className="flex justify-between mt-[15px] w-[10px]">
           <div>
-            <button className=" flex  mt-[11px] w-[150px] h-[35px] rounded-[4px] text-[#B3BDC2]">
-              <div className=" text-[#939fa5] mt-[9px] opacity-80">
-                <Info />
-              </div>
-              <p className="my-[9px] w-[74px] h-[19px] text-[12.5px] ">
-                درباره ما
-              </p>
-            </button>
+            <Link to="/aboutus">
+              <button className=" flex  mt-[11px] w-[150px] h-[35px] rounded-[4px] text-[#B3BDC2]">
+                <div className=" text-[#939fa5] mt-[9px] opacity-80">
+                  <Info />
+                </div>
+                <p className="my-[9px] w-[74px] h-[19px] text-[12.5px] ">
+                  درباره ما
+                </p>
+              </button>
+            </Link>
           </div>
           <div>
             <button className=" flex -mr-[30px] mt-[11px] w-[150px] h-[35px] rounded-[4px] text-[#B3BDC2]">
