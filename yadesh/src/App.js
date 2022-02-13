@@ -47,6 +47,8 @@ import AddCourse from "./Components/Modals/AddCourse";
 import AddEpisode from "./Components/Modals/AddEpisode";
 import AddNewSubscription from "./Components/Modals/AddNewSubscription";
 import CompanySubMenu from "./Components/Modals/CompanySubMenu";
+import MessageFailed from "../src/Components/Messaeg/MessageFailed"
+import MessageSucsses from "../src/Components/Messaeg/MessageSucsses"
 
 function App() {
   return (
@@ -68,13 +70,16 @@ function App() {
           <Route path="/home/PlayerEpisode/:id" element={<PlayerEpisode />} />
           <Route path="/home/contactsupport" element={<ContactSupport />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />}/>
+          <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
           <Route path="/adminlogin/entercode" element={<EnterCode />} />
           <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
           <Route path="/adminlogin/succsess" element={<Succses />} />
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
           <Route path="/AddNewUser" element={<AddNewUser />} />
           <Route path="/AddCourse" element={<AddCourse />} />
+          <Route path="/MessageSucsses" element={<MessageSucsses
+            text={"دانلود فایل  Excel با خطا مواجه شد"} />} />
+
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />

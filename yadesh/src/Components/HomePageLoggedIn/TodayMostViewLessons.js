@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
-import "slick-carousel/slick/slick.css";
 import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
-import LogoPlay from "../../assets/Img/MostVeiw/logoPlay.svg";
-import bgLogoPlay from "../../assets/Img/MostVeiw/bgLogoPlay.png";
+import BgArrow from "../../assets/svg/adminPanelEpisode/BgArrow"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const TodayMostViewLessons = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
@@ -32,7 +32,7 @@ const TodayMostViewLessons = () => {
         </div>
       </div>
 
-      <div className="mr-[55px] mt-7 w-[90%] text-white">
+      <div className="mr-[55px] mt-7 w-[90%] text-white relative ">
         <Slider {...settings}>
           <div className="">
             <img
