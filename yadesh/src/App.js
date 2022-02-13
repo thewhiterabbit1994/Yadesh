@@ -15,7 +15,6 @@ import Login from "./Pages/Login";
 import Course from "./Pages/Course";
 import SignUpForBusiness from "./Pages/SignUpForBusiness";
 import PlayerEpisode from "./Pages/PlayerEpisode";
-import PlayerCourse from "./Pages/PlayerCourse";
 import AboutUs from "./Pages/AboutUs";
 import AdminDashboardLayout from "./Pages/AdminDashboard/AdminDashboardLayout";
 import ContactSupport from "./Pages/ContactSupport";
@@ -47,8 +46,8 @@ import AddCourse from "./Components/Modals/AddCourse";
 import AddEpisode from "./Components/Modals/AddEpisode";
 import AddNewSubscription from "./Components/Modals/AddNewSubscription";
 import CompanySubMenu from "./Components/Modals/CompanySubMenu";
-import MessageFailed from "../src/Components/Messaeg/MessageFailed"
-import MessageSucsses from "../src/Components/Messaeg/MessageSucsses"
+import MessageFailed from "../src/Components/Messaeg/MessageFailed";
+import MessageSucsses from "../src/Components/Messaeg/MessageSucsses";
 
 function App() {
   return (
@@ -62,30 +61,41 @@ function App() {
           <Route path="/home/myprogress" element={<MyProgress />} />
           <Route path="/home/userprofile" element={<UserProfile />} />
           <Route path="home/forbusiness" element={<ForBusiness />} />
-          <Route path="/home/course" element={<Course />} />
-          <Route path="/home/signupforbusiness" element={<SignUpForBusiness />} />
+          <Route path="/home/course/:id" element={<Course />} />
+          <Route
+            path="/home/signupforbusiness"
+            element={<SignUpForBusiness />}
+          />
           <Route path="/home/playerepisode" element={<PlayerEpisode />} />
-          <Route path="/home/playercourse" element={<PlayerCourse />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/home/PlayerEpisode/:id" element={<PlayerEpisode />} />
           <Route path="/home/contactsupport" element={<ContactSupport />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/adminlogin/forgotpassword" element={<ForgotPassword />} />
+          <Route
+            path="/adminlogin/forgotpassword"
+            element={<ForgotPassword />}
+          />
           <Route path="/adminlogin/entercode" element={<EnterCode />} />
           <Route path="/adminlogin/failuremodal" element={<FailureModal />} />
           <Route path="/adminlogin/succsess" element={<Succses />} />
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
           <Route path="/AddNewUser" element={<AddNewUser />} />
           <Route path="/AddCourse" element={<AddCourse />} />
-          <Route path="/MessageSucsses" element={<MessageSucsses
-            text={"دانلود فایل  Excel با خطا مواجه شد"} />} />
-
+          <Route
+            path="/MessageSucsses"
+            element={
+              <MessageSucsses text={"دانلود فایل  Excel با خطا مواجه شد"} />
+            }
+          />
 
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />
             <Route path="listofcompanies" element={<AdminPanelCompany />} />
             <Route path="userlist" element={<AdminPanelUser />} />
-            <Route path="subscriptionmanagment" element={<AdminPanelSubscription />} />
+            <Route
+              path="subscriptionmanagment"
+              element={<AdminPanelSubscription />}
+            />
             <Route path="episode" element={<AdminPanelEpisode />} />
             <Route path="courses" element={<AdminPanelCourses />} />
             <Route path="factor" element={<AdminPanelFactor />} />

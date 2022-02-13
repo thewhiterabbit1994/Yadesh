@@ -11,6 +11,7 @@ import Bookmark from "../../assets/svg/Bookmark";
 import Speakermute from "../../assets/svg/Speakermute";
 import { useContext, useState } from "react";
 import { MainCounter } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 const TodaySpecialCourses = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
@@ -80,18 +81,22 @@ const TodaySpecialCourses = () => {
           </p>
         </div>
         <div className="mt-7 flex">
-          <button className="flex flex-row w-[135px] h-[40px] text-[12px] border-[1.5px] ml-[20px] text-[#ffffff] rounded-[6px] border-[#80FFC2]">
-            <div className="mt-2.5 mr-4">
-              <Hat />
-            </div>
-            <p className="mt-2.5 mr-3">برو به کلاس</p>
-          </button>
-          <button className="flex w-[135px] h-[40px] text-[12px] rounded-[6px] bg-[#00FF85] ">
-            <div className="mt-3 mr-6">
-              <BtnPlay />
-            </div>
-            <p className="mt-3 mr-3"> شروع دوره</p>
-          </button>
+          <Link to={`/home/course/${threeOfCourses[index].CourseID}`}>
+            <button className="flex flex-row w-[135px] h-[40px] text-[12px] border-[1.5px] ml-[20px] text-[#ffffff] rounded-[6px] border-[#80FFC2]">
+              <div className="mt-2.5 mr-4">
+                <Hat />
+              </div>
+              <p className="mt-2.5 mr-3">برو به کلاس</p>
+            </button>
+          </Link>
+          <Link to={`/home/course/${threeOfCourses[index].CourseID}`}>
+            <button className="flex w-[135px] h-[40px] text-[12px] rounded-[6px] bg-[#00FF85] ">
+              <div className="mt-3 mr-6">
+                <BtnPlay />
+              </div>
+              <p className="mt-3 mr-3"> شروع دوره</p>
+            </button>
+          </Link>
         </div>
       </div>
       <section className=" mt-[70px] rounded-lg mr-[120px] w-[670px]">

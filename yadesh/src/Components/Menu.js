@@ -17,7 +17,7 @@ import LinkedinLogo from "../assets/svg/LinkedinLogo";
 export default ({ menuDisplay }) => {
   return (
     <div
-      className={`menu absolute mt-[10vh] h-[460px] w-screen z-10 rounded-b-[10px] bg-[#17313c] 
+      className={`menu absolute mt-[57px] h-[460px] w-screen z-10 rounded-b-[10px] bg-[#17313c] 
       `}
       style={{
         top: menuDisplay ? "0" : "-100vh",

@@ -1,4 +1,8 @@
 import { createContext, useState } from "react";
+import andre from "../assets/Img/Teachers/alex.png";
+import panahi from "../assets/Img/Teachers/derick.png";
+import jabbari from "../assets/Img/Teachers/foto.png";
+import poyakian from "../assets/Img/Teachers/philip.png";
 import imgUser from "../assets/Img/AdminPanelCourses/imgUser.jpg";
 import classs from "../assets/Img/imgHomeNotLogin/class.jpg";
 import asnad from "../assets/Img/imgHomeNotLogin/asnad.jpg";
@@ -395,6 +399,28 @@ const Context = (props) => {
             EpisodeID: "E-kzk13tsjhb8iicrx9ft",
           },
         ],
+      },
+    ],
+    Teachers: [
+      {
+        TeacherName: "آندره نیگوا",
+        Carrier: "برنامه نویس سنیور",
+        TeacherImg: andre,
+      },
+      {
+        TeacherName: "داوود پناهی",
+        Carrier: "دکترای ایمنی ساختمان و معدن",
+        TeacherImg: panahi,
+      },
+      {
+        TeacherName: "جواد جباری",
+        Carrier: "دکترای برق",
+        TeacherImg: jabbari,
+      },
+      {
+        TeacherName: "مصطفی پویا کیان",
+        Carrier: "دکترای ایمنی",
+        TeacherImg: poyakian,
       },
     ],
     HomePageNotLogin: {

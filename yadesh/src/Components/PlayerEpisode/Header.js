@@ -131,7 +131,7 @@ const Header = () => {
   return (
     <section className="w-full h-[1300px] bg-[#000] flex">
       <div className="w-[800px] mt-[80px] mr-[50px] relative h-[450px]">
-        <section className="text-[#fff] text-[20px] mr-[15px] mt-[15px]">
+        <section className="text-[#fff] text-[20px] mr-[15px] my-[15px]">
           <h6>
             {Episode.EpisodeCategory} - {Episode.NameOfEpisode}
           </h6>

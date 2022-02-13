@@ -40,7 +40,7 @@ const PopularCourses = () => {
           <Ellipse />
         </div>
         <div className="relative">
-          <Link to="/home/course" className="">
+          <Link to={`/home/course/${coursedata[0].CourseID}`} className="">
             <img
               className={`transform transition-all duration-1000 w-[150px] object-cover object-right  ${
                 index === 0
@@ -114,7 +114,7 @@ const PopularCourses = () => {
         </div>
 
         <div className="relative mr-[15px]">
-          <Link to="/home/course" className="">
+          <Link to={`/home/course/${coursedata[1].CourseID}`} className="">
             <img
               className={`transform transition-all duration-1000 w-[150px] object-cover object-right  ${
                 index === 1
@@ -188,7 +188,7 @@ const PopularCourses = () => {
         </div>
 
         <div className="relative mr-[15px]">
-          <Link to="/home/course" className="">
+          <Link to={`/home/course/${coursedata[2].CourseID}`} className="">
             <img
               className={`transform transition-all duration-1000 w-[150px] object-cover object-right  ${
                 index === 2
@@ -262,7 +262,7 @@ const PopularCourses = () => {
         </div>
 
         <div className=" relative mr-[15px] ">
-          <Link to="/home/course" className="">
+          <Link to={`/home/course/${coursedata[3].CourseID}`} className="">
             <img
               className={`transform transition-all duration-1000 w-[150px] object-cover object-right  ${
                 index === 3

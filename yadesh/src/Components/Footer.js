@@ -19,6 +19,23 @@ const Footer = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
 
   const data = siteManagmentDatabase.Footer;
+  let allEpisode = [];
+  const allEpisodedata = siteManagmentDatabase.Courses.forEach((Course) => {
+    Course.Episodes.forEach((Episode) => {
+      allEpisode.push(Episode);
+    });
+  });
+  const fiveOfEpisodes = [];
+  for (let i = 0; i < 5; i++) {
+    fiveOfEpisodes.push(allEpisode[i]);
+  }
+  const allCourses = siteManagmentDatabase.Courses;
+  const fiveOfCourses = [];
+  for (let i = 0; i < 5; i++) {
+    fiveOfCourses.push(allCourses[i]);
+  }
+
+  console.log("fiveOfCourses", fiveOfCourses);
   return (
     <div className=" w-full h-[567px] bg-[#000405] ">
       <div className="flex justify-between mr-[65px] pt-[30px] ">
@@ -52,10 +69,11 @@ const Footer = () => {
       </div>
       <div className="flex ">
         <div
-          className={`${data.exploreInYadesh
-            ? " w-[208px]  h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]"
-            : "hidden"
-            }`}
+          className={`${
+            data.exploreInYadesh
+              ? " w-[208px]  h-[300px] mr-[65px] mt-[40px] divide-y divide-[#373b3c]"
+              : "hidden"
+          }`}
         >
           <p className="text-[13px] mb-3 text-[#E6FFF3] ">گردش در یادش</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
@@ -72,7 +90,7 @@ const Footer = () => {
               <Link to="/home/course">
                 <a className="">کلاس ها</a>
               </Link>
-              <Link to="/home/playerepisode">
+              <Link to="/home/myprogress">
                 <a className="">پلی لیست های من</a>
               </Link>
             </div>
@@ -87,42 +105,52 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className={`${data.FavoriteEpisodes
-            ? "w-[120px] h-[300px] mr-[40px]  mt-[40px] divide-y divide-[#373b3c]"
-            : "hidden"
-            } `}
+          className={`${
+            data.FavoriteEpisodes
+              ? "w-[120px] h-[300px] mr-[40px]  mt-[40px] divide-y divide-[#373b3c]"
+              : "hidden"
+          } `}
         >
           <p className="text-[13px]  mb-3 text-[#E6FFF3]">اپیزود های محبوب</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
-              <a className="my-4">اقتصاد الکترونیک</a>
-              <a className="my-4">مبانی تجارت</a>
-              <a className="my-4">حسابداری صنعتی</a>
-              <a className="my-4">اصول سرمایه گذاری</a>
-              <a className="my-4">اقتصاد کلان</a>
+              {fiveOfEpisodes.map((item) => {
+                return (
+                  <Link
+                    className="my-4"
+                    to={`/home/PlayerEpisode/${item.EpisodeID}`}
+                  >
+                    <a className="my-4">{item.NameOfEpisode}</a>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
         <div
-          className={`${data.bestCourses
-            ? "w-[130px] h-[300px] mr-[40px] mt-[40px] divide-y divide-[#373b3c]"
-            : "hidden"
-            } `}
+          className={`${
+            data.bestCourses
+              ? "w-[150px] h-[300px] mr-[40px] mt-[40px] divide-y divide-[#373b3c]"
+              : "hidden"
+          } `}
         >
           <p className="text-[13px] mb-3 text-[#E6FFF3]">دوره های برتر</p>
           <div className="flex flex-row text-[13px] text-[#626464] ">
             <div className="flex flex-col">
-              <a className="my-4">سواد بصری</a>
-              <a className="my-4">مبانی تجارت</a>
-              <a className="my-4">اقتصاد الکترونیک</a>
-              <a className="my-4">اصول سخنوری</a>
-              <a className="my-4">برنامه نویسی اندروید</a>
+              {fiveOfCourses.map((item) => {
+                return (
+                  <Link className="my-4" to={`/home/course/${item.CourseID}`}>
+                    <a className="my-4">{item.CourseCategory}</a>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
         <div
-          className={`${data.contactInfo ? "mt-12 w-[400px] mr-[205px]" : "hidden"
-            } `}
+          className={`${
+            data.contactInfo ? "mt-12 w-[400px] mr-[205px]" : "hidden"
+          } `}
         >
           <div className="flex">
             <div className="w-[6px] h-[15px] bg-[#00FF85] rounded-[10px] mt-1 ml-2"></div>

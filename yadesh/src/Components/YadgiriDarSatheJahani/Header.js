@@ -10,6 +10,7 @@ const Header = () => {
 
   const herodata = siteManagmentDatabase.YadeshForOrganization.hero;
   const teacherdata = siteManagmentDatabase.YadeshForOrganization.Teachers;
+  const teachers = siteManagmentDatabase.Teachers;
   return (
     <div className="bg-[#000]">
       <section className="relative h-[600px] ">
@@ -57,96 +58,25 @@ const Header = () => {
           <div className="border-t-[7px] w-[20px] rounded border-[#00FF85]"></div>
         </div>
         <div className="flex bg-[#000] w-[100%] h-[80vh] justify-center">
-          <div className="relative text-[#E6E9EB]">
-            <img
-              src={manPng}
-              className=" w-[180px] h-[380px]  ml-[20px] rounded-lg relative"
-            />
-            <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[90%] h-[380px] rounded-lg"></div>
-            <h6 className="absolute top-[300px] left-[52px] text-[14px]">
-              {" "}
-              شهاب علی بخشی{" "}
-            </h6>
-            <h6 className="absolute top-[340px] left-[65px] text-[12px] text-[#C4C4C4]">
-              {" "}
-              مشاور رسانه ای{" "}
-            </h6>
-          </div>
-          <div className="relative text-[#E6E9EB]">
-            <img
-              src={manPng}
-              className=" relative w-[180px] h-[380px] ml-[20px] rounded-lg"
-            />
-            <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[90%] h-[380px] rounded-lg"></div>
-            <h6 className="absolute top-[300px] left-[52px] text-[14px]">
-              {" "}
-              شهاب علی بخشی{" "}
-            </h6>
-            <h6 className="absolute top-[340px] left-[65px] text-[12px] text-[#C4C4C4]">
-              {" "}
-              مشاور رسانه ای{" "}
-            </h6>
-          </div>
-          <div className="relative text-[#E6E9EB]">
-            <img
-              src={manPng}
-              className=" relative w-[180px] h-[380px]  ml-[20px] rounded-lg"
-            />
-            <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[90%] h-[380px] rounded-lg"></div>
-            <h6 className="absolute top-[300px] left-[52px] text-[14px]">
-              {" "}
-              شهاب علی بخشی{" "}
-            </h6>
-            <h6 className="absolute top-[340px] left-[65px] text-[12px] text-[#C4C4C4]">
-              {" "}
-              مشاور رسانه ای{" "}
-            </h6>
-          </div>
-          <div className="relative text-[#E6E9EB]">
-            <img
-              src={manPng}
-              className="relative w-[180px] h-[380px] rounded-lg ml-[20px]"
-            />
-            <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[90%] h-[380px] rounded-lg"></div>
-            <h6 className="absolute top-[300px] left-[52px] text-[14px]">
-              {" "}
-              شهاب علی بخشی{" "}
-            </h6>
-            <h6 className="absolute top-[340px] left-[65px] text-[12px] text-[#C4C4C4]">
-              {" "}
-              مشاور رسانه ای{" "}
-            </h6>
-          </div>
-          <div className="relative text-[#E6E9EB]">
-            <img
-              src={manPng}
-              className="relative w-[180px] h-[380px] rounded-lg ml-[20px]"
-            />
-            <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[90%] h-[380px] rounded-lg"></div>
-            <h6 className="absolute top-[300px] left-[52px] text-[14px]">
-              {" "}
-              شهاب علی بخشی{" "}
-            </h6>
-            <h6 className="absolute top-[340px] left-[65px] text-[12px] text-[#C4C4C4]">
-              {" "}
-              مشاور رسانه ای{" "}
-            </h6>
-          </div>
-          <div className="relative text-[#E6E9EB]">
-            <img
-              src={manPng}
-              className="ralative w-[180px] h-[380px] rounded-lg"
-            />
-            <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[100%] h-[380px] rounded-lg"></div>
-            <h6 className="absolute top-[300px] left-[45px] text-[14px]">
-              {" "}
-              شهاب علی بخشی{" "}
-            </h6>
-            <h6 className="absolute top-[340px] left-[55px] text-[#C4C4C4] text-[12px] text-center ">
-              {" "}
-              مشاور رسانه ای{" "}
-            </h6>
-          </div>
+          {teachers.map((teacher) => {
+            return (
+              <div className="relative  text-[#E6E9EB]">
+                <img
+                  src={teacher.TeacherImg}
+                  className=" w-[180px] h-[380px]  ml-[20px] rounded-lg relative"
+                />
+                <div className="absolute bg-gradient-to-t top-[0] from-[#00121A] via-[#00121a88] to-[#00121a00] w-[90%] h-[380px] rounded-lg"></div>
+                <div className="flex flex-col mr-[-20px] items-center">
+                  <h6 className="absolute top-[300px]  text-[14px]">
+                    {teacher.TeacherName}
+                  </h6>
+                  <h6 className="absolute top-[340px]  text-[12px] text-[#C4C4C4]">
+                    {teacher.Carrier}
+                  </h6>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>
