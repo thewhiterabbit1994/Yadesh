@@ -101,7 +101,7 @@ const TodaySpecialCourses = () => {
           </Link>
         </div>
       </div>
-      <section className=" mt-[70px] rounded-lg mr-[50px] w-[670px]">
+      <section className="absolute left-[40px] mt-[70px] rounded-lg mr-[50px] w-[670px]">
         <div className="flex w-[670px] justify-between">
           <p className="relative rounded text-[12px] mr-5 py-2  text-[#fff] w-fit px-3 h-[32px] bg-[#7b9199] top-[55px] z-10 ">
             {threeOfCourses[index].CourseCategory}
@@ -138,7 +138,7 @@ const TodaySpecialCourses = () => {
           onClick={() => {
             slider?.current?.slickPrev();
           }}
-          className="absolute top-[290px] left-[5.46875vw] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+          className="absolute top-[220px] left-[20px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
         >
           <PrevIcon />
         </div>
@@ -146,7 +146,7 @@ const TodaySpecialCourses = () => {
           onClick={() => {
             slider?.current?.slickNext();
           }}
-          className="absolute top-[290px] left-[53.125vw] bg-[#a29688] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+          className="absolute top-[220px] left-[620px] bg-[#a29688] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
         >
           <PrevIcon />
         </div>
