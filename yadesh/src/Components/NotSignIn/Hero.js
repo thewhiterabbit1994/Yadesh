@@ -6,6 +6,8 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const Hero = () => {
   const [uploadImg1, setuploadImg1] = useState(null);
@@ -13,6 +15,9 @@ const Hero = () => {
   const [uploadImg3, setuploadImg3] = useState(null);
   const [uploadImg4, setuploadImg4] = useState(null);
   const [uploadImg5, setuploadImg5] = useState(null);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
+
 
   const getUploadParams1 = ({ meta }) => {
     return { url: "https://httpbin.org/post" };
@@ -112,8 +117,21 @@ const Hero = () => {
       database.HomePageNotLogin.hero.imagery.img5 = uploadImg5.previewUrl;
 
     setsiteManagmentDatabase(database);
-  };
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
 
+  };
+  
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[600px] bg-[#F5F5F5] flex justify-around rounded mt-[10px]">
       <section className="w-[35%]">
@@ -402,6 +420,12 @@ const Hero = () => {
             حداکثر اندازه عکس مورد نظر باید 1366 * 768 باشد و برش عکس به صورت
             اتوماتیک مطابق با سایز container باشد.
           </p>
+        </div>
+        <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[20px] transition-all duration-[500ms]"}`}>
+          <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+        </div>
+        <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[20px] transition-all duration-[500ms]"}`}>
+          <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
         </div>
         <div className="w-[170px] m-auto mt-12">
           <button

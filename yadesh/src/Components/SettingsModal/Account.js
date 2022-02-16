@@ -2,13 +2,18 @@ import { useState } from "react"
 import userProfile from "../../assets/Img/UserProfileImg.jpg"
 import Trash from "../../assets/svg/AdminPanelCourses/Trash"
 import ParchamIran from "../../assets/svg/AdminPanelCourses/ParchamIran"
-const Account = () => {
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+const Account = ({setSettingsModal , settingsModal}) => {
     const [name, setName] = useState("")
     const [lastName, setLastName] = useState("")
-
     const [phone, setPhone] = useState("")
     const [email, setEmail] = useState("")
-
+    const [SavedChangesModal, setSavedChangesModal] = useState(false)
+    setTimeout(() => {
+        if (SavedChangesModal === true) {
+            setSavedChangesModal(false)
+        }
+    }, 4000)
     return (
         <section className="text-[12px] mt-[50px]">
             <div>
@@ -111,11 +116,17 @@ const Account = () => {
                     </div>
                 </section>
             </section>
+            <div className={`${!SavedChangesModal ? "absolute bottom-[-100px]" : "absolute bottom-[10px] left-[450px] transition-all duration-[500ms]"}`}>
+                <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
             <div className="w-[92%]  bg-[#4e50501c] rounded-lg h-1 mt-[30px] ml-[170px]"> </div>
             <section className="text-[12px] text-[#fff] w-[210px] flex justify-between mt-[20px] absolute left-[70px]">
                 <button
-                className="w-[100px] h-[35px] rounded bg-[#4e50505d] text-[#000]">لغو </button>
-                <button className="w-[100px] h-[35px] rounded bg-[#008043]">ذخیره کردن</button>
+                onClick={()=>setSettingsModal(false)}
+                    className="w-[100px] h-[35px] rounded bg-[#4e50505d] text-[#000]">لغو </button>
+                <button
+                    onClick={() =>setSavedChangesModal(true)}
+                    className="w-[100px] h-[35px] rounded bg-[#008043]">ذخیره کردن</button>
             </section>
         </section>
     )

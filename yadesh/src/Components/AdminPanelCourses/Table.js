@@ -5,8 +5,11 @@ import EmtyLogo from "../../assets/svg/adminPanelEpisode/EmtyLogo";
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import EditCourse from "../Modals/EditCourse";
 
 const Table = () => {
+  const [EditCourseModal, setEditCourseModal] = useState(false);
+
   const {
     siteManagmentDatabase,
     setsiteManagmentDatabase,
@@ -29,6 +32,7 @@ const Table = () => {
 
   return (
     <section className="w-[97vw]">
+      <EditCourse EditCourseModal={EditCourseModal} setEditCourseModal={setEditCourseModal} />
       {emtyCourse ? (
         <section className=" m-auto text-[12px] text-[#001D29] mr-[120px]">
           <section className="w-full justify-between flex  py-[20px] bg-[#e6e9eb6e] rounded-lg">
@@ -83,91 +87,95 @@ const Table = () => {
             <tbody className="w-full">
               {!showmore
                 ? threeOfCourses.map((item, i) => {
-                    if (clickCount === 3) setShowmore(true);
-                    return (
-                      <tr className="hover:bg-[#e6e9ebc2]">
-                        <td className="text-center">{i + 1}</td>
-                        <td>
-                          <img
-                            src={item.CourseImg}
-                            className="rounded m-auto h-[50px]"
-                          />{" "}
-                        </td>
-                        <td>
-                          <p className="text-center">{item.TeacherName}</p>
-                        </td>
-                        <td>
-                          <p className="text-center text-[#0050A8] font-semibold">
-                            {item.CourseDurationTime}
-                          </p>
-                        </td>
-                        <td className="text-[#0050A8] font-semibold text-center">
-                          {item.NumberOfEpisodes}
-                        </td>
-                        <td>
-                          <p className="text-center">{item.CourseCategory}</p>
-                        </td>
-                        <td className="flex items-center h-[80px]">
-                          <div className="mt-[3px]">
-                            <Edit />{" "}
-                          </div>
-                          <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
-                            ویرایش دوره
-                          </p>
-                          <p
-                            onClick={(i) => {
-                              deleteCourse(i);
-                              setclickCount(clickCount + 1);
-                            }}
-                            className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]"
-                          >
-                            حذف دوره
-                          </p>
-                        </td>
-                      </tr>
-                    );
-                  })
+                  if (clickCount === 3) setShowmore(true);
+                  return (
+                    <tr className="hover:bg-[#e6e9ebc2]">
+                      <td className="text-center">{i + 1}</td>
+                      <td>
+                        <img
+                          src={item.CourseImg}
+                          className="rounded m-auto h-[50px]"
+                        />{" "}
+                      </td>
+                      <td>
+                        <p className="text-center">{item.TeacherName}</p>
+                      </td>
+                      <td>
+                        <p className="text-center text-[#0050A8] font-semibold">
+                          {item.CourseDurationTime}
+                        </p>
+                      </td>
+                      <td className="text-[#0050A8] font-semibold text-center">
+                        {item.NumberOfEpisodes}
+                      </td>
+                      <td>
+                        <p className="text-center">{item.CourseCategory}</p>
+                      </td>
+                      <td className="flex items-center h-[80px]">
+                        <div className="mt-[3px]">
+                          <Edit />{" "}
+                        </div>
+                        <p
+                          onClick={() => setEditCourseModal(true)}
+                          className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
+                          ویرایش دوره
+                        </p>
+                        <p
+                          onClick={(i) => {
+                            deleteCourse(i);
+                            setclickCount(clickCount + 1);
+                          }}
+                          className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]"
+                        >
+                          حذف دوره
+                        </p>
+                      </td>
+                    </tr>
+                  );
+                })
                 : data.map((item, i) => {
-                    return (
-                      <tr className="hover:bg-[#e6e9ebc2]">
-                        <td className="text-center">{i + 1}</td>
-                        <td>
-                          <img
-                            src={item.CourseImg}
-                            className="rounded m-auto h-[50px]"
-                          />{" "}
-                        </td>
-                        <td>
-                          <p className="text-center">{item.TeacherName}</p>
-                        </td>
-                        <td>
-                          <p className="text-center text-[#0050A8] font-semibold">
-                            {item.CourseDurationTime}
-                          </p>
-                        </td>
-                        <td className="text-[#0050A8] font-semibold text-center">
-                          {item.NumberOfEpisodes}
-                        </td>
-                        <td>
-                          <p className="text-center">{item.CourseCategory}</p>
-                        </td>
-                        <td className="flex items-center h-[80px]">
-                          <div className="mt-[3px]">
-                            <Edit />{" "}
-                          </div>
-                          <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
-                            ویرایش دوره
-                          </p>
-                          <p
-                            onClick={(i) => deleteCourse(i)}
-                            className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]"
-                          >
-                            حذف دوره
-                          </p>
-                        </td>
-                      </tr>
-                    );
-                  })}
+                  return (
+                    <tr className="hover:bg-[#e6e9ebc2]">
+                      <td className="text-center">{i + 1}</td>
+                      <td>
+                        <img
+                          src={item.CourseImg}
+                          className="rounded m-auto h-[50px]"
+                        />{" "}
+                      </td>
+                      <td>
+                        <p className="text-center">{item.TeacherName}</p>
+                      </td>
+                      <td>
+                        <p className="text-center text-[#0050A8] font-semibold">
+                          {item.CourseDurationTime}
+                        </p>
+                      </td>
+                      <td className="text-[#0050A8] font-semibold text-center">
+                        {item.NumberOfEpisodes}
+                      </td>
+                      <td>
+                        <p className="text-center">{item.CourseCategory}</p>
+                      </td>
+                      <td className="flex items-center h-[80px]">
+                        <div className="mt-[3px]">
+                          <Edit />{" "}
+                        </div>
+                        <p
+                          onClick={() => setEditCourseModal(true)}
+                          className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
+                          ویرایش دوره
+                        </p>
+                        <p
+                          onClick={(i) => deleteCourse(i)}
+                          className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]"
+                        >
+                          حذف دوره
+                        </p>
+                      </td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
           <section className="w-full h-[50px] bg-[#E6E9EB] mt-[20px] flex justify-center items-center rounded-lg">

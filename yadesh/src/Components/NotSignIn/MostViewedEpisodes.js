@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
+
 
 const MostViewedEpisodes = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.HomePageNotLogin.mostViewedEpisodes;
 
@@ -16,7 +21,19 @@ const MostViewedEpisodes = () => {
     database.HomePageNotLogin.mostViewedEpisodes.title = titleValue;
     database.HomePageNotLogin.mostViewedEpisodes.subTitle = subtitleValue;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
 
   return (
     <section className="w-full h-[280px] flex justify-between bg-[#F5F5F5] mt-[10px]">
@@ -44,6 +61,12 @@ const MostViewedEpisodes = () => {
                 onChange={(e) => setsubtitleValue(e.target.value)}
                 maxLength={50}
               />
+            </div>
+            <div className={`${!SavedChangesModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
+            <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
             </div>
             <div className="w-[400px] m-auto">
               <button

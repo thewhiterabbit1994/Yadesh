@@ -6,8 +6,12 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const HeroYadeshForSazman = () => {
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
@@ -37,9 +41,20 @@ const HeroYadeshForSazman = () => {
     database.YadeshForOrganization.hero.description = description;
     if (uploadImg !== null)
       database.YadeshForOrganization.hero.imagery = uploadImg.previewUrl;
-
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[400px] bg-[#F5F5F5] flex justify-between rounded mt-[10px]">
       <section className="w-[45%]">
@@ -142,6 +157,12 @@ const HeroYadeshForSazman = () => {
             حداکثر اندازه عکس مورد نظر باید 1366 * 768 باشد و برش عکس به صورت
             اتوماتیک مطابق با سایز container باشد.
           </p>
+        </div>
+        <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+          <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+        </div>
+        <div className={`${!MessageFailedModal ?"fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+          <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
         </div>
         <div className="w-[170px] m-auto mt-7">
           <button

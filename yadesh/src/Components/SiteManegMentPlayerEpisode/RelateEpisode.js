@@ -1,10 +1,28 @@
 import { useState } from "react"
 import Play from "../../assets/svg/AdminPanelCourses/Play"
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const RelateEpisode = () => {
     const [toggle, setToggle] = useState(false)
     const [titlevalue, setTitleValue] = useState("")
     const [subTitleValue, setSubTitleValue] = useState("")
+    const [SavedChangesModal, setSavedChangesModal] = useState(false)
+    const [MessageFailedModal, setMessageFailedModal] = useState(false)
+    const handleClick = () => {
+        setSavedChangesModal(true)
+        // setMessageFailedModal(true)
+    }
+    setTimeout(() => {
+        if (SavedChangesModal === true) {
+            setSavedChangesModal(false)
+        }
+    }, 4000)
+    setTimeout(() => {
+        if (MessageFailedModal === true) {
+            setMessageFailedModal(false)
+        }
+    }, 4000)
     return (
         <section className="w-full ">
             <section className="bg-[#F5F5F5] h-[280px] flex justify-between rounded mt-[10px]">
@@ -38,7 +56,7 @@ const RelateEpisode = () => {
                             />
                         </div>
                     </section>
-                    
+
                 </section>
                 <section className="w-[50%]  mt-[60px]  ">
                     <section className="flex text-[12px] text-[#7A7A7A]">
@@ -49,7 +67,12 @@ const RelateEpisode = () => {
                     </section>
                 </section>
             </section>
-
+            <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+                <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
+            <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+                <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+            </div>
             <section className="flex text-[#fff] mt-[] text-[12px] w-[350px] justify-between m-auto">
                 <div className="relative ">
                     <div className="absolute top-[18px] right-[10px]">
@@ -57,7 +80,9 @@ const RelateEpisode = () => {
                     </div>
                     <button className="w-[170px] h-[45px] bg-[#0050A8] rounded"> پیش نمایش صفحه </button>
                 </div>
-                <button className="w-[170px] h-[45px] bg-[#008043] rounded"> ذخیره کردن تغییرات </button>
+                <button
+                    onClick={handleClick}
+                    className="w-[170px] h-[45px] bg-[#008043] rounded"> ذخیره کردن تغییرات </button>
             </section>
         </section>
     )

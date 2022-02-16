@@ -6,7 +6,7 @@ const MessageSucsses = ({text}) => {
                 <p className="text-[15px]">
                     <TickSucsses/>
                 </p>
-                <p className="mr-[10px]">{text}</p>
+                <p className="mr-[10px] text-[11px]">{text}</p>
             </div>
         </section>
     )

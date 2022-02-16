@@ -6,10 +6,14 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const PanelSazmani = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.HomePageNotLogin.pelanSazmani;
   const [titleValue, settitleValue] = useState(data.title);
@@ -35,8 +39,19 @@ const PanelSazmani = () => {
     if (uploadImg !== null)
       database.HomePageNotLogin.pelanSazmani.imagery = uploadImg.previewUrl;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[500px] bg-[#F5F5F5] rounded mt-[10px] ">
       <section className="w-[95%] m-auto flex justify-between">
@@ -113,6 +128,12 @@ const PanelSazmani = () => {
               حداکثر اندازه عکس مورد نظر باید 1366 * 768 باشد و برش عکس به صورت
               اتوماتیک مطابق با سایز container باشد.
             </p>
+          </div>
+          <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[30px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+          </div>
+          <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
           </div>
           <div className="w-[170px] m-auto mt-2">
             <button

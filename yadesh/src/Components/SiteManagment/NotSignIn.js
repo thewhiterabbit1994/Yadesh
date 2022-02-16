@@ -10,7 +10,7 @@ import Footer from "../../Components/SiteManagment/Footer";
 const NotSignIn = () => {
     const [openTab, setOpenTab] = useState(1)
     return (
-        <section className="w-full h-[100vh] flex justify-between">
+        <section className="w-full h-[600px] flex justify-between">
             <section className="w-[10%]">
                 <div className="text-[11px] w-[160px] text-center opacity-90">
                     <p onClick={() => setOpenTab(1)} className=" hover:bg-[#e2e0e0]  p-3  my-[10px] bg-[#C4C4C4] w-[140px] m-auto py-[15px] rounded-lg cursor-pointer">قسمت hero</p>

@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const YadeshIdentify = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.AboutYadesh.YadeshIdentify;
   const [toggle, setToggle] = useState(data.isLogoDisplayed);
@@ -17,8 +21,19 @@ const YadeshIdentify = () => {
     database.AboutYadesh.YadeshIdentify.subTitle = subtitleValue;
     database.AboutYadesh.YadeshIdentify.isLogoDisplayed = toggle;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[300px] bg-[#F5F5F5] mt-[10px] rounded flex justify-between">
       <section className="w-[35%] pt-[10px]">
@@ -49,7 +64,7 @@ const YadeshIdentify = () => {
               value={subtitleValue}
               onChange={(e) => setsubtitleValue(e.target.value)}
               id="Title26"
-              className="w-[400px] px-[10px] py-[10px] leading-6 resize-none h-[80px] rounded mt-[15px] text-[11px] pr-[10px]"
+              className="w-[400px] px-[10px] py-[10px] leading-6 resize-none h-[100px] rounded mt-[15px] text-[11px] pr-[10px]"
               placeholder="هدف ما در یادش بالا بردن سطح کیفیت تجربه ی کاربری در استفاده از پلتفرم های آموزشی است."
             />
           </div>
@@ -60,21 +75,25 @@ const YadeshIdentify = () => {
           <p className="w-[150px] ml-[50px]">لوگو (نمایش داده شود)</p>
           <div
             onClick={() => setToggle(!toggle)}
-            className={`${
-              toggle
-                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-            }`}
+            className={`${toggle
+              ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+              : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+              }`}
           >
             <div
-              className={`${
-                toggle
-                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-              }`}
+              className={`${toggle
+                ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                }`}
             ></div>
           </div>
         </section>
+        <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+          <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+        </div>
+        <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+          <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+        </div>
         <div className="w-[400px] mt-40 m-auto">
           <button
             onClick={handleClick}

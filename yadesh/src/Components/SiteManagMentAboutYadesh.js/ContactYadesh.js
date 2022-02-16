@@ -7,6 +7,8 @@ import "leaflet/dist/leaflet.css";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import LogoGoogleMap from "../../assets/svg/AdminPanelCourses/LogoGoogleMap";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 let DefaultIcon = L.icon({
   iconUrl: icon,
@@ -16,6 +18,8 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const ContactYadesh = () => {
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
 
@@ -61,8 +65,19 @@ const ContactYadesh = () => {
     database.AboutYadesh.ContactYadesh.addressLocation.lat = position.lat;
     database.AboutYadesh.ContactYadesh.addressLocation.lng = position.lng;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[500px]  mt-[10px] ">
       <section className="bg-[#F5F5F5] rounded flex justify-between h-[500px]">
@@ -167,7 +182,12 @@ const ContactYadesh = () => {
               </div>
             </section>
           </div>
-
+          <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+          </div>
+          <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+          </div>
           <div className="w-[400px] text-center mt-[35px] m-auto">
             <button
               onClick={handleClick}

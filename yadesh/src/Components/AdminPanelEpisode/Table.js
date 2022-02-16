@@ -5,8 +5,11 @@ import video from "../../assets/Img/adminPanelEpisode/video.png";
 import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import EditCourseForOfEpisode from "../../Components/Modals/EditCourseForOfEpisode"
+
 
 const Table = () => {
+  const [EditCourseForOfEpisodeModal, setEditCourseForOfEpisodeModal] = useState(false);
   const { siteManagmentDatabase } = useContext(MainCounter);
   let database = [];
   const data = siteManagmentDatabase.Courses.forEach((Course) => {
@@ -26,6 +29,7 @@ const Table = () => {
   }
   return (
     <section className="w-[97vw]">
+      <EditCourseForOfEpisode EditCourseForOfEpisodeModal={EditCourseForOfEpisodeModal} setEditCourseForOfEpisodeModal={setEditCourseForOfEpisodeModal} />
       <section className="w-[90%] mr-[120px] m-auto text-[12px] text-[#001D29]">
         <section className="w-full justify-between rounded bg-[#F5F5F5] flex py-[30px] px-[15px]">
           <section className="w-[50%] font-semibold">
@@ -79,75 +83,79 @@ const Table = () => {
           <tbody className="w-full ">
             {!showMore
               ? threeOfEpisodes.map((item, i) => {
-                  return (
-                    <tr className="h-[100px] hover:bg-[#e6e9ebc2]">
-                      <td>
-                        <p className="text-center">{i + 1}</p>
-                      </td>
-                      <td>
-                        <img
-                          src={item.PreviewImg}
-                          className="rounded m-auto  h-[50px]"
-                        />{" "}
-                      </td>
-                      <td>
-                        <p className="text-center">{item.NameOfEpisode}</p>
-                      </td>
-                      <td>
-                        <p className="text-center">{item.TeacherName}</p>
-                      </td>
-                      <td className="text-[#0050A8] font-semibold text-center">
-                        {item.TimeOfEpisode}
-                      </td>
-                      <td>
-                        <p className="text-center">{item.EpisodeCategory}</p>
-                      </td>
-                      <td className="flex h-[55px]  items-end ">
-                        <div className="mt-[3px]">
-                          <Edit />{" "}
-                        </div>
-                        <p className="mr-[10px] text-[#0050A8] text-[10px] font-semibold">
-                          ویرایش اپیزود ها
-                        </p>
-                      </td>
-                    </tr>
-                  );
-                })
+                return (
+                  <tr className="h-[100px] hover:bg-[#e6e9ebc2]">
+                    <td>
+                      <p className="text-center">{i + 1}</p>
+                    </td>
+                    <td>
+                      <img
+                        src={item.PreviewImg}
+                        className="rounded m-auto  h-[50px]"
+                      />{" "}
+                    </td>
+                    <td>
+                      <p className="text-center">{item.NameOfEpisode}</p>
+                    </td>
+                    <td>
+                      <p className="text-center">{item.TeacherName}</p>
+                    </td>
+                    <td className="text-[#0050A8] font-semibold text-center">
+                      {item.TimeOfEpisode}
+                    </td>
+                    <td>
+                      <p className="text-center">{item.EpisodeCategory}</p>
+                    </td>
+                    <td className="flex h-[55px]  items-end ">
+                      <div className="mt-[3px]">
+                        <Edit />{" "}
+                      </div>
+                      <p
+                        onClick={() => setEditCourseForOfEpisodeModal(true)}
+                        className="mr-[10px] cursor-pointer text-[#0050A8] text-[10px] font-semibold">
+                        ویرایش اپیزود ها
+                      </p>
+                    </td>
+                  </tr>
+                );
+              })
               : database.map((item, i) => {
-                  return (
-                    <tr className="h-[100px] hover:bg-[#e6e9ebc2]">
-                      <td>
-                        <p className="text-center">{i + 1}</p>
-                      </td>
-                      <td>
-                        <img
-                          src={item.PreviewImg}
-                          className="rounded m-auto  h-[50px]"
-                        />{" "}
-                      </td>
-                      <td>
-                        <p className="text-center">{item.NameOfEpisode}</p>
-                      </td>
-                      <td>
-                        <p className="text-center">{item.TeacherName}</p>
-                      </td>
-                      <td className="text-[#0050A8] font-semibold text-center">
-                        {item.TimeOfEpisode}
-                      </td>
-                      <td>
-                        <p className="text-center">{item.EpisodeCategory}</p>
-                      </td>
-                      <td className="flex h-[55px]  items-end ">
-                        <div className="mt-[3px]">
-                          <Edit />{" "}
-                        </div>
-                        <p className="mr-[10px] text-[#0050A8] text-[10px] font-semibold">
-                          ویرایش اپیزود ها
-                        </p>
-                      </td>
-                    </tr>
-                  );
-                })}
+                return (
+                  <tr className="h-[100px] hover:bg-[#e6e9ebc2]">
+                    <td>
+                      <p className="text-center">{i + 1}</p>
+                    </td>
+                    <td>
+                      <img
+                        src={item.PreviewImg}
+                        className="rounded m-auto  h-[50px]"
+                      />{" "}
+                    </td>
+                    <td>
+                      <p className="text-center">{item.NameOfEpisode}</p>
+                    </td>
+                    <td>
+                      <p className="text-center">{item.TeacherName}</p>
+                    </td>
+                    <td className="text-[#0050A8] font-semibold text-center">
+                      {item.TimeOfEpisode}
+                    </td>
+                    <td>
+                      <p className="text-center">{item.EpisodeCategory}</p>
+                    </td>
+                    <td className="flex h-[55px]  items-end ">
+                      <div className="mt-[3px]">
+                        <Edit />{" "}
+                      </div>
+                      <p
+                        onClick={() => setEditCourseForOfEpisodeModal(true)}
+                        className="mr-[10px] text-[#0050A8] text-[10px] font-semibold">
+                        ویرایش اپیزود ها
+                      </p>
+                    </td>
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
         <section
