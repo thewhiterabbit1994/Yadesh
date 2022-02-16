@@ -101,7 +101,7 @@ const TodaySpecialCourses = () => {
           </Link>
         </div>
       </div>
-      <section className="absolute left-[40px] mt-[70px] rounded-lg mr-[50px] w-[670px]">
+      <section className="absolute left-[3.125vw] mt-[70px] rounded-lg  w-[670px]">
         <div className="flex w-[670px] justify-between">
           <p className="relative rounded text-[12px] mr-5 py-2  text-[#fff] w-fit px-3 h-[32px] bg-[#7b9199] top-[55px] z-10 ">
             {threeOfCourses[index].CourseCategory}
