@@ -99,7 +99,6 @@ const UserComent = () => {
                                     </div>
                                     <div className="absolute top-[5px] left-[20px] flex w-[150px] justify-around mt-[10px] text-[10px] text-[#000000af] font-semibold">
                                         <p>{item.date}</p>
-                                        <p>{item.time}</p>
                                     </div>
                                 </section>
                             )

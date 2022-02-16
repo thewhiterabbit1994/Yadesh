@@ -83,7 +83,7 @@ const CompanyComent = () => {
             </section>
           }
           {
-            ticketDatabase.userTicket.map(item => {
+            ticketDatabase.companyTicket.map(item => {
               return (
                 <section className="text-[12px] relative bg-[#c5c1c133] w-[500px] my-[15px] h-[130px] rounded-lg pr-[20px] pt-[10px]">
                   <div className="flex w-[150px] justify-around">
@@ -95,7 +95,6 @@ const CompanyComent = () => {
                   </div>
                   <div className="absolute top-[5px] left-[20px] flex w-[150px] justify-around mt-[10px] text-[10px] text-[#000000af] font-semibold">
                     <p>{item.date}</p>
-                    <p>{item.time}</p>
                   </div>
                 </section>
               )
