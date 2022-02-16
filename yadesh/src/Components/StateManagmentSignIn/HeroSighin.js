@@ -2,10 +2,14 @@ import Danger from "../../assets/svg/AdminPanelCourses/Danger";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
 import { useState } from "react";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const HeroSighin = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.HomePageLogin.hero;
 
@@ -17,8 +21,19 @@ const HeroSighin = () => {
     database.HomePageLogin.hero.title = titleValue;
     database.HomePageLogin.hero.subTitle = subtitleValue;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[350px] bg-[#F5F5F5] flex justify-between rounded mt-[10px] ">
       <section className="w-[47%] ">
@@ -54,7 +69,12 @@ const HeroSighin = () => {
               placeholder="برای شما"
             />
           </div>
-
+          <div className={`${!SavedChangesModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+          </div>
+          <div className={`${!MessageFailedModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+          </div>
           <div className="w-[400px] mt-12 m-auto">
             <button
               onClick={handleClick}

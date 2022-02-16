@@ -83,13 +83,6 @@ function App() {
           <Route path="/adminlogin/changpassword" element={<ChangPassword />} />
           <Route path="/AddNewUser" element={<AddNewUser />} />
           <Route path="/AddCourse" element={<AddCourse />} />
-          <Route
-            path="/MessageSucsses"
-            element={
-              <MessageSucsses text={"دانلود فایل  Excel با خطا مواجه شد"} />
-            }
-          />
-
           <Route path="admindashboard" element={<AdminDashboardLayout />}>
             <Route path="adminpanel" element={<AdminPanel />} />
             <Route path="listofcompanies" element={<AdminPanelCompany />} />

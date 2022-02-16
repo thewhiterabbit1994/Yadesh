@@ -821,20 +821,10 @@ const Context = (props) => {
     ],
     company: [],
     userTicket: [
-      {
-        txt: "سلام من حسین ضرابی هستم",
-        name: "حسین ضرابی",
-        time: "12 : 00",
-        date: "22 شهریور",
-      },
+
     ],
     companyTicket: [
-      {
-        txt: "سلام من حسین ضرابی از شرکت مکین هستم",
-        name: "حسین ضرابی",
-        time: "12 : 00",
-        date: "22 شهریور",
-      },
+
     ],
   });
   return (

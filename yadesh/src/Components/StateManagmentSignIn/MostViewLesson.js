@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const MostViewLesson = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.HomePageLogin.TodayMostViewLessons;
 
@@ -16,8 +20,19 @@ const MostViewLesson = () => {
     database.HomePageLogin.TodayMostViewLessons.title = titleValue;
     database.HomePageLogin.TodayMostViewLessons.subTitle = subtitleValue;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[330px] flex justify-between bg-[#F5F5F5] mt-[10px]">
       <section className="w-[95%] m-auto flex justify-between">
@@ -53,7 +68,12 @@ const MostViewLesson = () => {
                 placeholder="یادشی ها این ویدیو را بیشتر دیده اند"
               />
             </div>
-
+            <div className={`${!SavedChangesModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
+            <div className={`${!MessageFailedModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+            </div>
             <div className="w-[400px] mt-12 m-auto">
               <button
                 onClick={handleClick}

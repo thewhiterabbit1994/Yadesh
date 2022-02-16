@@ -6,10 +6,14 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const Costomers = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.YadeshForOrganization.Customer;
 
@@ -59,8 +63,9 @@ const Costomers = () => {
     setnewcustomerName("");
     setnewCustomerComment("");
     setuploadImg(null);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-  console.log(data);
 
   const deleteicon = (i) => {
     let database = JSON.parse(JSON.stringify(siteManagmentDatabase));
@@ -74,7 +79,16 @@ const Costomers = () => {
     });
     setcustomerName(image.name);
   };
-  console.log(showcomment);
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-fit bg-[#F5F5F5] mt-[10px] rounded">
       <section className="w-[95%] m-auto flex justify-between">
@@ -115,18 +129,16 @@ const Costomers = () => {
               <p>این قسمت نمایش داده شود</p>
               <div
                 onClick={() => setToggle(!toggle)}
-                className={`${
-                  toggle
-                    ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                    : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-                }`}
+                className={`${toggle
+                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                  }`}
               >
                 <div
-                  className={`${
-                    toggle
-                      ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                      : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                  }`}
+                  className={`${toggle
+                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                    }`}
                 ></div>
               </div>
             </section>
@@ -271,6 +283,12 @@ const Costomers = () => {
           </div>
         </section>
       </section>
+      <div className={`${!SavedChangesModal ?"fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+        <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+      </div>
+      <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+        <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+      </div>
       <div className="w-[170px] absolute left-32 mt-[-100px]">
         <button
           onClick={handleClick}

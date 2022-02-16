@@ -43,13 +43,13 @@ const Settings = ({settingsModal , setSettingsModal}) => {
 
             <section className="w-[75%]">
                 <div className={`${openTab === 1 ? "block" : "hidden"}`}>
-                    <Account />
+                    <Account settingsModal={settingsModal} setSettingsModal={setSettingsModal} />
                 </div>
                 <div className={`${openTab === 2 ? "block" : "hidden"}`}>
-                    <Notifications />
+                    <Notifications settingsModal={settingsModal} setSettingsModal={setSettingsModal}/>
                 </div>
                 <div className={`${openTab === 3 ? "block" : "hidden"}`}>
-                    <Protection />
+                    <Protection settingsModal={settingsModal} setSettingsModal={setSettingsModal}/>
                 </div>
             </section>
         </section>

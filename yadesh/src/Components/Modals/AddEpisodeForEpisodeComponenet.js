@@ -15,7 +15,7 @@ const AddEpisodeForEpisodeComponenet = ({ EpisodeModal, setEpisodeModal }) => {
     return (
 
         <section
-            className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen  bg-[#00000071]  ${EpisodeModal ? "scale-100 opacity-100" : "opacity-0 "
+            className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-[1000px] h-fit rounded-lg   bg-[#00000071]  ${EpisodeModal ? "scale-100 opacity-100" : "opacity-0 "
                 }`}
         >
             <section

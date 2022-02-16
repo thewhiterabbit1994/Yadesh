@@ -5,8 +5,11 @@ import EmtyLogo from "../../assets/svg/adminPanelEpisode/EmtyLogo";
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import EditCourse from "../Modals/EditCourse";
 
 const Table = () => {
+  const [EditCourseModal, setEditCourseModal] = useState(false);
+
   const {
     siteManagmentDatabase,
     setsiteManagmentDatabase,
@@ -22,6 +25,10 @@ const Table = () => {
 
   return (
     <section className="w-[97vw]">
+      <EditCourse
+        EditCourseModal={EditCourseModal}
+        setEditCourseModal={setEditCourseModal}
+      />
       {emtyCourse ? (
         <section className=" m-auto text-[12px] text-[#001D29] mr-[120px]">
           <section className="w-full justify-between flex  py-[20px] bg-[#e6e9eb6e] rounded-lg">

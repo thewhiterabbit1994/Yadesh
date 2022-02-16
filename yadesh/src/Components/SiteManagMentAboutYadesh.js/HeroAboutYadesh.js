@@ -7,10 +7,14 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const HeroAboutYadesh = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.AboutYadesh.hero;
   const [toggle, setToggle] = useState(data.isLogoDisplayed);
@@ -38,7 +42,19 @@ const HeroAboutYadesh = () => {
     if (uploadImg !== null)
       database.AboutYadesh.hero.imagery = uploadImg.previewUrl;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[390px] bg-[#F5F5F5] rounded mt-[10px] ">
       <section className="w-[95%] m-auto flex justify-between">
@@ -47,18 +63,16 @@ const HeroAboutYadesh = () => {
             <p className="w-[150px] ml-[50px]">لوگو (نمایش داده شود)</p>
             <div
               onClick={() => setToggle(!toggle)}
-              className={`${
-                toggle
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${toggle
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  toggle
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${toggle
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -93,7 +107,12 @@ const HeroAboutYadesh = () => {
                 placeholder="یادشی ها این ویدیو را بیشتر دیده اند"
               />
             </div>
-
+            <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[30px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
+            <div className={`${!MessageFailedModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+            </div>
             <div className="w-[400px] mt-3 m-auto">
               <button
                 onClick={handleClick}

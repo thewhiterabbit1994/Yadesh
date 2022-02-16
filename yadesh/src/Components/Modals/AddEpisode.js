@@ -13,11 +13,11 @@ const AddEpisode = ({ AddEpisodeModal, setAddEpisodeModal }) => {
   return (
 
     <section
-      className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-full h-screen  bg-[#00000071]  ${AddEpisodeModal ? "scale-100 opacity-100" : "opacity-0 "
+      className={`fixed transform transition-opacity duration-300 scale-0 z-50 w-[1000px] rounded-lg h-fit   bg-[#00000071]  ${AddEpisodeModal ? "scale-100 opacity-100" : "opacity-0 "
         }`}
     >
       <section
-        className={` w-[1000px] h-fit relative right-0 inset-x-[140px] ml-[200px]  rounded-[10px] bg-[#fff]`}
+        className={` w-[1000px] h-fit relative right-0 inset-x-[140px] ml-[200px] mt-[-10px]  rounded-[10px] bg-[#fff]`}
       >
         <section className="w-[900px] h-[600px]  m-auto text-[12px]">
           <section className="w-[900px] relative h-[600px] flex justify-between m-auto overflow-y-scroll-r  overflow-x-hidden ">

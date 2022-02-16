@@ -1,7 +1,24 @@
 import { useState } from "react"
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 const MyNotes = () => {
     const [toggle, setToggle] = useState(true)
-
+    const [SavedChangesModal, setSavedChangesModal] = useState(false)
+    const [MessageFailedModal, setMessageFailedModal] = useState(false)
+    const handleClick = () => {
+        setSavedChangesModal(true)
+        // setMessageFailedModal(true)
+    }
+    setTimeout(() => {
+        if (SavedChangesModal === true) {
+            setSavedChangesModal(false)
+        }
+    }, 4000)
+    setTimeout(() => {
+        if (MessageFailedModal === true) {
+            setMessageFailedModal(false)
+        }
+    }, 4000)
     return (
         <section className="w-full ">
 
@@ -11,9 +28,16 @@ const MyNotes = () => {
                     <div className={`${toggle ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]" : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"}`}></div>
                 </div>
             </section>
-
+            <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+                <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
+            <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+                <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+            </div>
             <section className="w-[170px] h-[45px] rounded bg-[#0050A8] text-[12px] mt-[20px] m-auto cursor-pointer">
-                <div className="text-[#fff] flex justify-center items-center h-[45px]" >
+                <div
+                    onClick={handleClick}
+                    className="text-[#fff] flex justify-center items-center h-[45px]" >
                     <p className="mr-[5px]">ذخیره کردن تغییرات</p>
                 </div>
             </section>

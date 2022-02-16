@@ -1,4 +1,13 @@
-const Protection = () => {
+import { useState } from "react"
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+
+const Protection = ({ settingsModal, setSettingsModal }) => {
+    const [SavedChangesModal, setSavedChangesModal] = useState(false)
+    setTimeout(() => {
+        if (SavedChangesModal === true) {
+            setSavedChangesModal(false)
+        }
+    }, 4000)
     return (
         <section className="w-full">
             <section className="w-[90%] mt-[55px] text-[12px]  text-[#7A7A7A]">
@@ -31,11 +40,17 @@ const Protection = () => {
                         </div>
                     </div>
                 </section>
+                <div className={`${!SavedChangesModal ? "absolute bottom-[-100px]" : "absolute bottom-[10px] left-[550px] transition-all duration-[500ms]"}`}>
+                    <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+                </div>
                 <div className="w-[92%]  bg-[#4e50501c] rounded-lg h-[3px] mt-[170px]  ml-[170px]"> </div>
                 <section className="text-[12px] text-[#fff] w-[210px] flex justify-between mt-[20px] absolute left-[140px]">
                     <button
+                        onClick={() => setSettingsModal(false)}
                         className="w-[100px] h-[35px] rounded bg-[#4e50505d] text-[#000]">لغو </button>
-                    <button className="w-[100px] h-[35px] rounded bg-[#008043]">ذخیره کردن</button>
+                    <button
+                        onClick={() => setSavedChangesModal(true)}
+                        className="w-[100px] h-[35px] rounded bg-[#008043]">ذخیره کردن</button>
                 </section>
             </section>
         </section>

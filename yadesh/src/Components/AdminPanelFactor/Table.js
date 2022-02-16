@@ -104,7 +104,7 @@ const Table = () => {
                             twoOfFactor.map((item , i) => {
                                 return (
                                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                                        <td className="text-center">{i}</td>
+                                        <td className="text-center">{i+1}</td>
                                         <td className="text-center">{item.Subscription}</td>
                                         <td className=" text-[#008043] font-semibold ">
                                             <div className="justify-center flex ">
@@ -126,7 +126,7 @@ const Table = () => {
                             factor.map((item , i) => {
                                 return (
                                     <tr className="h-[50px] hover:bg-[#e6e9ebc2]">
-                                        <td className="text-center">{i}</td>
+                                        <td className="text-center">{i+1}</td>
                                         <td className="text-center">{item.Subscription}</td>
                                         <td className=" text-[#008043] font-semibold ">
                                             <div className="justify-center flex ">

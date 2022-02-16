@@ -6,10 +6,14 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const CostomerYadesh = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.HomePageNotLogin.costomerYadesh;
 
@@ -39,6 +43,8 @@ const CostomerYadesh = () => {
       );
 
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
 
   const deleteicon = (i) => {
@@ -47,6 +53,16 @@ const CostomerYadesh = () => {
     setsiteManagmentDatabase(database);
   };
 
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[500px] bg-[#F5F5F5] mt-[10px] rounded">
       <section className="w-[95%] m-auto flex justify-between">
@@ -144,7 +160,12 @@ const CostomerYadesh = () => {
               حداکثر تعداد مشتریان 15 و حداقل 10 می باشد
             </p>
           </div>
-
+          <div className={`${!SavedChangesModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+          </div>
+          <div className={`${!MessageFailedModal ?  "fixed bottom-[-200px]" : "fixed bottom-[50px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+          </div>
           <div className="w-[170px] m-auto mt-12">
             <button
               onClick={handleClick}

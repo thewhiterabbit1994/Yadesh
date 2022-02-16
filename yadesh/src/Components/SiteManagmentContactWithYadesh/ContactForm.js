@@ -2,10 +2,14 @@ import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
 import Play from "../../assets/svg/AdminPanelCourses/Play";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const ContactForm = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.ContactWithYadesh.ContactForm.Fields;
 
@@ -36,8 +40,19 @@ const ContactForm = () => {
       YourTitleInSazman;
     database.ContactWithYadesh.ContactForm.Fields.Field5.title = MessageText;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full  mt-[10px] bg-[#F5F5F5] rounded-lg">
       <section className="w-full h-[430px] text-[12px]  pt-[30px] pr-[20px]   flex justify-around flex-wrap  ">
@@ -61,18 +76,16 @@ const ContactForm = () => {
             <p>نمایش این قسمت</p>
             <div
               onClick={() => setToggle(!toggle)}
-              className={`${
-                toggle
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${toggle
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  toggle
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${toggle
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -98,18 +111,16 @@ const ContactForm = () => {
             <p>نمایش این قسمت</p>
             <div
               onClick={() => setToggle4(!toggle4)}
-              className={`${
-                toggle4
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${toggle4
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  toggle4
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${toggle4
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -135,18 +146,16 @@ const ContactForm = () => {
             <p>نمایش این قسمت</p>
             <div
               onClick={() => setToggle2(!toggle2)}
-              className={`${
-                toggle2
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${toggle2
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  toggle2
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${toggle2
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -172,18 +181,16 @@ const ContactForm = () => {
             <p>نمایش این قسمت</p>
             <div
               onClick={() => setToggle5(!toggle5)}
-              className={`${
-                toggle5
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${toggle5
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  toggle5
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${toggle5
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -209,23 +216,26 @@ const ContactForm = () => {
             <p>نمایش این قسمت</p>
             <div
               onClick={() => setToggle3(!toggle3)}
-              className={`${
-                toggle3
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${toggle3
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  toggle3
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${toggle3
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
         </section>
-
+        <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+          <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+        </div>
+        <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+          <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+        </div>
         <div className="w-[170px] m-auto mt-[20px]">
           <button
             onClick={handleClick}

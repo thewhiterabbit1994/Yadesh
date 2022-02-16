@@ -6,10 +6,14 @@ import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 
 const HeroUserProfile = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.UserInfo.hero;
   const [uploadImg, setuploadImg] = useState(null);
@@ -42,8 +46,19 @@ const HeroUserProfile = () => {
     if (uploadImg !== null)
       database.UserInfo.hero.imagery = uploadImg.previewUrl;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[350px] text-[12px] ">
       <section className="w-full h-[350px] mt-[10px] flex justify-around bg-[#F5F5F5] rounded">
@@ -91,7 +106,7 @@ const HeroUserProfile = () => {
             onSubmit={handleSubmit}
             accept="image/* png/* jpg/* jpeg/*"
           />
-          <div className="text-[10px] flex mt-[20px] px-[10px] text-[#7A7A7A]">
+          <div className="text-[10px] flex mt-[-170px] px-[10px] text-[#7A7A7A]">
             <Ekhtar />
             <p className="mr-[10px]">
               حداکثر اندازه عکس مورد نظر باید 1366 * 768 باشد و برش عکس به صورت
@@ -106,18 +121,16 @@ const HeroUserProfile = () => {
               onClick={() =>
                 setisUserImgDisplayedtoggle(!isUserImgDisplayedtoggle)
               }
-              className={`${
-                isUserImgDisplayedtoggle
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${isUserImgDisplayedtoggle
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  isUserImgDisplayedtoggle
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${isUserImgDisplayedtoggle
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -127,18 +140,16 @@ const HeroUserProfile = () => {
               onClick={() =>
                 setseenCourseIsDisplayedtoggle(!seenCourseIsDisplayedtoggle)
               }
-              className={`${
-                seenCourseIsDisplayedtoggle
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${seenCourseIsDisplayedtoggle
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  seenCourseIsDisplayedtoggle
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${seenCourseIsDisplayedtoggle
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
@@ -148,21 +159,25 @@ const HeroUserProfile = () => {
               onClick={() =>
                 setseenVideoIsDisplayedtoggle(!seenVideoIsDisplayedtoggle)
               }
-              className={`${
-                seenVideoIsDisplayedtoggle
-                  ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
-                  : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
-              }`}
+              className={`${seenVideoIsDisplayedtoggle
+                ? "cursor-pointer w-[40px] h-[20px] bg-[#008043] rounded-[20px] mr-[20px] relative"
+                : "cursor-pointer w-[40px] h-[20px] bg-[#C4C4C4] rounded-[20px] mr-[20px] relative"
+                }`}
             >
               <div
-                className={`${
-                  seenVideoIsDisplayedtoggle
-                    ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
-                    : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
-                }`}
+                className={`${seenVideoIsDisplayedtoggle
+                  ? "w-[18px] h-[18px] bg-[#fff] rounded-[50%]  absolute left-0 top-[1px]"
+                  : "w-[18px] h-[18px] bg-[#fff] rounded-[50%] absolute right-0 top-[1px]"
+                  }`}
               ></div>
             </div>
           </section>
+          <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+          </div>
+          <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+            <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+          </div>
           <div className="w-[170px] m-auto mt-12">
             <button
               onClick={handleClick}

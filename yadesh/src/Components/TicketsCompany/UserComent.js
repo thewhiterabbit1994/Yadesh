@@ -19,9 +19,9 @@ const UserComent = () => {
             date: "22 شهریور",
 
         }
-        // tickets.push(obj)
         ticketDatabase.userTicket.push(obj)
         setComment("")
+        console.log(ticketDatabase.userTicket);
     }
 
     const handlekeyEnter = (e) => {
@@ -29,8 +29,8 @@ const UserComent = () => {
             addComment()
         }
     }
-    let privetTickets = (user) => {
-        setprivetTicket(user)
+    let privetTickets = (item) => {
+        setprivetTicket(item)
     }
 
     return (
@@ -68,8 +68,8 @@ const UserComent = () => {
                     <p className=" text-[10px] font-semibold text-[#001D29]">مشاهده ی همه ی تیکت ها</p>
                 </div>
             </section>
-            <section className="w-[59%] pb-[50px] bg-[#0000001a] rounded-lg h-fit mt-[20px] ">
-                <div className="w-full h-fit justify-center py-[20px]  flex items-center ">
+            <section className="w-[55%]  pb-[50px] border-2 bg-[#0000001a] rounded-lg h-fit mt-[20px] ">
+                <div className="w-full h-fit justify-center border-2 py-[20px] flex-col    flex items-center ">
                     {
                         <section className="text-[12px] relative bg-[#F5F5F5] w-[500px] h-[130px] rounded-lg pr-[20px] pt-[10px]">
                             <div className="flex w-[150px] justify-around">
@@ -86,20 +86,39 @@ const UserComent = () => {
                             </div>
                         </section>
                     }
+                    {
+                        ticketDatabase.userTicket.map(item => {
+                            return (
+                                <section className="text-[12px] relative bg-[#F5F5F5] w-[500px] my-[15px] h-[130px] rounded-lg pr-[20px] pt-[10px]">
+                                    <div className="flex w-[150px] justify-around">
+                                        <p className="mt-[5px]">مسئول فنی یادش</p>
+                                    </div>
+                                    <div className="mt-[15px] pr-[60px] leading-7">
+                                        <p>{item.txt}</p>
+                                        
+                                    </div>
+                                    <div className="absolute top-[5px] left-[20px] flex w-[150px] justify-around mt-[10px] text-[10px] text-[#000000af] font-semibold">
+                                        <p>{item.date}</p>
+                                        <p>{item.time}</p>
+                                    </div>
+                                </section>
+                            )
+                        })
+                    }
                 </div>
                 <div>
                     <label >
-                        <div onClick={addComment} className="w-[17px] rotate-45 fixed cursor-pointer bottom-[20px] right-[625px] z-10">
+                        <div onClick={addComment} className="w-[17px] rotate-45 fixed cursor-pointer bottom-[20px] right-[48.682284040995604vw] z-10">
                             <Send />
                         </div>
                         <input value={comment}
                             onChange={(event) => setComment(event.target.value)}
                             onKeyDown={handlekeyEnter}
-                            className="w-[550px] h-[40px] text-[12px] pr-[15px] bg-[#0000002a] placeholder:text-[#000]  placeholder:text-[12px] outline-none placeholder:pr-[15px] right-[670px] rounded fixed bottom-[8px]"
+                            className="w-[550px] h-[40px] text-[12px] pr-[15px] bg-[#0000002a] placeholder:text-[#000]  placeholder:text-[12px] outline-none placeholder:pr-[15px] right-[51.24450951683748vw] rounded fixed bottom-[8px]"
                             placeholder="پیام شما ..."
                         />
                     </label>
-                    <div className="w-[16px] fixed bottom-[20px] left-[160px] z-10">
+                    <div className="w-[16px] fixed bottom-[20px] left-[9.51683748169839vw] z-10">
                         <Link />
                     </div>
                 </div>

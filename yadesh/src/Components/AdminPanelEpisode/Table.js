@@ -5,8 +5,11 @@ import video from "../../assets/Img/adminPanelEpisode/video.png";
 import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
+import EditCourseForOfEpisode from "../../Components/Modals/EditCourseForOfEpisode";
 
 const Table = () => {
+  const [EditCourseForOfEpisodeModal, setEditCourseForOfEpisodeModal] =
+    useState(false);
   const { siteManagmentDatabase } = useContext(MainCounter);
   let database = [];
   const data = siteManagmentDatabase.Courses.forEach((Course) => {
@@ -26,6 +29,10 @@ const Table = () => {
   }
   return (
     <section className="w-[97vw]">
+      <EditCourseForOfEpisode
+        EditCourseForOfEpisodeModal={EditCourseForOfEpisodeModal}
+        setEditCourseForOfEpisodeModal={setEditCourseForOfEpisodeModal}
+      />
       <section className="w-[90%] mr-[120px] m-auto text-[12px] text-[#001D29]">
         <section className="w-full justify-between rounded bg-[#F5F5F5] flex py-[30px] px-[15px]">
           <section className="w-[50%] font-semibold">

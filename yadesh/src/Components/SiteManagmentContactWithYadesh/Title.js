@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
-
+import MessageSucsses from "../../Components/Messaeg/MessageSucsses"
+import MessageFailed from "../../Components/Messaeg/MessageFailed"
 const Title = () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const [SavedChangesModal, setSavedChangesModal] = useState(false)
+  const [MessageFailedModal, setMessageFailedModal] = useState(false)
 
   const data = siteManagmentDatabase.ContactWithYadesh.Title;
 
@@ -16,8 +19,19 @@ const Title = () => {
     database.ContactWithYadesh.Title.title = titleValue;
     database.ContactWithYadesh.Title.subTitle = subtitleValue;
     setsiteManagmentDatabase(database);
+    setSavedChangesModal(true)
+    // setMessageFailedModal(true)
   };
-
+  setTimeout(() => {
+    if (SavedChangesModal === true) {
+      setSavedChangesModal(false)
+    }
+  }, 4000)
+  setTimeout(() => {
+    if (MessageFailedModal === true) {
+      setMessageFailedModal(false)
+    }
+  }, 4000)
   return (
     <section className="w-full h-[200px] bg-[#F5F5F5] rounded-lg mt-[10px] ">
       <section className="w-[90%]  h-[140px] flex justify-between  m-auto pr-[20px]">
@@ -51,6 +65,12 @@ const Title = () => {
               className="w-[400px] leading-5 px-[10px] py-[10px] h-[40px] rounded my-[15px] text-[11px] pr-[10px]"
               placeholder=" از طریق فرم روبرو با ما در تماس باشید "
             />
+            <div className={`${!SavedChangesModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageSucsses text={"تغییرات با موفقیت ذخیره شد"} />
+            </div>
+            <div className={`${!MessageFailedModal ? "fixed bottom-[-200px]" : "fixed bottom-[20px] left-[50px] transition-all duration-[500ms]"}`}>
+              <MessageFailed text={"متاسفانه تغییرات ذخیره نشد"} />
+            </div>
             <div className="w-[170px] m-auto mt-[20px]">
               <button
                 onClick={handleClick}
