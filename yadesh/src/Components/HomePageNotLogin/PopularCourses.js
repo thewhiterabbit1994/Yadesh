@@ -4,7 +4,7 @@ import Hesabdari from "../../assets/Img/papoularCourses/hesabdari.png";
 import SarmayeGozari from "../../assets/Img/papoularCourses/sarmayegozari.png";
 import Ellipse from "../../assets/svg/HomePageNotLogin/Ellipse";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MainCounter } from "../../Context/Context";
 
 const PopularCourses = () => {
@@ -13,9 +13,21 @@ const PopularCourses = () => {
   const coursedata = siteManagmentDatabase.Courses;
 
   let [index, setindex] = useState(0);
+  let [firstSlideIndex, setfirstSlideIndex] = useState(0);
+  const changefirstSlideIndex = () => {
+    firstSlideIndex === 2
+      ? setfirstSlideIndex(0)
+      : setfirstSlideIndex(firstSlideIndex + 1);
+  };
   const changeindex = () => {
     index === 3 ? setindex(0) : setindex(index + 1);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      changefirstSlideIndex();
+    }, 500);
+  }, []);
+
   setTimeout(() => {
     changeindex();
   }, 5000);
@@ -95,6 +107,15 @@ const PopularCourses = () => {
                     دراین کلاس در مورد اصول حسابداری در مقیاس های صنعتی و اصول
                     کلی حسابداری یاد خواهید گرفت{" "}
                   </p>
+                  <div
+                    className={`transform transition-all duration-[5000ms] 
+                  ${
+                    index === 0 && firstSlideIndex === 1
+                      ? "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[550px] mt-5 rounded-[6px]"
+                      : "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[0px] mt-5 rounded-[6px]"
+                  }
+                  `}
+                  ></div>
                 </div>
               </div>
               <div
@@ -169,6 +190,15 @@ const PopularCourses = () => {
                     دراین کلاس در مورد اصول حسابداری در مقیاس های صنعتی و اصول
                     کلی حسابداری یاد خواهید گرفت{" "}
                   </p>
+                  <div
+                    className={`transform transition-all duration-[5000ms]
+                  ${
+                    index === 1
+                      ? "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[550px] mt-5 rounded-[6px]"
+                      : "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[0px] mt-5 rounded-[6px]"
+                  }
+                  `}
+                  ></div>
                 </div>
               </div>
               <div
@@ -243,6 +273,15 @@ const PopularCourses = () => {
                     دراین کلاس در مورد اصول حسابداری در مقیاس های صنعتی و اصول
                     کلی حسابداری یاد خواهید گرفت{" "}
                   </p>
+                  <div
+                    className={`transform transition-all duration-[5000ms]
+                  ${
+                    index === 2
+                      ? "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[550px] mt-5 rounded-[6px]"
+                      : "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[0px] mt-5 rounded-[6px]"
+                  }
+                  `}
+                  ></div>
                 </div>
               </div>
               <div
@@ -317,6 +356,15 @@ const PopularCourses = () => {
                     دراین کلاس در مورد اصول حسابداری در مقیاس های صنعتی و اصول
                     کلی حسابداری یاد خواهید گرفت{" "}
                   </p>
+                  <div
+                    className={`transform transition-all duration-[5000ms]
+                  ${
+                    index === 3
+                      ? "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[550px] mt-5 rounded-[6px]"
+                      : "bg-gradient-to-r from-[#00FF85] to-[#0000] mr-[-30px] h-[2px] w-[0px] mt-5 rounded-[6px]"
+                  }
+                  `}
+                  ></div>
                 </div>
               </div>
               <div

@@ -10,16 +10,24 @@ import SiteManagmentIcon from "../../assets/svg/AdminLogin/SiteManagmentIcon";
 import SettingIcon from "../../assets/svg/AdminLogin/SettingIcon";
 import ExitIcon from "../../assets/svg/AdminLogin/ExitIcon";
 import SidebarBtn from "../../assets/svg/AdminLogin/SidebarBtn";
+
 import { Link } from "react-router-dom";
 
-export default ({ showSidebarCollapsed, setshowSidebarCollapsed }) => {
+export default ({
+  showSidebarCollapsed,
+  setshowSidebarCollapsed,
+  settingsModal,
+  setSettingsModal,
+  setlogoutModal,
+}) => {
   return (
     <div
       style={{
         right: showSidebarCollapsed ? "0" : "-50vh",
+        scale: showSidebarCollapsed ? "0" : "1",
         transition: "0.4s",
       }}
-      className="absolute top-0 bg-[#f5f5f5] w-[200px] h-screen"
+      className="absolute shadow-2xl top-0 bg-[#f5f5f5] w-[200px] h-screen"
     >
       <div
         onClick={() => setshowSidebarCollapsed(false)}
@@ -40,38 +48,56 @@ export default ({ showSidebarCollapsed, setshowSidebarCollapsed }) => {
           </Link>
 
           <div className="cursor-pointer flex my-8">
-            <CoursesIcon />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">دوره ها</p>
+            <Link className="flex" to="courses">
+              <CoursesIcon />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">دوره ها</p>
+            </Link>
           </div>
           <div className="cursor-pointer flex my-8">
-            <EpisodeIcon />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">اپیزود ها</p>
+            <Link className="flex" to="episode">
+              <EpisodeIcon />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">اپیزود ها</p>
+            </Link>
           </div>
           <Link to="adminpanelcompany">
             <div className="cursor-pointer flex my-8">
-              <UserControlIcon />
-              <p className="text-[12px] pr-3 text-[#4a5e67]">شرکت ها</p>
+              <Link className="flex" to="listofcompanies">
+                <UserControlIcon />
+                <p className="text-[12px] pr-3 text-[#4a5e67]">شرکت ها</p>
+              </Link>
             </div>
           </Link>
           <div className="cursor-pointer flex my-8">
-            <FactorIcon />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">فاکتور ها</p>
+            <Link className="flex" to="factor">
+              <FactorIcon />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">فاکتور ها</p>
+            </Link>
           </div>
           <div className="cursor-pointer flex my-8">
-            <TicketIcon />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">تیکت ها</p>
+            <Link className="flex" to="ticketscompany">
+              <TicketIcon />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">تیکت ها</p>
+            </Link>
           </div>
         </div>
         <div className="mt-8">
           <div className="cursor-pointer flex mb-6">
-            <SiteManagmentIcon />
-            <p className="text-[12px] pr-3 text-[#4a5e67]">مدیریت سایت</p>
+            <Link className="flex" to="sitemanagment">
+              <SiteManagmentIcon />
+              <p className="text-[12px] pr-3 text-[#4a5e67]">مدیریت سایت</p>
+            </Link>
           </div>
-          <div className="cursor-pointer flex mb-6">
+          <div
+            onClick={() => setSettingsModal(!settingsModal)}
+            className="cursor-pointer flex mb-6"
+          >
             <SettingIcon />
             <p className="text-[12px] pr-3 text-[#4a5e67]">تنظیمات</p>
           </div>
-          <div className="cursor-pointer flex mb-6">
+          <div
+            onClick={() => setlogoutModal(true)}
+            className="cursor-pointer flex mb-6"
+          >
             <ExitIcon />
             <p className="text-[12px] pr-3 text-[#4a5e67]">خروج از پنل</p>
           </div>

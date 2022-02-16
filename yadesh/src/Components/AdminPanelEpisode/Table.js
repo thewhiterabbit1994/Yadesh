@@ -10,13 +10,13 @@ const Table = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
   let database = [];
   const data = siteManagmentDatabase.Courses.forEach((Course) => {
-    // database = Course.Episodes;
     Course.Episodes.forEach((Episode) => {
       database.push(Episode);
     });
   });
   console.log(database);
 
+  const [searchInputValue, setsearchInputValue] = useState("");
   const [showMore, setShowMore] = useState(false);
 
   let threeOfEpisodes = [];
@@ -37,12 +37,14 @@ const Table = () => {
               <div className="mt-[13px] mx-[10px]">
                 <Search />
               </div>
-              <label className="z-20">
-                <input
-                  className="w-[250px] h-[35px] placeholder:text-[#000000a2] placeholder:text-[10px] z-20 bg-[#E6E9EB] outline-none text-[12px]"
-                  placeholder="جستوجوی اپیزود"
-                />
-              </label>
+
+              <input
+                value={searchInputValue}
+                onChange={(e) => setsearchInputValue(e.target.value)}
+                onClick={() => setShowMore(true)}
+                placeholder="جستوجوی اپیزود ها "
+                className="z-30 w-[250px] placeholder:text-[#000000a4] placeholder:text-[10px] bg-[#E6E9EB] outline-none"
+              />
             </div>
             <div className="flex items-center justify-center text-[10px] w-[250px] h-[35px] bg-[#E6E9EB] rounded">
               <p> چیدمان بر اساس لیست شرکت ها</p>
@@ -113,41 +115,58 @@ const Table = () => {
                     </tr>
                   );
                 })
-              : database.map((item, i) => {
-                  return (
-                    <tr className="h-[100px] hover:bg-[#e6e9ebc2]">
-                      <td>
-                        <p className="text-center">{i + 1}</p>
-                      </td>
-                      <td>
-                        <img
-                          src={item.PreviewImg}
-                          className="rounded m-auto  h-[50px]"
-                        />{" "}
-                      </td>
-                      <td>
-                        <p className="text-center">{item.NameOfEpisode}</p>
-                      </td>
-                      <td>
-                        <p className="text-center">{item.TeacherName}</p>
-                      </td>
-                      <td className="text-[#0050A8] font-semibold text-center">
-                        {item.TimeOfEpisode}
-                      </td>
-                      <td>
-                        <p className="text-center">{item.EpisodeCategory}</p>
-                      </td>
-                      <td className="flex h-[55px]  items-end ">
-                        <div className="mt-[3px]">
-                          <Edit />{" "}
-                        </div>
-                        <p className="mr-[10px] text-[#0050A8] text-[10px] font-semibold">
-                          ویرایش اپیزود ها
-                        </p>
-                      </td>
-                    </tr>
-                  );
-                })}
+              : database
+                  .filter((item, i) => {
+                    return (
+                      item.NameOfEpisode.toLowerCase().includes(
+                        searchInputValue.toLowerCase()
+                      ) ||
+                      item.TeacherName.toLowerCase().includes(
+                        searchInputValue.toLowerCase()
+                      ) ||
+                      item.EpisodeCategory.toLowerCase().includes(
+                        searchInputValue.toLowerCase()
+                      ) ||
+                      item.TimeOfEpisode.toLowerCase().includes(
+                        searchInputValue.toLowerCase()
+                      )
+                    );
+                  })
+                  .map((item, i) => {
+                    return (
+                      <tr className="h-[100px] hover:bg-[#e6e9ebc2]">
+                        <td>
+                          <p className="text-center">{i + 1}</p>
+                        </td>
+                        <td>
+                          <img
+                            src={item.PreviewImg}
+                            className="rounded m-auto  h-[50px]"
+                          />{" "}
+                        </td>
+                        <td>
+                          <p className="text-center">{item.NameOfEpisode}</p>
+                        </td>
+                        <td>
+                          <p className="text-center">{item.TeacherName}</p>
+                        </td>
+                        <td className="text-[#0050A8] font-semibold text-center">
+                          {item.TimeOfEpisode}
+                        </td>
+                        <td>
+                          <p className="text-center">{item.EpisodeCategory}</p>
+                        </td>
+                        <td className="flex h-[55px]  items-end ">
+                          <div className="mt-[3px]">
+                            <Edit />{" "}
+                          </div>
+                          <p className="mr-[10px] text-[#0050A8] text-[10px] font-semibold">
+                            ویرایش اپیزود ها
+                          </p>
+                        </td>
+                      </tr>
+                    );
+                  })}
           </tbody>
         </table>
         <section

@@ -1,8 +1,9 @@
 import Slider from "react-slick";
 import BrandImg from "../../assets/Img/BrandImg.png";
 import TeacherImg1 from "../../assets/Img/TeacherImg1.png";
+import PrevIcon from "../../assets/svg/PrevIcon";
 import NoteIcon from "../../assets/svg/NoteIcon";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { MainCounter } from "../../Context/Context";
 
 const settings = {
@@ -10,6 +11,7 @@ const settings = {
   infinite: true,
   speed: 500,
   rtl: false,
+  arrows: false,
   slidesToShow: 4.0,
   slidesToScroll: 1,
 };
@@ -17,6 +19,7 @@ const settings = {
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const slider = useRef(null);
 
   const data = siteManagmentDatabase.MyProgress.MyNotes;
 
@@ -38,7 +41,7 @@ export default () => {
         </div>
       </div>
       <div className=" mt-[25px] w-[95%] m-auto  text-white">
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           <div>
             <div className="flex w-fit h-[120px] bg-[#011e29] rounded-[10px]">
               <div className=" flex flex-row-reverse ">
@@ -170,6 +173,22 @@ export default () => {
             <div className=" h-[1px] relative bottom-[45px] w-[80%]  mx-[5%] bg-slate-700"></div>
           </div>
         </Slider>
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickPrev();
+        }}
+        className="absolute top-[800px] left-[70px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+      >
+        <PrevIcon />
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickNext();
+        }}
+        className="absolute top-[800px] left-[110px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+      >
+        <PrevIcon />
       </div>
     </div>
   );

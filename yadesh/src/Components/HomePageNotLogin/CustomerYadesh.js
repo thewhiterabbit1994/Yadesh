@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { useContext } from "react";
 import { MainCounter } from "../../Context/Context";
 import "slick-carousel/slick/slick.css";
-import "../../Css/CustomerYadesh.css";
 
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
@@ -19,6 +18,7 @@ export default () => {
     autoplay: true,
     speed: 5000,
     autoplaySpeed: 0,
+    arrows: false,
     cssEase: "linear",
   };
   return (

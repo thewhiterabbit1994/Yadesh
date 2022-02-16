@@ -8,11 +8,13 @@ import PersonalManagement from "../Components/HomePageLoggedIn/PersonalManagemen
 
 const HomePageLoggedIn = () => {
   return (
-    <div>
+    <div className="bg-[#000506]">
       <Navbar />
       <TodaySpecialCourses />
       <ContinueLearning />
-      <MostView />
+      <div className=" mt-[100px] ">
+        <MostView />
+      </div>
       <TodayMostViewLessons />
       <PersonalManagement />
       <Footer />

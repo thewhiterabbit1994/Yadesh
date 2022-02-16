@@ -48,11 +48,13 @@ import AddNewSubscription from "./Components/Modals/AddNewSubscription";
 import CompanySubMenu from "./Components/Modals/CompanySubMenu";
 import MessageFailed from "../src/Components/Messaeg/MessageFailed";
 import MessageSucsses from "../src/Components/Messaeg/MessageSucsses";
+import ScrollToTop from "../src/Components/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="*" element={<Page404 />} />
           <Route path="/" element={<HomePageNotLogin />} />

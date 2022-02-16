@@ -48,6 +48,9 @@ const MainSection = () => {
                     src={item.PreviewImg}
                     className="rounded-lg w-[230px] h-[150px] object-cover mt-[5px] "
                   />
+                  <div className="absolute w-fit h-[20px] bg-[#7e9095] text-white text-[11px] px-1 rounded flex justify-center items-center mr-[5px] mt-[-145px]">
+                    {item.TimeOfEpisode}
+                  </div>
                 </Link>
                 <div>
                   <p className="text-[16px] text-[#E6FFF3] mb-[1rem]">

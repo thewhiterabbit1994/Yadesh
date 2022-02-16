@@ -35,8 +35,9 @@ const Main = () => {
     <section className="w-full h-[1700px] bg-[#000]">
       <section className="w-[600px] m-auto text-center leading-[30px] ">
         <div
-          className={`mb-[20px] m-auto flex justify-center ${visiondata.isLogoDisplayed ? "" : "hidden"
-            }`}
+          className={`mb-[20px] m-auto flex justify-center ${
+            visiondata.isLogoDisplayed ? "" : "hidden"
+          }`}
         >
           <Dart />
         </div>
@@ -48,8 +49,9 @@ const Main = () => {
       <div className="bg-gradient-to-r mt-[50px] h-[2px] w-[70%] m-auto from-[#0004052d] via-[#E6E9EB] to-[#0004052a]"></div>
       <section className="w-[600px]   m-auto text-center leading-[30px]">
         <div
-          className={`m-auto flex justify-center my-[50px] ${missiondata.isLogoDisplayed ? "" : "hidden"
-            }`}
+          className={`m-auto flex justify-center mt-[50px] mb-[20px] ${
+            missiondata.isLogoDisplayed ? "" : "hidden"
+          }`}
         >
           <Tick />
         </div>
@@ -61,8 +63,9 @@ const Main = () => {
       <div className="bg-gradient-to-r mt-[50px] h-[2px] w-[70%] m-auto from-[#0004052d] via-[#E6E9EB] to-[#0004052a]"></div>
       <section className="w-[600px]   m-auto text-center leading-[30px]">
         <div
-          className={` m-auto flex justify-center my-[50px] ${identifydata.isLogoDisplayed ? "" : "hidden"
-            }`}
+          className={` m-auto flex justify-center mt-[50px] mb-[20px] ${
+            identifydata.isLogoDisplayed ? "" : "hidden"
+          }`}
         >
           <Person />
         </div>
@@ -71,33 +74,37 @@ const Main = () => {
         </h6>
         <p className="text-[#C4C4C4] text-[14px]">{identifydata.subTitle}</p>
       </section>
-      <section className="w-[80vw] flex h-[500px] mt-[100px] justify-end ">
+      <section className="w-[80vw] flex h-[500px] mt-[200px] justify-end ">
         <div className="w-[40vw] h-[350px] text-[#E6FFF3] flex flex-col justify-center text-[14px]">
           <div className="flex">
-            <div className="border-[#00FF85] opacity-80 h-[20px]  border-r-[6px] ml-[7px] mr-[7px] rounded mt-[3px]"></div>
+            <div className="border-[#00FF85] opacity-80 h-[20px]  border-r-[6px] ml-[7px] mr-[7px] rounded mt-[5px]"></div>
             <p className="text-[#E6FFF3] text-[20px]">{contactdata.title}</p>
           </div>
           <div className="text-[#C4C4C4] mt-[10px]">
             <p>{contactdata.subTitle}</p>
           </div>
           <section className="text-[#C4C4C4] flex mt-[30px] justify-between w-[350px] ">
-            <div className="flex">
+            <a href={`tel:${contactdata.phoneNumber}`} className="flex">
               <Phone />
               <p className="mr-[10px]">{contactdata.phoneNumber}</p>
-            </div>
+            </a>
             <div className="border-r-2 rounded border-[#c4c4c4ab]"></div>
-            <div className="flex">
+            <a href={`mailto:${contactdata.emailAddress}`} className="flex">
               <Letter />
               <p className="mr-[10px]">{contactdata.emailAddress}</p>
-            </div>
+            </a>
           </section>
-          <div className="text-[#C4C4C4] flex mt-[30px]">
+          <a
+            href="https://goo.gl/maps/wWS2ioiFMViaooZX8"
+            target="_blank"
+            className="text-[#C4C4C4] flex mt-[30px]"
+          >
             <Location />
             <p className="mr-[10px]">{contactdata.address}</p>
-          </div>
+          </a>
         </div>
         <div className="w-[380px] ">
-          <div className="h-[300px] mr-[-30px] drop-shadow-xl w-[550px]">
+          <div className="h-[450px] mr-[-30px] mt-[-50px] drop-shadow-xl w-[550px]">
             <MapContainer
               center={contactdata.addressLocation}
               zoom={20}
@@ -113,8 +120,9 @@ const Main = () => {
         </div>
       </section>
       <section
-        className={`${supportdata.isDisplayed ? "" : "hidden"
-          } w-full bg-[#000E14] h-[270px] flex flex-col justify-center items-center leading-[40px]`}
+        className={`${
+          supportdata.isDisplayed ? "" : "hidden"
+        } w-full bg-[#000E14] h-[270px] flex flex-col justify-center items-center leading-[40px]`}
       >
         <div>
           <p className="text-[#E6FFF3] text-[20px]">{supportdata.title}</p>
@@ -128,7 +136,6 @@ const Main = () => {
               تماس با پشتیبانی
             </button>
           </Link>
-
         </div>
       </section>
     </section>

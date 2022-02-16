@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { MainCounter } from "../../Context/Context";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
@@ -7,9 +7,11 @@ import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
 import BgArrow from "../../assets/svg/adminPanelEpisode/BgArrow";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PrevIcon from "../../assets/svg/PrevIcon";
 
 const TodayMostViewLessons = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
+  const slider = useRef(null);
 
   const data = siteManagmentDatabase.HomePageLogin.TodayMostViewLessons;
   let episodesData = [];
@@ -26,6 +28,7 @@ const TodayMostViewLessons = () => {
   const settings = {
     dots: true,
     infinite: true,
+    arrows: false,
     slidesToShow: 5,
   };
   return (
@@ -43,7 +46,7 @@ const TodayMostViewLessons = () => {
       </div>
 
       <div className="mr-[55px] mt-7 w-[90%] text-white relative ">
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           {episodes.map((item) => {
             return (
               <div className="">
@@ -68,6 +71,22 @@ const TodayMostViewLessons = () => {
             );
           })}
         </Slider>
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickPrev();
+        }}
+        className="absolute top-[1750px] left-[70px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+      >
+        <PrevIcon />
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickNext();
+        }}
+        className="absolute top-[1750px] left-[110px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+      >
+        <PrevIcon />
       </div>
     </div>
   );

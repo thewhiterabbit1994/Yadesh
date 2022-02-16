@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useRef } from "react";
 import { MainCounter } from "../../Context/Context";
 import MyProgressRocket from "../../assets/svg/MyProgressRocket";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
+import PrevIcon from "../../assets/svg/PrevIcon";
 
 const ContinueLearning = () => {
   const { siteManagmentDatabase } = useContext(MainCounter);
+  const slider = useRef(null);
 
   const data = siteManagmentDatabase.HomePageLogin.ContinueLearning;
   let episodesData = [];
@@ -24,6 +25,7 @@ const ContinueLearning = () => {
   const settings = {
     dots: true,
     infinite: true,
+    arrows: false,
     slidesToShow: 4,
   };
   return (
@@ -58,7 +60,7 @@ const ContinueLearning = () => {
       </div>
 
       <div className="pl-1 mt-24 w-[75%] text-white">
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           {episodes.map((item) => {
             return (
               <div className="">
@@ -80,6 +82,22 @@ const ContinueLearning = () => {
             );
           })}
         </Slider>
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickPrev();
+        }}
+        className="absolute top-[690px] left-[70px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+      >
+        <PrevIcon />
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickNext();
+        }}
+        className="absolute top-[690px] left-[110px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+      >
+        <PrevIcon />
       </div>
     </div>
   );

@@ -13,19 +13,12 @@ const Table = () => {
     emtyCourse,
     setemtyCourse,
   } = useContext(MainCounter);
-
+  const [searchInputValue, setsearchInputValue] = useState("");
   const data = siteManagmentDatabase.Courses;
   console.log(data);
   const [showmore, setShowmore] = useState(false);
-  let [clickCount, setclickCount] = useState(0);
 
   let threeOfCourses = [data[0], data[1], data[2]];
-
-  const deleteCourse = (i) => {
-    let database = JSON.parse(JSON.stringify(siteManagmentDatabase));
-    database.Courses.splice(i, 1);
-    setsiteManagmentDatabase(database);
-  };
 
   return (
     <section className="w-[97vw]">
@@ -41,12 +34,14 @@ const Table = () => {
                 <div className="mt-[13px] mx-[10px]">
                   <Search />
                 </div>
-                <label className="z-30 w-[300px] h-[35px] flex">
-                  <input
-                    placeholder="جستوجوی دوره ها "
-                    className="z-30 w-[100px] placeholder:text-[#000000a4] placeholder:text-[10px] bg-[#E6E9EB] outline-none"
-                  />
-                </label>
+
+                <input
+                  value={searchInputValue}
+                  onChange={(e) => setsearchInputValue(e.target.value)}
+                  onClick={() => setShowmore(true)}
+                  placeholder="جستوجوی دوره ها "
+                  className="z-30 w-[250px] placeholder:text-[#000000a4] placeholder:text-[10px] bg-[#E6E9EB] outline-none"
+                />
               </div>
               <div className="flex items-center justify-center text-[10px] w-[250px] h-[35px] bg-[#E6E9EB] rounded">
                 <p> چیدمان بر اساس لیست شرکت ها</p>
@@ -83,7 +78,6 @@ const Table = () => {
             <tbody className="w-full">
               {!showmore
                 ? threeOfCourses.map((item, i) => {
-                    if (clickCount === 3) setShowmore(true);
                     return (
                       <tr className="hover:bg-[#e6e9ebc2]">
                         <td className="text-center">{i + 1}</td>
@@ -113,61 +107,63 @@ const Table = () => {
                           </div>
                           <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
                             ویرایش دوره
-                          </p>
-                          <p
-                            onClick={(i) => {
-                              deleteCourse(i);
-                              setclickCount(clickCount + 1);
-                            }}
-                            className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]"
-                          >
-                            حذف دوره
                           </p>
                         </td>
                       </tr>
                     );
                   })
-                : data.map((item, i) => {
-                    return (
-                      <tr className="hover:bg-[#e6e9ebc2]">
-                        <td className="text-center">{i + 1}</td>
-                        <td>
-                          <img
-                            src={item.CourseImg}
-                            className="rounded m-auto h-[50px]"
-                          />{" "}
-                        </td>
-                        <td>
-                          <p className="text-center">{item.TeacherName}</p>
-                        </td>
-                        <td>
-                          <p className="text-center text-[#0050A8] font-semibold">
-                            {item.CourseDurationTime}
-                          </p>
-                        </td>
-                        <td className="text-[#0050A8] font-semibold text-center">
-                          {item.NumberOfEpisodes}
-                        </td>
-                        <td>
-                          <p className="text-center">{item.CourseCategory}</p>
-                        </td>
-                        <td className="flex items-center h-[80px]">
-                          <div className="mt-[3px]">
-                            <Edit />{" "}
-                          </div>
-                          <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
-                            ویرایش دوره
-                          </p>
-                          <p
-                            onClick={(i) => deleteCourse(i)}
-                            className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]"
-                          >
-                            حذف دوره
-                          </p>
-                        </td>
-                      </tr>
-                    );
-                  })}
+                : data
+                    .filter((item, i) => {
+                      return (
+                        item.CourseCategory.toLowerCase().includes(
+                          searchInputValue.toLowerCase()
+                        ) ||
+                        item.TeacherName.toLowerCase().includes(
+                          searchInputValue.toLowerCase()
+                        ) ||
+                        item.NumberOfEpisodes.toLowerCase().includes(
+                          searchInputValue.toLowerCase()
+                        ) ||
+                        item.CourseDurationTime.toLowerCase().includes(
+                          searchInputValue.toLowerCase()
+                        )
+                      );
+                    })
+                    .map((item, i) => {
+                      return (
+                        <tr className="hover:bg-[#e6e9ebc2]">
+                          <td className="text-center">{i + 1}</td>
+                          <td>
+                            <img
+                              src={item.CourseImg}
+                              className="rounded m-auto h-[50px]"
+                            />{" "}
+                          </td>
+                          <td>
+                            <p className="text-center">{item.TeacherName}</p>
+                          </td>
+                          <td>
+                            <p className="text-center text-[#0050A8] font-semibold">
+                              {item.CourseDurationTime}
+                            </p>
+                          </td>
+                          <td className="text-[#0050A8] font-semibold text-center">
+                            {item.NumberOfEpisodes}
+                          </td>
+                          <td>
+                            <p className="text-center">{item.CourseCategory}</p>
+                          </td>
+                          <td className="flex items-center h-[80px]">
+                            <div className="mt-[3px]">
+                              <Edit />{" "}
+                            </div>
+                            <p className="mr-[10px] cursor-pointer text-[#0050A8]  text-[10px]">
+                              ویرایش دوره
+                            </p>
+                          </td>
+                        </tr>
+                      );
+                    })}
             </tbody>
           </table>
           <section className="w-full h-[50px] bg-[#E6E9EB] mt-[20px] flex justify-center items-center rounded-lg">

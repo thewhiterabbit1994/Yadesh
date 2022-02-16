@@ -11,11 +11,18 @@ import InstaLogo from "../assets/svg/InstaLogo";
 import WhatsAppLogo from "../assets/svg/WhatsAppLogo";
 import TwiterLogo from "../assets/svg/TwiterLogo";
 import LinkedinLogo from "../assets/svg/LinkedinLogo";
+import IranFlag from "../assets/svg/IranFlag";
+import EnFlag from "../assets/svg/EnFlag";
+import ArabFlag from "../assets/svg/ArabFlag";
+import Langdropivon from "../assets/svg/langdropivon";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MainCounter } from "../Context/Context";
 
 const Footer = () => {
+  const [isSelectMenuOpen, setisSelectMenuOpen] = useState(false);
+  const [flagshow, setflagshow] = useState(0);
+
   const { siteManagmentDatabase } = useContext(MainCounter);
 
   const data = siteManagmentDatabase.Footer;
@@ -56,10 +63,81 @@ const Footer = () => {
               </p>
             </Link>
           </button>
-          <select className="bg-[#001d29] w-[40px] h-[32px] rounded-[4px] mt-[11px] mr-[15px] text-[#E6E9EB]">
-            <option value="1"></option>
-            <option value="2">EN</option>
-          </select>
+          <div
+            onClick={() => setisSelectMenuOpen(!isSelectMenuOpen)}
+            className="bg-[#001d29] w-[45px] cursor-pointer h-[35px] rounded-[4px] mt-[11px] mr-[15px] text-[#E6E9EB]"
+          >
+            <div className="flex justify-end ml-[5px] mt-[16px]">
+              <div className="mt-[-5px] ml-[5px]">
+                {flagshow === 0 ? (
+                  <IranFlag />
+                ) : flagshow === 1 ? (
+                  <ArabFlag />
+                ) : flagshow === 2 ? (
+                  <EnFlag />
+                ) : null}
+              </div>
+              <Langdropivon />
+            </div>
+          </div>
+          <div
+            className={`translate transition-all duration-700 
+          ${
+            isSelectMenuOpen
+              ? "absolute mr-[87px] mt-[47px]  bg-[#001d29] w-[45px] h-[85px] rounded-[4px] text-[#E6E9EB]"
+              : "absolute mr-[87px] mt-[47px] bg-[#001d29] w-[45px] h-[0px] rounded-[4px] text-[#E6E9EB]"
+          }
+          `}
+          >
+            <div
+              onClick={() => {
+                setflagshow(0);
+                setisSelectMenuOpen(false);
+              }}
+              className={`translate transition-all duration-700 cursor-pointer
+            ${
+              isSelectMenuOpen
+                ? "flex justify-center  h-[20px] mt-[5px]"
+                : "flex justify-center relative z-[-10] mt-[-30px]"
+            }
+            `}
+            >
+              <IranFlag />
+              <p className="text-[10px] mr-1">FA</p>
+            </div>
+            <div
+              onClick={() => {
+                setflagshow(1);
+                setisSelectMenuOpen(false);
+              }}
+              className={`translate transition-all duration-700 cursor-pointer
+            ${
+              isSelectMenuOpen
+                ? "flex justify-center  h-[20px] mt-[10px]"
+                : "flex justify-center relative z-[-10] mt-[-10px]"
+            }
+            `}
+            >
+              <ArabFlag />
+              <p className="text-[10px] mr-1">AR</p>
+            </div>
+            <div
+              onClick={() => {
+                setflagshow(2);
+                setisSelectMenuOpen(false);
+              }}
+              className={`translate transition-all duration-700 cursor-pointer
+            ${
+              isSelectMenuOpen
+                ? "flex justify-center  h-[20px] mt-[10px]"
+                : "flex justify-center relative z-[-10] mt-[-10px]"
+            }
+            `}
+            >
+              <EnFlag />
+              <p className="text-[10px] mr-1">EN</p>
+            </div>
+          </div>
         </div>
       </div>
       <div>
@@ -157,22 +235,32 @@ const Footer = () => {
             <p className="text-[#E6FFF3] text-[15px] ml-[90px] ">
               با ما در تماس باشید
             </p>
-            <p className="text-[#a1b4ac] text-[14px] flex mr-[21px]">
+            <a
+              href="tel:09904848665"
+              className="text-[#a1b4ac] text-[14px] flex mr-[21px]"
+            >
               ۶۵۲۳۶۵۲۶۵۲
               <div className="mr-[10.5px] opacity-50">
                 <Call />
               </div>
-            </p>
+            </a>
           </div>
           <div className="my-7">
-            <p className="flex text-[#a1b4ac] text-[13px]">
+            <a
+              href="mailto:ho3einzarrabi@gmail.com"
+              className="flex text-[#a1b4ac] text-[13px]"
+            >
               <div className="ml-[10.5px] opacity-50">
                 <Email />
               </div>
               info@yadesh.com
-            </p>
+            </a>
           </div>
-          <div className="flex w-[380px]">
+          <a
+            href="https://goo.gl/maps/wWS2ioiFMViaooZX8"
+            target="_blank"
+            className="flex w-[380px]"
+          >
             <div className="ml-[10.5px] opacity-50">
               <Location />
             </div>
@@ -181,7 +269,7 @@ const Footer = () => {
               تهران، خیابان انقلاب اسلامی، خیابان کارگر شمالی، پلاک ۴۲،واحد۲
             </p>
             <GoogleMap />
-          </div>
+          </a>
           <div className="w-[380px] flex justify-between mt-[24px]">
             <div className="w-[120px] h-[120px] bg-[#000a0e] rounded-[10px]">
               <img
@@ -207,20 +295,36 @@ const Footer = () => {
             پرسش های متداول
           </p>
           <div className="flex absolute  left-[85px] text-[12px] text-[#939FA5]">
-            <div className="opacity-20 mt-[26px] px-4">
+            <a
+              href="https://www.instagram.com/realzarrabi"
+              target="_blank"
+              className="opacity-20 mt-[26px] px-4"
+            >
               <InstaLogo />
-            </div>
-            <div className="opacity-20 mt-[26px] px-4">
+            </a>
+            <a
+              href="https://wa.me/989904848665"
+              target="_blank"
+              className="opacity-20 mt-[26px] px-4"
+            >
               <WhatsAppLogo />
-            </div>
-            <div className=" bg-[#00202e] rounded-[10px] mt-[16px] h-[40px] w-[40px] mx-4">
+            </a>
+            <a
+              href="https://twitter.com/hoseinzarrabi"
+              target="_blank"
+              className=" bg-[#00202e] rounded-[10px] mt-[16px] h-[40px] w-[40px] mx-4"
+            >
               <div className="mx-3 mt-3">
                 <TwiterLogo />
               </div>
-            </div>
-            <div className="opacity-20 mt-[26px] px-4">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hoseinzarrabi"
+              target="_blank"
+              className="opacity-20 mt-[26px] px-4"
+            >
               <LinkedinLogo />
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -228,9 +332,12 @@ const Footer = () => {
         <p className="my-6 mr-16 text-[#2e3a3f] text-[13px]">
           تمام حق و حقوق این سایت محفوظ است
         </p>
-        <p className="absolute left-20 my-6 mr-16 text-[#2e3a3f] text-[13px]">
+        <a
+          href="tel:09904848665"
+          className="absolute left-20 my-6 mr-16 text-[#2e3a3f] text-[13px]"
+        >
           توسعه توسط تیم AlfaDevs
-        </p>
+        </a>
       </div>
     </div>
   );

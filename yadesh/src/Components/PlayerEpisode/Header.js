@@ -27,6 +27,10 @@ const Header = () => {
   const Coursedata = siteManagmentDatabase.Courses;
   const Episode = database.find((Episode) => Episode.EpisodeID === id);
 
+  const TeacherData = siteManagmentDatabase.Teachers.find(
+    (teacher) => teacher.TeacherName === Episode.TeacherName
+  );
+
   const Course = Coursedata.filter(
     (Course) => Course.CourseID === Episode.CourseID
   );
@@ -44,6 +48,20 @@ const Header = () => {
 
   const [isPlaying, setisPlaying] = useState(false);
   const player = useRef();
+
+  document.addEventListener("keyup", (event) => {
+    if (event.code === "Space" && isPlaying === false) {
+      handleplay();
+      setisPlaying(true);
+      initializeVideoDuration();
+    } else if (event.code === "Space" && isPlaying === true) {
+      handlepause();
+      setisPlaying(false);
+      initializeVideoDuration();
+    } else if (event.code === "Enter") {
+      toggleFullScreen();
+    }
+  });
 
   function handleplay() {
     player.current.play();
@@ -137,34 +155,31 @@ const Header = () => {
             {Episode.EpisodeCategory} - {Episode.NameOfEpisode}
           </h6>
         </section>
-        {/* <div
-          className="cursor-pointer"
-          onMouseEnter={() => setshowControlBar(true)}
-          onMouseLeave={() => setshowControlBar(false)}
-          style={{ borderRadius: "10px", width: "730px", height: "450px" }}
-        > */}
+
         <video
           ref={player}
           onTimeUpdate={updateTimeElapsed}
           onMouseEnter={() => setshowControlBar(true)}
           onMouseLeave={() => setshowControlBar(false)}
           onClick={() => {
+            initializeVideoDuration();
             if (isPlaying) {
               handlepause();
+
               setisPlaying(false);
             }
             if (!isPlaying) {
               handleplay();
+
               setisPlaying(true);
             }
           }}
           poster={Episode.PreviewImg}
           controls={isFullScreen ? true : false}
           controlsList={"nodownload"}
-          class="video"
+          class="video cursor-pointer"
           src={Episode.Video}
         ></video>
-        {/* </div> */}
 
         <div
           className={`${
@@ -295,7 +310,7 @@ const Header = () => {
           </div>
         </div>
 
-        <hr className="bg-[#c4c4c43d] h-[2px] rounded-xl w-[52vw]  mt-[10px]"></hr>
+        <hr className="bg-[#c4c4c43d] h-[2px] rounded-xl w-[55.8vw] mr-2 mt-[40px]"></hr>
         <section className="text-[#fff] text-[20px] mr-[15px] mt-[15px]">
           <h6>{Episode.TeacherName}</h6>
         </section>
@@ -324,15 +339,19 @@ const Header = () => {
         </div>
       </div>
       <div className="w-[400px] bg-[#00141C] h-[480px] mx-[2rem] mt-[6rem] rounded-xl">
-        <section className="flex  h-[100px] items-center w-[300px] justify-around">
-          <div>
-            <img src={Imgman} className="rounded-[50%]" />
+        <section className="flex  h-[100px] items-center w-[300px] ">
+          <div className="mr-8">
+            <img
+              src={TeacherData.TeacherImg}
+              className="rounded-[50%] object-cover h-[80px] w-[80px]"
+            />
           </div>
           <div className="mr-[20px]">
-            <h6 className="text-[#E6FFF3] text-[16px]"> رضا استوار </h6>
+            <h6 className="text-[#E6FFF3] text-[16px]">
+              {TeacherData.TeacherName}
+            </h6>
             <h6 className="text-[#C4C4C4] text-[14px] mt-[10px]">
-              {" "}
-              مقاله نویس تاثیر گذار
+              {TeacherData.Carrier}
             </h6>
           </div>
         </section>
@@ -353,7 +372,7 @@ const Header = () => {
         <section className="text-[14px] bg-[#fff] w-[340px] h-[280px] rounded-xl mx-[30px] mt-[20px]   ">
           <section className="flex  mt-[20px] h-[50px] items-center justify-between w-[80%] m-auto text-[#00121A]">
             <div>
-              <h6 className="">مقاله نویس تاثیر گذار</h6>
+              <h6 className="">{TeacherData.Carrier}</h6>
             </div>
             <div className="flex">
               <h6 className="">در حال تماشا</h6>
@@ -382,7 +401,7 @@ const Header = () => {
             </div>
             <h6 className="text-[#C4C4C4] text-[12px] mt-[15px]">
               {" "}
-              شاید این اپیزود ها را نیز دوست داشتع باشید
+              شاید این اپیزود ها را نیز دوست داشته باشید
             </h6>
           </section>
           <section>

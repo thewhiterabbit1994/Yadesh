@@ -13,7 +13,6 @@ const HeaderCourse = () => {
   const Course = siteManagmentDatabase.Courses.filter(
     (Course) => Course.CourseID === id
   );
-  console.log(Course);
   return (
     <section className="bg-[#000] w-full h-[700px] flex justify-center">
       <section className=" w-[35%]  flex flex-col justify-center  leading-[35px] mr-[100px]">
@@ -32,7 +31,10 @@ const HeaderCourse = () => {
         </div>
         <section className="flex text-[12px] my-[20px]">
           <div className="ml-[20px]">
-            <img src={imgMan} />
+            <img
+              src={Course[0].TeacherImg}
+              className="object-cover rounded-full w-[70px] h-[70px] "
+            />
           </div>
           <div>
             <h6 className="text-[#E6FFF3] text-[14px]">آموزش سرمایه گذاری</h6>

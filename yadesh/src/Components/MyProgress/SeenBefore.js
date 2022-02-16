@@ -1,13 +1,14 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import conlearnImg1 from "../../assets/Img/conlearnImg1.png";
-import { useContext } from "react";
+import PrevIcon from "../../assets/svg/PrevIcon";
+import { useContext, useRef } from "react";
 import { MainCounter } from "../../Context/Context";
 import { Link } from "react-router-dom";
 
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const slider = useRef(null);
 
   const data = siteManagmentDatabase.MyProgress.SeenBefore;
   let episodesData = [];
@@ -25,6 +26,7 @@ export default () => {
     dots: true,
     infinite: true,
     slidesToShow: 5,
+    arrows: false,
   };
   return (
     <div
@@ -43,7 +45,7 @@ export default () => {
       </div>
 
       <div className="mr-[55px] mt-7 w-[90%] text-white">
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           {episodes.map((item) => {
             return (
               <div className="">
@@ -68,6 +70,22 @@ export default () => {
             );
           })}
         </Slider>
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickPrev();
+        }}
+        className="absolute top-[2100px] left-[70px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+      >
+        <PrevIcon />
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickNext();
+        }}
+        className="absolute top-[2100px] left-[110px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+      >
+        <PrevIcon />
       </div>
     </div>
   );

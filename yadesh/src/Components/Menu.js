@@ -17,7 +17,7 @@ import LinkedinLogo from "../assets/svg/LinkedinLogo";
 export default ({ menuDisplay }) => {
   return (
     <div
-      className={`menu absolute mt-[57px] h-[460px] w-screen z-10 rounded-b-[10px] bg-[#17313c] 
+      className={` absolute mt-[57px] h-[460px] w-screen z-10 rounded-b-[10px] bg-[#17313c] 
       `}
       style={{
         top: menuDisplay ? "0" : "-100vh",
@@ -110,33 +110,49 @@ export default ({ menuDisplay }) => {
         <div className="flex w-[770px] justify-between">
           <div className="flex mt-[100px] text-[12px] text-[#5f7179] ">
             <p className="text-[#939FA5]">تماس با ما</p>
-            <p className="flex mr-[21px]">
+            <a href="tel:09904848665" className="flex mr-[21px]">
               <div className="ml-[10.5px] -mt-1 opacity-30">
                 <Call />
               </div>
               ۶۵۲۳۶۵۲۶۵۲
-            </p>
-            <p className="flex mr-[21px]">
+            </a>
+            <a href="mailto:ho3einzarrabi@gmail.com" className="flex mr-[21px]">
               <div className="ml-[10.5px] opacity-30">
                 <Email />
               </div>
               info@yadesh.com
-            </p>
+            </a>
           </div>
           <div className="flex mt-[100px] text-[12px] text-[#939FA5]">
             <p className="px-4">شبکه های اجتماعی</p>
-            <div className="opacity-30 px-2">
+            <a
+              href="https://www.instagram.com/realzarrabi"
+              target="_blank"
+              className="opacity-30 px-2"
+            >
               <InstaLogo />
-            </div>
-            <div className="opacity-30 px-2">
+            </a>
+            <a
+              href="https://wa.me/989904848665"
+              target="_blank"
+              className="opacity-30 px-2"
+            >
               <WhatsAppLogo />
-            </div>
-            <div className=" px-2">
+            </a>
+            <a
+              href="https://twitter.com/hoseinzarrabi"
+              target="_blank"
+              className=" px-2"
+            >
               <TwiterLogo />
-            </div>
-            <div className="opacity-30 px-2">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hoseinzarrabi"
+              target="_blank"
+              className="opacity-30 px-2"
+            >
               <LinkedinLogo />
-            </div>
+            </a>
           </div>
         </div>
       </div>

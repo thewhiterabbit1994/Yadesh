@@ -42,7 +42,7 @@ export default () => {
           return (
             <div className="ml-[px]">
               <Link to={`/home/PlayerEpisode/${item.EpisodeID}`}>
-                <div className="absolute w-[310px] h-[310px] bg-gradient-to-t from-black to-[#0000]"></div>
+                <div className="absolute w-[310px] h-[310px] bg-gradient-to-t from-[#000000c7] to-[#0000]"></div>
                 <img
                   className="w-[310px] h-[310px] object-cover rounded "
                   src={item.PreviewImg}
@@ -50,7 +50,7 @@ export default () => {
                 <div className=" relative -top-[300px] right-[10px] h-[30px] w-[30px] cursor-pointer rounded pt-2 px-[13px] bg-[#626765]">
                   <_3Dots />
                 </div>
-                <div className=" relative right-[10px] -top-[110px]">
+                <div className=" relative right-[10px] -top-[100px]">
                   <p className="text-[14px] w-[310px]   text-[#ffffff]">
                     {item.EpisodeCategory} - {item.NameOfEpisode}
                   </p>

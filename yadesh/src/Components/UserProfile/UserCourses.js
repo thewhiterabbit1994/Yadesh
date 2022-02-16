@@ -1,15 +1,15 @@
 import Slider from "react-slick";
-import BrandImg from "../../assets/Img/BrandImg.png";
-import TeacherImg1 from "../../assets/Img/TeacherImg1.png";
+import PrevIcon from "../../assets/svg/PrevIcon";
 import _3Dots from "../../assets/svg/3Dots";
 import BtnPlay from "../../assets/svg/BtnPlay";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { MainCounter } from "../../Context/Context";
 import { Link } from "react-router-dom";
 
 export default () => {
   const { siteManagmentDatabase, setsiteManagmentDatabase } =
     useContext(MainCounter);
+  const slider = useRef(null);
 
   const data = siteManagmentDatabase.UserInfo.UserCourses;
   let episodesData = [];
@@ -27,6 +27,7 @@ export default () => {
     dots: true,
     infinite: true,
     slidesToShow: 4,
+    arrows: false,
   };
   return (
     <div
@@ -46,7 +47,7 @@ export default () => {
         </div>
       </div>
       <div className="pl-1 mt-[25px] w-[95%] text-white">
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           {episodes.map((item) => {
             return (
               <div>
@@ -75,8 +76,8 @@ export default () => {
                 <div className="flex -mt-[50px]">
                   <div>
                     <img
-                      className="relative -right-[215px] top-[-5px] rounded-full h-[55px]"
-                      src={TeacherImg1}
+                      className="relative -right-[215px] top-[-5px] object-cover w-[55px] rounded-full h-[55px]"
+                      src={item.TeacherImg}
                     />
                   </div>
                   <div className=" mt-[-15px] -ml-[5px]">
@@ -96,6 +97,22 @@ export default () => {
             );
           })}
         </Slider>
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickPrev();
+        }}
+        className="absolute top-[1840px] left-[70px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+      >
+        <PrevIcon />
+      </div>
+      <div
+        onClick={() => {
+          slider?.current?.slickNext();
+        }}
+        className="absolute top-[1840px] left-[110px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+      >
+        <PrevIcon />
       </div>
     </div>
   );

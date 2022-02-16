@@ -62,6 +62,7 @@ const Context = (props) => {
         CourseImg: ZtoMPrev,
         CourseView: "12084 بازدید",
         TeacherName: "آندره نیگوا",
+        TeacherImg: andre,
         CourseDurationTime: "27 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
         CourseCategory: "صفر تا صد تسلط وب",
@@ -77,6 +78,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط وب",
             CourseID: "C-kzk1z7me4gb2djwyszv",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0sn2tp0xy7m2bi39",
           },
           {
@@ -89,6 +91,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط وب",
             CourseID: "C-kzk1z7me4gb2djwyszv",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0tk4uketo09lgr",
           },
           {
@@ -101,6 +104,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط وب",
             CourseID: "C-kzk1z7me4gb2djwyszv",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0u8dmkqj2lqjguh",
           },
         ],
@@ -109,6 +113,7 @@ const Context = (props) => {
         CourseImg: ZtoMReactPrew,
         CourseView: "98656 بازدید",
         TeacherName: "آندره نیگوا",
+        TeacherImg: andre,
         CourseDurationTime: "44 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
         CourseCategory: "صفر تا صد تسلط ریکت",
@@ -124,6 +129,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط ریکت",
             CourseID: "C-kzk21d0melc7o7zw0vv",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0upxalu58xm2hsk",
           },
           {
@@ -136,6 +142,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط ریکت",
             CourseID: "C-kzk21d0melc7o7zw0vv",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0v69k817emsuz186",
           },
           {
@@ -148,6 +155,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط ریکت",
             CourseID: "C-kzk21d0melc7o7zw0vv",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0vse79odulf2k6l5",
           },
         ],
@@ -156,6 +164,7 @@ const Context = (props) => {
         CourseImg: ZtoMBackPrew,
         CourseView: "32584 بازدید",
         TeacherName: "آندره نیگوا",
+        TeacherImg: andre,
         CourseDurationTime: "52 دقیقه",
         NumberOfEpisodes: "4 اپیزود",
         CourseCategory: "صفر تا صد تسلط بک اند",
@@ -171,6 +180,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط بک اند",
             CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0w4zhk1411b5k2b",
           },
           {
@@ -183,6 +193,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط بک اند",
             CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0wqzjxoi2wpbpq5c",
           },
           {
@@ -195,6 +206,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط بک اند",
             CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0x3od1o7heb4sf5o",
           },
           {
@@ -207,6 +219,7 @@ const Context = (props) => {
             EpisodeCategory: "صفر تا صد تسلط بک اند",
             CourseID: "C-kzk227bet6b11z7vgk",
             TeacherName: "آندره نیگوا",
+            TeacherImg: andre,
             EpisodeID: "E-kzk0xoer6iyvsz1i28n",
           },
         ],
@@ -215,6 +228,7 @@ const Context = (props) => {
         CourseImg: BuildingPrew,
         CourseView: "78496 بازدید",
         TeacherName: "داوود پناهی",
+        TeacherImg: panahi,
         CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "4 اپیزود",
         CourseCategory: "ایمنی ساختمان و معدن",
@@ -230,6 +244,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ساختمان و معدن",
             CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            TeacherImg: panahi,
             EpisodeID: "E-kzk0y78s9pzgnmmdzr7",
           },
           {
@@ -242,6 +257,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ساختمان و معدن",
             CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            TeacherImg: panahi,
             EpisodeID: "E-kzk0ymjgx17dq7v5j5e",
           },
           {
@@ -254,6 +270,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ساختمان و معدن",
             CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            TeacherImg: panahi,
             EpisodeID: "E-kzk0yy7tv2bj8uc5lfi",
           },
           {
@@ -266,6 +283,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ساختمان و معدن",
             CourseID: "C-kzk23gmcoxdxs2dc7xb",
             TeacherName: "داوود پناهی",
+            TeacherImg: panahi,
             EpisodeID: "E-kzk0zb8dllaw0b293y",
           },
         ],
@@ -274,6 +292,7 @@ const Context = (props) => {
         CourseImg: PowerPrew,
         CourseView: "65823 بازدید",
         TeacherName: "جواد جباری",
+        TeacherImg: jabbari,
         CourseDurationTime: "160 دقیقه",
         NumberOfEpisodes: "6 اپیزود",
         CourseCategory: "مبانی مهندسی برق",
@@ -289,6 +308,7 @@ const Context = (props) => {
             EpisodeCategory: "مبانی مهندسی برق",
             CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            TeacherImg: jabbari,
             EpisodeID: "E-kzk10e7otd1qu6i0dfi",
           },
           {
@@ -301,6 +321,7 @@ const Context = (props) => {
             EpisodeCategory: "مبانی مهندسی برق",
             CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            TeacherImg: jabbari,
             EpisodeID: "E-kzk1108phftxtkb0gg6",
           },
           {
@@ -313,6 +334,7 @@ const Context = (props) => {
             EpisodeCategory: "مبانی مهندسی برق",
             CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            TeacherImg: jabbari,
             EpisodeID: "E-kzk11hgrmh0x4kprnkm",
           },
           {
@@ -325,6 +347,7 @@ const Context = (props) => {
             EpisodeCategory: "مبانی مهندسی برق",
             CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            TeacherImg: jabbari,
             EpisodeID: "E-kzk11vj5tfrq7fp8q4",
           },
           {
@@ -337,6 +360,7 @@ const Context = (props) => {
             EpisodeCategory: "مبانی مهندسی برق",
             CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            TeacherImg: jabbari,
             EpisodeID: "E-kzk127mw1s78a3dd8c9",
           },
           {
@@ -349,6 +373,7 @@ const Context = (props) => {
             EpisodeCategory: "مبانی مهندسی برق",
             CourseID: "C-kzk24912hm86scientb",
             TeacherName: "جواد جباری",
+            TeacherImg: jabbari,
             EpisodeID: "E-kzk12m4knhl63re06p",
           },
         ],
@@ -357,6 +382,7 @@ const Context = (props) => {
         CourseImg: MashinPrew,
         CourseView: "45813 بازدید",
         TeacherName: "مصطفی پویا کیان",
+        TeacherImg: poyakian,
         CourseDurationTime: "90 دقیقه",
         NumberOfEpisodes: "3 اپیزود",
         CourseCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
@@ -372,6 +398,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
             CourseID: "C-kzk24waa5vrc2hpf7go",
             TeacherName: "مصطفی پویا کیان",
+            TeacherImg: poyakian,
             EpisodeID: "E-kzk1349flbz92hjx6ho",
           },
           {
@@ -384,6 +411,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
             CourseID: "C-kzk24waa5vrc2hpf7go",
             TeacherName: "مصطفی پویا کیان",
+            TeacherImg: poyakian,
             EpisodeID: "E-kzk13h9vyo0oa95fpj",
           },
           {
@@ -396,6 +424,7 @@ const Context = (props) => {
             EpisodeCategory: "ایمنی ماشین آلات و تجهیزات صنعتی",
             CourseID: "C-kzk24waa5vrc2hpf7go",
             TeacherName: "مصطفی پویا کیان",
+            TeacherImg: poyakian,
             EpisodeID: "E-kzk13tsjhb8iicrx9ft",
           },
         ],
