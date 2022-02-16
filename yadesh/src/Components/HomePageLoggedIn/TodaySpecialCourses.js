@@ -138,7 +138,7 @@ const TodaySpecialCourses = () => {
           onClick={() => {
             slider?.current?.slickPrev();
           }}
-          className="absolute top-[290px] left-[70px] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
+          className="absolute top-[290px] left-[5.46875vw] bg-[#283043] cursor-pointer w-[30px] h-[30px] rounded flex justify-center items-center"
         >
           <PrevIcon />
         </div>
@@ -146,7 +146,7 @@ const TodaySpecialCourses = () => {
           onClick={() => {
             slider?.current?.slickNext();
           }}
-          className="absolute top-[290px] left-[680px] bg-[#a29688] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
+          className="absolute top-[290px] left-[53.125vw] bg-[#a29688] cursor-pointer w-[30px] h-[30px] rotate-180 rounded flex justify-center items-center"
         >
           <PrevIcon />
         </div>
